@@ -24,7 +24,7 @@
 	</SubModules>
 	<Xmls>
 		<XmlNode>
-			<XmlName id="EquipmentRosters" path="CharacterCreation/CharacterCreationEquipment"/>
+			<XmlName id="EquipmentRosters" path="CharacterCreationEquipment"/>
 			<IncludedGameTypes>
 				<GameType value = "Campaign"/>
 				<GameType value = "CampaignStoryMode"/>
