@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module>
+	<Name value="CharacterCreationRedone"/>
+	<Id value="CharacterCreationRedone"/>
+	<Version value="v1.3.0"/>
+	<SingleplayerModule value="true"/>
+	<MultiplayerModule value="false"/>
+	<ModuleType value ="Community" />
+	<DependedModules>
+		<DependedModule Id="Bannerlord.Harmony"/>
+		<DependedModule Id="Native"/>
+		<DependedModule Id="Sandbox"/>
+		<DependedModule Id="SandBoxCore"/>
+		<DependedModule Id="StoryMode"/>
+		<DependedModule Id="CustomBattle"/>
+	</DependedModules>
+	<SubModules>
+		<SubModule>
+			<Name value="CharacterCreationRedone" />
+			<DLLName value="CharacterCreationRedone.dll" />
+			<SubModuleClassType value="CharacterCreationRedone.Submodule" />
+			<Tags />
+		</SubModule>
+	</SubModules>
+	<Xmls>
+		<XmlNode>
+			<XmlName id="EquipmentRosters" path="CharacterCreation/CharacterCreationEquipment"/>
+			<IncludedGameTypes>
+				<GameType value = "Campaign"/>
+				<GameType value = "CampaignStoryMode"/>
+				<GameType value = "CustomGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+	</Xmls>
+</Module>
