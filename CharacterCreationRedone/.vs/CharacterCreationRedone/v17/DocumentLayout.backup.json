@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Steam\\steamapps\\common\\Mount \u0026 Blade II Bannerlord\\Modules\\CharacterCreationRedone\\CharacterCreationRedone\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{07E1CB88-1F68-44AF-91B4-2A80CA679F00}|CharacterCreationRedone\\CharacterCreationRedone.csproj|c:\\steam\\steamapps\\common\\mount \u0026 blade ii bannerlord\\modules\\charactercreationredone\\charactercreationredone\\charactercreationredone\\charactercreationoptions\\charactercreationredonesandboxoptions\\charactercreationredonesandbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E1CB88-1F68-44AF-91B4-2A80CA679F00}|CharacterCreationRedone\\CharacterCreationRedone.csproj|solutionrelative:charactercreationredone\\charactercreationoptions\\charactercreationredonesandboxoptions\\charactercreationredonesandbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{07E1CB88-1F68-44AF-91B4-2A80CA679F00}|CharacterCreationRedone\\CharacterCreationRedone.csproj|c:\\steam\\steamapps\\common\\mount \u0026 blade ii bannerlord\\modules\\charactercreationredone\\charactercreationredone\\charactercreationredone\\charactercreationoptions\\charactercreationredonevanilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07E1CB88-1F68-44AF-91B4-2A80CA679F00}|CharacterCreationRedone\\CharacterCreationRedone.csproj|solutionrelative:charactercreationredone\\charactercreationoptions\\charactercreationredonevanilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,6 +31,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CharacterCreationRedoneVanilla.cs",
+              "DocumentMoniker": "C:\\Steam\\steamapps\\common\\Mount \u0026 Blade II Bannerlord\\Modules\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneVanilla.cs",
+              "RelativeDocumentMoniker": "CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneVanilla.cs",
+              "ToolTip": "C:\\Steam\\steamapps\\common\\Mount \u0026 Blade II Bannerlord\\Modules\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneVanilla.cs",
+              "RelativeToolTip": "CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneVanilla.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T20:53:38.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CharacterCreationRedoneSandbox.cs",
+              "DocumentMoniker": "C:\\Steam\\steamapps\\common\\Mount \u0026 Blade II Bannerlord\\Modules\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneSandboxOptions\\CharacterCreationRedoneSandbox.cs",
+              "RelativeDocumentMoniker": "CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneSandboxOptions\\CharacterCreationRedoneSandbox.cs",
+              "ToolTip": "C:\\Steam\\steamapps\\common\\Mount \u0026 Blade II Bannerlord\\Modules\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneSandboxOptions\\CharacterCreationRedoneSandbox.cs*",
+              "RelativeToolTip": "CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneSandboxOptions\\CharacterCreationRedoneSandbox.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T20:34:34.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Submodule.cs",
               "DocumentMoniker": "C:\\Steam\\steamapps\\common\\Mount \u0026 Blade II Bannerlord\\Modules\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationRedone\\Submodule.cs",
               "RelativeDocumentMoniker": "CharacterCreationRedone\\Submodule.cs",
@@ -34,21 +64,7 @@
               "RelativeToolTip": "CharacterCreationRedone\\Submodule.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T14:42:23.662Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CharacterCreationRedoneVanilla.cs",
-              "DocumentMoniker": "C:\\Steam\\steamapps\\common\\Mount \u0026 Blade II Bannerlord\\Modules\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneVanilla.cs",
-              "RelativeDocumentMoniker": "CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneVanilla.cs",
-              "ToolTip": "C:\\Steam\\steamapps\\common\\Mount \u0026 Blade II Bannerlord\\Modules\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneVanilla.cs*",
-              "RelativeToolTip": "CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneVanilla.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKsAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T14:42:34.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T14:42:23.662Z"
             }
           ]
         }
