@@ -1,9 +1,4 @@
-﻿
-
-using HarmonyLib;
-using TaleWorlds.CampaignSystem;
-using TaleWorlds.CampaignSystem.CampaignBehaviors;
-using TaleWorlds.Core;
+﻿using HarmonyLib;
 using TaleWorlds.MountAndBlade;
 
 namespace CharacterCreationRedone
