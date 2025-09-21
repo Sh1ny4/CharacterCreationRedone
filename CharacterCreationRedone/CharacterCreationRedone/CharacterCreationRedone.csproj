@@ -76,7 +76,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterCreationOptions\CharacterCreationRedoneSandboxOptions\CharacterCreationRedoneSandbox.cs" />
-    <Compile Include="CharacterCreationOptions\CharacterCreationRedoneVanilla.cs" />
     <Compile Include="Submodule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
