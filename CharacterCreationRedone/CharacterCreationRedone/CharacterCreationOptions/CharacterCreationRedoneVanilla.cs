@@ -66,73 +66,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             return string.Concat(new string[] { "player_char_creation_", cultureId, "_", text, "_", isFemale ? "f" : "m" });
         }
 
-        public override void RegisterEvents()
-        {
-            CampaignEvents.OnCharacterCreationInitializedEvent.AddNonSerializedListener(this, new Action<CharacterCreationManager>(this.OnCharacterCreationInitialized));
-        }
-
-        public override void SyncData(IDataStore dataStore)
-        {
-        }
-
-        private void OnCharacterCreationInitialized(CharacterCreationManager characterCreationManager)
-        {
-            this._focusToAdd = characterCreationManager.CharacterCreationContent.FocusToAdd;
-            this._skillLevelToAdd = characterCreationManager.CharacterCreationContent.SkillLevelToAdd;
-            this._attributeLevelToAdd = characterCreationManager.CharacterCreationContent.AttributeLevelToAdd;
-            characterCreationManager.CharacterCreationContent.DefaultSelectedTitleType = "guard";
-            characterCreationManager.RegisterCharacterCreationContentHandler(this, 800);
-        }
-
-        void ICharacterCreationContentHandler.InitializeContent(CharacterCreationManager characterCreationManager)
-        {
-            characterCreationManager.CharacterCreationContent.AddEquipmentToUseGetter(delegate (string occupationId, out string equipmentId)
-            {
-                return this._occupationToEquipmentMapping.TryGetValue(occupationId, out equipmentId);
-            });
-            this.InitializeCharacterCreationStages(characterCreationManager);
-            this.InitializeCharacterCreationCultures(characterCreationManager);
-            this.InitializeData(characterCreationManager);
-        }
-
-        void ICharacterCreationContentHandler.AfterInitializeContent(CharacterCreationManager characterCreationManager)
-        {
-        }
-
-        void ICharacterCreationContentHandler.OnStageCompleted(CharacterCreationStageBase stage)
-        {
-            if (stage is CharacterCreationFaceGeneratorStage)
-            {
-                this.FaceGenUpdated();
-            }
-        }
-
-        void ICharacterCreationContentHandler.OnCharacterCreationFinalize(CharacterCreationManager characterCreationManager)
-        {
-        }
-
-        new public void InitializeCharacterCreationStages(CharacterCreationManager characterCreationManager)
-        {
-            characterCreationManager.AddStage(new CharacterCreationCultureStage());
-            characterCreationManager.AddStage(new CharacterCreationFaceGeneratorStage());
-            characterCreationManager.AddStage(new CharacterCreationNarrativeStage());
-            characterCreationManager.AddStage(new CharacterCreationBannerEditorStage());
-            characterCreationManager.AddStage(new CharacterCreationClanNamingStage());
-            characterCreationManager.AddStage(new CharacterCreationReviewStage());
-            characterCreationManager.AddStage(new CharacterCreationOptionsStage());
-        }
-
-        new public void InitializeCharacterCreationCultures(CharacterCreationManager characterCreationManager)
-        {
-            foreach (CultureObject cultureObject in Game.Current.ObjectManager.GetObjectTypeList<CultureObject>())
-            {
-                if (cultureObject.StringId == "aserai" || cultureObject.StringId == "battania" || cultureObject.StringId == "empire" || cultureObject.StringId == "khuzait" || cultureObject.StringId == "sturgia" || cultureObject.StringId == "vlandia")
-                {
-                    characterCreationManager.CharacterCreationContent.AddCharacterCreationCulture(cultureObject, 1, 10);
-                }
-            }
-        }
-
         private List<NarrativeMenuCharacterArgs> GetParentMenuNarrativeMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
         {
             return new List<NarrativeMenuCharacterArgs>
@@ -199,10 +132,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("vlandia_mercenary_option", new TextObject("{=ipQP6aVi}Mercenaries", null), new TextObject("{=yYhX6JQC}Your father joined one of Vlandia's many mercenary companies, composed of men who got such a taste for war in their lord's service that they never took well to peace. Their crossbowmen were much valued across Calradia. Your mother was a camp follower, taking you along in the wake of bloody campaigns.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetVlandiaMercenaryNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.VlandiaMercenaryNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.VlandiaMercenaryNarrativeOptionOnSelect), null));
 
             characterCreationManager.AddNewMenu(narrativeMenu);
-        }
-
-        private void AddEmpireParentNarrativeMenuOptions(NarrativeMenu narrativeMenu)
-        {
         }
 
         private void GetEmpireLandlordNarrativeOptionArgs(NarrativeMenuOptionArgs args)
