@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="Français" />
+  </tags>
+  <strings>
+    <!-- aserai -->
+    <string id="YATO_ArB"      text="Béduin Aserai" />
+    <string id="YATO_AMF"      text="Fantassin Mamluk Aserai" />
+    <string id="YATO_AMS"      text="Soldat Mamluk Aserai" />
+    <string id="YATO_AMI"      text="Infantrie Mamluk Aserai" />
+    <string id="YATO_AMVI"     text="Infantrie Vétérante Mamluk Aserai" />
+    <string id="YATO_AMC"      text="Camellerie Mamluk Aserai" />
+    <string id="YATO_AMHC"     text="Cammellerie Mamluk Lourde Aserai" />
+    <string id="YATO_AS"       text="tirailleur Aserai" />
+    <string id="YATO_AK"       text="Kawas Aserai" />
+    <string id="YATO_AVK"      text="Kawas Veteran Aserai" />
+    <string id="YATO_AMK"      text="Maitre Kawas Aserai" />
+    <string id="YATO_AB"       text="Beyzade Aserai" />
+    <string id="YATO_ATC"      text="Camellerie Tribale Aserai" />
+    <string id="YATO_AAF"      text="Azdrak Faris Aserai" />
+    <string id="YATO_AFF"      text="Foddi Faris Aserai" />
+    <string id="YATO_AZF"      text="Zehabi Faris Aserai" />
+    <!-- battania -->
+    <string id="YATO_BrF"      text="Fyrd Battanien" />
+    <string id="YATO_BW"       text="Sauvageon Battanien" />
+    <string id="YATO_BK"       text="Kern Battanien" />
+    <string id="YATO_BFx"      text="Falxman Battanien" />
+    <string id="YATO_BVFx"     text="Falxman Vétéran Battanien" />
+    <string id="YATO_BSc"      text="Éclaireur Battanien" />
+    <string id="YATO_BMS"      text="Éclaireur Monté Battanien" />
+    <string id="YATO_BH"       text="Cavalier Battanien" />
+    <string id="YATO_BCW"      text="Guerrier de Clan Battanien" />
+    <string id="YATO_BVW"      text="Guerrier Vétéran Battanien" />
+    <string id="YATO_BR"       text="Riglach Battanien" />
+    <string id="YATO_BES"      text="Fil d&apos;Earl Battanien" />
+    <string id="YATO_BFi"      text="Fian Battanien" />
+    <string id="YATO_BO"       text="Assermenté Battanien" />
+    <string id="YATO_BG"       text="Galloglass Battanien" />
+    <string id="YATO_BSw"      text="Swaethwr Battanien" />
+    <!-- empire -->
+    <string id="YATO_IR"       text="Recrue Impériale" />
+    <string id="YATO_II"       text="Infantrie Impériale" />
+    <string id="YATO_IL"       text="Legionnaire Impérial" />
+    <string id="YATO_IVL"      text="Legionnaire Veteran Impérial" />
+    <string id="YATO_IEL"      text="Legionnaire d&apos;Élite Impérial" />
+    <string id="YATO_ICv"      text="Cavalier Impérial" />
+    <string id="YATO_IVCv"     text="Cavalier Veteran Impérial" />
+    <string id="YATO_IM"       text="Menavlion Impérial" />
+    <string id="YATO_IVM"      text="Menavlion Veteran Impérial" />
+    <string id="YATO_IEM"      text="Menavlion d&apos;Élite Impérial" />
+    <string id="YATO_IS"       text="Tirailleur Impérial" />
+    <string id="YATO_IA"       text="Archer Impérial" />
+    <string id="YATO_IVA"      text="Archer Veteran Impérial" />
+    <string id="YATO_IEA"      text="Archer d&apos;Élite Impérial" />
+    <string id="YATO_IHA"      text="Archer Monté Impérial" />
+    <string id="YATO_IVHA"     text="Archer Monté Vétéran Impérial" />
+    <string id="YATO_INS"      text="Fils de Notable Impérial" />
+    <string id="YATO_IE"       text="Equites Impérial" />
+    <string id="YATO_ICat"     text="Cataphracte Impérial" />
+    <string id="YATO_IVCat"    text="Cataphracte Vétéran Impérial" />
+    <string id="YATO_IECat"    text="Cataphracte d&apos;Élite Impérial" />
+    <!-- khuzait -->
+    <string id="YATO_KrT"      text="Homme de Tribue Khuzait" />
+    <string id="YATO_KN"       text="Nomade Khuzait" />
+    <string id="YATO_KH"       text="Cavalier Khuzait" />
+    <string id="YATO_KL"       text="Lancier Khuzait" />
+    <string id="YATO_KHL"      text="Lancier Lourd Khuzait" />
+    <string id="YATO_KHA"      text="Archer Monté Khuzait" />
+    <string id="YATO_KVHA"     text="Archer Monté Vétéran Khuzait" />
+    <string id="YATO_KF"       text="Fantassin Khuzait" />
+    <string id="YATO_KBw"      text="Archer Khuzait" />
+    <string id="YATO_KM"       text="Tireur de Précision Khuzait" />
+    <string id="YATO_KKS"      text="Fils de Khan Khuzait" />
+    <string id="YATO_KKh"      text="Kheshig Khuzait" />
+    <string id="YATO_KKo"      text="Korchi Khuzait" />
+    <string id="YATO_KB"       text="Bahadur Khuzait" />
+    <string id="YATO_KD"       text="Darkhan Khuzait" />
+    <!-- sturgia -->
+    <string id="YATO_SrV"      text="Volontaire Sturgien" />
+    <string id="YATO_SF"       text="Combattant Sturgien" />
+    <string id="YATO_SWa"      text="Guerrier Sturgien" />
+    <string id="YATO_SS"       text="Lancier Sturgien" />
+    <string id="YATO_SHS"      text="Lancier Lourd Sturgien" />
+    <string id="YATO_SLB"      text="Briseur de ligne Sturgien" />
+    <string id="YATO_SA"       text="Guerrier à la Hache Sturgien" />
+    <string id="YATO_SHA"      text="Guerrier Lourd à la Hache Sturgien" />
+    <string id="YATO_SWo"      text="Tirailleur Sturgien" />
+    <string id="YATO_SAr"      text="Archer Sturgien" />
+    <string id="YATO_SVA"      text="Archer Vétéran Sturgien" />
+    <string id="YATO_SO"       text="Otrok Sturgien" />
+    <string id="YATO_SC"       text="Companion Sturgien" />
+    <string id="YATO_SD"       text="Druzhinnik Sturgien" />
+    <string id="YATO_SG"       text="Grid Sturgien" />
+    <string id="YATO_SM"       text="Malaia Sturgien" />
+    <!-- vlandia -->
+    <string id="YATO_VrL"      text="Conscrit Vlandais" />
+    <string id="YATO_VLI"      text="Infantrie Conscrite Vlandaise" />
+    <string id="YATO_VI"       text="Infantrie Vlandaise" />
+    <string id="YATO_VSe"      text="Sergeant Vlandais" />
+    <string id="YATO_VH"       text="Soldat Monté Vlandais" />
+    <string id="YATO_VCo"      text="Coursier Vlandais" />
+    <string id="YATO_VCa"      text="Cavalier Vlandais" />
+    <string id="YATO_VLC"      text="Arbaletrier Conscrit Vlandais" />
+    <string id="YATO_VCr"      text="Arbaletrier Vlandais" />
+    <string id="YATO_VVC"      text="Arbaletrier Veteran Vlandais" />
+    <string id="YATO_VSh"      text="Tireur de Précision Vlandais" />
+    <string id="YATO_VrE"      text="Ecuyer Vlandais" />
+    <string id="YATO_VAu"      text="Auxilliaire Vlandais" />
+    <string id="YATO_VHA"      text="Homme d&apos;Arme Vlandais" />
+    <string id="YATO_VCh"      text="Chevalier Vlandais" />
+    <string id="YATO_VChB"     text="Chevalier Banneret Vlandais" />
+    <!-- Mercs -->
+    <string id="YATO_MF"       text="Fantassin Mercenaire" />
+    <string id="YATO_MP"       text="Piquier Mercenaire" />
+    <string id="YATO_MI"       text="Infantrie Mercenaire" />
+    <string id="YATO_MS"       text="Epeiste Mercenaire" />
+    <string id="YATO_MH"       text="Soldat Monté Mercenaire" />
+    <string id="YATO_MC"       text="Cavalier Mercenaire" />
+    <string id="YATO_MCr"      text="Arbaletrier Mercenaire" />
+    <string id="YATO_MA"       text="Arbalestrier Veteran Mercenaire" />
+    <string id="YATO_MM"       text="Tireur de Précision Mercenaire" />
+    <string id="YATO_SSF"      text="Suiveuse Épéiste" />
+    <string id="YATO_SSH"      text="Chasseuse Épéiste" />
+    <string id="YATO_SSD"      text="Defendeuse Épéiste" />
+    <string id="YATO_SSS"      text="Sœur Épéiste" />
+    <string id="YATO_SlH"      text="Chasseur d&apos;Esclave" />
+    <string id="YATO_SlD"      text="Meneur d&apos;Esclave" />
+    <string id="YATO_SlC"      text="Ecraseur d&apos;Esclave" />
+    <string id="YATO_SlM"      text="Maitre d&apos;Esclave" />
+    <!-- Mercs Legacy -->
+    <string id="YATO_MLMA"     text="Arbaletrier Milesien" />
+    <string id="YATO_MLMS"     text="Tireur d&apos;Élite Milesien" />
+    <string id="YATO_MLVM"     text="Mercenaire Varyag" />
+    <string id="YATO_MLVG"     text="Guard Varyag" />
+    <string id="YATO_MLB"      text="Bogatyr" />
+    <string id="YATO_MLBC"     text="Champion Bogatyr" />
+    <string id="YATO_MLSS"     text="Sœur Au Bouclier" />
+    <string id="YATO_MLSM"     text="Vierge Au Bouclier" />
+    <string id="YATO_MLIG"     text="Exécuteur Immortel" />
+    <string id="YATO_MLIPG"    text="Exécuteur d&apos;Elite Executioner" />
+    <string id="YATO_MLH"      text="Hashashin" />
+    <string id="YATO_MLHE"     text="Expert Hashashin" />
+    <string id="YATO_MLSQ"     text="Selji Qanqli" />
+    <string id="YATO_MLST"     text="Selji Torguud" />
+    <string id="YATO_MLO"      text="Outrider" />
+    <string id="YATO_MLOV"     text="Vétéran Outrider" />
+    <string id="YATO_MLWL"     text="Archer Walais" />
+    <string id="YATO_MLWM"     text="Tireur de Précision Walais" />
+    <string id="YATO_MLMV"     text="Voulgier Mercenaire" />
+    <string id="YATO_MLMB"     text="Hallebardier Mercenaire" />
+  </strings>
+</base>
