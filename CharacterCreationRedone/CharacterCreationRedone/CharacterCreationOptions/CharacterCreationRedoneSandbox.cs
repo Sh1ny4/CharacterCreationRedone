@@ -2737,102 +2737,84 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
 
         public readonly IReadOnlyDictionary<string, string> _occupationToEquipmentMapping = new Dictionary<string, string>
-    {
         {
-            "retainer",
-            "retainer"
-        },
-        {
-            "bard",
-            "bard"
-        },
-        {
-            "hunter",
-            "hunter"
-        },
-        {
-            "farmer",
-            "farmer"
-        },
-        {
-            "herder",
-            "herder"
-        },
-        {
-            "healer",
-            "healer"
-        },
-        {
-            "mercenary",
-            "mercenary"
-        },
-        {
-            "infantry",
-            "infantry"
-        },
-        {
-            "skirmisher",
-            "skirmisher"
-        },
-        {
-            "kern",
-            "kern"
-        },
-        {
-            "guard",
-            "guard"
-        },
-        {
-            "retainer_urban",
-            "retainer"
-        },
-        {
-            "mercenary_urban",
-            "mercenary"
-        },
-        {
-            "merchant_urban",
-            "merchant"
-        },
-        {
-            "vagabond_urban",
-            "vagabond"
-        },
-        {
-            "artisan_urban",
-            "artisan"
-        },
-        {
-            "physician_urban",
-            "physician"
-        },
-        {
-            "healer_urban",
-            "healer"
-        },
-        {
-            "bard_urban",
-            "bard"
-        }
-};
-
-        public const int ChildhoodAge = 7;
-
-        public const int EducationAge = 12;
-
-        public const int YouthAge = 17;
-
-        public const int AccomplishmentAge = 20;
-
-        public const int ParentAge = 33;
-
-        public const int YoungAdultAge = 20;
-
-        public const int AdultAge = 30;
-
-        public const int MiddleAge = 40;
-
-        public const int ElderAge = 50;
+            {
+                "retainer",
+                "retainer"
+            },
+            {
+                "bard",
+                "bard"
+            },
+            {
+                "hunter",
+                "hunter"
+            },
+            {
+                "farmer",
+                "farmer"
+            },
+            {
+                "herder",
+                "herder"
+            },
+            {
+                "healer",
+                "healer"
+            },
+            {
+                "mercenary",
+                "mercenary"
+            },
+            {
+                "infantry",
+                "infantry"
+            },
+            {
+                "skirmisher",
+                "skirmisher"
+            },
+            {
+                "kern",
+                "kern"
+            },
+            {
+                "guard",
+                "guard"
+            },
+            {
+                "retainer_urban",
+                "retainer"
+            },
+            {
+                "mercenary_urban",
+                "mercenary"
+            },
+            {
+                "merchant_urban",
+                "merchant"
+            },
+            {
+                "vagabond_urban",
+                "vagabond"
+            },
+            {
+                "artisan_urban",
+                "artisan"
+            },
+            {
+                "physician_urban",
+                "physician"
+            },
+            {
+                "healer_urban",
+                "healer"
+            },
+            {
+                "bard_urban",
+                "bard"
+            }
+        };
 
         new public const int FocusToAddYouthStart = 2;
 
