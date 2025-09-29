@@ -133,9 +133,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Polearm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
         }
 
         public bool EmpireLandlordNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -159,9 +159,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
         }
 
         public bool EmpireUrbanNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -185,9 +185,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Polearm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
         }
 
         public bool EmpireFarmerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -211,9 +211,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Crossbow };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
         }
 
         public bool EmpireArtisanNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -237,9 +237,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
         }
 
         public bool EmpireHunterNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -263,9 +263,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
         }
 
         public bool EmpireVagabondNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -306,9 +306,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Polearm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
         }
 
         public bool VlandiaRetainerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -332,9 +332,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
         }
 
         public bool VlandiaMerchantNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -358,9 +358,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Crossbow };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
         }
 
         public bool VlandiaFarmerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -384,9 +384,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.TwoHanded };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
         }
 
         public bool VlandiaBlacksmithNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -410,9 +410,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Crossbow };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
         }
 
         public bool VlandiaHunterNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -436,9 +436,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Crossbow };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
         }
 
         public bool VlandiaMercenaryNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -462,9 +462,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.TwoHanded };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
         }
 
         public bool SturgiaCompanionNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -488,9 +488,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Tactics };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
         }
 
         public bool SturgiaTraderNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -514,9 +514,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Polearm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
         }
 
         public bool SturgiaFarmerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -540,9 +540,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.OneHanded };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
         }
 
         public bool SturgiaArtisanNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -566,9 +566,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
         }
 
         public bool SturgiaHunterNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -592,9 +592,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
         }
 
         public bool SturgiaVagabondNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -619,9 +619,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Throwing };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
         }
 
         public bool AseraiKinsfolkNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -645,9 +645,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Polearm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
         }
 
         public bool AseraiSlaveNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -671,9 +671,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
         }
 
         public bool AseraiPhysicianNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -697,9 +697,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.OneHanded };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
         }
 
         public bool AseraiFarmerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -723,9 +723,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
         }
 
         public bool AseraiHerderNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -749,9 +749,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Polearm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
         }
 
         public bool AseraiArtisanNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -775,9 +775,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Bow };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
         }
 
         public bool BattaniaRetainerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -801,9 +801,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
         }
 
         public bool BattaniaHealerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -827,9 +827,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Throwing };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
         }
 
         public bool BattaniaFarmerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -853,9 +853,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.TwoHanded };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
         }
 
         public bool BattaniaArtisanNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -879,9 +879,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Tactics };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
         }
 
         public bool BattaniaHunterNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -905,9 +905,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
         }
 
         public bool BattaniaBardNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -931,9 +931,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Polearm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
         }
 
         public bool KhuzaitRetainerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -957,9 +957,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
         }
 
         public bool KhuzaitMerchantNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -983,9 +983,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
         }
 
         public bool KhuzaitHerderNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1009,9 +1009,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Throwing };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
         }
 
         public bool KhuzaitFarmerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1035,9 +1035,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
         }
 
         public bool KhuzaitHealerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1061,9 +1061,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
         }
 
         public bool KhuzaitNomadHerderNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1110,9 +1110,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Leadership, DefaultSkills.Tactics };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
         }
 
         public bool ChildhoodLeadershipOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1135,9 +1135,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
         }
 
         public bool ChildhoodBrawnOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1160,9 +1160,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Bow };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
         }
 
         public bool ChildhoodDetailOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1185,9 +1185,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Engineering, DefaultSkills.Trade };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
         }
 
         public bool ChildhoodSmartOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1210,9 +1210,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Charm, DefaultSkills.Leadership };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
         }
 
         public bool ChildhoodLeaderOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1235,9 +1235,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Medicine };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
         }
 
         public bool ChildhoodHorseOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1290,9 +1290,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Throwing };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
         }
 
         public bool EducationHerderOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1318,9 +1318,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Crafting };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
         }
 
         public bool EducationSmithOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1346,9 +1346,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Engineering };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
         }
 
         public bool EducationEngineerOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1374,9 +1374,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Scouting };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
         }
 
         public bool EducationDoctorOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1402,9 +1402,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Tactics };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
         }
 
         public bool EducationHunterOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1430,9 +1430,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
         }
 
         public bool EducationMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1458,9 +1458,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Tactics };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
         }
 
         public bool EducationWatcherOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1486,9 +1486,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.OneHanded };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
         }
 
         public bool EducationGangerOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1514,9 +1514,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Crafting };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
         }
 
         public bool EducationDockerOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1542,9 +1542,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
         }
 
         public bool EducationMarketerOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1570,9 +1570,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Engineering, DefaultSkills.Leadership };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
         }
 
         public bool EducationTutorOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1598,9 +1598,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Steward };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
         }
 
         public bool EducationPoorHorserOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1672,9 +1672,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Steward, DefaultSkills.Tactics };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
         }
 
         public bool YouthStaffOneOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1705,9 +1705,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Charm, DefaultSkills.Tactics };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
         }
 
         public bool YouthGroomOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1733,9 +1733,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Steward, DefaultSkills.Tactics };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
         }
 
         public bool YouthServantOneOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1766,9 +1766,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Polearm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
         }
 
         public bool YouthCavalryOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1794,9 +1794,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Polearm };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
         }
 
         public bool YouthHearthOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1822,9 +1822,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crossbow, DefaultSkills.Engineering };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
         }
 
         public bool YouthGuardHighRegisterOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1850,9 +1850,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Engineering };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
         }
 
         public bool YouthGuardLowRegisterOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1878,9 +1878,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Engineering };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
         }
 
         public bool YouthGuardGarrisonRegisterOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1906,9 +1906,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crossbow, DefaultSkills.Engineering };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
         }
 
         public bool YouthGuardEmpireRegisterOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1934,9 +1934,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Bow };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
         }
 
         public bool YouthRiderHighRegisterOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1962,9 +1962,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Bow };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
         }
 
         public bool YouthRiderLowRegisterOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -1990,9 +1990,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.OneHanded };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
         }
 
         public bool YouthInfantryOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -2018,9 +2018,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Throwing, DefaultSkills.OneHanded };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
         }
 
         public bool YouthSkirmisherOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -2046,9 +2046,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Throwing, DefaultSkills.OneHanded };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
         }
 
         public bool YouthKernOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -2074,9 +2074,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
         }
 
         public bool YouthCampOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -2102,18 +2102,18 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Charm, DefaultSkills.Scouting };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
         }
 
         public void GetEnvoysGuardSecondOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Charm, DefaultSkills.Scouting };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
         }
 
         public bool EnvoysGuardFirstOptionOnCondition(CharacterCreationManager characterCreationManager)
@@ -2172,7 +2172,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             List<NarrativeMenuCharacter> list = new List<NarrativeMenuCharacter>();
             list.Add(new NarrativeMenuCharacter("player_adulthood_character", bodyProperties, CharacterObject.PlayerCharacter.Race, CharacterObject.PlayerCharacter.IsFemale));
             list.Add(new NarrativeMenuCharacter("narrative_character_horse"));
-            MBTextManager.SetTextVariable("EXP_VALUE", this._skillLevelToAdd);
+            MBTextManager.SetTextVariable("EXP_VALUE", 10);
             NarrativeMenu narrativeMenu = new NarrativeMenu("narrative_adulthood_menu", "narrative_youth_menu", "narrative_age_selection_menu", new TextObject("{=MafIe9yI}Young Adulthood", null), new TextObject("{=4WYY0X59}Before you set out for a life of adventure, your biggest achievement was...", null), list, new NarrativeMenu.GetNarrativeMenuCharacterArgsDelegate(this.GetAdultMenuNarrativeMenuCharacterArgs));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("adulthood_defeated_enemy_option", new TextObject("{=8bwpVpgy}you defeated an enemy in battle.", null), new TextObject("{=1IEroJKs}Not everyone who musters for the levy marches to war, and not everyone who goes on campaign sees action. You did both, and you also took down an enemy warrior in direct one-to-one combat, in the full view of your comrades.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetAdulthoodDefeatedEnemyOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.AdulthoodDefeatedEnemyOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.AdulthoodDefeatedEnemyOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("adulthood_manhunt_option", new TextObject("{=mP3uFbcq}you led a successful manhunt.", null), new TextObject("{=4f5xwzX0}When your community needed to organize a posse to pursue horse thieves, you were the obvious choice. You hunted down the raiders, surrounded them and forced their surrender, and took back your stolen property.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetAdulthoodManhuntOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.AdulthoodManhuntOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.AdulthoodManhuntOptionOnSelect), null));
@@ -2193,9 +2193,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.TwoHanded };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
             TraitObject[] affectedTraits = new TraitObject[] { DefaultTraits.Valor };
             args.SetAffectedTraits(affectedTraits);
             args.SetLevelToTraits(1);
@@ -2222,9 +2222,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Leadership };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
             TraitObject[] affectedTraits = new TraitObject[] { DefaultTraits.Calculating };
             args.SetAffectedTraits(affectedTraits);
             args.SetLevelToTraits(1);
@@ -2251,9 +2251,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Leadership };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
             TraitObject[] affectedTraits = new TraitObject[] { DefaultTraits.Calculating };
             args.SetAffectedTraits(affectedTraits);
             args.SetLevelToTraits(1);
@@ -2280,9 +2280,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Leadership };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
             TraitObject[] affectedTraits = new TraitObject[] { DefaultTraits.Valor };
             args.SetAffectedTraits(affectedTraits);
             args.SetLevelToTraits(1);
@@ -2309,9 +2309,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Leadership };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
             TraitObject[] affectedTraits = new TraitObject[] { DefaultTraits.Calculating };
             args.SetAffectedTraits(affectedTraits);
             args.SetLevelToTraits(1);
@@ -2338,9 +2338,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Crafting };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
             TraitObject[] affectedTraits = new TraitObject[] { DefaultTraits.Calculating };
             args.SetAffectedTraits(affectedTraits);
             args.SetLevelToTraits(1);
@@ -2366,9 +2366,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Crafting };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
             TraitObject[] affectedTraits = new TraitObject[] { DefaultTraits.Calculating };
             args.SetAffectedTraits(affectedTraits);
             args.SetLevelToTraits(1);
@@ -2395,9 +2395,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Bow };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
             TraitObject[] affectedTraits = new TraitObject[] { DefaultTraits.Valor };
             args.SetAffectedTraits(affectedTraits);
             args.SetLevelToTraits(1);
@@ -2424,9 +2424,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Crossbow };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
             args.SetRenownToAdd(5);
         }
 
@@ -2450,9 +2450,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Roguery };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
             TraitObject[] affectedTraits = new TraitObject[] { DefaultTraits.Valor };
             args.SetAffectedTraits(affectedTraits);
             args.SetLevelToTraits(1);
@@ -2479,9 +2479,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Roguery };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
             TraitObject[] affectedTraits = new TraitObject[] { DefaultTraits.Valor };
             args.SetAffectedTraits(affectedTraits);
             args.SetLevelToTraits(1);
@@ -2508,9 +2508,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Charm, DefaultSkills.Steward };
             args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(this._focusToAdd);
-            args.SetLevelToSkills(this._skillLevelToAdd);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
             TraitObject[] affectedTraits = new TraitObject[] { DefaultTraits.Mercy, DefaultTraits.Generosity, DefaultTraits.Honor };
             args.SetAffectedTraits(affectedTraits);
             args.SetLevelToTraits(1);
@@ -2546,7 +2546,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
 
         public void AddAgeSelectionMenu(CharacterCreationManager characterCreationManager)
         {
-            MBTextManager.SetTextVariable("EXP_VALUE", this._skillLevelToAdd);
+            MBTextManager.SetTextVariable("EXP_VALUE", 10);
             BodyProperties bodyProperties = CharacterObject.PlayerCharacter.GetBodyProperties(CharacterObject.PlayerCharacter.Equipment, -1);
             bodyProperties = FaceGen.GetBodyPropertiesWithAge(ref bodyProperties, (float)characterCreationManager.CharacterCreationContent.StartingAge);
             List<NarrativeMenuCharacter> list = new List<NarrativeMenuCharacter>();
