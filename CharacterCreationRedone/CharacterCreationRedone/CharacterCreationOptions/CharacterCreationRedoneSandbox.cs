@@ -19,9 +19,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         {
             characterCreationManager.CharacterCreationContent.ChangeReviewPageDescription(new TextObject("{=W6pKpEoT}You prepare to set off for a grand adventure in Calradia! Here is your character. Continue if you are ready, or go back to make changes.", null));
             __instance.AddParentsMenu(characterCreationManager);
-            __instance.AddChildhoodMenu(characterCreationManager);
             __instance.AddEducationMenu(characterCreationManager);
-            __instance.AddYouthMenu(characterCreationManager);
+            __instance.FavoriteIdiomMenu(characterCreationManager);
+            __instance.StartInLifeMenu(characterCreationManager);
             __instance.AddReasonMenu(characterCreationManager);
             __instance.AddAgeSelectionMenu(characterCreationManager);
             return false;
@@ -1086,44 +1086,55 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
 
-        public List<NarrativeMenuCharacterArgs> GetChildhoodMenuNarrativeMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
+        public List<NarrativeMenuCharacterArgs> AddEducationMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
         {
             List<NarrativeMenuCharacterArgs> list = new List<NarrativeMenuCharacterArgs>();
             string playerChildhoodAgeEquipmentId = this.GetPlayerChildhoodAgeEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             list.Add(new NarrativeMenuCharacterArgs("player_childhood_character", 7, playerChildhoodAgeEquipmentId, "act_childhood_schooled", "spawnpoint_player_1", "", "", null, true, CharacterObject.PlayerCharacter.IsFemale));
             return list;
         }
-        public void AddChildhoodMenu(CharacterCreationManager characterCreationManager)
+        new public void AddEducationMenu(CharacterCreationManager characterCreationManager)
         {
             List<NarrativeMenuCharacter> list = new List<NarrativeMenuCharacter>();
             BodyProperties bodyProperties = CharacterObject.PlayerCharacter.GetBodyProperties(CharacterObject.PlayerCharacter.Equipment, -1);
             bodyProperties = FaceGen.GetBodyPropertiesWithAge(ref bodyProperties, 7f);
             list.Add(new NarrativeMenuCharacter("player_childhood_character", bodyProperties, CharacterObject.PlayerCharacter.Race, CharacterObject.PlayerCharacter.IsFemale));
-            NarrativeMenu narrativeMenu = new NarrativeMenu("narrative_childhood_menu", "narrative_parent_menu", "narrative_education_menu", new TextObject("{=8Yiwt1z6}Early Childhood", null), new TextObject("{=character_creation_content_16}As a child you were noted for...", null), list, new NarrativeMenu.GetNarrativeMenuCharacterArgsDelegate(this.GetChildhoodMenuNarrativeMenuCharacterArgs));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("childhood_leadership_option", new TextObject("{=kmM68Qx4}your leadership skills.", null), new TextObject("{=FfNwXtii}If the wolf pup gang of your early childhood had an alpha, it was definitely you. All the other kids followed your lead as you decided what to play and where to play, and led them in games and mischief.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetChildhoodLeadershipOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.ChildhoodLeadershipOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.ChildhoodLeadershipOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("childhood_brawn_option", new TextObject("{=5HXS8HEY}your brawn.", null), new TextObject("{=YKzuGc54}You were big, and other children looked to have you around in any scrap with children from a neighboring village. You pushed a plough and threw an axe like an adult.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetChildhoodBrawnOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.ChildhoodBrawnOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.ChildhoodBrawnOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("childhood_detail_option", new TextObject("{=QrYjPUEf}your attention to detail.", null), new TextObject("{=JUSHAPnu}You were quick on your feet and attentive to what was going on around you. Usually you could run away from trouble, though you could give a good account of yourself in a fight with other children if cornered.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetChildhoodDetailOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.ChildhoodDetailOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.ChildhoodDetailOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("childhood_smart_option", new TextObject("{=Y3UcaX74}your aptitude for numbers.", null), new TextObject("{=DFidSjIf}Most children around you had only the most rudimentary education, but you lingered after class to study letters and mathematics. You were fascinated by the marketplace - weights and measures, tallies and accounts, the chatter about profits and losses.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetChildhoodSmartOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.ChildhoodSmartOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.ChildhoodSmartOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("childhood_leader_option", new TextObject("{=GEYzLuwb}your way with people.", null), new TextObject("{=w2TEQq26}You were always attentive to other people, good at guessing their motivations. You studied how individuals were swayed, and tried out what you learned from adults on your friends.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetChildhoodLeaderOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.ChildhoodLeaderOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.ChildhoodLeaderOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("childhood_horse_option", new TextObject("{=MEgLE2kj}your skill with horses.", null), new TextObject("{=ngazFofr}You were always drawn to animals, and spent as much time as possible hanging out in the village stables. You could calm horses, and were sometimes called upon to break in new colts. You learned the basics of veterinary arts, much of which is applicable to humans as well.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetChildhoodHorseOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.ChildhoodHorseOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.ChildhoodHorseOptionOnSelect), null));
+            NarrativeMenu narrativeMenu = new NarrativeMenu("narrative_childhood_menu", "narrative_parent_menu", "narrative_education_menu", new TextObject("{=!}Received education", null), new TextObject("{=!}Your parents wanted you to...", null), list, new NarrativeMenu.GetNarrativeMenuCharacterArgsDelegate(this.AddEducationMenuCharacterArgs));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_Faris", new TextObject("{=CCR_Education_Choice_Faris}become a faris.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationFarisOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_Hearthguard", new TextObject("{=CCR_Education_Choice_Hearthguard}enter the hearthguard.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationHearthguardOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationHearthguardOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationHearthguardOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_Cataphract", new TextObject("{=CCR_Education_Choice_Cataphract}become a cataphract.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationCataphractOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationCataphractOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationCataphractOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_KhanGuard", new TextObject("{=CCR_Education_Choice_KhanGuard}enter a khan's guard.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationKhanGuardOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationKhanGuardOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationKhanGuardOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_Druzhina", new TextObject("{=CCR_Education_Choice_Druzhina}join a druzhina.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationDruzhinaOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationDruzhinaOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationDruzhinaOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_Knight", new TextObject("{=CCR_Education_Choice_Knight}become a knight.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationKnightOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationKnightOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationKnightOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_Commander", new TextObject("{=CCR_Education_Choice_Commander}lead armies.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationCommanderOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationCommanderOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationCommanderOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_Court", new TextObject("{=CCR_Education_Choice_Court}be part of the court.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationCourtOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationCourtOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationCourtOptionOnSelect), null));
+
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_trade", new TextObject("{=CCR_Education_Choice_trade}become a merchant.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationMerchantOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_crafting", new TextObject("{=CCR_Education_Choice_crafting}learn a trade.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationCraftOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationCraftOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationCraftOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_scholar", new TextObject("{=CCR_Education_Choice_scholar}become a scholar.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationScholarOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationScholarOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationScholarOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_religious", new TextObject("{=CCR_Education_Choice_religious}be a {?PLAYER.GENDER}lady{?}man{\\?} of faith.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationReligiousOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationReligiousOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationReligiousOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_farmer", new TextObject("{=CCR_Education_Choice_farmer}tend to the fields.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationFarmerOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_lady", new TextObject("{=CCR_Education_Choice_lady}become a lady in waiting.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationLadyOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationLadyOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(EducationLadyOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_defense", new TextObject("{=CCR_Education_Choice_defense}learn how to defend yourself.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationDefenseOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationDefenseOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationDefenseOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_trickery", new TextObject("{=CCR_Education_Choice_trickery}know how to trick others.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationTrickOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationTrickOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationTrickOptionOnSelect), null));
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
 
-        public void GetChildhoodLeadershipOptionArgs(NarrativeMenuOptionArgs args)
+        public void EducationFarisOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Leadership, DefaultSkills.Tactics };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Athletics, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
 
-        public bool ChildhoodLeadershipOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool EducationFarisOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return true;
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
 
-        public void ChildhoodLeadershipOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void EducationFarisOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1134,21 +1145,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetChildhoodBrawnOptionArgs(NarrativeMenuOptionArgs args)
+        public void EducationHearthguardOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
         }
 
-        public bool ChildhoodBrawnOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool EducationHearthguardOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return true;
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "battania";
         }
 
-        public void ChildhoodBrawnOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void EducationHearthguardOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1159,21 +1170,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetChildhoodDetailOptionArgs(NarrativeMenuOptionArgs args)
+        public void EducationCataphractOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Bow };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
 
-        public bool ChildhoodDetailOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool EducationCataphractOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return true;
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
 
-        public void ChildhoodDetailOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void EducationCataphractOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1184,21 +1195,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetChildhoodSmartOptionArgs(NarrativeMenuOptionArgs args)
+        public void EducationKhanGuardOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Engineering, DefaultSkills.Trade };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Polearm, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
         }
 
-        public bool ChildhoodSmartOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool EducationKhanGuardOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return true;
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
 
-        public void ChildhoodSmartOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void EducationKhanGuardOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1209,21 +1220,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetChildhoodLeaderOptionArgs(NarrativeMenuOptionArgs args)
+        public void EducationDruzhinaOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Charm, DefaultSkills.Leadership };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
 
-        public bool ChildhoodLeaderOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool EducationDruzhinaOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return true;
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
 
-        public void ChildhoodLeaderOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void EducationDruzhinaOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1234,21 +1245,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetChildhoodHorseOptionArgs(NarrativeMenuOptionArgs args)
+        public void EducationKnightOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Medicine };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Athletics, DefaultSkills.Polearm };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
 
-        public bool ChildhoodHorseOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool EducationKnightOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return true;
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
 
-        public void ChildhoodHorseOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void EducationKnightOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1258,11 +1269,261 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
+        public void EducationCommanderOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Leadership, DefaultSkills.Tactics, DefaultSkills.Charm };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+        }
+
+        public bool EducationCommanderOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation) && !Hero.MainHero.IsFemale;
+        }
+
+        public void EducationCommanderOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_childhood_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_leader");
+                }
+            }
+        }
+
+        public void EducationCourtOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Charm, DefaultSkills.Roguery, DefaultSkills.Tactics };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+        }
+
+        public bool EducationCourtOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation) && Hero.MainHero.IsFemale;
+        }
+
+        public void EducationCourtOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_childhood_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                }
+            }
+        }
+
+        public void EducationMerchantOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm, DefaultSkills.Steward };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+        }
+
+        public bool EducationMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+
+        public void EducationMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_childhood_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_memory");
+                }
+            }
+        }
+
+        public void EducationCraftOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Engineering, DefaultSkills.Trade, DefaultSkills.Crafting };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+        }
+
+        public bool EducationCraftOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+
+        public void EducationCraftOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_childhood_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_numbers");
+                }
+            }
+        }
+
+        public void EducationScholarOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Engineering, DefaultSkills.Tactics };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
+        }
+
+        public bool EducationScholarOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+
+        public void EducationScholarOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_childhood_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_manners");
+                }
+            }
+        }
+
+        public void EducationReligiousOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Steward, DefaultSkills.Medicine, DefaultSkills.Trade };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
+        }
+
+        public bool EducationReligiousOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+
+        public void EducationReligiousOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_childhood_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_animals");
+                }
+            }
+        }
+        public void EducationFarmerOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Medicine, DefaultSkills.Athletics};
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+        }
+
+        public bool EducationFarmerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+
+        public void EducationFarmerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_childhood_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_leader");
+                }
+            }
+        }
+
+        public void EducationLadyOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm, DefaultSkills.Steward };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+        }
+
+        public bool EducationLadyOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+
+        public void EducationLadyOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_childhood_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                }
+            }
+        }
+
+        public void EducationDefenseOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Athletics, DefaultSkills.Roguery };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+        }
+
+        public bool EducationDefenseOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+
+        public void EducationDefenseOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_childhood_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_memory");
+                }
+            }
+        }
+
+        public void EducationTrickOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Charm, DefaultSkills.OneHanded };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+        }
+
+        public bool EducationTrickOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+
+        public void EducationTrickOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_childhood_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_numbers");
+                }
+            }
+        }
+
+
 
         /// <summary>
         /// Education menu
         /// </summary>
-        public List<NarrativeMenuCharacterArgs> GetEducationMenuNarrativeMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
+        public List<NarrativeMenuCharacterArgs> FavoriteIdiomMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
         {
             List<NarrativeMenuCharacterArgs> list = new List<NarrativeMenuCharacterArgs>();
             string playerEducationAgeEquipmentId = this.GetPlayerEducationAgeEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -1270,43 +1531,49 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             return list;
         }
 
-        new public void AddEducationMenu(CharacterCreationManager characterCreationManager)
+        public void FavoriteIdiomMenu(CharacterCreationManager characterCreationManager)
         {
             BodyProperties bodyProperties = CharacterObject.PlayerCharacter.GetBodyProperties(CharacterObject.PlayerCharacter.Equipment, -1);
             bodyProperties = FaceGen.GetBodyPropertiesWithAge(ref bodyProperties, 12f);
             List<NarrativeMenuCharacter> list = new List<NarrativeMenuCharacter>();
             list.Add(new NarrativeMenuCharacter("player_education_character", bodyProperties, CharacterObject.PlayerCharacter.Race, CharacterObject.PlayerCharacter.IsFemale));
-            NarrativeMenu narrativeMenu = new NarrativeMenu("narrative_education_menu", "narrative_childhood_menu", "narrative_youth_menu", new TextObject("{=rcoueCmk}Adolescence", null), new TextObject("{=WYvnWcXQ}Like all village children you helped out in the fields. You also...", null), list, new NarrativeMenu.GetNarrativeMenuCharacterArgsDelegate(this.GetEducationMenuNarrativeMenuCharacterArgs));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_herder_option", new TextObject("{=RKVNvimC}herded the sheep.", null), new TextObject("{=KfaqPpbK}You went with other fleet-footed youths to take the villages' sheep, goats or cattle to graze in pastures near the village. You were in charge of chasing down stray beasts, and always kept a big stone on hand to be hurled at lurking predators if necessary.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationHerderOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationHerderOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationHerderOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_smith_option", new TextObject("{=bTKiN0hr}worked in the village smithy.", null), new TextObject("{=y6j1bJTH}You were apprenticed to the local smith. You learned how to heat and forge metal, hammering for hours at a time until your muscles ached.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationSmithOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationSmithOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationSmithOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_engineer_option", new TextObject("{=tI8ZLtoA}repaired projects.", null), new TextObject("{=6LFj919J}You helped dig wells, rethatch houses, and fix broken plows. You learned about the basics of construction, as well as what it takes to keep a farming community prosperous.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationEngineerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationEngineerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationEngineerOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_doctor_option", new TextObject("{=TRwgSLD2}gathered herbs in the wild.", null), new TextObject("{=9ks4u5cH}You were sent by the village healer up into the hills to look for useful medicinal plants. You learned which herbs healed wounds or brought down a fever, and how to find them.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationDoctorOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationDoctorOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationDoctorOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_hunter_option", new TextObject("{=T7m7ReTq}hunted small game.", null), new TextObject("{=RuvSk3QT}You accompanied a local hunter as he went into the wilderness, helping him set up traps and catch small animals.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationHunterOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationHunterOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationHunterOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_merchant_option", new TextObject("{=qAbMagWq}sold product at the market.", null), new TextObject("{=DIgsfYfz}You took your family's goods to the nearest town to sell your produce and buy supplies. It was hard work, but you enjoyed the hubbub of the marketplace.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationMerchantOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_watcher_option", new TextObject("{=go7Yu7KS}watched the militia training.", null), new TextObject("{=qnqdEJOv}You watched the town's watch practice shooting and perfect their plans to defend the walls in case of a siege.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationWatcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationWatcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationWatcherOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_ganger_option", new TextObject("{=gAjvAGTa}hung out with the gangs in the alleys.", null), new TextObject("{=1SUTcF0J}The gang leaders who kept watch over the slums of Calradian cities were always in need of poor youth to run messages and back them up in turf wars, while thrill-seeking merchants' sons and daughters sometimes slummed it in their company as well.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationGangerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationGangerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationGangerOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_docker_option", new TextObject("{=QVVCgajg}helped at building sites.", null), new TextObject("{=bhdkegZ4}All towns had their share of projects that were constantly in need of both skilled and unskilled labor. You learned how hoists and scaffolds were constructed, how planks and stones were hewn and fitted, and other skills.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationDockerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationDockerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationDockerOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_marketer_option", new TextObject("{=JTsv6PFe}worked in the markets and caravanserais.", null), new TextObject("{=rmMcwSn8}You helped your family handle their business affairs, going down to the marketplace to make purchases and oversee the arrival of caravans.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationMarketerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationMarketerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationMarketerOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_tutor_option", new TextObject("{=EMVojYzW}studied with your public tutor.", null), new TextObject("{=hXl25avg}Your family arranged for a public tutor and you took full advantage, reading voraciously on history, mathematics, and philosophy and discussing what you read with your tutor and classmates.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationTutorOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationTutorOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationTutorOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_horser_option", new TextObject("{=hin3iA2D}cared for the horses.", null), new TextObject("{=Ghz90npw}Your family owned a few horses at the town stables and you took charge of their care. Many evenings you would take them out beyond the walls and gallup through the fields, racing other youth.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationPoorHorserOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationPoorHorserOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationPoorHorserOptionOnSelect), null));
+            NarrativeMenu narrativeMenu = new NarrativeMenu("narrative_education_menu", "narrative_childhood_menu", "narrative_youth_menu", new TextObject("{=!}Idioms", null), new TextObject("{=!}Growing up, you were inculcated the saying...", null), list, new NarrativeMenu.GetNarrativeMenuCharacterArgsDelegate(this.FavoriteIdiomMenuCharacterArgs));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Afighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterAOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterAOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterAOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Bfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterBOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterBOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterBOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Efighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterEOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterEOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterEOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Kfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterKOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterKOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterKOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Sfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterSOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterSOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterSOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Vfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterVOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterVOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterVOptionOnSelect), null));
+            
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Cfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterCOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterCOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterCOptionOnSelect), null));
+            
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_healthy", new TextObject("{=CCR_Idiom_choice_healthy}A healthy mind in a healthy body.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomHealthyOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomHealthyOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomHealthyOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_prevention", new TextObject("{=CCR_Idiom_choice_prevention}Prevention is better than cure.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomPreventionOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomPreventionOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomPreventionOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_wellbegun", new TextObject("{=CCR_Idiom_choice_wellbegun}Well begun is half done.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomWellBegunOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomWellBegunOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomWellBegunOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_bold", new TextObject("{=CCR_Idiom_choice_bold}Fortune favors the bold.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomBoldOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomBoldOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomBoldOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_forwarned", new TextObject("{=CCR_Idiom_choice_forwarned}Forewarned is forearmed.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomForwarnedOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomForwarnedOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomForwarnedOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_invention", new TextObject("{=CCR_Idiom_choice_invention}Necessity is the mother of invention.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomInventionOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomInventionOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomInventionOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_armed", new TextObject("{=CCR_Idiom_choice_armed}Men with weapons never starve.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomArmedOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomArmedOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomArmedOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_conquer", new TextObject("{=CCR_Idiom_choice_conquer}To conquer without risk is to triumph without glory.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomConquerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomBoldOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomConquerOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_means", new TextObject("{=CCR_Idiom_choice_means}The end justifies the means.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomMeanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomMeanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomMeanOptionOnSelect), null));
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
 
-        public void GetEducationHerderOptionArgs(NarrativeMenuOptionArgs args)
+        public void IdiomFighterAOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Throwing };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
 
-        public bool EducationHerderOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomFighterAOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return !CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
 
-        public void EducationHerderOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomFighterAOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1320,21 +1587,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetEducationSmithOptionArgs(NarrativeMenuOptionArgs args)
+        public void IdiomFighterBOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Crafting };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
         }
 
-        public bool EducationSmithOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomFighterBOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return !CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "battania";
         }
 
-        public void EducationSmithOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomFighterBOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1348,21 +1615,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetEducationEngineerOptionArgs(NarrativeMenuOptionArgs args)
+        public void IdiomFighterEOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Engineering };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
 
-        public bool EducationEngineerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomFighterEOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return !CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
 
-        public void EducationEngineerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomFighterEOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1376,21 +1643,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetEducationDoctorOptionArgs(NarrativeMenuOptionArgs args)
+        public void IdiomFighterKOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Scouting };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
         }
 
-        public bool EducationDoctorOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomFighterKOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return !CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
 
-        public void EducationDoctorOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomFighterKOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1404,21 +1671,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetEducationHunterOptionArgs(NarrativeMenuOptionArgs args)
+        public void IdiomFighterSOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Tactics };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
 
-        public bool EducationHunterOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomFighterSOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return !CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
 
-        public void EducationHunterOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomFighterSOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1432,21 +1699,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetEducationMerchantOptionArgs(NarrativeMenuOptionArgs args)
+        public void IdiomFighterVOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
 
-        public bool EducationMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomFighterVOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return !CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
 
-        public void EducationMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomFighterVOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1460,21 +1727,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetEducationWatcherOptionArgs(NarrativeMenuOptionArgs args)
+        public void IdiomFighterCOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Tactics };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
 
-        public bool EducationWatcherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomFighterCOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+            return !(characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer);
         }
 
-        public void EducationWatcherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomFighterCOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1488,21 +1755,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetEducationGangerOptionArgs(NarrativeMenuOptionArgs args)
+        public void IdiomHealthyOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.OneHanded };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Medicine };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
 
-        public bool EducationGangerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomHealthyOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+            return true;
         }
 
-        public void EducationGangerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomHealthyOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1516,21 +1783,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetEducationDockerOptionArgs(NarrativeMenuOptionArgs args)
+        public void IdiomPreventionOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Crafting };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Steward };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
 
-        public bool EducationDockerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomPreventionOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+            return true;
         }
 
-        public void EducationDockerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomPreventionOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1544,21 +1811,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetEducationMarketerOptionArgs(NarrativeMenuOptionArgs args)
+        public void IdiomWellBegunOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Steward, DefaultSkills.Engineering };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
 
-        public bool EducationMarketerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomWellBegunOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+            return true;
         }
 
-        public void EducationMarketerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomWellBegunOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1572,21 +1839,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetEducationTutorOptionArgs(NarrativeMenuOptionArgs args)
+        public void IdiomBoldOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Engineering, DefaultSkills.Leadership };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Tactics };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
 
-        public bool EducationTutorOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomBoldOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+            return true;
         }
 
-        public void EducationTutorOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomBoldOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1600,21 +1867,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public void GetEducationPoorHorserOptionArgs(NarrativeMenuOptionArgs args)
+        public void IdiomForwarnedOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Steward };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Scouting };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
 
-        public bool EducationPoorHorserOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomForwarnedOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return CharacterCreationRedoneSandbox.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+            return true;
         }
 
-        public void EducationPoorHorserOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomForwarnedOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1628,7 +1895,119 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-        public List<NarrativeMenuCharacterArgs> GetYouthMenuNarrativeMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
+        public void IdiomInventionOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Engineering };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
+        }
+
+        public bool IdiomInventionOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+
+        public void IdiomInventionOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_education_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_streets");
+                    narrativeMenuCharacter.SetLeftHandItem("");
+                    narrativeMenuCharacter.SetRightHandItem("carry_bostaff_rogue1");
+                    break;
+                }
+            }
+        }
+
+        public void IdiomArmedOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Roguery };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+        }
+
+        public bool IdiomArmedOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+
+        public void IdiomArmedOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_education_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_militia");
+                    narrativeMenuCharacter.SetLeftHandItem("");
+                    narrativeMenuCharacter.SetRightHandItem("peasant_hammer_1_t1");
+                    break;
+                }
+            }
+        }
+
+        public void IdiomConquerOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Leadership, DefaultSkills.Charm };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+        }
+
+        public bool IdiomConquerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+
+        public void IdiomConquerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_education_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_grit");
+                    narrativeMenuCharacter.SetLeftHandItem("");
+                    narrativeMenuCharacter.SetRightHandItem("carry_hammer");
+                    break;
+                }
+            }
+        }
+
+        public void IdiomMeanOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Roguery };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+        }
+
+        public bool IdiomMeanOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+
+        public void IdiomMeanOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_education_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_peddlers");
+                    narrativeMenuCharacter.SetLeftHandItem("");
+                    narrativeMenuCharacter.SetRightHandItem("_to_carry_bd_basket_a");
+                    break;
+                }
+            }
+        }
+
+        public List<NarrativeMenuCharacterArgs> StartInLifeMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
         {
             if (string.IsNullOrEmpty(characterCreationManager.CharacterCreationContent.SelectedTitleType))
             {
@@ -1646,7 +2025,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         /// <summary>
         /// Youth menu
         /// </summary>
-        public void AddYouthMenu(CharacterCreationManager characterCreationManager)
+        public void StartInLifeMenu(CharacterCreationManager characterCreationManager)
         {
             TextObject description = CharacterObject.PlayerCharacter.IsFemale ? new TextObject("{=5kbeAC7k}In wartorn Calradia, especially in frontier or tribal areas, some women as well as men learn to fight from an early age. You...", null) : new TextObject("{=F7OO5SAa}As a youngster growing up in Calradia, war was never too far away. You...", null);
             BodyProperties bodyProperties = CharacterObject.PlayerCharacter.GetBodyProperties(CharacterObject.PlayerCharacter.Equipment, -1);
@@ -1654,7 +2033,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             List<NarrativeMenuCharacter> list = new List<NarrativeMenuCharacter>();
             list.Add(new NarrativeMenuCharacter("player_youth_character", bodyProperties, CharacterObject.PlayerCharacter.Race, CharacterObject.PlayerCharacter.IsFemale));
             list.Add(new NarrativeMenuCharacter("narrative_character_horse"));
-            NarrativeMenu narrativeMenu = new NarrativeMenu("narrative_youth_menu", "narrative_education_menu", "narrative_adulthood_menu", new TextObject("{=ok8lSW6M}Youth", null), description, list, new NarrativeMenu.GetNarrativeMenuCharacterArgsDelegate(this.GetYouthMenuNarrativeMenuCharacterArgs));
+            NarrativeMenu narrativeMenu = new NarrativeMenu("narrative_youth_menu", "narrative_education_menu", "narrative_adulthood_menu", new TextObject("{=ok8lSW6M}Youth", null), description, list, new NarrativeMenu.GetNarrativeMenuCharacterArgsDelegate(this.StartInLifeMenuCharacterArgs));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_staff_first_option", new TextObject("{=CITG915d}joined a commander's staff.", null), new TextObject("{=wNHqFlDL}You were chosen by your superior officer to serve an imperial strategos as a courier. You were not given major responsibilities - mostly carrying messages and tending to his horse - but it did give you a chance to see how campaigns were planned and men were deployed in battle.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthStaffOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthStaffOneOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthStaffOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_staff_second_option", new TextObject("{=CITG915d}joined a commander's staff.", null), new TextObject("{=ANbNblaH}You were picked as the courier of the commander of the local forces. You were not given major responsibilities - mostly carrying messages and tending to his horse - but it did give you a chance to see how campaigns were planned and men were deployed in battle.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthStaffOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthStaffTwoOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthStaffOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_groom_option", new TextObject("{=bhE2i6OU}served as a baron's groom.", null), new TextObject("{=i3k7YtA8}You were chosen by a knight to accompany a minor baron of the Vlandian kingdom. You were not given major responsibilities - mostly carrying messages and tending to his horse - but it did give you a chance to see how campaigns were planned and men were deployed in battle.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthGroomOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthGroomOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthGroomOptionOnSelect), null));
