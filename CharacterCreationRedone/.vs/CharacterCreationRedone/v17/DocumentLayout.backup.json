@@ -30,9 +30,9 @@
               "Title": "CharacterCreationRedoneSandbox.cs",
               "DocumentMoniker": "C:\\Steam\\steamapps\\common\\Mount \u0026 Blade II Bannerlord\\Modules\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneSandbox.cs",
               "RelativeDocumentMoniker": "CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneSandbox.cs",
-              "ToolTip": "C:\\Steam\\steamapps\\common\\Mount \u0026 Blade II Bannerlord\\Modules\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneSandbox.cs",
-              "RelativeToolTip": "CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneSandbox.cs",
-              "ViewState": "AgIAALoHAAAAAAAAAAAYwMgHAAAXAAAAAAAAAA==",
+              "ToolTip": "C:\\Steam\\steamapps\\common\\Mount \u0026 Blade II Bannerlord\\Modules\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneSandbox.cs*",
+              "RelativeToolTip": "CharacterCreationRedone\\CharacterCreationOptions\\CharacterCreationRedoneSandbox.cs*",
+              "ViewState": "AgIAAMYHAAAAAAAAAAAQwO8HAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-29T03:51:56.93Z",
               "EditorCaption": ""
@@ -45,9 +45,10 @@
               "RelativeDocumentMoniker": "CharacterCreationRedone\\Submodule.cs",
               "ToolTip": "C:\\Steam\\steamapps\\common\\Mount \u0026 Blade II Bannerlord\\Modules\\CharacterCreationRedone\\CharacterCreationRedone\\CharacterCreationRedone\\Submodule.cs",
               "RelativeToolTip": "CharacterCreationRedone\\Submodule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T14:42:23.662Z"
+              "WhenOpened": "2025-09-18T14:42:23.662Z",
+              "EditorCaption": ""
             }
           ]
         }
