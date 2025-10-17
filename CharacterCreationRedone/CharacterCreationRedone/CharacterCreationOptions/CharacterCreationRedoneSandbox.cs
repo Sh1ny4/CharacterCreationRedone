@@ -54,17 +54,32 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             return string.Concat(new string[] { "player_char_creation_", cultureId, "_", text, "_", isFemale ? "f" : "m" });
         }
 
-
         /// <summary>
         /// Parents menu
         /// </summary>
         public List<NarrativeMenuCharacterArgs> GetParentMenuNarrativeMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
         {
             return new List<NarrativeMenuCharacterArgs>
+            {
+                new NarrativeMenuCharacterArgs("mother_character", 33, "mother_char_creation_none_" + characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "act_character_creation_female_default_standing", "spawnpoint_player_1", "", "", null, true, true),
+                new NarrativeMenuCharacterArgs("father_character", 33, "father_char_creation_none_" + characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "act_character_creation_male_default_standing", "spawnpoint_player_1", "", "", null, true, false)
+            };
+        }
+        new public void UpdateParentEquipment(CharacterCreationManager characterCreationManager, MBEquipmentRoster motherEquipment, MBEquipmentRoster fatherEquipment, string motherAnimation, string fatherAnimation)
         {
-            new NarrativeMenuCharacterArgs("mother_character", 33, "mother_char_creation_none_" + characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "act_character_creation_female_default_standing", "spawnpoint_player_1", "", "", null, true, true),
-            new NarrativeMenuCharacterArgs("father_character", 33, "father_char_creation_none_" + characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "act_character_creation_male_default_standing", "spawnpoint_player_1", "", "", null, true, false)
-        };
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId.Equals("mother_character"))
+                {
+                    narrativeMenuCharacter.SetEquipment(motherEquipment);
+                    narrativeMenuCharacter.SetAnimationId(motherAnimation);
+                }
+                if (narrativeMenuCharacter.StringId.Equals("father_character"))
+                {
+                    narrativeMenuCharacter.SetEquipment(fatherEquipment);
+                    narrativeMenuCharacter.SetAnimationId(fatherAnimation);
+                }
+            }
         }
         public void AddParentsMenu(CharacterCreationManager characterCreationManager)
         {
@@ -121,22 +136,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Vmercenaries", new TextObject("{=CCR_Family_Choice_Vmercenaries}mercenaries", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceVMercenariesOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.VlandianParentsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceVMercenariesOptionOnSelect), null));
 
             characterCreationManager.AddNewMenu(narrativeMenu);
-        }
-        new public void UpdateParentEquipment(CharacterCreationManager characterCreationManager, MBEquipmentRoster motherEquipment, MBEquipmentRoster fatherEquipment, string motherAnimation, string fatherAnimation)
-        {
-            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
-            {
-                if (narrativeMenuCharacter.StringId.Equals("mother_character"))
-                {
-                    narrativeMenuCharacter.SetEquipment(motherEquipment);
-                    narrativeMenuCharacter.SetAnimationId(motherAnimation);
-                }
-                if (narrativeMenuCharacter.StringId.Equals("father_character"))
-                {
-                    narrativeMenuCharacter.SetEquipment(fatherEquipment);
-                    narrativeMenuCharacter.SetAnimationId(fatherAnimation);
-                }
-            }
         }
         public bool AseraiParentsOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -256,7 +255,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_hugging";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-        
+
         public bool BattanianParentsOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "battania";
@@ -375,7 +374,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_hugging";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-        
+
         public bool EmpireParentsOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
@@ -851,8 +850,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_hugging";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
+
         /// <summary>
-        /// Edducation Menu
+        /// Education Menu
         /// </summary>
         public List<NarrativeMenuCharacterArgs> AddEducationMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
         {
@@ -1240,8 +1240,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-
-
         /// <summary>
         /// Education menu
         /// </summary>
@@ -1250,6 +1248,20 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             List<NarrativeMenuCharacterArgs> list = new List<NarrativeMenuCharacterArgs>();
             string playerEducationAgeEquipmentId = this.GetPlayerEducationAgeEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             list.Add(new NarrativeMenuCharacterArgs("player_education_character", 12, playerEducationAgeEquipmentId, "act_childhood_schooled", "spawnpoint_player_1", "", "", null, true, CharacterObject.PlayerCharacter.IsFemale));
+            return list;
+        }
+        public List<NarrativeMenuCharacterArgs> StartInLifeMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
+        {
+            if (string.IsNullOrEmpty(characterCreationManager.CharacterCreationContent.SelectedTitleType))
+            {
+                characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
+            }
+            List<NarrativeMenuCharacterArgs> list = new List<NarrativeMenuCharacterArgs>();
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            list.Add(new NarrativeMenuCharacterArgs("player_youth_character", 17, playerEquipmentId, "act_childhood_schooled", "spawnpoint_player_1", "", "", null, true, CharacterObject.PlayerCharacter.IsFemale));
+            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId);
+            ItemObject item = @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item;
+            list.Add(new NarrativeMenuCharacterArgs("narrative_character_horse", -1, "", "act_inventory_idle_start", "spawnpoint_mount_1", @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item.StringId, @object.DefaultEquipment[EquipmentIndex.HorseHarness].Item.StringId, MountCreationKey.GetRandomMountKey(item, CharacterObject.PlayerCharacter.GetMountKeySeed()), false, false));
             return list;
         }
         public void FavoriteIdiomMenu(CharacterCreationManager characterCreationManager)
@@ -1679,20 +1691,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public List<NarrativeMenuCharacterArgs> StartInLifeMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
-        {
-            if (string.IsNullOrEmpty(characterCreationManager.CharacterCreationContent.SelectedTitleType))
-            {
-                characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
-            }
-            List<NarrativeMenuCharacterArgs> list = new List<NarrativeMenuCharacterArgs>();
-            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
-            list.Add(new NarrativeMenuCharacterArgs("player_youth_character", 17, playerEquipmentId, "act_childhood_schooled", "spawnpoint_player_1", "", "", null, true, CharacterObject.PlayerCharacter.IsFemale));
-            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId);
-            ItemObject item = @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item;
-            list.Add(new NarrativeMenuCharacterArgs("narrative_character_horse", -1, "", "act_inventory_idle_start", "spawnpoint_mount_1", @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item.StringId, @object.DefaultEquipment[EquipmentIndex.HorseHarness].Item.StringId, MountCreationKey.GetRandomMountKey(item, CharacterObject.PlayerCharacter.GetMountKeySeed()), false, false));
-            return list;
-        }
 
         /// <summary>
         /// Youth menu
@@ -1704,70 +1702,70 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             List<NarrativeMenuCharacter> list = new List<NarrativeMenuCharacter>();
             list.Add(new NarrativeMenuCharacter("player_youth_character", bodyProperties, CharacterObject.PlayerCharacter.Race, CharacterObject.PlayerCharacter.IsFemale));
             NarrativeMenu narrativeMenu = new NarrativeMenu("narrative_youth_menu", "narrative_education_menu", "narrative_adulthood_menu", new TextObject("{=!}Start in life", null), new TextObject("{=!}You started your life as...", null), list, new NarrativeMenu.GetNarrativeMenuCharacterArgsDelegate(this.StartInLifeMenuCharacterArgs));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afaris", new TextObject("{=CCR_Start_Choice_Afaris}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAFarisOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acaravaner", new TextObject("{=CCR_Start_Choice_Acaravaner}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartACaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartACaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartACaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartACaravaneerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amerchant", new TextObject("{=CCR_Start_Choice_Amerchant}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAMerchantOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acraftman", new TextObject("{=CCR_Start_Choice_Acraftman}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartACraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartACraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartACraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartACraftmanOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afarmer", new TextObject("{=CCR_Start_Choice_Afarmer}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAFarmerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amamluke", new TextObject("{=CCR_Start_Choice_Amamluke}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAMamlukeOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ahorsearcher", new TextObject("{=CCR_Start_Choice_Ahorsearcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAHorseArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Aarcher", new TextObject("{=CCR_Start_Choice_Aarcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartADesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartADesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartADesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartADesertBanditOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afaris", new TextObject("{=CCR_Start_Choice_Afaris}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarisOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acaravaner", new TextObject("{=CCR_Start_Choice_Acaravaner}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCaravaneerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amerchant", new TextObject("{=CCR_Start_Choice_Amerchant}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMerchantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acraftman", new TextObject("{=CCR_Start_Choice_Acraftman}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCraftmanOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afarmer", new TextObject("{=CCR_Start_Choice_Afarmer}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarmerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amamluke", new TextObject("{=CCR_Start_Choice_Amamluke}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMamlukeOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ahorsearcher", new TextObject("{=CCR_Start_Choice_Ahorsearcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiHorseArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Aarcher", new TextObject("{=CCR_Start_Choice_Aarcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiDesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiDesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiDesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiDesertBanditOptionOnConsequence)));
 
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afaris", new TextObject("{=CCR_Start_Choice_Afaris}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAFarisOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acaravaner", new TextObject("{=CCR_Start_Choice_Acaravaner}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartACaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartACaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartACaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartACaravaneerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amerchant", new TextObject("{=CCR_Start_Choice_Amerchant}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAMerchantOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acraftman", new TextObject("{=CCR_Start_Choice_Acraftman}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartACraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartACraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartACraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartACraftmanOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afarmer", new TextObject("{=CCR_Start_Choice_Afarmer}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAFarmerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amamluke", new TextObject("{=CCR_Start_Choice_Amamluke}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAMamlukeOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ahorsearcher", new TextObject("{=CCR_Start_Choice_Ahorsearcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAHorseArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Aarcher", new TextObject("{=CCR_Start_Choice_Aarcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartADesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartADesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartADesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartADesertBanditOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afaris", new TextObject("{=CCR_Start_Choice_Afaris}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarisOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acaravaner", new TextObject("{=CCR_Start_Choice_Acaravaner}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCaravaneerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amerchant", new TextObject("{=CCR_Start_Choice_Amerchant}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMerchantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acraftman", new TextObject("{=CCR_Start_Choice_Acraftman}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCraftmanOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afarmer", new TextObject("{=CCR_Start_Choice_Afarmer}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarmerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amamluke", new TextObject("{=CCR_Start_Choice_Amamluke}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMamlukeOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ahorsearcher", new TextObject("{=CCR_Start_Choice_Ahorsearcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiHorseArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Aarcher", new TextObject("{=CCR_Start_Choice_Aarcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiDesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiDesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiDesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiDesertBanditOptionOnConsequence)));
 
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afaris", new TextObject("{=CCR_Start_Choice_Afaris}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAFarisOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acaravaner", new TextObject("{=CCR_Start_Choice_Acaravaner}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartACaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartACaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartACaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartACaravaneerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amerchant", new TextObject("{=CCR_Start_Choice_Amerchant}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAMerchantOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acraftman", new TextObject("{=CCR_Start_Choice_Acraftman}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartACraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartACraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartACraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartACraftmanOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afarmer", new TextObject("{=CCR_Start_Choice_Afarmer}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAFarmerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amamluke", new TextObject("{=CCR_Start_Choice_Amamluke}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAMamlukeOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ahorsearcher", new TextObject("{=CCR_Start_Choice_Ahorsearcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAHorseArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Aarcher", new TextObject("{=CCR_Start_Choice_Aarcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartADesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartADesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartADesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartADesertBanditOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartADesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartADesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartADesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartADesertBanditOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afaris", new TextObject("{=CCR_Start_Choice_Afaris}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarisOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acaravaner", new TextObject("{=CCR_Start_Choice_Acaravaner}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCaravaneerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amerchant", new TextObject("{=CCR_Start_Choice_Amerchant}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMerchantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acraftman", new TextObject("{=CCR_Start_Choice_Acraftman}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCraftmanOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afarmer", new TextObject("{=CCR_Start_Choice_Afarmer}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarmerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amamluke", new TextObject("{=CCR_Start_Choice_Amamluke}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMamlukeOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ahorsearcher", new TextObject("{=CCR_Start_Choice_Ahorsearcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiHorseArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Aarcher", new TextObject("{=CCR_Start_Choice_Aarcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiDesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiDesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiDesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiDesertBanditOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiDesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiDesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiDesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiDesertBanditOptionOnConsequence)));
 
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afaris", new TextObject("{=CCR_Start_Choice_Afaris}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAFarisOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acaravaner", new TextObject("{=CCR_Start_Choice_Acaravaner}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartACaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartACaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartACaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartACaravaneerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amerchant", new TextObject("{=CCR_Start_Choice_Amerchant}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAMerchantOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acraftman", new TextObject("{=CCR_Start_Choice_Acraftman}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartACraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartACraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartACraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartACraftmanOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afarmer", new TextObject("{=CCR_Start_Choice_Afarmer}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAFarmerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amamluke", new TextObject("{=CCR_Start_Choice_Amamluke}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAMamlukeOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ahorsearcher", new TextObject("{=CCR_Start_Choice_Ahorsearcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAHorseArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Aarcher", new TextObject("{=CCR_Start_Choice_Aarcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartADesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartADesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartADesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartADesertBanditOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afaris", new TextObject("{=CCR_Start_Choice_Afaris}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarisOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acaravaner", new TextObject("{=CCR_Start_Choice_Acaravaner}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCaravaneerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amerchant", new TextObject("{=CCR_Start_Choice_Amerchant}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMerchantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acraftman", new TextObject("{=CCR_Start_Choice_Acraftman}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCraftmanOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afarmer", new TextObject("{=CCR_Start_Choice_Afarmer}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarmerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amamluke", new TextObject("{=CCR_Start_Choice_Amamluke}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMamlukeOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ahorsearcher", new TextObject("{=CCR_Start_Choice_Ahorsearcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiHorseArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Aarcher", new TextObject("{=CCR_Start_Choice_Aarcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiDesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiDesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiDesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiDesertBanditOptionOnConsequence)));
 
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afaris", new TextObject("{=CCR_Start_Choice_Afaris}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAFarisOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acaravaner", new TextObject("{=CCR_Start_Choice_Acaravaner}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartACaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartACaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartACaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartACaravaneerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amerchant", new TextObject("{=CCR_Start_Choice_Amerchant}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAMerchantOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acraftman", new TextObject("{=CCR_Start_Choice_Acraftman}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartACraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartACraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartACraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartACraftmanOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afarmer", new TextObject("{=CCR_Start_Choice_Afarmer}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAFarmerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amamluke", new TextObject("{=CCR_Start_Choice_Amamluke}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAMamlukeOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ahorsearcher", new TextObject("{=CCR_Start_Choice_Ahorsearcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAHorseArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Aarcher", new TextObject("{=CCR_Start_Choice_Aarcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartADesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartADesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartADesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartADesertBanditOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afaris", new TextObject("{=CCR_Start_Choice_Afaris}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarisOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acaravaner", new TextObject("{=CCR_Start_Choice_Acaravaner}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCaravaneerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amerchant", new TextObject("{=CCR_Start_Choice_Amerchant}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMerchantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acraftman", new TextObject("{=CCR_Start_Choice_Acraftman}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCraftmanOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afarmer", new TextObject("{=CCR_Start_Choice_Afarmer}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarmerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amamluke", new TextObject("{=CCR_Start_Choice_Amamluke}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMamlukeOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ahorsearcher", new TextObject("{=CCR_Start_Choice_Ahorsearcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiHorseArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Aarcher", new TextObject("{=CCR_Start_Choice_Aarcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiDesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiDesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiDesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiDesertBanditOptionOnConsequence)));
 
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afaris", new TextObject("{=CCR_Start_Choice_Afaris}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAFarisOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acaravaner", new TextObject("{=CCR_Start_Choice_Acaravaner}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartACaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartACaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartACaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartACaravaneerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amerchant", new TextObject("{=CCR_Start_Choice_Amerchant}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAMerchantOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acraftman", new TextObject("{=CCR_Start_Choice_Acraftman}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartACraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartACraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartACraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartACraftmanOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afarmer", new TextObject("{=CCR_Start_Choice_Afarmer}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAFarmerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amamluke", new TextObject("{=CCR_Start_Choice_Amamluke}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAMamlukeOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ahorsearcher", new TextObject("{=CCR_Start_Choice_Ahorsearcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAHorseArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Aarcher", new TextObject("{=CCR_Start_Choice_Aarcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartADesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartADesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartADesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartADesertBanditOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afaris", new TextObject("{=CCR_Start_Choice_Afaris}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarisOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acaravaner", new TextObject("{=CCR_Start_Choice_Acaravaner}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCaravaneerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amerchant", new TextObject("{=CCR_Start_Choice_Amerchant}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMerchantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Acraftman", new TextObject("{=CCR_Start_Choice_Acraftman}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCraftmanOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Afarmer", new TextObject("{=CCR_Start_Choice_Afarmer}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarmerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Amamluke", new TextObject("{=CCR_Start_Choice_Amamluke}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMamlukeOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ahorsearcher", new TextObject("{=CCR_Start_Choice_Ahorsearcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiHorseArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Aarcher", new TextObject("{=CCR_Start_Choice_Aarcher}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Adesertbandit", new TextObject("{=CCR_Start_Choice_Adesertbandit}", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiDesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiDesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiDesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiDesertBanditOptionOnConsequence)));
 
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
-        public void LifeStartAFarisOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartAseraiFarisOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.OneHanded, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
@@ -1775,11 +1773,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-        public bool LifeStartAFarisOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartAseraiFarisOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-        public void LifeStartAFarisOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiFarisOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -1792,7 +1790,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAFarisOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiFarisOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
             Hero ruler = Hero.FindAll(hero => hero.Culture == Hero.MainHero.Culture && hero.IsAlive && hero.IsFactionLeader && !hero.MapFaction.IsMinorFaction).GetRandomElementInefficiently();
             ChangeKingdomAction.ApplyByJoinToKingdom(Hero.MainHero.Clan, ruler.Clan.Kingdom, default, false);
@@ -1801,7 +1799,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
             AddHeroToPartyAction.Apply(companion, Hero.MainHero.PartyBelongedTo);
         }
-        public void LifeStartACaravaneerOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartAseraiCaravaneerOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Trade, DefaultSkills.Leadership };
             args.SetAffectedSkills(affectedSkills);
@@ -1809,11 +1807,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-        public bool LifeStartACaravaneerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartAseraiCaravaneerOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-        public void LifeStartACaravaneerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiCaravaneerOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -1826,10 +1824,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartACaravaneerOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiCaravaneerOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAMerchantOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartAseraiMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
@@ -1837,11 +1835,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-        public bool LifeStartAMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartAseraiMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-        public void LifeStartAMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -1854,10 +1852,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartACraftmanOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartAseraiCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -1865,11 +1863,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-        public bool LifeStartACraftmanOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartAseraiCraftmanOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-        public void LifeStartACraftmanOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiCraftmanOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -1882,10 +1880,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartACraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiCraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAFarmerOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartAseraiFarmerOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine };
             args.SetAffectedSkills(affectedSkills);
@@ -1893,11 +1891,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-        public bool LifeStartAFarmerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartAseraiFarmerOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-        public void LifeStartAFarmerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiFarmerOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -1910,10 +1908,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAFarmerOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiFarmerOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAMamlukeOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartAseraiMamlukeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -1921,11 +1919,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAMamlukeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartAseraiMamlukeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-        public void LifeStartAMamlukeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiMamlukeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -1938,10 +1936,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAMamlukeOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiMamlukeOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartAseraiHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
@@ -1949,11 +1947,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAHorseArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartAseraiHorseArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-        public void LifeStartAHorseArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiHorseArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -1966,10 +1964,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAHorseArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiHorseArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAArcherOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartAseraiArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -1977,11 +1975,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartAseraiArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-        public void LifeStartAArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -1994,10 +1992,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartADesertBanditOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartAseraiDesertBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.OneHanded };
             args.SetAffectedSkills(affectedSkills);
@@ -2005,11 +2003,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartADesertBanditOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartAseraiDesertBanditOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-        public void LifeStartADesertBanditOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiDesertBanditOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2022,7 +2020,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartADesertBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartAseraiDesertBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
 
@@ -2245,8 +2243,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             }
         }
 
-
-
         /// <summary>
         /// AgeSelection
         /// </summary>
@@ -2259,6 +2255,21 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             ItemObject item = @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item;
             list.Add(new NarrativeMenuCharacterArgs("narrative_character_horse", -1, "", "act_horse_stand_1", "spawnpoint_mount_1", @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item.StringId, @object.DefaultEquipment[EquipmentIndex.HorseHarness].Item.StringId, MountCreationKey.GetRandomMountKey(item, CharacterObject.PlayerCharacter.GetMountKeySeed()), false, false));
             return list;
+        }
+        public void ApplyMainHeroEquipment(CharacterCreationManager characterCreationManager)
+        {
+            NarrativeMenu narrativeMenuWithId = characterCreationManager.GetNarrativeMenuWithId("narrative_age_selection_menu");
+            NarrativeMenuCharacter narrativeMenuCharacter = null;
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter2 in narrativeMenuWithId.Characters)
+            {
+                if (narrativeMenuCharacter2.StringId.Equals("player_age_selection_character"))
+                {
+                    narrativeMenuCharacter = narrativeMenuCharacter2;
+                    break;
+                }
+            }
+            CharacterObject.PlayerCharacter.Equipment.FillFrom(narrativeMenuCharacter.Equipment.DefaultEquipment, true);
+            CharacterObject.PlayerCharacter.FirstCivilianEquipment.FillFrom(narrativeMenuCharacter.Equipment.GetRandomCivilianEquipment(), true);
         }
         public void AddAgeSelectionMenu(CharacterCreationManager characterCreationManager)
         {
@@ -2406,21 +2417,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             characterCreationManager.CharacterCreationContent.StartingAge = 50;
             this.ApplyMainHeroEquipment(characterCreationManager);
         }
-        public void ApplyMainHeroEquipment(CharacterCreationManager characterCreationManager)
-        {
-            NarrativeMenu narrativeMenuWithId = characterCreationManager.GetNarrativeMenuWithId("narrative_age_selection_menu");
-            NarrativeMenuCharacter narrativeMenuCharacter = null;
-            foreach (NarrativeMenuCharacter narrativeMenuCharacter2 in narrativeMenuWithId.Characters)
-            {
-                if (narrativeMenuCharacter2.StringId.Equals("player_age_selection_character"))
-                {
-                    narrativeMenuCharacter = narrativeMenuCharacter2;
-                    break;
-                }
-            }
-            CharacterObject.PlayerCharacter.Equipment.FillFrom(narrativeMenuCharacter.Equipment.DefaultEquipment, true);
-            CharacterObject.PlayerCharacter.FirstCivilianEquipment.FillFrom(narrativeMenuCharacter.Equipment.GetRandomCivilianEquipment(), true);
-        }
+
         new public const string MotherNarrativeCharacterStringId = "mother_character";
         new public const string FatherNarrativeCharacterStringId = "father_character";
         new public const string PlayerChildhoodCharacterStringId = "player_childhood_character";
