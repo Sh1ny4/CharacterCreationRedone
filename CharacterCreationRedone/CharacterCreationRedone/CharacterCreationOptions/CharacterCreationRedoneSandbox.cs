@@ -28,31 +28,26 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             __instance.AddAgeSelectionMenu(characterCreationManager);
             return false;
         }
-
         public string GetMotherEquipmentId(CharacterCreationManager characterCreationManager, string occupationType, string cultureId)
         {
             characterCreationManager.CharacterCreationContent.TryGetEquipmentToUse(occupationType, out string str);
             return "mother_char_creation_" + str + "_" + cultureId;
         }
-
         public string GetFatherEquipmentId(CharacterCreationManager characterCreationManager, string occupationType, string cultureId)
         {
             characterCreationManager.CharacterCreationContent.TryGetEquipmentToUse(occupationType, out string str);
             return "father_char_creation_" + str + "_" + cultureId;
         }
-
         public string GetPlayerChildhoodAgeEquipmentId(CharacterCreationManager characterCreationManager, string parentOccupationType, string cultureId, bool isFemale)
         {
             characterCreationManager.CharacterCreationContent.TryGetEquipmentToUse(parentOccupationType, out string text);
             return string.Concat(new string[] { "player_char_creation_childhood_age_", cultureId, "_", text, "_", isFemale ? "f" : "m" });
         }
-
         public string GetPlayerEducationAgeEquipmentId(CharacterCreationManager characterCreationManager, string parentOccupationType, string cultureId, bool isFemale)
         {
             characterCreationManager.CharacterCreationContent.TryGetEquipmentToUse(parentOccupationType, out string text);
             return string.Concat(new string[] { "player_char_creation_education_age_", cultureId, "_", text, "_", isFemale ? "f" : "m" });
         }
-
         public string GetPlayerEquipmentId(CharacterCreationManager characterCreationManager, string occupationType, string cultureId, bool isFemale)
         {
             characterCreationManager.CharacterCreationContent.TryGetEquipmentToUse(occupationType, out string text);
@@ -71,7 +66,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             new NarrativeMenuCharacterArgs("father_character", 33, "father_char_creation_none_" + characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "act_character_creation_male_default_standing", "spawnpoint_player_1", "", "", null, true, false)
         };
         }
-
         public void AddParentsMenu(CharacterCreationManager characterCreationManager)
         {
             List<NarrativeMenuCharacter> list = new List<NarrativeMenuCharacter>();
@@ -84,19 +78,19 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             list.Add(new NarrativeMenuCharacter("father_character", bodyProperties, CharacterObject.PlayerCharacter.Race, false));
             NarrativeMenu narrativeMenu = new NarrativeMenu("narrative_parent_menu", "start", "narrative_childhood_menu", new TextObject("{=!}Family", null), new TextObject("{=XgFU1pCx}You were born into a family of...", null), list, new NarrativeMenu.GetNarrativeMenuCharacterArgsDelegate(this.GetParentMenuNarrativeMenuCharacterArgs));
 
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_ARais", new TextObject("{=CCR_Family_Choice_ARais}rais", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetAseraiKinsfolkNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.AseraiKinsfolkNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.AseraiKinsfolkNarrativeOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_AMamluks", new TextObject("{=CCR_Family_Choice_AMamluks}mamluks", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetAseraiSlaveNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.AseraiSlaveNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.AseraiSlaveNarrativeOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_AMerchant", new TextObject("{=CCR_Family_Choice_AMerchant}merchants", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetAseraiPhysicianNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.AseraiPhysicianNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.AseraiPhysicianNarrativeOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_AFarmers", new TextObject("{=CCR_Family_Choice_AFarmers}farmers", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetAseraiFarmerNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.AseraiFarmerNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.AseraiFarmerNarrativeOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_AArtisans", new TextObject("{=CCR_Family_Choice_AArtisans}artisans", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetAseraiHerderNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.AseraiHerderNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.AseraiHerderNarrativeOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_AThugs", new TextObject("{=CCR_Family_Choice_AThugs}thugs", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetAseraiArtisanNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.AseraiArtisanNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.AseraiArtisanNarrativeOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_ARais", new TextObject("{=CCR_Family_Choice_ARais}rais", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceARaisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.FamilyChoiceARaisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceARaisOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_AMamluks", new TextObject("{=CCR_Family_Choice_AMamluks}mamluks", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceAMamluksOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.FamilyChoiceAMamluksOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceAMamluksOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_AMerchant", new TextObject("{=CCR_Family_Choice_AMerchant}merchants", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceAMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.FamilyChoiceAMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceAMerchantOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_AFarmers", new TextObject("{=CCR_Family_Choice_AFarmers}farmers", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceAFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.FamilyChoiceAFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceAFarmerOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_AArtisans", new TextObject("{=CCR_Family_Choice_AArtisans}artisans", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceAArtisansOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.FamilyChoiceAArtisansOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceAArtisansOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_AThugs", new TextObject("{=CCR_Family_Choice_AThugs}thugs", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceAThugsOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.FamilyChoiceAThugsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceAThugsOptionOnSelect), null));
 
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Bchieftains", new TextObject("{=CCR_Family_Choice_Bchieftains}chieftains", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetBattaniaRetainerNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.BattaniaRetainerNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.BattaniaRetainerNarrativeOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Bhealers", new TextObject("{=CCR_Family_Choice_Bhealers}healers", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetBattaniaHealerNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.BattaniaHealerNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.BattaniaHealerNarrativeOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Bfarmers", new TextObject("{=CCR_Family_Choice_Bfarmers}farmers", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetBattaniaFarmerNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.BattaniaFarmerNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.BattaniaFarmerNarrativeOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Bartisans", new TextObject("{=CCR_Family_Choice_Bartisans}artisans", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetBattaniaArtisanNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.BattaniaArtisanNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.BattaniaArtisanNarrativeOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Bforesters", new TextObject("{=CCR_Family_Choice_Bforesters}foresters", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetBattaniaHunterNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.BattaniaHunterNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.BattaniaHunterNarrativeOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Bbards", new TextObject("{=CCR_Family_Choice_Bbards}bards", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetBattaniaBardNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.BattaniaBardNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.BattaniaBardNarrativeOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Bchieftains", new TextObject("{=CCR_Family_Choice_Bchieftains}chieftains", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceBchieftainsOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.FamilyChoiceBchieftainsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceBchieftainsOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Bhealers", new TextObject("{=CCR_Family_Choice_Bhealers}healers", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceBHealersOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.FamilyChoiceBHealersOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceBHealersOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Bfarmers", new TextObject("{=CCR_Family_Choice_Bfarmers}farmers", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceBFarmersOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.FamilyChoiceBFarmersOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceBFarmersOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Bartisans", new TextObject("{=CCR_Family_Choice_Bartisans}artisans", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceBArtisansOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.FamilyChoiceBArtisansOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceBArtisansOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Bforesters", new TextObject("{=CCR_Family_Choice_Bforesters}foresters", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceBForestersOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.FamilyChoiceBForestersOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceBForestersOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Bbards", new TextObject("{=CCR_Family_Choice_Bbards}bards", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceBBardsOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.FamilyChoiceBBardsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceBBardsOptionOnSelect), null));
 
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Earistocrates", new TextObject("{=CCR_Family_Choice_Earistocrates}aristocrates", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEmpireLandlordNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EmpireLandlordNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EmpireLandlordNarrativeOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Emerchants", new TextObject("{=CCR_Family_Choice_Emerchants}merchants", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEmpireUrbanNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EmpireUrbanNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EmpireUrbanNarrativeOptionOnSelect), null));
@@ -128,163 +122,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
 
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
-
-        public void GetEmpireLandlordNarrativeOptionArgs(NarrativeMenuOptionArgs args)
-        {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Polearm };
-            args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(1);
-            args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
-        }
-
-        public bool EmpireLandlordNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
-        {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
-        }
-
-        public void EmpireLandlordNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
-        {
-            characterCreationManager.CharacterCreationContent.SetParentOccupation("retainer");
-            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
-            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
-            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
-            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
-            string motherAnimation = "act_character_creation_female_default_side_to_side_1";
-            string fatherAnimation = "act_character_creation_male_default_side_to_side_1";
-            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
-        }
-
-        public void GetEmpireUrbanNarrativeOptionArgs(NarrativeMenuOptionArgs args)
-        {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm };
-            args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(1);
-            args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
-        }
-
-        public bool EmpireUrbanNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
-        {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
-        }
-
-        public void EmpireUrbanNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
-        {
-            characterCreationManager.CharacterCreationContent.SetParentOccupation("merchant_urban");
-            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
-            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
-            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
-            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
-            string motherAnimation = "act_character_creation_female_default_mother_front";
-            string fatherAnimation = "act_character_creation_male_default_mother_front";
-            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
-        }
-
-        public void GetEmpireFarmerNarrativeOptionArgs(NarrativeMenuOptionArgs args)
-        {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Polearm };
-            args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(1);
-            args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
-        }
-
-        public bool EmpireFarmerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
-        {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
-        }
-
-        public void EmpireFarmerNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
-        {
-            characterCreationManager.CharacterCreationContent.SetParentOccupation("farmer");
-            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
-            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
-            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
-            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
-            string motherAnimation = "act_character_creation_female_default_father_sitting";
-            string fatherAnimation = "act_character_creation_male_default_father_sitting";
-            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
-        }
-
-        public void GetEmpireArtisanNarrativeOptionArgs(NarrativeMenuOptionArgs args)
-        {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Crossbow };
-            args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(1);
-            args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
-        }
-
-        public bool EmpireArtisanNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
-        {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
-        }
-
-        public void EmpireArtisanNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
-        {
-            characterCreationManager.CharacterCreationContent.SetParentOccupation("artisan_urban");
-            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
-            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
-            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
-            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
-            string motherAnimation = "act_character_creation_female_default_side_to_side_2";
-            string fatherAnimation = "act_character_creation_male_default_side_to_side_2";
-            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
-        }
-
-        public void GetEmpireHunterNarrativeOptionArgs(NarrativeMenuOptionArgs args)
-        {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow };
-            args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(1);
-            args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
-        }
-
-        public bool EmpireHunterNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
-        {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
-        }
-
-        public void EmpireHunterNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
-        {
-            characterCreationManager.CharacterCreationContent.SetParentOccupation("hunter");
-            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
-            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
-            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
-            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
-            string motherAnimation = "act_character_creation_female_default_side_to_side_3";
-            string fatherAnimation = "act_character_creation_male_default_side_to_side_3";
-            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
-        }
-
-        public void GetEmpireVagabondNarrativeOptionArgs(NarrativeMenuOptionArgs args)
-        {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing };
-            args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(1);
-            args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
-        }
-
-        public bool EmpireVagabondNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
-        {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
-        }
-
-        public void EmpireVagabondNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
-        {
-            characterCreationManager.CharacterCreationContent.SetParentOccupation("vagabond_urban");
-            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
-            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
-            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
-            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
-            string motherAnimation = "act_character_creation_female_default_hugging";
-            string fatherAnimation = "act_character_creation_male_default_hugging";
-            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
-        }
-
         new public void UpdateParentEquipment(CharacterCreationManager characterCreationManager, MBEquipmentRoster motherEquipment, MBEquipmentRoster fatherEquipment, string motherAnimation, string fatherAnimation)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -301,22 +138,19 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
-        public void GetVlandiaRetainerNarrativeOptionArgs(NarrativeMenuOptionArgs args)
+        public void FamilyChoiceARaisOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Polearm };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
-
-        public bool VlandiaRetainerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool FamilyChoiceARaisOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-
-        public void VlandiaRetainerNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void FamilyChoiceARaisOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("retainer");
             string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
@@ -327,22 +161,19 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_1";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
-        public void GetVlandiaMerchantNarrativeOptionArgs(NarrativeMenuOptionArgs args)
+        public void FamilyChoiceAMamluksOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
-        public bool VlandiaMerchantNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool FamilyChoiceAMamluksOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-
-        public void VlandiaMerchantNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void FamilyChoiceAMamluksOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("merchant_urban");
             string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
@@ -353,22 +184,19 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_mother_front";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
-        public void GetVlandiaFarmerNarrativeOptionArgs(NarrativeMenuOptionArgs args)
+        public void FamilyChoiceAMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Crossbow };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Polearm };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
-        public bool VlandiaFarmerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool FamilyChoiceAMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-
-        public void VlandiaFarmerNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void FamilyChoiceAMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("farmer");
             string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
@@ -379,22 +207,19 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_father_sitting";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
-        public void GetVlandiaBlacksmithNarrativeOptionArgs(NarrativeMenuOptionArgs args)
+        public void FamilyChoiceAFarmerOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.TwoHanded };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Crossbow };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
-        public bool VlandiaBlacksmithNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool FamilyChoiceAFarmerOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-
-        public void VlandiaBlacksmithNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void FamilyChoiceAFarmerOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("artisan_urban");
             string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
@@ -405,22 +230,19 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_2";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
-        public void GetVlandiaHunterNarrativeOptionArgs(NarrativeMenuOptionArgs args)
+        public void FamilyChoiceAArtisansOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Crossbow };
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
         }
-
-        public bool VlandiaHunterNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool FamilyChoiceAArtisansOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-
-        public void VlandiaHunterNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void FamilyChoiceAArtisansOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("hunter");
             string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
@@ -431,8 +253,146 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_3";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
+        public void FamilyChoiceAThugsOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+        }
+        public bool FamilyChoiceAThugsOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
+        }
+        public void FamilyChoiceAThugsOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SetParentOccupation("vagabond_urban");
+            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
+            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
+            string motherAnimation = "act_character_creation_female_default_hugging";
+            string fatherAnimation = "act_character_creation_male_default_hugging";
+            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
+        }
 
-        public void GetVlandiaMercenaryNarrativeOptionArgs(NarrativeMenuOptionArgs args)
+        public void FamilyChoiceBchieftainsOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Polearm };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+        }
+        public bool FamilyChoiceBchieftainsOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
+        }
+        public void FamilyChoiceBchieftainsOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SetParentOccupation("retainer");
+            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
+            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
+            string motherAnimation = "act_character_creation_female_default_side_to_side_1";
+            string fatherAnimation = "act_character_creation_male_default_side_to_side_1";
+            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
+        }
+        public void FamilyChoiceBHealersOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
+        }
+        public bool FamilyChoiceBHealersOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
+        }
+        public void FamilyChoiceBHealersOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SetParentOccupation("merchant_urban");
+            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
+            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
+            string motherAnimation = "act_character_creation_female_default_mother_front";
+            string fatherAnimation = "act_character_creation_male_default_mother_front";
+            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
+        }
+        public void FamilyChoiceBFarmersOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Crossbow };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+        }
+        public bool FamilyChoiceBFarmersOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
+        }
+        public void FamilyChoiceBFarmersOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SetParentOccupation("farmer");
+            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
+            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
+            string motherAnimation = "act_character_creation_female_default_father_sitting";
+            string fatherAnimation = "act_character_creation_male_default_father_sitting";
+            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
+        }
+        public void FamilyChoiceBArtisansOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.TwoHanded };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+        }
+        public bool FamilyChoiceBArtisansOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
+        }
+        public void FamilyChoiceBArtisansOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SetParentOccupation("artisan_urban");
+            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
+            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
+            string motherAnimation = "act_character_creation_female_default_side_to_side_2";
+            string fatherAnimation = "act_character_creation_male_default_side_to_side_2";
+            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
+        }
+        public void FamilyChoiceBForestersOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Crossbow };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
+        }
+        public bool FamilyChoiceBForestersOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
+        }
+        public void FamilyChoiceBForestersOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SetParentOccupation("hunter");
+            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
+            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
+            string motherAnimation = "act_character_creation_female_default_side_to_side_3";
+            string fatherAnimation = "act_character_creation_male_default_side_to_side_3";
+            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
+        }
+        public void FamilyChoiceBBardsOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Crossbow };
             args.SetAffectedSkills(affectedSkills);
@@ -440,13 +400,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
-        public bool VlandiaMercenaryNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool FamilyChoiceBBardsOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
-
-        public void VlandiaMercenaryNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void FamilyChoiceBBardsOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("merchant_urban");
             string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
@@ -466,12 +424,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
         public bool SturgiaCompanionNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-
         public void SturgiaCompanionNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("retainer");
@@ -483,7 +439,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_1";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetSturgiaTraderNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Tactics };
@@ -492,12 +447,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
         public bool SturgiaTraderNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-
         public void SturgiaTraderNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("merchant_urban");
@@ -509,7 +462,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_mother_front";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetSturgiaFarmerNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Polearm };
@@ -518,12 +470,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool SturgiaFarmerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-
         public void SturgiaFarmerNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("farmer");
@@ -535,7 +485,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_father_sitting";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetSturgiaArtisanNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.OneHanded };
@@ -544,12 +493,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool SturgiaArtisanNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-
         public void SturgiaArtisanNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("artisan_urban");
@@ -561,7 +508,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_2";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetSturgiaHunterNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow };
@@ -570,12 +516,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
-
         public bool SturgiaHunterNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-
         public void SturgiaHunterNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("hunter");
@@ -587,7 +531,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_3";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetSturgiaVagabondNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing };
@@ -596,12 +539,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
         }
-
         public bool SturgiaVagabondNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-
         public void SturgiaVagabondNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("vagabond_urban");
@@ -614,7 +555,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
 
-
         public void GetAseraiKinsfolkNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Throwing };
@@ -623,12 +563,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
         public bool AseraiKinsfolkNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void AseraiKinsfolkNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("retainer");
@@ -640,7 +578,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_1";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetAseraiSlaveNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Polearm };
@@ -649,12 +586,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
-
         public bool AseraiSlaveNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void AseraiSlaveNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("mercenary_urban");
@@ -666,7 +601,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_mother_front";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetAseraiPhysicianNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Charm };
@@ -675,12 +609,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool AseraiPhysicianNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void AseraiPhysicianNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("physician_urban");
@@ -692,7 +624,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_father_sitting";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetAseraiFarmerNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.OneHanded };
@@ -701,12 +632,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool AseraiFarmerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void AseraiFarmerNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("farmer");
@@ -718,7 +647,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_2";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetAseraiHerderNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow };
@@ -727,12 +655,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
         public bool AseraiHerderNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void AseraiHerderNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("herder");
@@ -744,7 +670,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_3";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetAseraiArtisanNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Polearm };
@@ -753,12 +678,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
         }
-
         public bool AseraiArtisanNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void AseraiArtisanNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("artisan_urban");
@@ -779,12 +702,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
-
         public bool BattaniaRetainerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "battania";
         }
-
         public void BattaniaRetainerNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("retainer_urban");
@@ -796,7 +717,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_1";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetBattaniaHealerNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Charm };
@@ -805,12 +725,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool BattaniaHealerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "battania";
         }
-
         public void BattaniaHealerNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("healer");
@@ -822,7 +740,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_mother_front";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetBattaniaFarmerNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Throwing };
@@ -831,12 +748,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
         }
-
         public bool BattaniaFarmerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "battania";
         }
-
         public void BattaniaFarmerNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("farmer");
@@ -848,7 +763,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_father_sitting";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetBattaniaArtisanNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.TwoHanded };
@@ -857,12 +771,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool BattaniaArtisanNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "battania";
         }
-
         public void BattaniaArtisanNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("artisan_urban");
@@ -874,7 +786,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_2";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetBattaniaHunterNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Tactics };
@@ -883,12 +794,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
         public bool BattaniaHunterNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "battania";
         }
-
         public void BattaniaHunterNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("hunter");
@@ -900,7 +809,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_3";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetBattaniaBardNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Charm };
@@ -909,12 +817,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
         public bool BattaniaBardNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "battania";
         }
-
         public void BattaniaBardNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("bard_urban");
@@ -935,12 +841,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool KhuzaitRetainerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-
         public void KhuzaitRetainerNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("retainer_urban");
@@ -952,7 +856,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_1";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetKhuzaitMerchantNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm };
@@ -961,12 +864,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
         public bool KhuzaitMerchantNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-
         public void KhuzaitMerchantNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("merchant_urban");
@@ -978,7 +879,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_mother_front";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetKhuzaitHerderNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Riding };
@@ -987,12 +887,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
         }
-
         public bool KhuzaitHerderNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-
         public void KhuzaitHerderNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("herder");
@@ -1004,7 +902,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_father_sitting";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetKhuzaitFarmerNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Throwing };
@@ -1013,12 +910,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
-
         public bool KhuzaitFarmerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-
         public void KhuzaitFarmerNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("farmer");
@@ -1030,7 +925,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_2";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetKhuzaitHealerNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Charm };
@@ -1039,12 +933,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool KhuzaitHealerNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-
         public void KhuzaitHealerNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("healer_urban");
@@ -1056,7 +948,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_side_to_side_3";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
         public void GetKhuzaitNomadHerderNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Riding };
@@ -1065,12 +956,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
         public bool KhuzaitNomadHerderNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-
         public void KhuzaitNomadHerderNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SetParentOccupation("herder");
@@ -1082,7 +971,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             string fatherAnimation = "act_character_creation_male_default_hugging";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
+        /// <summary>
+        /// Edducation Menu
+        /// </summary>
         public List<NarrativeMenuCharacterArgs> AddEducationMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
         {
             List<NarrativeMenuCharacterArgs> list = new List<NarrativeMenuCharacterArgs>();
@@ -1116,7 +1007,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_trickery", new TextObject("{=CCR_Education_Choice_trickery}know how to trick others.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.EducationTrickOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationTrickOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationTrickOptionOnSelect), null));
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
-
         public void EducationFarisOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Athletics, DefaultSkills.Riding };
@@ -1125,12 +1015,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool EducationFarisOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void EducationFarisOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1141,7 +1029,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void EducationHearthguardOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
@@ -1150,12 +1037,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
         }
-
         public bool EducationHearthguardOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "battania";
         }
-
         public void EducationHearthguardOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1166,7 +1051,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void EducationCataphractOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Riding };
@@ -1175,12 +1059,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool EducationCataphractOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-
         public void EducationCataphractOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1191,7 +1073,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void EducationKhanGuardOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Polearm, DefaultSkills.Riding };
@@ -1200,12 +1081,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
         }
-
         public bool EducationKhanGuardOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-
         public void EducationKhanGuardOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1216,7 +1095,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void EducationDruzhinaOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing, DefaultSkills.Athletics };
@@ -1225,12 +1103,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool EducationDruzhinaOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-
         public void EducationDruzhinaOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1241,7 +1117,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void EducationKnightOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Athletics, DefaultSkills.Polearm };
@@ -1250,12 +1125,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool EducationKnightOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
-
         public void EducationKnightOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1274,12 +1147,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
         public bool EducationCommanderOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && !Hero.MainHero.IsFemale;
         }
-
         public void EducationCommanderOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1290,7 +1161,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void EducationCourtOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Charm, DefaultSkills.Roguery, DefaultSkills.Tactics };
@@ -1299,12 +1169,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
         public bool EducationCourtOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && Hero.MainHero.IsFemale;
         }
-
         public void EducationCourtOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1315,7 +1183,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void EducationMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm, DefaultSkills.Steward };
@@ -1324,12 +1191,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
         public bool EducationMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void EducationMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1340,7 +1205,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void EducationCraftOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Engineering, DefaultSkills.Trade, DefaultSkills.Crafting };
@@ -1349,12 +1213,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool EducationCraftOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void EducationCraftOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1365,7 +1227,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void EducationScholarOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Engineering, DefaultSkills.Tactics };
@@ -1374,12 +1235,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool EducationScholarOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void EducationScholarOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1390,7 +1249,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void EducationReligiousOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Steward, DefaultSkills.Medicine, DefaultSkills.Trade };
@@ -1399,12 +1257,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool EducationReligiousOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void EducationReligiousOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1417,18 +1273,16 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void EducationFarmerOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Medicine, DefaultSkills.Athletics};
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Medicine, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool EducationFarmerOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void EducationFarmerOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1439,7 +1293,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void EducationLadyOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm, DefaultSkills.Steward };
@@ -1448,12 +1301,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
         public bool EducationLadyOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void EducationLadyOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1464,7 +1315,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void EducationDefenseOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Athletics, DefaultSkills.Roguery };
@@ -1473,12 +1323,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
         public bool EducationDefenseOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void EducationDefenseOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1489,7 +1337,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void EducationTrickOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Charm, DefaultSkills.OneHanded };
@@ -1498,12 +1345,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
         public bool EducationTrickOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void EducationTrickOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1527,7 +1372,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             list.Add(new NarrativeMenuCharacterArgs("player_education_character", 12, playerEducationAgeEquipmentId, "act_childhood_schooled", "spawnpoint_player_1", "", "", null, true, CharacterObject.PlayerCharacter.IsFemale));
             return list;
         }
-
         public void FavoriteIdiomMenu(CharacterCreationManager characterCreationManager)
         {
             BodyProperties bodyProperties = CharacterObject.PlayerCharacter.GetBodyProperties(CharacterObject.PlayerCharacter.Equipment, -1);
@@ -1541,9 +1385,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Kfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterKOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterKOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterKOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Sfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterSOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterSOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterSOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Vfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterVOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterVOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterVOptionOnSelect), null));
-            
+
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Cfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterCOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterCOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterCOptionOnSelect), null));
-            
+
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_healthy", new TextObject("{=CCR_Idiom_choice_healthy}A healthy mind in a healthy body.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomHealthyOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomHealthyOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomHealthyOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_prevention", new TextObject("{=CCR_Idiom_choice_prevention}Prevention is better than cure.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomPreventionOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomPreventionOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomPreventionOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_wellbegun", new TextObject("{=CCR_Idiom_choice_wellbegun}Well begun is half done.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomWellBegunOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomWellBegunOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomWellBegunOptionOnSelect), null));
@@ -1555,7 +1399,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_means", new TextObject("{=CCR_Idiom_choice_means}The end justifies the means.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomMeanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomMeanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomMeanOptionOnSelect), null));
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
-
         public void IdiomFighterAOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding };
@@ -1564,12 +1407,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
-
         public bool IdiomFighterAOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void IdiomFighterAOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1583,7 +1424,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomFighterBOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Athletics };
@@ -1592,12 +1432,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
         }
-
         public bool IdiomFighterBOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "battania";
         }
-
         public void IdiomFighterBOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1611,7 +1449,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomFighterEOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding };
@@ -1620,12 +1457,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
-
         public bool IdiomFighterEOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-
         public void IdiomFighterEOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1639,7 +1474,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomFighterKOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Riding };
@@ -1648,12 +1482,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
         }
-
         public bool IdiomFighterKOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-
         public void IdiomFighterKOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1667,7 +1499,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomFighterSOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Athletics };
@@ -1676,12 +1507,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
         public bool IdiomFighterSOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-
         public void IdiomFighterSOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1695,7 +1524,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomFighterVOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding };
@@ -1704,12 +1532,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
-
         public bool IdiomFighterVOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
-
         public void IdiomFighterVOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1723,7 +1549,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomFighterCOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Athletics };
@@ -1732,12 +1557,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool IdiomFighterCOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return !(characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer);
         }
-
         public void IdiomFighterCOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1751,7 +1574,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomHealthyOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Medicine };
@@ -1760,12 +1582,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool IdiomHealthyOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void IdiomHealthyOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1779,7 +1599,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomPreventionOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Steward };
@@ -1788,12 +1607,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool IdiomPreventionOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void IdiomPreventionOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1807,7 +1624,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomWellBegunOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Steward, DefaultSkills.Engineering };
@@ -1816,12 +1632,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool IdiomWellBegunOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void IdiomWellBegunOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1835,7 +1649,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomBoldOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Tactics };
@@ -1844,12 +1657,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool IdiomBoldOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void IdiomBoldOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1863,7 +1674,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomForwarnedOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Scouting };
@@ -1872,12 +1682,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool IdiomForwarnedOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void IdiomForwarnedOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1891,7 +1699,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomInventionOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Engineering };
@@ -1900,12 +1707,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool IdiomInventionOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void IdiomInventionOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1919,7 +1724,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomArmedOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Roguery };
@@ -1928,12 +1732,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
         public bool IdiomArmedOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void IdiomArmedOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1947,7 +1749,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomConquerOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Leadership, DefaultSkills.Charm };
@@ -1956,12 +1757,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
         public bool IdiomConquerOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void IdiomConquerOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -1975,7 +1774,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void IdiomMeanOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Roguery };
@@ -1984,12 +1782,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
         public bool IdiomMeanOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void IdiomMeanOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -2003,7 +1799,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public List<NarrativeMenuCharacterArgs> StartInLifeMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
         {
             if (string.IsNullOrEmpty(characterCreationManager.CharacterCreationContent.SelectedTitleType))
@@ -2094,7 +1889,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
 
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
-
         public void LifeStartAFarisOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.OneHanded, DefaultSkills.Riding };
@@ -2103,12 +1897,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
         public bool LifeStartAFarisOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void LifeStartAFarisOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
@@ -2131,7 +1923,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
             AddHeroToPartyAction.Apply(companion, Hero.MainHero.PartyBelongedTo);
         }
-
         public void LifeStartACaravaneerOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Trade, DefaultSkills.Leadership };
@@ -2140,12 +1931,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
         public bool LifeStartACaravaneerOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void LifeStartACaravaneerOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
@@ -2159,11 +1948,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void LifeStartACaravaneerOptionOnConsequence(CharacterCreationManager characterCreationManager)
-        { 
+        {
         }
-
         public void LifeStartAMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
@@ -2172,12 +1959,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
         public bool LifeStartAMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void LifeStartAMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
@@ -2191,11 +1976,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void LifeStartAMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-
         public void LifeStartACraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics };
@@ -2204,12 +1987,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool LifeStartACraftmanOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void LifeStartACraftmanOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
@@ -2223,11 +2004,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void LifeStartACraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-
         public void LifeStartAFarmerOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine };
@@ -2236,12 +2015,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool LifeStartAFarmerOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void LifeStartAFarmerOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
@@ -2255,11 +2032,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void LifeStartAFarmerOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-
         public void LifeStartAMamlukeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics };
@@ -2268,12 +2043,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool LifeStartAMamlukeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void LifeStartAMamlukeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
@@ -2287,11 +2060,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void LifeStartAMamlukeOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-
         public void LifeStartAHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Riding };
@@ -2300,12 +2071,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool LifeStartAHorseArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void LifeStartAHorseArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
@@ -2319,11 +2088,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void LifeStartAHorseArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-
         public void LifeStartAArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
@@ -2332,12 +2099,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool LifeStartAArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void LifeStartAArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
@@ -2351,11 +2116,9 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void LifeStartAArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-
         public void LifeStartADesertBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.OneHanded };
@@ -2364,12 +2127,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool LifeStartADesertBanditOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
         }
-
         public void LifeStartADesertBanditOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
@@ -2401,7 +2162,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             list.Add(new NarrativeMenuCharacterArgs("narrative_character_horse", -1, "", "act_horse_stand_1", "spawnpoint_mount_1", @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item.StringId, @object.DefaultEquipment[EquipmentIndex.HorseHarness].Item.StringId, MountCreationKey.GetRandomMountKey(item, CharacterObject.PlayerCharacter.GetMountKeySeed()), false, false));
             return list;
         }
-
         public void AddReasonMenu(CharacterCreationManager characterCreationManager)
         {
             BodyProperties bodyProperties = CharacterObject.PlayerCharacter.GetBodyProperties(CharacterObject.PlayerCharacter.Equipment, -1);
@@ -2423,7 +2183,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Reason_prove_worth", new TextObject("{=CCR_Reason_prove_worth}to prove your fighting skills", null), new TextObject("{=CCR_Reason_desc_prove_worth}Attaching much importance to your fighting skill, you figured there was no better place than calradia to prove your might.", null), new GetNarrativeMenuOptionArgsDelegate(this.ReasonWorthOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.ReasonWorthOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.ReasonWorthOptionOnSelect), null));
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
-
         public void ReasonTravelOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting };
@@ -2432,12 +2191,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool ReasonTravelOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void ReasonTravelOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -2448,7 +2205,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void ReasonRevengeOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Tactics };
@@ -2457,12 +2213,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
-
         public bool ReasonRevengeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void ReasonRevengeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -2473,7 +2227,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void ReasonForcedOutOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery };
@@ -2482,12 +2235,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
         public bool ReasonForcedOutOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void ReasonForcedOutOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -2498,7 +2249,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void ReasonMoneyOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade };
@@ -2507,12 +2257,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
         public bool ReasonMoneyOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void ReasonMoneyOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -2523,7 +2271,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void ReasonPowerOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Leadership };
@@ -2532,12 +2279,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-
         public bool ReasonPowerOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void ReasonPowerOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -2548,7 +2293,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void ReasonHistoryOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Charm };
@@ -2557,12 +2301,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
         public bool ReasonHistoryOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void ReasonHistoryOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -2581,12 +2323,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-
         public bool ReasonLossOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void ReasonLossOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -2597,7 +2337,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void ReasonCraftingOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting };
@@ -2606,12 +2345,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-
         public bool ReasonCraftingOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void ReasonCraftingOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -2622,7 +2359,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void ReasonHelpingOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine };
@@ -2631,12 +2367,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-
         public bool ReasonHelpingOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void ReasonHelpingOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -2647,7 +2381,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-
         public void ReasonWorthOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.TwoHanded, DefaultSkills.Polearm };
@@ -2656,12 +2389,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(20);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
-
         public bool ReasonWorthOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void ReasonWorthOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
@@ -2688,7 +2419,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             list.Add(new NarrativeMenuCharacterArgs("narrative_character_horse", -1, "", "act_horse_stand_1", "spawnpoint_mount_1", @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item.StringId, @object.DefaultEquipment[EquipmentIndex.HorseHarness].Item.StringId, MountCreationKey.GetRandomMountKey(item, CharacterObject.PlayerCharacter.GetMountKeySeed()), false, false));
             return list;
         }
-
         public void AddAgeSelectionMenu(CharacterCreationManager characterCreationManager)
         {
             MBTextManager.SetTextVariable("EXP_VALUE", 30);
@@ -2704,18 +2434,15 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("age_selection_elder_option", new TextObject("{=!}50", null), new TextObject("{=ePD5Afvy}While you are past your prime, there is still enough time to go on that last big adventure for you. And you have all the experience you need to overcome anything!", null), new GetNarrativeMenuOptionArgsDelegate(this.GetAgeSelectionElderOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.AgeSelectionElderOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.AgeSelectionElderOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.AgeSelectionElderOptionOnConsequence)));
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
-
         public void GetAgeSelectionYoungAdultAgeOptionArgs(NarrativeMenuOptionArgs args)
         {
             args.SetUnspentFocusToAdd(2);
             args.SetUnspentAttributeToAdd(1);
         }
-
         public bool AgeSelectionYoungAdultAgeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void AgeSelectionYoungAdultAgeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2738,24 +2465,20 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             characterCreationManager.CharacterCreationContent.StartingAge = 21;
             Hero.MainHero.SetBirthDay(CampaignTime.YearsFromNow(-21f));
         }
-
         public void AgeSelectionYoungAdultAgeOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.StartingAge = 21;
             this.ApplyMainHeroEquipment(characterCreationManager);
         }
-
         public void GetAgeSelectionAdultOptionArgs(NarrativeMenuOptionArgs args)
         {
             args.SetUnspentFocusToAdd(4);
             args.SetUnspentAttributeToAdd(2);
         }
-
         public bool AgeSelectionAdultOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void AgeSelectionAdultOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2778,24 +2501,20 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             characterCreationManager.CharacterCreationContent.StartingAge = 30;
             Hero.MainHero.SetBirthDay(CampaignTime.YearsFromNow(-30f));
         }
-
         public void AgeSelectionAdultOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.StartingAge = 30;
             this.ApplyMainHeroEquipment(characterCreationManager);
         }
-
         public void GetAgeSelectionMiddleAgeOptionArgs(NarrativeMenuOptionArgs args)
         {
             args.SetUnspentFocusToAdd(6);
             args.SetUnspentAttributeToAdd(3);
         }
-
         public bool AgeSelectionMiddleAgeOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void AgeSelectionMiddleAgeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2818,24 +2537,20 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             characterCreationManager.CharacterCreationContent.StartingAge = 40;
             Hero.MainHero.SetBirthDay(CampaignTime.YearsFromNow(-40f));
         }
-
         public void AgeSelectionMiddleAgeOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.StartingAge = 40;
             this.ApplyMainHeroEquipment(characterCreationManager);
         }
-
         public void GetAgeSelectionElderOptionArgs(NarrativeMenuOptionArgs args)
         {
             args.SetUnspentFocusToAdd(8);
             args.SetUnspentAttributeToAdd(4);
         }
-
         public bool AgeSelectionElderOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return true;
         }
-
         public void AgeSelectionElderOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2858,13 +2573,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             characterCreationManager.CharacterCreationContent.StartingAge = 50;
             Hero.MainHero.SetBirthDay(CampaignTime.YearsFromNow(-50f));
         }
-
         public void AgeSelectionElderOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.StartingAge = 50;
             this.ApplyMainHeroEquipment(characterCreationManager);
         }
-
         public void ApplyMainHeroEquipment(CharacterCreationManager characterCreationManager)
         {
             NarrativeMenu narrativeMenuWithId = characterCreationManager.GetNarrativeMenuWithId("narrative_age_selection_menu");
@@ -2880,62 +2593,35 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             CharacterObject.PlayerCharacter.Equipment.FillFrom(narrativeMenuCharacter.Equipment.DefaultEquipment, true);
             CharacterObject.PlayerCharacter.FirstCivilianEquipment.FillFrom(narrativeMenuCharacter.Equipment.GetRandomCivilianEquipment(), true);
         }
-
         new public const string MotherNarrativeCharacterStringId = "mother_character";
-
         new public const string FatherNarrativeCharacterStringId = "father_character";
-
         new public const string PlayerChildhoodCharacterStringId = "player_childhood_character";
-
         new public const string PlayerEducationCharacterStringId = "player_education_character";
-
         new public const string PlayerYouthCharacterStringId = "player_youth_character";
-
         new public const string PlayerAdulthoodCharacterStringId = "player_adulthood_character";
-
         new public const string PlayerAgeSelectionCharacterStringId = "player_age_selection_character";
-
         new public const string HorseNarrativeCharacterStringId = "narrative_character_horse";
-
         public static class CharacterOccupationTypes
         {
 
             public const string Retainer = "retainer";
-
             public const string Bard = "bard";
-
             public const string Hunter = "hunter";
-
             public const string Farmer = "farmer";
-
             public const string Herder = "herder";
-
             public const string Healer = "healer";
-
             public const string Mercenary = "mercenary";
-
             public const string Infantry = "infantry";
-
             public const string Skirmisher = "skirmisher";
-
             public const string Kern = "kern";
-
             public const string Guard = "guard";
-
             public const string RetainerUrban = "retainer_urban";
-
             public const string MercenaryUrban = "mercenary_urban";
-
             public const string MerchantUrban = "merchant_urban";
-
             public const string VagabondUrban = "vagabond_urban";
-
             public const string ArtisanUrban = "artisan_urban";
-
             public const string PhysicianUrban = "physician_urban";
-
             public const string HealerUrban = "healer_urban";
-
             public const string BardUrban = "bard_urban";
         }
     }

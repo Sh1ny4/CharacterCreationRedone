@@ -158,9 +158,6 @@
       <string id="CCR_Reason_desc_helping"        text="Having been taught in medicine, you decide to set out and help those in need, as with the wars many have suffered." />
       <string id="CCR_Reason_prove_worth"         text="to prove your fighting skills" />
       <string id="CCR_Reason_desc_prove_worth"    text="Attaching much importance to your fighting skill, you figured there was no better place than calradia to prove your might." />
-  
-      <!-- starting age -->
-      <string id="CCR_Age_16_desc"                text="Some might say you are too young, but your eagerness more than makes up for your lack of experience." />
     <!-- #endregion -->
     </strings>
 </base>
