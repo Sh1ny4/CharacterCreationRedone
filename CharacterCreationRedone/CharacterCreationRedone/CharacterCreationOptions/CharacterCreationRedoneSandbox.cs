@@ -861,7 +861,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             list.Add(new NarrativeMenuCharacterArgs("player_childhood_character", 7, playerChildhoodAgeEquipmentId, "act_childhood_schooled", "spawnpoint_player_1", "", "", null, true, CharacterObject.PlayerCharacter.IsFemale));
             return list;
         }
-        new public void EducationMenu(CharacterCreationManager characterCreationManager)
+        public void EducationMenu(CharacterCreationManager characterCreationManager)
         {
             List<NarrativeMenuCharacter> list = new List<NarrativeMenuCharacter>();
             BodyProperties bodyProperties = CharacterObject.PlayerCharacter.GetBodyProperties(CharacterObject.PlayerCharacter.Equipment, -1);
