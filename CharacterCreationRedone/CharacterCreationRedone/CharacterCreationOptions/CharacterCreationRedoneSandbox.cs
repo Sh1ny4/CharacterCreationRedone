@@ -1722,46 +1722,46 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Bkern", new TextObject("{=CCR_Start_Choice_Bkern}part of the kern", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartBattaniaKernOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartBattaniaKernOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartBattaniaKernOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartBattaniaKernOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Bforestbandit", new TextObject("{=CCR_Start_Choice_Bforestbandit}a forest bandit", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartBattaniaForestBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartBattaniaForestBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartBattaniaForestBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartBattaniaForestBanditOptionOnConsequence)));
 
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ecommander", new TextObject("{=CCR_Start_Choice_Ecommander}a centurion", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarisOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Eengineer", new TextObject("{=CCR_Start_Choice_Eengineer}an engineer's apprentice", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCaravaneerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Emerchant", new TextObject("{=CCR_Start_Choice_Emerchant}a merchant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMerchantOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ecraftman", new TextObject("{=CCR_Start_Choice_Ecraftman}a craftman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCraftmanOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Epeasant", new TextObject("{=CCR_Start_Choice_Epeasant}a peasant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarmerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Elegionary", new TextObject("{=CCR_Start_Choice_Elegionary}legionary", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMamlukeOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Earcher", new TextObject("{=CCR_Start_Choice_Earcher}archer", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiHorseArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ecavalry", new TextObject("{=CCR_Start_Choice_Ecavalry}light cavalry", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ehorsearcher", new TextObject("{=CCR_Start_Choice_Ehorsearcher}mounted archer", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiDesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiDesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiDesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiDesertBanditOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Elooter", new TextObject("{=CCR_Start_Choice_Elooter}a looter", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiDesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiDesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiDesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiDesertBanditOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ecommander", new TextObject("{=CCR_Start_Choice_Ecommander}a centurion", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartEmpireCommanderOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartEmpireCommanderOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartEmpireCommanderOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartEmpireCommanderOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Eengineer", new TextObject("{=CCR_Start_Choice_Eengineer}an engineer's apprentice", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartEmpireEngineerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartEmpireEngineerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartEmpireEngineerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartEmpireEngineerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Emerchant", new TextObject("{=CCR_Start_Choice_Emerchant}a merchant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartEmpireMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartEmpireMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartEmpireMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartEmpireMerchantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ecraftman", new TextObject("{=CCR_Start_Choice_Ecraftman}a craftman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartEmpireCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartEmpireCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartEmpireCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartEmpireCraftmanOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Epeasant", new TextObject("{=CCR_Start_Choice_Epeasant}a peasant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartEmpirePeasantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartEmpirePeasantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartEmpirePeasantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartEmpirePeasantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Elegionary", new TextObject("{=CCR_Start_Choice_Elegionary}legionary", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartEmpireLegionaryOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartEmpireLegionaryOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartEmpireLegionaryOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartEmpireLegionaryOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Earcher", new TextObject("{=CCR_Start_Choice_Earcher}archer", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartEmpireArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartEmpireArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartEmpireArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartEmpireArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ecavalry", new TextObject("{=CCR_Start_Choice_Ecavalry}light cavalry", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartEmpireCavalryOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartEmpireCavalryOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartEmpireCavalryOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartEmpireCavalryOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ehorsearcher", new TextObject("{=CCR_Start_Choice_Ehorsearcher}mounted archer", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartEmpireHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartEmpireHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartEmpireHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartEmpireHorseArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Elooter", new TextObject("{=CCR_Start_Choice_Elooter}a looter", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartEmpireLooterOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartEmpireLooterOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartEmpireLooterOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartEmpireLooterOptionOnConsequence)));
 
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Kkhanguard", new TextObject("{=CCR_Start_Choice_Kkhanguard}part of a khan's guard", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarisOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Knomad", new TextObject("{=CCR_Start_Choice_Knomad}a nomad", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCaravaneerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Kmerchant", new TextObject("{=CCR_Start_Choice_Kmerchant}a merchant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMerchantOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Kcraftman", new TextObject("{=CCR_Start_Choice_Kcraftman}a craftman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCraftmanOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Kfarmer", new TextObject("{=CCR_Start_Choice_Kfarmer}a farmer", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarmerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Kcavalry", new TextObject("{=CCR_Start_Choice_Kcavalry}part of the cavalry", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMamlukeOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Khorsearcher", new TextObject("{=CCR_Start_Choice_Khorsearcher}mounted archer", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiHorseArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Kinfantry", new TextObject("{=CCR_Start_Choice_Kinfantry}infantry", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ksteppebandit", new TextObject("{=CCR_Start_Choice_Ksteppebandit}a steppe bandit", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiDesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiDesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiDesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiDesertBanditOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Kkhanguard", new TextObject("{=CCR_Start_Choice_Kkhanguard}part of a khan's guard", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartKhuzaitKhanGuardOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartKhuzaitKhanGuardOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartKhuzaitKhanGuardOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartKhuzaitKhanGuardOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Knomad", new TextObject("{=CCR_Start_Choice_Knomad}a nomad", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartKhuzaitNomadOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartKhuzaitNomadOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartKhuzaitNomadOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartKhuzaitNomadOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Kmerchant", new TextObject("{=CCR_Start_Choice_Kmerchant}a merchant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartKhuzaitMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartKhuzaitMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartKhuzaitMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartKhuzaitMerchantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Kcraftman", new TextObject("{=CCR_Start_Choice_Kcraftman}a craftman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartKhuzaitCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartKhuzaitCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartKhuzaitCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartKhuzaitCraftmanOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Kfarmer", new TextObject("{=CCR_Start_Choice_Kfarmer}a farmer", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartKhuzaitFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartKhuzaitFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartKhuzaitFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartKhuzaitFarmerOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Kcavalry", new TextObject("{=CCR_Start_Choice_Kcavalry}part of the cavalry", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartKhuzaitCavalryOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartKhuzaitCavalryOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartKhuzaitCavalryOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartKhuzaitCavalryOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Khorsearcher", new TextObject("{=CCR_Start_Choice_Khorsearcher}mounted archer", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartKhuzaitHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartKhuzaitHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartKhuzaitHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartKhuzaitHorseArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Kinfantry", new TextObject("{=CCR_Start_Choice_Kinfantry}infantry", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartKhuzaitInfantryOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartKhuzaitInfantryOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartKhuzaitInfantryOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartKhuzaitInfantryOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ksteppebandit", new TextObject("{=CCR_Start_Choice_Ksteppebandit}a steppe bandit", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartKhuzaitSteppeBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartKhuzaitSteppeBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartKhuzaitSteppeBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartKhuzaitSteppeBanditOptionOnConsequence)));
 
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sdruzhina", new TextObject("{=CCR_Start_Choice_Sdruzhina}a member of a druzhina", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarisOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sfur_hunter", new TextObject("{=CCR_Start_Choice_Sfur_hunter}fur hunter", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCaravaneerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Smerchant", new TextObject("{=CCR_Start_Choice_Smerchant}a merchant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMerchantOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Scraftman", new TextObject("{=CCR_Start_Choice_Scraftman}a craftman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCraftmanOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Speasant", new TextObject("{=CCR_Start_Choice_Speasant}a peasant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarmerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sinfantry", new TextObject("{=CCR_Start_Choice_Sinfantry}part of the infantry", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMamlukeOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sshocktroop", new TextObject("{=CCR_Start_Choice_Sshocktroop}shock troop", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiHorseArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sarcher", new TextObject("{=CCR_Start_Choice_Sarcher}bowman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ssearaider", new TextObject("{=CCR_Start_Choice_Ssearaider}a raider", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiDesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiDesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiDesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiDesertBanditOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sdruzhina", new TextObject("{=CCR_Start_Choice_Sdruzhina}a member of a druzhina", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaDruzhinaOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaDruzhinaOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaDruzhinaOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaDruzhinaOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sfur_hunter", new TextObject("{=CCR_Start_Choice_Sfur_hunter}fur hunter", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaFurHunterOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaFurHunterOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaFurHunterOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaFurHunterOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Smerchant", new TextObject("{=CCR_Start_Choice_Smerchant}a merchant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaMerchantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Scraftman", new TextObject("{=CCR_Start_Choice_Scraftman}a craftman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaCraftmanOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Speasant", new TextObject("{=CCR_Start_Choice_Speasant}a peasant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaPeasantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaPeasantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaPeasantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaPeasantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sinfantry", new TextObject("{=CCR_Start_Choice_Sinfantry}part of the infantry", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaInfantryOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaInfantryOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaInfantryOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaInfantryOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sshocktroop", new TextObject("{=CCR_Start_Choice_Sshocktroop}shock troop", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaShockTroopOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaShockTroopOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaShockTroopOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaShockTroopOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sarcher", new TextObject("{=CCR_Start_Choice_Sarcher}bowman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ssearaider", new TextObject("{=CCR_Start_Choice_Ssearaider}a raider", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaSeaRaiderBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaSeaRaiderBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaSeaRaiderBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaSeaRaiderBanditOptionOnConsequence)));
 
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vknight", new TextObject("{=CCR_Start_Choice_Vknight}a knight", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarisOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarisOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarisOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarisOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vchamberlain", new TextObject("{=CCR_Start_Choice_Vchamberlain}chamberlain", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCaravaneerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCaravaneerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCaravaneerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCaravaneerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vmerchant", new TextObject("{=CCR_Start_Choice_Vmerchant}a merchant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMerchantOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vguild", new TextObject("{=CCR_Start_Choice_Vguild}a member of a guild", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiCraftmanOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vserf", new TextObject("{=CCR_Start_Choice_Vserf}a serf", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiFarmerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiFarmerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiFarmerOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiFarmerOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vinfantry", new TextObject("{=CCR_Start_Choice_Vinfantry}levied footman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiMamlukeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiMamlukeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiMamlukeOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiMamlukeOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vcavalry", new TextObject("{=CCR_Start_Choice_Vcavalry}light cavalry", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiHorseArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiHorseArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiHorseArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiHorseArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vcrossbowman", new TextObject("{=CCR_Start_Choice_Vcrossbowman}levied crossbowman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiArcherOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vbandit", new TextObject("{=CCR_Start_Choice_Vbandit}a highwayman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartAseraiDesertBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartAseraiDesertBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartAseraiDesertBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartAseraiDesertBanditOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vknight", new TextObject("{=CCR_Start_Choice_Vknight}a knight", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartVlandiaKnightOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartVlandiaKnightOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartVlandiaKnightOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartVlandiaKnightOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vchamberlain", new TextObject("{=CCR_Start_Choice_Vchamberlain}chamberlain", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartVlandiaChamberlainOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartVlandiaChamberlainOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartVlandiaChamberlainOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartVlandiaChamberlainOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vmerchant", new TextObject("{=CCR_Start_Choice_Vmerchant}a merchant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartVlandiaMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartVlandiaMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartVlandiaMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartVlandiaMerchantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vguild", new TextObject("{=CCR_Start_Choice_Vguild}a member of a guild", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartVlandiaGuildMemberOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartVlandiaGuildMemberOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartVlandiaGuildMemberOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartVlandiaGuildMemberOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vserf", new TextObject("{=CCR_Start_Choice_Vserf}a serf", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartVlandiaSerfOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartVlandiaSerfOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartVlandiaSerfOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartVlandiaSerfOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vinfantry", new TextObject("{=CCR_Start_Choice_Vinfantry}levied footman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartVlandiaInfantryOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartVlandiaInfantryOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartVlandiaInfantryOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartVlandiaInfantryOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vcavalry", new TextObject("{=CCR_Start_Choice_Vcavalry}light cavalry", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartVlandiaCavalryOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartVlandiaCavalryOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartVlandiaCavalryOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartVlandiaCavalryOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vcrossbowman", new TextObject("{=CCR_Start_Choice_Vcrossbowman}levied crossbowman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartVlandiaRangedOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartVlandiaRangedOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartVlandiaRangedOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartVlandiaRangedOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Vbandit", new TextObject("{=CCR_Start_Choice_Vbandit}a highwayman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartVlandiaMountainBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartVlandiaMountainBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartVlandiaMountainBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartVlandiaMountainBanditOptionOnConsequence)));
 
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
@@ -2282,7 +2282,8 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         public void LifeStartBattaniaForestBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiFarisOptionArgs(NarrativeMenuOptionArgs args)
+        
+        public void LifeStartEmpireCommanderOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.OneHanded, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
@@ -2290,11 +2291,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-        public bool LifeStartAseraiFarisOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartEmpireCommanderOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-        public void LifeStartAseraiFarisOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireCommanderOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2307,7 +2308,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiFarisOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireCommanderOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
             Hero ruler = Hero.FindAll(hero => hero.Culture == Hero.MainHero.Culture && hero.IsAlive && hero.IsFactionLeader && !hero.MapFaction.IsMinorFaction).GetRandomElementInefficiently();
             ChangeKingdomAction.ApplyByJoinToKingdom(Hero.MainHero.Clan, ruler.Clan.Kingdom, default, false);
@@ -2316,7 +2317,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
             AddHeroToPartyAction.Apply(companion, Hero.MainHero.PartyBelongedTo);
         }
-        public void LifeStartAseraiCaravaneerOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartEmpireEngineerOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Trade, DefaultSkills.Leadership };
             args.SetAffectedSkills(affectedSkills);
@@ -2324,11 +2325,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-        public bool LifeStartAseraiCaravaneerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartEmpireEngineerOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-        public void LifeStartAseraiCaravaneerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireEngineerOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2341,10 +2342,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiCaravaneerOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireEngineerOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiMerchantOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartEmpireMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
@@ -2352,11 +2353,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-        public bool LifeStartAseraiMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartEmpireMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-        public void LifeStartAseraiMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2369,10 +2370,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiCraftmanOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartEmpireCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -2380,11 +2381,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-        public bool LifeStartAseraiCraftmanOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartEmpireCraftmanOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-        public void LifeStartAseraiCraftmanOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireCraftmanOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2397,10 +2398,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiCraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireCraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiFarmerOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartEmpirePeasantOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine };
             args.SetAffectedSkills(affectedSkills);
@@ -2408,11 +2409,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-        public bool LifeStartAseraiFarmerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartEmpirePeasantOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-        public void LifeStartAseraiFarmerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpirePeasantOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2425,10 +2426,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiFarmerOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpirePeasantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiMamlukeOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartEmpireLegionaryOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -2436,11 +2437,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiMamlukeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartEmpireLegionaryOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-        public void LifeStartAseraiMamlukeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireLegionaryOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2453,10 +2454,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiMamlukeOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireLegionaryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartEmpireArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
@@ -2464,11 +2465,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiHorseArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartEmpireArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-        public void LifeStartAseraiHorseArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2481,10 +2482,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiHorseArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiArcherOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartEmpireCavalryOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -2492,11 +2493,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartEmpireCavalryOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-        public void LifeStartAseraiArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireCavalryOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2509,10 +2510,38 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireCavalryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiDesertBanditOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartEmpireHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Riding };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
+        }
+        public bool LifeStartEmpireHorseArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
+        }
+        public void LifeStartEmpireHorseArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+        public void LifeStartEmpireHorseArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        {
+        }
+        public void LifeStartEmpireLooterOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.OneHanded };
             args.SetAffectedSkills(affectedSkills);
@@ -2520,11 +2549,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiDesertBanditOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartEmpireLooterOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
         }
-        public void LifeStartAseraiDesertBanditOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireLooterOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2537,10 +2566,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiDesertBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartEmpireLooterOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiFarisOptionArgs(NarrativeMenuOptionArgs args)
+
+        public void LifeStartKhuzaitKhanGuardOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.OneHanded, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
@@ -2548,11 +2578,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-        public bool LifeStartAseraiFarisOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartKhuzaitKhanGuardOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-        public void LifeStartAseraiFarisOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitKhanGuardOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2565,7 +2595,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiFarisOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitKhanGuardOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
             Hero ruler = Hero.FindAll(hero => hero.Culture == Hero.MainHero.Culture && hero.IsAlive && hero.IsFactionLeader && !hero.MapFaction.IsMinorFaction).GetRandomElementInefficiently();
             ChangeKingdomAction.ApplyByJoinToKingdom(Hero.MainHero.Clan, ruler.Clan.Kingdom, default, false);
@@ -2574,7 +2604,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
             AddHeroToPartyAction.Apply(companion, Hero.MainHero.PartyBelongedTo);
         }
-        public void LifeStartAseraiCaravaneerOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartKhuzaitNomadOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Trade, DefaultSkills.Leadership };
             args.SetAffectedSkills(affectedSkills);
@@ -2582,11 +2612,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-        public bool LifeStartAseraiCaravaneerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartKhuzaitNomadOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-        public void LifeStartAseraiCaravaneerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitNomadOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2599,10 +2629,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiCaravaneerOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitNomadOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiMerchantOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartKhuzaitMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
@@ -2610,11 +2640,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-        public bool LifeStartAseraiMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartKhuzaitMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-        public void LifeStartAseraiMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2627,10 +2657,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiCraftmanOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartKhuzaitCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -2638,11 +2668,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-        public bool LifeStartAseraiCraftmanOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartKhuzaitCraftmanOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-        public void LifeStartAseraiCraftmanOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitCraftmanOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2655,10 +2685,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiCraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitCraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiFarmerOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartKhuzaitFarmerOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine };
             args.SetAffectedSkills(affectedSkills);
@@ -2666,11 +2696,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-        public bool LifeStartAseraiFarmerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartKhuzaitFarmerOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-        public void LifeStartAseraiFarmerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitFarmerOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2683,10 +2713,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiFarmerOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitFarmerOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiMamlukeOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartKhuzaitCavalryOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -2694,11 +2724,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiMamlukeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartKhuzaitCavalryOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-        public void LifeStartAseraiMamlukeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitCavalryOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2711,10 +2741,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiMamlukeOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitCavalryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartKhuzaitHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
@@ -2722,11 +2752,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiHorseArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartKhuzaitHorseArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-        public void LifeStartAseraiHorseArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitHorseArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2739,10 +2769,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiHorseArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitHorseArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiArcherOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartKhuzaitInfantryOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -2750,11 +2780,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartKhuzaitInfantryOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-        public void LifeStartAseraiArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitInfantryOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2767,10 +2797,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitInfantryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiDesertBanditOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartKhuzaitSteppeBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.OneHanded };
             args.SetAffectedSkills(affectedSkills);
@@ -2778,11 +2808,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiDesertBanditOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartKhuzaitSteppeBanditOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
         }
-        public void LifeStartAseraiDesertBanditOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitSteppeBanditOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2795,10 +2825,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiDesertBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartKhuzaitSteppeBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiFarisOptionArgs(NarrativeMenuOptionArgs args)
+
+        public void LifeStartSturgiaDruzhinaOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.OneHanded, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
@@ -2806,11 +2837,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-        public bool LifeStartAseraiFarisOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartSturgiaDruzhinaOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-        public void LifeStartAseraiFarisOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaDruzhinaOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2823,7 +2854,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiFarisOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaDruzhinaOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
             Hero ruler = Hero.FindAll(hero => hero.Culture == Hero.MainHero.Culture && hero.IsAlive && hero.IsFactionLeader && !hero.MapFaction.IsMinorFaction).GetRandomElementInefficiently();
             ChangeKingdomAction.ApplyByJoinToKingdom(Hero.MainHero.Clan, ruler.Clan.Kingdom, default, false);
@@ -2832,7 +2863,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
             AddHeroToPartyAction.Apply(companion, Hero.MainHero.PartyBelongedTo);
         }
-        public void LifeStartAseraiCaravaneerOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartSturgiaFurHunterOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Trade, DefaultSkills.Leadership };
             args.SetAffectedSkills(affectedSkills);
@@ -2840,11 +2871,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-        public bool LifeStartAseraiCaravaneerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartSturgiaFurHunterOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-        public void LifeStartAseraiCaravaneerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaFurHunterOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2857,10 +2888,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiCaravaneerOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaFurHunterOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiMerchantOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartSturgiaMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
@@ -2868,11 +2899,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-        public bool LifeStartAseraiMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartSturgiaMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-        public void LifeStartAseraiMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2885,10 +2916,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiCraftmanOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartSturgiaCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -2896,11 +2927,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-        public bool LifeStartAseraiCraftmanOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartSturgiaCraftmanOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-        public void LifeStartAseraiCraftmanOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaCraftmanOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2913,10 +2944,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiCraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaCraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiFarmerOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartSturgiaPeasantOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine };
             args.SetAffectedSkills(affectedSkills);
@@ -2924,11 +2955,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-        public bool LifeStartAseraiFarmerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartSturgiaPeasantOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-        public void LifeStartAseraiFarmerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaPeasantOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2941,10 +2972,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiFarmerOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaPeasantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiMamlukeOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartSturgiaInfantryOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -2952,11 +2983,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiMamlukeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartSturgiaInfantryOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-        public void LifeStartAseraiMamlukeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaInfantryOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2969,10 +3000,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiMamlukeOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaInfantryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartSturgiaShockTroopOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
@@ -2980,11 +3011,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiHorseArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartSturgiaShockTroopOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-        public void LifeStartAseraiHorseArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaShockTroopOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -2997,10 +3028,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiHorseArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaShockTroopOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiArcherOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartSturgiaArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -3008,11 +3039,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartSturgiaArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-        public void LifeStartAseraiArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -3025,10 +3056,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiDesertBanditOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartSturgiaSeaRaiderBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.OneHanded };
             args.SetAffectedSkills(affectedSkills);
@@ -3036,11 +3067,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiDesertBanditOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartSturgiaSeaRaiderBanditOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-        public void LifeStartAseraiDesertBanditOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaSeaRaiderBanditOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -3053,10 +3084,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiDesertBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaSeaRaiderBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiFarisOptionArgs(NarrativeMenuOptionArgs args)
+
+        public void LifeStartVlandiaKnightOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.OneHanded, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
@@ -3064,11 +3096,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-        public bool LifeStartAseraiFarisOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartVlandiaKnightOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Retainer && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
-        public void LifeStartAseraiFarisOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaKnightOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -3081,7 +3113,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiFarisOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaKnightOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
             Hero ruler = Hero.FindAll(hero => hero.Culture == Hero.MainHero.Culture && hero.IsAlive && hero.IsFactionLeader && !hero.MapFaction.IsMinorFaction).GetRandomElementInefficiently();
             ChangeKingdomAction.ApplyByJoinToKingdom(Hero.MainHero.Clan, ruler.Clan.Kingdom, default, false);
@@ -3090,7 +3122,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
             AddHeroToPartyAction.Apply(companion, Hero.MainHero.PartyBelongedTo);
         }
-        public void LifeStartAseraiCaravaneerOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartVlandiaChamberlainOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Trade, DefaultSkills.Leadership };
             args.SetAffectedSkills(affectedSkills);
@@ -3098,11 +3130,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
         }
-        public bool LifeStartAseraiCaravaneerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartVlandiaChamberlainOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
-        public void LifeStartAseraiCaravaneerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaChamberlainOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -3115,10 +3147,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiCaravaneerOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaChamberlainOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiMerchantOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartVlandiaMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
             args.SetAffectedSkills(affectedSkills);
@@ -3126,11 +3158,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
         }
-        public bool LifeStartAseraiMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartVlandiaMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
-        public void LifeStartAseraiMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "retainer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -3143,10 +3175,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiCraftmanOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartVlandiaGuildMemberOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -3154,11 +3186,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-        public bool LifeStartAseraiCraftmanOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartVlandiaGuildMemberOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
-        public void LifeStartAseraiCraftmanOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaGuildMemberOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -3171,10 +3203,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiCraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaGuildMemberOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiFarmerOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartVlandiaSerfOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine };
             args.SetAffectedSkills(affectedSkills);
@@ -3182,11 +3214,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
         }
-        public bool LifeStartAseraiFarmerOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartVlandiaSerfOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
-        public void LifeStartAseraiFarmerOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaSerfOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -3199,10 +3231,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiFarmerOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaSerfOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiMamlukeOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartVlandiaInfantryOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -3210,11 +3242,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiMamlukeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartVlandiaInfantryOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
-        public void LifeStartAseraiMamlukeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaInfantryOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -3227,10 +3259,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiMamlukeOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaInfantryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartVlandiaCavalryOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Riding };
             args.SetAffectedSkills(affectedSkills);
@@ -3238,11 +3270,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiHorseArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartVlandiaCavalryOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
-        public void LifeStartAseraiHorseArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaCavalryOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -3255,10 +3287,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiHorseArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaCavalryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiArcherOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartVlandiaRangedOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -3266,11 +3298,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartVlandiaRangedOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
-        public void LifeStartAseraiArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaRangedOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -3283,10 +3315,10 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaRangedOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
-        public void LifeStartAseraiDesertBanditOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartVlandiaMountainBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.OneHanded };
             args.SetAffectedSkills(affectedSkills);
@@ -3294,11 +3326,11 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
         }
-        public bool LifeStartAseraiDesertBanditOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartVlandiaMountainBanditOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
         }
-        public void LifeStartAseraiDesertBanditOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaMountainBanditOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
@@ -3311,7 +3343,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                 }
             }
         }
-        public void LifeStartAseraiDesertBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartVlandiaMountainBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
         }
 
