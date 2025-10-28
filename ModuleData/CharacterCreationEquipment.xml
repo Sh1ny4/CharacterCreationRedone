@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EquipmentRosters>
-	<!-- #region STARTING EQUIPMENT SETS -->
 	<!-- #region Aserai -->
 	<!--faris-->
-	<EquipmentRoster id="player_char_creation_aserai_1_m"
+	<EquipmentRoster id="player_char_creation_aserai_noble_m"
             culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.empire_lance_1_t3" />
@@ -23,7 +22,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_aserai_1_f"
+	<EquipmentRoster id="player_char_creation_aserai_noble_f"
             culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.empire_lance_1_t3" />
@@ -44,7 +43,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--caravaneer-->
-	<EquipmentRoster id="player_char_creation_aserai_2_m"
+	<EquipmentRoster id="player_char_creation_aserai_special_m"
             culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.seax" />
@@ -62,7 +61,7 @@
 			<Equipment slot="HorseHarness" id="Item.camel_saddle" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_aserai_2_f"
+	<EquipmentRoster id="player_char_creation_aserai_special_f"
             culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.seax" />
@@ -81,7 +80,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--merchant-->
-	<EquipmentRoster id="player_char_creation_aserai_3_m"
+	<EquipmentRoster id="player_char_creation_aserai_merchant_m"
             culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.seax" />
@@ -95,7 +94,7 @@
 			<Equipment slot="Leg" id="Item.fine_town_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_aserai_3_f"
+	<EquipmentRoster id="player_char_creation_aserai_merchant_f"
             culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.seax" />
@@ -110,7 +109,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--craftman-->
-	<EquipmentRoster id="player_char_creation_aserai_4_m"
+	<EquipmentRoster id="player_char_creation_aserai_craftman_m"
             culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_hammer_1_t1" />
@@ -127,7 +126,7 @@
 			<Equipment slot="Leg" id="Item.fine_town_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_aserai_4_f"
+	<EquipmentRoster id="player_char_creation_aserai_craftman_f"
             culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_hammer_1_t1" />
@@ -145,7 +144,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--farmer-->
-	<EquipmentRoster id="player_char_creation_aserai_5_m"
+	<EquipmentRoster id="player_char_creation_aserai_farmer_m"
             culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_polearm_1_t1" />
@@ -161,7 +160,7 @@
 			<Equipment slot="Leg" id="Item.wrapped_shoes" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_aserai_5_f"
+	<EquipmentRoster id="player_char_creation_aserai_farmer_f"
             culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_polearm_1_t1" />
@@ -179,7 +178,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--infantry-->
-	<EquipmentRoster id="player_char_creation_aserai_6_m"
+	<EquipmentRoster id="player_char_creation_aserai_infantry_m"
 		culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.eastern_spear_1_t2"/>
@@ -198,7 +197,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_aserai_6_f"
+	<EquipmentRoster id="player_char_creation_aserai_infantry_f"
 		culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.eastern_spear_1_t2"/>
@@ -218,7 +217,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--horse archer-->
-	<EquipmentRoster id="player_char_creation_aserai_7_m"
+	<EquipmentRoster id="player_char_creation_aserai_horsearcher_m"
 		culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.simple_sabre_sword_t2" />
@@ -238,7 +237,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_aserai_7_f"
+	<EquipmentRoster id="player_char_creation_aserai_horsearcher_f"
 		culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.simple_sabre_sword_t2" />
@@ -259,7 +258,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--archer-->
-	<EquipmentRoster id="player_char_creation_aserai_8_m"
+	<EquipmentRoster id="player_char_creation_aserai_skirmisher_m"
 		culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hunting_bow"/>
@@ -277,7 +276,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_aserai_8_f"
+	<EquipmentRoster id="player_char_creation_aserai_skirmisher_f"
 		culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hunting_bow"/>
@@ -296,7 +295,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!-- desert bandit-->
-	<EquipmentRoster id="player_char_creation_aserai_9_m"
+	<EquipmentRoster id="player_char_creation_aserai_bandit_m"
 		culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item1" id="Item.eastern_spear_3_t3" />
@@ -316,7 +315,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_aserai_9_f"
+	<EquipmentRoster id="player_char_creation_aserai_bandit_f"
 		culture="Culture.aserai">
 		<EquipmentSet>
 			<Equipment slot="Item1" id="Item.eastern_spear_3_t3" />
@@ -334,71 +333,12 @@
 			<Equipment slot="Head" id="Item.woven_turban" />
 			<Equipment slot="Body" id="Item.aserai_civil_f" />
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<!--Ignore 10th Option-->
-	<EquipmentRoster id="player_char_creation_aserai_10_m"
-                      culture="Culture.aserai">
-		<EquipmentSet>
-			<Equipment slot="Item2"
-                    id="Item.light_mace_t3" />
-			<Equipment slot="Item3"
-                    id="Item.small_flat_heater_shield" />
-			<Equipment slot="Head"
-                    id="Item.open_head_scarf" />
-			<Equipment slot="Body"
-                    id="Item.long_padded_robe" />
-			<Equipment slot="Leg"
-                    id="Item.khuzait_curved_boots" />
-			<Equipment slot="Horse"
-                    id="Item.sumpter_horse" />
-			<Equipment slot="HorseHarness"
-                    id="Item.aseran_village_harness" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0"
-                    id="Item.desert_throwing_knife" />
-			<Equipment slot="Head"
-                    id="Item.open_head_scarf" />
-			<Equipment slot="Body"
-                    id="Item.long_padded_robe" />
-			<Equipment slot="Leg"
-                    id="Item.khuzait_curved_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_aserai_10_f"
-                      culture="Culture.aserai">
-		<EquipmentSet>
-			<Equipment slot="Item2"
-                    id="Item.light_mace_t3" />
-			<Equipment slot="Item3"
-                    id="Item.small_flat_heater_shield" />
-			<Equipment slot="Head"
-                    id="Item.aserai_villager_female_headdress" />
-			<Equipment slot="Body"
-                    id="Item.long_padded_robe" />
-			<Equipment slot="Leg"
-                    id="Item.khuzait_curved_boots" />
-			<Equipment slot="Horse"
-                    id="Item.sumpter_horse" />
-			<Equipment slot="HorseHarness"
-                    id="Item.aseran_village_harness" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0"
-                    id="Item.aserai_sword_2_t2" />
-			<Equipment slot="Head"
-                    id="Item.aserai_villager_female_headdress" />
-			<Equipment slot="Body"
-                    id="Item.long_padded_robe" />
-			<Equipment slot="Leg"
-                    id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!-- #endregion -->
 	<!-- #region Battania -->
 	<!--fianna -->
-	<EquipmentRoster id="player_char_creation_battania_1_m"
+	<EquipmentRoster id="player_char_creation_battania_noble_m"
           culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.battania_2hsword_2_t3" />
@@ -418,7 +358,7 @@
 			<Equipment slot="Leg" id="Item.highland_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_battania_1_f"
+	<EquipmentRoster id="player_char_creation_battania_noble_f"
           culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.battania_2hsword_2_t3" />
@@ -439,7 +379,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--druid-->
-	<EquipmentRoster id="player_char_creation_battania_2_m"
+	<EquipmentRoster id="player_char_creation_battania_special_m"
             culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hooked_cleaver" />
@@ -454,7 +394,7 @@
 			<Equipment slot="Leg" id="Item.highland_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_battania_2_f"
+	<EquipmentRoster id="player_char_creation_battania_special_f"
             culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hooked_cleaver" />
@@ -470,7 +410,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--merchant-->
-	<EquipmentRoster id="player_char_creation_battania_3_m"
+	<EquipmentRoster id="player_char_creation_battania_merchant_m"
             culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hooked_cleaver" />
@@ -483,7 +423,7 @@
 			<Equipment slot="Leg" id="Item.highland_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_battania_3_f"
+	<EquipmentRoster id="player_char_creation_battania_merchant_f"
             culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hooked_cleaver" />
@@ -497,7 +437,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--craftman-->
-	<EquipmentRoster id="player_char_creation_battania_4_m"
+	<EquipmentRoster id="player_char_creation_battania_craftman_m"
             culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_hammer_1_t1" />
@@ -512,7 +452,7 @@
 			<Equipment slot="Leg" id="Item.highland_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_battania_4_f"
+	<EquipmentRoster id="player_char_creation_battania_craftman_f"
             culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_hammer_1_t1" />
@@ -528,7 +468,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--forester-->
-	<EquipmentRoster id="player_char_creation_battania_5_m"
+	<EquipmentRoster id="player_char_creation_battania_farmer_m"
             culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hooked_cleaver" />
@@ -544,7 +484,7 @@
 			<Equipment slot="Leg" id="Item.highland_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_battania_5_f"
+	<EquipmentRoster id="player_char_creation_battania_farmer_f"
             culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hooked_cleaver" />
@@ -561,7 +501,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--shock troop-->
-	<EquipmentRoster id="player_char_creation_battania_6_m"
+	<EquipmentRoster id="player_char_creation_battania_shock_m"
 		culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.simple_sparth_axe_t2"/>
@@ -579,7 +519,7 @@
 			<Equipment slot="Leg" id="Item.highland_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_battania_6_f"
+	<EquipmentRoster id="player_char_creation_battania_shock_f"
 		culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.simple_sparth_axe_t2"/>
@@ -598,7 +538,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--scout-->
-	<EquipmentRoster id="player_char_creation_battania_7_m"
+	<EquipmentRoster id="player_char_creation_battania_horsearcher_m"
 		culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.battania_mace_2_t2"/>
@@ -616,7 +556,7 @@
 			<Equipment slot="Leg" id="Item.highland_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_battania_7_f"
+	<EquipmentRoster id="player_char_creation_battania_horsearcher_f"
 		culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.battania_mace_2_t2"/>
@@ -635,7 +575,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--kern -->
-	<EquipmentRoster id="player_char_creation_battania_8_m"
+	<EquipmentRoster id="player_char_creation_battania_skirmisher_m"
 		culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Head" id="Item.thinhide_coif" />
@@ -654,7 +594,7 @@
 			<Equipment slot="Leg" id="Item.highland_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_battania_8_f"
+	<EquipmentRoster id="player_char_creation_battania_skirmisher_f"
 		culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Head" id="Item.thinhide_coif" />
@@ -674,7 +614,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!-- forest bandit -->
-	<EquipmentRoster id="player_char_creation_battania_9_m"
+	<EquipmentRoster id="player_char_creation_battania_bandit_m"
 		culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.mountain_hunting_bow" />
@@ -691,7 +631,7 @@
 			<Equipment slot="Leg" id="Item.ragged_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_battania_9_f"
+	<EquipmentRoster id="player_char_creation_battania_bandit_f"
 		culture="Culture.battania">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.mountain_hunting_bow" />
@@ -706,67 +646,12 @@
 			<Equipment slot="Item0" id="Item.battania_sword_1_t2" />
 			<Equipment slot="Body" id="Item.battania_civil_b" />
 			<Equipment slot="Leg" id="Item.ragged_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<!--Ignore 10th Option-->
-	<EquipmentRoster id="player_char_creation_battania_10_m"
-                      culture="Culture.battania">
-		<EquipmentSet>
-			<Equipment slot="Item0"
-                    id="Item.peasant_maul_t1" />
-			<Equipment slot="Item3"
-                    id="Item.highland_scouts_shield" />
-			<Equipment slot="Item2"
-                    id="Item.battania_axe_1_t2" />
-			<Equipment slot="Body"
-                    id="Item.long_fur_coat" />
-			<Equipment slot="Leg"
-                    id="Item.ragged_boots" />
-			<Equipment slot="Horse"
-                    id="Item.sumpter_horse" />
-			<Equipment slot="HorseHarness"
-                    id="Item.bandit_saddle_highland" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0"
-                    id="Item.peasant_maul_t1" />
-			<Equipment slot="Body"
-                    id="Item.long_fur_coat" />
-			<Equipment slot="Leg"
-                    id="Item.ragged_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_battania_10_f"
-                      culture="Culture.battania">
-		<EquipmentSet>
-			<Equipment slot="Item0"
-                    id="Item.peasant_maul_t1" />
-			<Equipment slot="Item3"
-                    id="Item.highland_scouts_shield" />
-			<Equipment slot="Item2"
-                    id="Item.battania_axe_1_t2" />
-			<Equipment slot="Body"
-                    id="Item.long_fur_coat" />
-			<Equipment slot="Leg"
-                    id="Item.ragged_boots" />
-			<Equipment slot="Horse"
-                    id="Item.sumpter_horse" />
-			<Equipment slot="HorseHarness"
-                    id="Item.bandit_saddle_highland" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0"
-                    id="Item.peasant_maul_t1" />
-			<Equipment slot="Body"
-                    id="Item.long_fur_coat" />
-			<Equipment slot="Leg"
-                    id="Item.ragged_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!-- #endregion -->
 	<!-- #region Empire -->
 	<!--commander-->
-	<EquipmentRoster id="player_char_creation_empire_1_m"
+	<EquipmentRoster id="player_char_creation_empire_noble_m"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.empire_sword_4_t4" />
@@ -785,7 +670,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_empire_1_f"
+	<EquipmentRoster id="player_char_creation_empire_noble_f"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.empire_sword_4_t4" />
@@ -805,7 +690,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--engineer-->
-	<EquipmentRoster id="player_char_creation_empire_2_m"
+	<EquipmentRoster id="player_char_creation_empire_special_m"
             culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.empire_sword_3_t3" />
@@ -819,7 +704,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_empire_2_f"
+	<EquipmentRoster id="player_char_creation_empire_special_f"
             culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.empire_sword_3_t3" />
@@ -834,7 +719,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--merchant-->
-	<EquipmentRoster id="player_char_creation_empire_3_m"
+	<EquipmentRoster id="player_char_creation_empire_merchant_m"
             culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.empire_sword_3_t3" />
@@ -848,7 +733,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_empire_3_f"
+	<EquipmentRoster id="player_char_creation_empire_merchant_f"
             culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.empire_sword_3_t3" />
@@ -863,7 +748,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--artisan-->
-	<EquipmentRoster id="player_char_creation_empire_4_m"
+	<EquipmentRoster id="player_char_creation_empire_craftman_m"
             culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.falchion_sword_t2" />
@@ -878,7 +763,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_empire_4_f"
+	<EquipmentRoster id="player_char_creation_empire_craftman_f"
             culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.falchion_sword_t2" />
@@ -894,7 +779,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--farmer-->
-	<EquipmentRoster id="player_char_creation_empire_5_m"
+	<EquipmentRoster id="player_char_creation_empire_farmer_m"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_hammer_2_t1" />
@@ -909,7 +794,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_empire_5_f"
+	<EquipmentRoster id="player_char_creation_empire_farmer_f"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_hammer_2_t1" />
@@ -925,7 +810,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--infantry-->
-	<EquipmentRoster id="player_char_creation_empire_6_m"
+	<EquipmentRoster id="player_char_creation_empire_infantry_m"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.iron_spatha_sword_t2"/>
@@ -940,7 +825,7 @@
 			<Equipment slot="Leg" id="Item.leather_shoes" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_empire_6_f"
+	<EquipmentRoster id="player_char_creation_empire_infantry_f"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.iron_spatha_sword_t2"/>
@@ -956,7 +841,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--archer-->
-	<EquipmentRoster id="player_char_creation_empire_7_m"
+	<EquipmentRoster id="player_char_creation_empire_skirmisher_m"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hunting_bow"/>
@@ -972,7 +857,7 @@
 			<Equipment slot="Leg" id="Item.leather_shoes" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_empire_7_f"
+	<EquipmentRoster id="player_char_creation_empire_skirmisher_f"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hunting_bow"/>
@@ -989,7 +874,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--cavalry-->
-	<EquipmentRoster id="player_char_creation_empire_8_m"
+	<EquipmentRoster id="player_char_creation_empire_cavalry_m"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.empire_sword_1_t2"/>
@@ -1007,7 +892,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_empire_8_f"
+	<EquipmentRoster id="player_char_creation_empire_cavalry_f"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.empire_sword_1_t2"/>
@@ -1026,7 +911,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--horse archer-->
-	<EquipmentRoster id="player_char_creation_empire_9_m"
+	<EquipmentRoster id="player_char_creation_empire_horsearcher_m"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.composite_bow"/>
@@ -1044,7 +929,7 @@
 			<Equipment slot="Leg" id="Item.leather_shoes" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_empire_9_f"
+	<EquipmentRoster id="player_char_creation_empire_horsearcher_f"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.composite_bow"/>
@@ -1063,7 +948,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!-- looter -->
-	<EquipmentRoster id="player_char_creation_empire_10_m"
+	<EquipmentRoster id="player_char_creation_empire_bandit_m"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_2haxe_1_t1" />
@@ -1077,7 +962,7 @@
 			<Equipment slot="Leg" id="Item.leather_shoes" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_empire_10_f"
+	<EquipmentRoster id="player_char_creation_empire_bandit_f"
 		culture="Culture.empire">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_2haxe_1_t1" />
@@ -1089,63 +974,12 @@
 			<Equipment slot="Item0" id="Item.empire_sword_1_t2" />
 			<Equipment slot="Body" id="Item.hemp_tunic" />
 			<Equipment slot="Leg" id="Item.leather_shoes" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<!--Ignore 11th Option-->
-	<EquipmentRoster id="player_char_creation_empire_11_m"
-                      culture="Culture.empire">
-		<EquipmentSet>
-			<Equipment slot="Item2"
-                    id="Item.peasant_hammer_1_t1" />
-			<Equipment slot="Item3"
-                    id="Item.small_flat_heater_shield" />
-			<Equipment slot="Body"
-                    id="Item.tunic_with_rolled_cloth" />
-			<Equipment slot="Leg"
-                    id="Item.leather_shoes" />
-			<Equipment slot="Horse"
-                    id="Item.sumpter_horse" />
-			<Equipment slot="HorseHarness"
-                    id="Item.stripped_leather_harness" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0"
-                    id="Item.peasant_hammer_1_t1" />
-			<Equipment slot="Body"
-                    id="Item.tunic_with_rolled_cloth" />
-			<Equipment slot="Leg"
-                    id="Item.leather_shoes" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_empire_11_f"
-                      culture="Culture.empire">
-		<EquipmentSet>
-			<Equipment slot="Item2"
-                    id="Item.empire_mace_1_t2" />
-			<Equipment slot="Item3"
-                    id="Item.small_flat_heater_shield" />
-			<Equipment slot="Body"
-                    id="Item.tunic_with_rolled_cloth" />
-			<Equipment slot="Leg"
-                    id="Item.leather_shoes" />
-			<Equipment slot="Horse"
-                    id="Item.sumpter_horse" />
-			<Equipment slot="HorseHarness"
-                    id="Item.stripped_leather_harness" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0"
-                    id="Item.empire_mace_1_t2" />
-			<Equipment slot="Body"
-                    id="Item.tunic_with_rolled_cloth" />
-			<Equipment slot="Leg"
-                    id="Item.leather_shoes" />
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!-- #endregion -->
 	<!-- #region Khuzait-->
 	<!--khans guard-->
-	<EquipmentRoster id="player_char_creation_khuzait_1_m"
+	<EquipmentRoster id="player_char_creation_khuzait_noble_m"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.steppe_heavy_bow"/>
@@ -1166,7 +1000,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_khuzait_1_f"
+	<EquipmentRoster id="player_char_creation_khuzait_noble_f"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.steppe_heavy_bow"/>
@@ -1188,7 +1022,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--nomad-->
-	<EquipmentRoster id="player_char_creation_khuzait_2_m"
+	<EquipmentRoster id="player_char_creation_khuzait_special_m"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.steppe_bow"/>
@@ -1207,7 +1041,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_khuzait_2_f"
+	<EquipmentRoster id="player_char_creation_khuzait_special_f"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.steppe_bow"/>
@@ -1227,7 +1061,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--merchant-->
-	<EquipmentRoster id="player_char_creation_khuzait_3_m"
+	<EquipmentRoster id="player_char_creation_khuzait_merchant_m"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.simple_sabre_sword_t2" />
@@ -1241,7 +1075,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_khuzait_3_f"
+	<EquipmentRoster id="player_char_creation_khuzait_merchant_f"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.simple_sabre_sword_t2" />
@@ -1256,7 +1090,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--craftman-->
-	<EquipmentRoster id="player_char_creation_khuzait_4_m"
+	<EquipmentRoster id="player_char_creation_khuzait_craftman_m"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
@@ -1271,7 +1105,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_khuzait_4_f"
+	<EquipmentRoster id="player_char_creation_khuzait_craftman_f"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
@@ -1287,7 +1121,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--farmer-->
-	<EquipmentRoster id="player_char_creation_khuzait_5_m"
+	<EquipmentRoster id="player_char_creation_khuzait_farmer_m"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_polearm_1_t1" />
@@ -1301,7 +1135,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_khuzait_5_f"
+	<EquipmentRoster id="player_char_creation_khuzait_farmer_f"
             culture="Culture.khuzait">
 			<EquipmentSet>
 				<Equipment slot="Item0" id="Item.peasant_polearm_1_t1" />
@@ -1316,7 +1150,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--cavalry-->
-	<EquipmentRoster id="player_char_creation_khuzait_6_m"
+	<EquipmentRoster id="player_char_creation_khuzait_cavalry_m"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.eastern_spear_3_t3"/>
@@ -1336,7 +1170,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_khuzait_6_f"
+	<EquipmentRoster id="player_char_creation_khuzait_cavalry_f"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.eastern_spear_3_t3"/>
@@ -1357,7 +1191,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--horse archer-->
-	<EquipmentRoster id="player_char_creation_khuzait_7_m"
+	<EquipmentRoster id="player_char_creation_khuzait_horsearcher_m"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.composite_bow"/>
@@ -1377,7 +1211,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_khuzait_7_f"
+	<EquipmentRoster id="player_char_creation_khuzait_horsearcher_f"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.composite_bow"/>
@@ -1398,7 +1232,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--infantry-->
-	<EquipmentRoster id="player_char_creation_khuzait_8_m"
+	<EquipmentRoster id="player_char_creation_khuzait_infantry_m"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.steppe_bow"/>
@@ -1415,7 +1249,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_khuzait_8_f"
+	<EquipmentRoster id="player_char_creation_khuzait_infantry_f"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.steppe_bow"/>
@@ -1433,7 +1267,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!-- steppe bandit -->
-	<EquipmentRoster id="player_char_creation_khuzait_9_m"
+	<EquipmentRoster id="player_char_creation_khuzait_bandit_m"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item1" id="Item.eastern_spear_1_t2" />
@@ -1449,7 +1283,7 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_khuzait_9_f"
+	<EquipmentRoster id="player_char_creation_khuzait_bandit_f"
 		culture="Culture.khuzait">
 		<EquipmentSet>
 			<Equipment slot="Item1" id="Item.eastern_spear_1_t2" />
@@ -1463,71 +1297,12 @@
 			<Equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
 			<Equipment slot="Body" id="Item.steppe_armor" />
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<!--Ignore 10th Option-->
-	<EquipmentRoster id="player_char_creation_khuzait_10_m"
-                      culture="Culture.khuzait">
-		<EquipmentSet>
-			<Equipment slot="Item2"
-                    id="Item.khuzait_mace_1_t2" />
-			<Equipment slot="Item3"
-                    id="Item.adarga" />
-			<Equipment slot="Body"
-                    id="Item.reinforced_suede_armor" />
-			<Equipment slot="Cape"
-                    id="Item.reinforced_suede_shoulders" />
-			<Equipment slot="Leg"
-                    id="Item.khuzait_curved_boots" />
-			<Equipment slot="Horse"
-                    id="Item.sumpter_horse" />
-			<Equipment slot="HorseHarness"
-                    id="Item.steppe_fur_harness" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0"
-                    id="Item.khuzait_sword_1_t2" />
-			<Equipment slot="Body"
-                    id="Item.reinforced_suede_armor" />
-			<Equipment slot="Cape"
-                    id="Item.reinforced_suede_shoulders" />
-			<Equipment slot="Leg"
-                    id="Item.khuzait_curved_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_khuzait_10_f"
-                      culture="Culture.khuzait">
-		<EquipmentSet>
-			<Equipment slot="Item2"
-                    id="Item.khuzait_mace_1_t2" />
-			<Equipment slot="Item3"
-                    id="Item.adarga" />
-			<Equipment slot="Body"
-                    id="Item.reinforced_suede_armor" />
-			<Equipment slot="Cape"
-                    id="Item.reinforced_suede_shoulders" />
-			<Equipment slot="Leg"
-                    id="Item.khuzait_curved_boots" />
-			<Equipment slot="Horse"
-                    id="Item.sumpter_horse" />
-			<Equipment slot="HorseHarness"
-                    id="Item.steppe_fur_harness" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0"
-                    id="Item.khuzait_mace_1_t2" />
-			<Equipment slot="Body"
-                    id="Item.reinforced_suede_armor" />
-			<Equipment slot="Cape"
-                    id="Item.reinforced_suede_shoulders" />
-			<Equipment slot="Leg"
-                    id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!-- #endregion -->
 	<!-- #region Sturgia -->
 	<!--druzhina-->
-	<EquipmentRoster id="player_char_creation_sturgia_1_m"
+	<EquipmentRoster id="player_char_creation_sturgia_noble_m"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.northern_axe_t3" />
@@ -1547,7 +1322,7 @@
 			<Equipment slot="Leg" id="Item.highland_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_sturgia_1_f"
+	<EquipmentRoster id="player_char_creation_sturgia_noble_f"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.northern_axe_t3" />
@@ -1567,8 +1342,8 @@
 			<Equipment slot="Leg" id="Item.highland_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<!--culture unique path-->
-	<EquipmentRoster id="player_char_creation_sturgia_2_m"
+	<!--fur hunter-->
+	<EquipmentRoster id="player_char_creation_sturgia_special_m"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hunting_bow" />
@@ -1587,7 +1362,7 @@
 			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_sturgia_2_f"
+	<EquipmentRoster id="player_char_creation_sturgia_special_f"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hunting_bow" />
@@ -1607,7 +1382,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--merchant-->
-	<EquipmentRoster id="player_char_creation_sturgia_3_m"
+	<EquipmentRoster id="player_char_creation_sturgia_merchant_m"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.sturgia_noble_sword_4_t5" />
@@ -1621,7 +1396,7 @@
 			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_sturgia_3_f"
+	<EquipmentRoster id="player_char_creation_sturgia_merchant_f"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.sturgia_noble_sword_4_t5" />
@@ -1636,7 +1411,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--craftman-->
-	<EquipmentRoster id="player_char_creation_sturgia_4_m"
+	<EquipmentRoster id="player_char_creation_sturgia_craftman_m"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.vlandia_axe_1_t3" />
@@ -1651,7 +1426,7 @@
 			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_sturgia_4_f"
+	<EquipmentRoster id="player_char_creation_sturgia_craftman_f"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.vlandia_axe_1_t3" />
@@ -1667,7 +1442,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--farmer-->
-	<EquipmentRoster id="player_char_creation_sturgia_5_m"
+	<EquipmentRoster id="player_char_creation_sturgia_farmer_m"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_2haxe_1_t1" />
@@ -1682,7 +1457,7 @@
 			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_sturgia_5_f"
+	<EquipmentRoster id="player_char_creation_sturgia_farmer_f"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_2haxe_1_t1" />
@@ -1698,7 +1473,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--infantry-->
-	<EquipmentRoster id="player_char_creation_sturgia_6_m"
+	<EquipmentRoster id="player_char_creation_sturgia_infantry_m"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.sturgia_sword_1_t2"/>
@@ -1715,7 +1490,7 @@
 			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_sturgia_6_f"
+	<EquipmentRoster id="player_char_creation_sturgia_infantry_f"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.sturgia_sword_1_t2"/>
@@ -1733,7 +1508,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--shock troop-->
-	<EquipmentRoster id="player_char_creation_sturgia_7_m"
+	<EquipmentRoster id="player_char_creation_sturgia_shock_m"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.battania_2haxe_1_t2"/>
@@ -1750,7 +1525,7 @@
 			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_sturgia_7_f"
+	<EquipmentRoster id="player_char_creation_sturgia_shock_f"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.battania_2haxe_1_t2"/>
@@ -1768,7 +1543,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--archer-->
-	<EquipmentRoster id="player_char_creation_sturgia_8_m"
+	<EquipmentRoster id="player_char_creation_sturgia_skirmisher_m"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hunting_bow"/>
@@ -1786,7 +1561,7 @@
 			<Equipment slot="Cape" id="Item.scarf" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_sturgia_8_f"
+	<EquipmentRoster id="player_char_creation_sturgia_skirmisher_f"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.hunting_bow"/>
@@ -1805,7 +1580,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!-- sea raider -->
-	<EquipmentRoster id="player_char_creation_sturgia_9_m"
+	<EquipmentRoster id="player_char_creation_sturgia_bandit_m"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.sturgia_axe_2_t2" />
@@ -1822,7 +1597,7 @@
 			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_sturgia_9_f"
+	<EquipmentRoster id="player_char_creation_sturgia_bandit_f"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.sturgia_axe_2_t2" />
@@ -1837,62 +1612,11 @@
 			<Equipment slot="Body" id="Item.heavy_nordic_coat" />
 			<Equipment slot="Head" id="Item.northern_fur_cap" />
 			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<!--Ignore 10th Option-->
-	<EquipmentRoster id="player_char_creation_sturgia_10_m"
-            culture="Culture.sturgia">
-		<EquipmentSet>
-			<Equipment slot="Item2"
-              id="Item.northern_scouts_shield" />
-			<Equipment slot="Item3"
-              id="Item.battania_mace_2_t2" />
-			<Equipment slot="Body"
-              id="Item.northern_leather_vest" />
-			<Equipment slot="Leg"
-              id="Item.wrapped_leather_boots" />
-			<Equipment slot="Horse"
-              id="Item.sumpter_horse" />
-			<Equipment slot="HorseHarness"
-              id="Item.light_harness" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0"
-              id="Item.sturgia_sword_1_t2" />
-			<Equipment slot="Body"
-              id="Item.northern_leather_vest" />
-			<Equipment slot="Leg"
-              id="Item.wrapped_leather_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_sturgia_10_f"
-            culture="Culture.sturgia">
-		<EquipmentSet>
-			<Equipment slot="Item2"
-              id="Item.small_flat_heater_shield" />
-			<Equipment slot="Item3"
-              id="Item.battania_mace_2_t2" />
-			<Equipment slot="Body"
-              id="Item.northern_leather_vest" />
-			<Equipment slot="Leg"
-              id="Item.wrapped_leather_boots" />
-			<Equipment slot="Horse"
-              id="Item.sumpter_horse" />
-			<Equipment slot="HorseHarness"
-              id="Item.light_harness" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0"
-              id="Item.sturgia_sword_1_t2" />
-			<Equipment slot="Body"
-              id="Item.northern_leather_vest" />
-			<Equipment slot="Leg"
-              id="Item.wrapped_leather_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!-- #endregion -->
 	<!-- #region Vlandia -->
-	<!--Became a knight, Parents Are Retainers-->
+	<!--knight-->
 	<EquipmentRoster id="player_char_creation_vlandia_noble_m"
 		culture="Culture.vlandia">
 		<EquipmentSet>
@@ -1913,7 +1637,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_vlandia_1_f"
+	<EquipmentRoster id="player_char_creation_vlandia_noble_f"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.vlandia_lance_2_t4"/>
@@ -1934,7 +1658,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--chamberlain-->
-	<EquipmentRoster id="player_char_creation_vlandia_noble_m"
+	<EquipmentRoster id="player_char_creation_vlandia_special_m"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.narrow_sword_t3" />
@@ -1949,7 +1673,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_vlandia_2_f"
+	<EquipmentRoster id="player_char_creation_vlandia_special_f"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.narrow_sword_t3" />
@@ -1965,7 +1689,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--merchant-->
-	<EquipmentRoster id="player_char_creation_vlandia_3_m"
+	<EquipmentRoster id="player_char_creation_vlandia_merchant_m"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.narrow_sword_t3" />
@@ -1978,7 +1702,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_vlandia_3_f"
+	<EquipmentRoster id="player_char_creation_vlandia_merchant_f"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.narrow_sword_t3" />
@@ -1992,7 +1716,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--guild-->
-	<EquipmentRoster id="player_char_creation_vlandia_4_m"
+	<EquipmentRoster id="player_char_creation_vlandia_craftman_m"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.narrow_sword_t3" />
@@ -2006,7 +1730,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_vlandia_4_f"
+	<EquipmentRoster id="player_char_creation_vlandia_craftman_f"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.narrow_sword_t3" />
@@ -2021,7 +1745,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--farmer-->
-	<EquipmentRoster id="player_char_creation_vlandia_5_m"
+	<EquipmentRoster id="player_char_creation_vlandia_farmer_m"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_polearm_1_t1" />
@@ -2036,7 +1760,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_vlandia_5_f"
+	<EquipmentRoster id="player_char_creation_vlandia_farmer_f"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.peasant_polearm_1_t1" />
@@ -2052,7 +1776,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--infantry-->
-	<EquipmentRoster id="player_char_creation_vlandia_6_m"
+	<EquipmentRoster id="player_char_creation_vlandia_infantry_m"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.vlandia_axe_1_t3"/>
@@ -2068,7 +1792,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_vlandia_6_f"
+	<EquipmentRoster id="player_char_creation_vlandia_infantry_f"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.vlandia_axe_1_t3"/>
@@ -2085,7 +1809,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--cavalry-->
-	<EquipmentRoster id="player_char_creation_vlandia_7_m"
+	<EquipmentRoster id="player_char_creation_vlandia_cavalry_m"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.vlandia_sword_1_t2"/>
@@ -2104,7 +1828,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_vlandia_7_f"
+	<EquipmentRoster id="player_char_creation_vlandia_cavalry_f"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.vlandia_sword_1_t2"/>
@@ -2124,7 +1848,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--crossbowman-->
-	<EquipmentRoster id="player_char_creation_vlandia_8_m"
+	<EquipmentRoster id="player_char_creation_vlandia_skirmisher_m"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.crossbow_b"/>
@@ -2142,7 +1866,7 @@
 			<Equipment slot="Leg" id="Item.empire_horseman_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_vlandia_8_f"
+	<EquipmentRoster id="player_char_creation_vlandia_skirmisher_f"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.crossbow_b"/>
@@ -2161,7 +1885,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!-- Highwayman -->
-	<EquipmentRoster id="player_char_creation_vlandia_9_m"
+	<EquipmentRoster id="player_char_creation_vlandia_bandit_m"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.falchion_sword_t2" />
@@ -2176,7 +1900,7 @@
 			<Equipment slot="Leg" id="Item.leather_cavalier_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_vlandia_9_f"
+	<EquipmentRoster id="player_char_creation_vlandia_bandit_f"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.falchion_sword_t2" />
@@ -2189,137 +1913,6 @@
 			<Equipment slot="Item0" id="Item.vlandia_sword_1_t2" />
 			<Equipment slot="Body" id="Item.long_hemp_tunic" />
 			<Equipment slot="Leg" id="Item.leather_cavalier_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<!--Ignore 10th Option-->
-	<EquipmentRoster id="player_char_creation_vlandia_10_m"
-                      culture="Culture.vlandia">
-		<EquipmentSet>
-			<Equipment slot="Item2"
-                    id="Item.morningstar_mace_t3" />
-			<Equipment slot="Item3"
-                    id="Item.old_kite_shield" />
-			<Equipment slot="Body"
-                    id="Item.sleeveless_padded_coat" />
-			<Equipment slot="Leg"
-                    id="Item.strapped_shoes" />
-			<Equipment slot="Horse"
-                    id="Item.sumpter_horse" />
-			<Equipment slot="HorseHarness"
-                    id="Item.light_harness" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0"
-                    id="Item.vlandia_sword_1_t2" />
-			<Equipment slot="Body"
-                    id="Item.sleeveless_padded_coat" />
-			<Equipment slot="Leg"
-                    id="Item.strapped_shoes" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_vlandia_10_f"
-                      culture="Culture.vlandia">
-		<EquipmentSet>
-			<Equipment slot="Item2"
-                    id="Item.morningstar_mace_t3" />
-			<Equipment slot="Item3"
-                    id="Item.old_kite_shield" />
-			<Equipment slot="Body"
-                    id="Item.sleeveless_padded_coat" />
-			<Equipment slot="Leg"
-                    id="Item.strapped_shoes" />
-			<Equipment slot="Horse"
-                    id="Item.sumpter_horse" />
-			<Equipment slot="HorseHarness"
-                    id="Item.light_harness" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0"
-                    id="Item.vlandia_sword_1_t2" />
-			<Equipment slot="Body"
-                    id="Item.sleeveless_padded_coat" />
-			<Equipment slot="Leg"
-                    id="Item.strapped_shoes" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<!-- #endregion -->
-	<!-- #endregion -->
-	<!-- #region CHARACTER CREATION SHOW ARMOR SET -->
-	<EquipmentRoster id="player_char_creation_show_sturgia"
-          culture="Culture.sturgia">
-		<EquipmentSet>
-			<Equipment slot="Body" id="Item.nordic_lamellar_vest" />
-			<Equipment slot="Gloves" id="Item.highland_gloves" />
-			<Equipment slot="Leg" id="Item.leather_shoes" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0" id="Item.battania_mace_2_t2" />
-			<Equipment slot="Body" id="Item.northern_leather_vest" />
-			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_show_vlandia"
-          culture="Culture.vlandia">
-		<EquipmentSet>
-			<Equipment slot="Body" id="Item.banded_leather_over_mail" />
-			<Equipment slot="Gloves" id="Item.leather_gloves" />
-			<Equipment slot="Leg" id="Item.leather_shoes" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0" id="Item.battania_mace_2_t2" />
-			<Equipment slot="Body" id="Item.northern_leather_vest" />
-			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_show_empire"
-          culture="Culture.empire">
-		<EquipmentSet>
-			<Equipment slot="Body" id="Item.basic_imperial_leather_armor" />
-			<Equipment slot="Gloves" id="Item.reinforced_padded_mitten" />
-			<Equipment slot="Leg" id="Item.strapped_leather_boots" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0" id="Item.battania_mace_2_t2" />
-			<Equipment slot="Body" id="Item.northern_leather_vest" />
-			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_show_khuzait"
-          culture="Culture.khuzait">
-		<EquipmentSet>
-			<Equipment slot="Body" id="Item.reinforced_suede_armor" />
-			<Equipment slot="Leg" id="Item.steppe_leather_boots" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0" id="Item.battania_mace_2_t2" />
-			<Equipment slot="Body" id="Item.northern_leather_vest" />
-			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_show_battania"
-          culture="Culture.battania">
-		<EquipmentSet>
-			<Equipment slot="Body" id="Item.kilt_over_plated_leather" />
-			<Equipment slot="Gloves" id="Item.strapped_leather_bracers" />
-			<Equipment slot="Leg" id="Item.battania_leather_boots" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0" id="Item.battania_mace_2_t2" />
-			<Equipment slot="Body" id="Item.northern_leather_vest" />
-			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
-		</EquipmentSet>
-	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_show_aserai"
-        culture="Culture.aserai">
-		<EquipmentSet>
-			<Equipment slot="Body" id="Item.desert_robe_over_mail" />
-			<Equipment slot="Gloves" id="Item.guarded_padded_vambrace" />
-			<Equipment slot="Leg" id="Item.wrapped_shoes" />
-		</EquipmentSet>
-		<EquipmentSet civilian="true">
-			<Equipment slot="Item0" id="Item.battania_mace_2_t2" />
-			<Equipment slot="Body" id="Item.northern_leather_vest" />
-			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!-- #endregion -->
