@@ -1893,7 +1893,7 @@
 	<!-- #endregion -->
 	<!-- #region Vlandia -->
 	<!--Became a knight, Parents Are Retainers-->
-	<EquipmentRoster id="player_char_creation_vlandia_1_m"
+	<EquipmentRoster id="player_char_creation_vlandia_noble_m"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.vlandia_lance_2_t4"/>
@@ -1934,7 +1934,7 @@
 		</EquipmentSet>
 	</EquipmentRoster>
 	<!--chamberlain-->
-	<EquipmentRoster id="player_char_creation_vlandia_2_m"
+	<EquipmentRoster id="player_char_creation_vlandia_noble_m"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.narrow_sword_t3" />

@@ -5,7 +5,6 @@ using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Actions;
 using TaleWorlds.CampaignSystem.CampaignBehaviors;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
-using TaleWorlds.CampaignSystem.CharacterDevelopment;
 using TaleWorlds.CampaignSystem.Extensions;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
@@ -31,12 +30,12 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         public string GetMotherEquipmentId(CharacterCreationManager characterCreationManager, string occupationType, string cultureId)
         {
             characterCreationManager.CharacterCreationContent.TryGetEquipmentToUse(occupationType, out string str);
-            return "mother_char_creation_" + str + "_" + cultureId;
+            return "mother_char_creation_" + occupationType + "_" + cultureId;
         }
         public string GetFatherEquipmentId(CharacterCreationManager characterCreationManager, string occupationType, string cultureId)
         {
             characterCreationManager.CharacterCreationContent.TryGetEquipmentToUse(occupationType, out string str);
-            return "father_char_creation_" + str + "_" + cultureId;
+            return "father_char_creation_" + occupationType + "_" + cultureId;
         }
         public string GetPlayerChildhoodAgeEquipmentId(CharacterCreationManager characterCreationManager, string parentOccupationType, string cultureId, bool isFemale)
         {
@@ -50,8 +49,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public string GetPlayerEquipmentId(CharacterCreationManager characterCreationManager, string occupationType, string cultureId, bool isFemale)
         {
-            characterCreationManager.CharacterCreationContent.TryGetEquipmentToUse(occupationType, out string text);
-            return string.Concat(new string[] { "player_char_creation_", cultureId, "_", text, "_", isFemale ? "f" : "m" });
+            return string.Concat(new string[] { "player_char_creation_", cultureId, "_", occupationType, "_", isFemale ? "f" : "m" });
         }
 
         /// <summary>
@@ -2812,7 +2810,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartKhuzaitSteppeBanditOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "bandit";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -2875,7 +2873,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartSturgiaFurHunterOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "noble";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "special";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -2903,7 +2901,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartSturgiaMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "noble";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "merchant";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -2931,7 +2929,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartSturgiaCraftmanOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "craftman";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -2959,7 +2957,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartSturgiaPeasantOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "farmer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -2987,7 +2985,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartSturgiaInfantryOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "infantry";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -3015,7 +3013,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartSturgiaShockTroopOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "shock";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -3043,7 +3041,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartSturgiaArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "skirmisher";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -3071,7 +3069,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartSturgiaSeaRaiderBanditOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "bandit";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -3134,7 +3132,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartVlandiaChamberlainOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "noble";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "special";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -3162,7 +3160,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartVlandiaMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "noble";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "merchant";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -3190,7 +3188,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartVlandiaGuildMemberOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "craftman";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -3218,7 +3216,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartVlandiaSerfOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "farmer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -3246,7 +3244,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartVlandiaInfantryOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "infantry";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -3274,7 +3272,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartVlandiaCavalryOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "cavalry";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -3302,8 +3300,8 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartVlandiaRangedOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
-            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "skirmisher";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, "skirmisher", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
@@ -3330,7 +3328,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartVlandiaMountainBanditOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "bandit";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
