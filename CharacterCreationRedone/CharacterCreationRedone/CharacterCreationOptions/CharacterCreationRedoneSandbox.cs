@@ -49,6 +49,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public string GetPlayerEquipmentId(CharacterCreationManager characterCreationManager, string occupationType, string cultureId, bool isFemale)
         {
+            characterCreationManager.CharacterCreationContent.TryGetEquipmentToUse(occupationType, out string text);
             return string.Concat(new string[] { "player_char_creation_", cultureId, "_", occupationType, "_", isFemale ? "f" : "m" });
         }
 
@@ -1690,7 +1691,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             list.Add(new NarrativeMenuCharacterArgs("player_youth_character", 17, playerEquipmentId, "act_childhood_schooled", "spawnpoint_player_1", "", "", null, true, CharacterObject.PlayerCharacter.IsFemale));
             MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId);
             ItemObject item = @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item;
-            list.Add(new NarrativeMenuCharacterArgs("narrative_character_horse", -1, "", "act_inventory_idle_start", "spawnpoint_mount_1", @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item.StringId, @object.DefaultEquipment[EquipmentIndex.HorseHarness].Item.StringId, MountCreationKey.GetRandomMountKey(item, CharacterObject.PlayerCharacter.GetMountKeySeed()), false, false));
             return list;
         }
         public void StartInLifeMenu(CharacterCreationManager characterCreationManager)
@@ -1715,7 +1715,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Bmerchant", new TextObject("{=CCR_Start_Choice_Bmerchant}a merchant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartBattaniaMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartBattaniaMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartBattaniaMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartBattaniaMerchantOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Bcraftman", new TextObject("{=CCR_Start_Choice_Bcraftman}a craftman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartBattaniaCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartBattaniaCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartBattaniaCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartBattaniaCraftmanOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Bforester", new TextObject("{=CCR_Start_Choice_Bforester}a forester", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartBattaniaForesterOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartBattaniaForesterOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartBattaniaForesterOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartBattaniaForesterOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Bwildling", new TextObject("{=CCR_Start_Choice_Bwildling}wildling", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartBattaniaForesterOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartBattaniaWildlingOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartBattaniaWildlingOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartBattaniaWildlingOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Bwildling", new TextObject("{=CCR_Start_Choice_Bwildling}wildling", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartBattaniaWildlingOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartBattaniaWildlingOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartBattaniaWildlingOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartBattaniaWildlingOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Bscout", new TextObject("{=CCR_Start_Choice_Bscout}scout", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartBattaniaScoutOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartBattaniaScoutOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartBattaniaScoutOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartBattaniaScoutOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Bkern", new TextObject("{=CCR_Start_Choice_Bkern}part of the kern", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartBattaniaKernOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartBattaniaKernOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartBattaniaKernOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartBattaniaKernOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Bforestbandit", new TextObject("{=CCR_Start_Choice_Bforestbandit}a forest bandit", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartBattaniaForestBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartBattaniaForestBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartBattaniaForestBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartBattaniaForestBanditOptionOnConsequence)));
@@ -1979,7 +1979,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartAseraiArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "archer";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "skirmisher";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -2154,7 +2154,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartBattaniaForesterOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "forester";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "farmer";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -2182,7 +2182,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
         }
         public void LifeStartBattaniaWildlingOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "skirmisher";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "shock";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -3354,7 +3354,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             list.Add(new NarrativeMenuCharacterArgs("player_adulthood_character", 20, playerEquipmentId, "act_childhood_schooled", "spawnpoint_player_1", "", "", null, true, CharacterObject.PlayerCharacter.IsFemale));
             MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId);
             ItemObject item = @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item;
-            list.Add(new NarrativeMenuCharacterArgs("narrative_character_horse", -1, "", "act_horse_stand_1", "spawnpoint_mount_1", @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item.StringId, @object.DefaultEquipment[EquipmentIndex.HorseHarness].Item.StringId, MountCreationKey.GetRandomMountKey(item, CharacterObject.PlayerCharacter.GetMountKeySeed()), false, false));
             return list;
         }
         public void ReasonMenu(CharacterCreationManager characterCreationManager)
@@ -3572,7 +3571,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             list.Add(new NarrativeMenuCharacterArgs("player_age_selection_character", characterCreationManager.CharacterCreationContent.StartingAge, playerEquipmentId, "act_childhood_schooled", "spawnpoint_player_1", "", "", null, true, CharacterObject.PlayerCharacter.IsFemale));
             MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId);
             ItemObject item = @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item;
-            list.Add(new NarrativeMenuCharacterArgs("narrative_character_horse", -1, "", "act_horse_stand_1", "spawnpoint_mount_1", @object.DefaultEquipment[EquipmentIndex.ArmorItemEndSlot].Item.StringId, @object.DefaultEquipment[EquipmentIndex.HorseHarness].Item.StringId, MountCreationKey.GetRandomMountKey(item, CharacterObject.PlayerCharacter.GetMountKeySeed()), false, false));
             return list;
         }
         public void ApplyMainHeroEquipment(CharacterCreationManager characterCreationManager)
