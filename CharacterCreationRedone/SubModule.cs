@@ -3,7 +3,7 @@ using TaleWorlds.MountAndBlade;
 
 namespace CharacterCreationRedone
 {
-    public class Submodule : MBSubModuleBase
+    public class SubModule : MBSubModuleBase
     {
         protected override void OnSubModuleLoad()
         {

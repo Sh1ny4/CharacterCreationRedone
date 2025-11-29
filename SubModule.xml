@@ -2,7 +2,7 @@
 <Module>
 	<Name value="CharacterCreationRedone"/>
 	<Id value="CharacterCreationRedone"/>
-	<Version value="v1.3.4"/>
+	<Version value="v1.3.6"/>
 	<SingleplayerModule value="true"/>
 	<MultiplayerModule value="false"/>
 	<ModuleType value ="Community" />
@@ -18,7 +18,7 @@
 		<SubModule>
 			<Name value="CharacterCreationRedone" />
 			<DLLName value="CharacterCreationRedone.dll" />
-			<SubModuleClassType value="CharacterCreationRedone.Submodule" />
+			<SubModuleClassType value="CharacterCreationRedone.SubModule" />
 			<Tags />
 		</SubModule>
 	</SubModules>
