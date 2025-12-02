@@ -97,7 +97,12 @@
   <ItemGroup>
     <Compile Include="CharacterCreationOptions\CharacterCreationRedoneCampaign.cs" />
     <Compile Include="CharacterCreationOptions\CharacterCreationRedoneSandbox.cs" />
-    <Compile Include="CharacterCreationOptions\CharacterCreationRedoneVanilla.cs" />
+    <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxAgeMenu.cs" />
+    <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxYouthMenu.cs" />
+    <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxReasonMenu.cs" />
+    <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxIdiomMenu.cs" />
+    <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxEducationMenu.cs" />
+    <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxParentsMenu.cs" />
     <Compile Include="SubModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

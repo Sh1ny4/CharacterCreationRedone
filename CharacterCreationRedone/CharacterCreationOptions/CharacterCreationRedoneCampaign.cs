@@ -25,13 +25,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             __instance.AddEscapeMenu(characterCreationManager);
             return false;        
         }
-        public void ModifyParentMenu(CharacterCreationManager characterCreationManager)
-        {
-            foreach (NarrativeMenuOption narrativeMenuOption in characterCreationManager.GetNarrativeMenuWithId("narrative_parent_menu").CharacterCreationMenuOptions)
-            {
-                narrativeMenuOption.SetOnConsequence(new NarrativeMenuOptionOnConsequenceDelegate(this.FinalizeParentsAndLittleSiblings));
-            }
-        }
         public List<NarrativeMenuCharacterArgs> GetEscapeMenuNarrativeMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
         {
             List<NarrativeMenuCharacterArgs> list = new List<NarrativeMenuCharacterArgs>();
@@ -319,7 +312,7 @@ namespace CharacterCreationRedone.CharacterCreationOptions
             elderBrother.CharacterObject.Equipment.FillFrom(narrativeMenuCharacter2.Equipment.DefaultEquipment, true);
             elderBrother.CharacterObject.FirstCivilianEquipment.FillFrom(narrativeMenuCharacter2.Equipment.GetRandomCivilianEquipment(), true);
         }
-        public void CreateSibling(Hero hero, BodyProperties motherBodyProperties, BodyProperties fatherBodyProperties)
+        new public void CreateSibling(Hero hero, BodyProperties motherBodyProperties, BodyProperties fatherBodyProperties)
         {
             BodyProperties randomBodyProperties = BodyProperties.GetRandomBodyProperties(hero.CharacterObject.Race, hero.IsFemale, motherBodyProperties, fatherBodyProperties, 1, Hero.MainHero.Mother.CharacterObject.GetDefaultFaceSeed(1), hero.IsFemale ? Hero.MainHero.Mother.CharacterObject.BodyPropertyRange.HairTags : Hero.MainHero.Father.CharacterObject.BodyPropertyRange.HairTags, hero.IsFemale ? Hero.MainHero.Mother.CharacterObject.BodyPropertyRange.BeardTags : Hero.MainHero.Father.CharacterObject.BodyPropertyRange.BeardTags, hero.IsFemale ? Hero.MainHero.Mother.CharacterObject.BodyPropertyRange.TattooTags : Hero.MainHero.Father.CharacterObject.BodyPropertyRange.TattooTags, 0f);
             randomBodyProperties = new BodyProperties(new DynamicBodyProperties(hero.Age, 0.5f, 0.5f), randomBodyProperties.StaticProperties);
