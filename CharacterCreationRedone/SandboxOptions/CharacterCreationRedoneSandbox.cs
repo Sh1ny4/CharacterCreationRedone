@@ -1,10 +1,9 @@
-using CharacterCreationRedone.SandboxOptions;
 using HarmonyLib;
 using TaleWorlds.CampaignSystem.CampaignBehaviors;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Localization;
 
-namespace CharacterCreationRedone.CharacterCreationOptions
+namespace CharacterCreationRedone.SandboxOptions
 {
     [HarmonyPatch(typeof(CharacterCreationCampaignBehavior), nameof(CharacterCreationCampaignBehavior.InitializeData))]
     public class CharacterCreationRedoneSandbox : CharacterCreationCampaignBehavior, ICharacterCreationContentHandler

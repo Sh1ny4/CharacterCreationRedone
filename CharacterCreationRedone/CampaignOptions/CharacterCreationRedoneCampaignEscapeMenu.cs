@@ -1,5 +1,3 @@
-using HarmonyLib;
-using Helpers;
 using StoryMode.GameComponents.CampaignBehaviors;
 using StoryMode.StoryModeObjects;
 using System.Collections.Generic;
@@ -9,22 +7,10 @@ using TaleWorlds.CampaignSystem.Extensions;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
 
-namespace CharacterCreationRedone.CharacterCreationOptions
+namespace CharacterCreationRedone.CampaignOptions
 {
-    [HarmonyPatch(typeof(StoryModeCharacterCreationCampaignBehavior), nameof(StoryModeCharacterCreationCampaignBehavior.InitializeData))]
-    public class CharacterCreationRedoneCampaign : StoryModeCharacterCreationCampaignBehavior, ICharacterCreationContentHandler
+    public class CharacterCreationRedoneCampaignEscapeMenu : StoryModeCharacterCreationCampaignBehavior, ICharacterCreationContentHandler
     {
-        [HarmonyPrefix]
-        static bool Prefix(ref CharacterCreationRedoneCampaign __instance, CharacterCreationManager characterCreationManager)
-        {
-            Hero.MainHero.Mother = StoryModeHeroes.MainHeroMother;
-            Hero.MainHero.Father = StoryModeHeroes.MainHeroFather;
-            characterCreationManager.CharacterCreationContent.ChangeReviewPageDescription(new TextObject("{=wbhKgpmr}You prepare to set off with your brother on a mission of vengeance and rescue. Here is your character. Continue if you are ready, or go back to make changes.", null));
-            characterCreationManager.DeleteNarrativeMenuWithId("narrative_age_selection_menu");
-            characterCreationManager.DeleteNarrativeMenuWithId("narrative_adulthood_menu");
-            __instance.AddEscapeMenu(characterCreationManager);
-            return false;        
-        }
         public List<NarrativeMenuCharacterArgs> GetEscapeMenuNarrativeMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
         {
             List<NarrativeMenuCharacterArgs> list = new List<NarrativeMenuCharacterArgs>();
@@ -228,67 +214,6 @@ namespace CharacterCreationRedone.CharacterCreationOptions
                     narrativeMenuCharacter.SetAnimationId(animationId2);
                 }
             }
-        }
-        public void FinalizeParentsAndLittleSiblings(CharacterCreationManager characterCreationManager)
-        {
-            CharacterObject @object = Game.Current.ObjectManager.GetObject<CharacterObject>("main_hero_mother");
-            CharacterObject object2 = Game.Current.ObjectManager.GetObject<CharacterObject>("main_hero_father");
-            CharacterObject characterObject = StoryModeHeroes.ElderBrother.CharacterObject;
-            NarrativeMenuCharacter narrativeMenuCharacter = null;
-            NarrativeMenuCharacter narrativeMenuCharacter2 = null;
-            foreach (NarrativeMenuCharacter narrativeMenuCharacter3 in characterCreationManager.GetNarrativeMenuWithId("narrative_parent_menu").Characters)
-            {
-                if (narrativeMenuCharacter3.StringId.Equals("mother_character"))
-                {
-                    narrativeMenuCharacter = narrativeMenuCharacter3;
-                }
-                if (narrativeMenuCharacter3.StringId.Equals("father_character"))
-                {
-                    narrativeMenuCharacter2 = narrativeMenuCharacter3;
-                }
-            }
-            @object.HeroObject.StaticBodyProperties = narrativeMenuCharacter.BodyProperties.StaticProperties;
-            object2.HeroObject.StaticBodyProperties = narrativeMenuCharacter2.BodyProperties.StaticProperties;
-            @object.HeroObject.Weight = narrativeMenuCharacter.BodyProperties.Weight;
-            @object.HeroObject.Build = narrativeMenuCharacter.BodyProperties.Build;
-            object2.HeroObject.Weight = narrativeMenuCharacter2.BodyProperties.Weight;
-            object2.HeroObject.Build = narrativeMenuCharacter2.BodyProperties.Build;
-            if (narrativeMenuCharacter.Equipment != null)
-            {
-                EquipmentHelper.AssignHeroEquipmentFromEquipment(@object.HeroObject, narrativeMenuCharacter.Equipment.DefaultEquipment);
-            }
-            if (narrativeMenuCharacter2.Equipment != null)
-            {
-                EquipmentHelper.AssignHeroEquipmentFromEquipment(object2.HeroObject, narrativeMenuCharacter2.Equipment.DefaultEquipment);
-            }
-            if (characterObject.Equipment != null)
-            {
-                EquipmentHelper.AssignHeroEquipmentFromEquipment(characterObject.HeroObject, characterObject.Equipment);
-            }
-            @object.HeroObject.Culture = Hero.MainHero.Culture;
-            object2.HeroObject.Culture = Hero.MainHero.Culture;
-            characterObject.HeroObject.Culture = Hero.MainHero.Culture;
-            StringHelpers.SetCharacterProperties("PLAYER", CharacterObject.PlayerCharacter, null, false);
-            TextObject textObject = GameTexts.FindText("str_player_little_brother_name", Hero.MainHero.Culture.StringId);
-            StoryModeHeroes.LittleBrother.SetName(textObject, textObject);
-            StoryModeHeroes.LittleBrother.SetHasMet();
-            TextObject textObject2 = GameTexts.FindText("str_player_little_sister_name", Hero.MainHero.Culture.StringId);
-            StoryModeHeroes.LittleSister.SetName(textObject2, textObject2);
-            StoryModeHeroes.LittleSister.SetHasMet();
-            TextObject textObject3 = GameTexts.FindText("str_player_father_name", Hero.MainHero.Culture.StringId);
-            object2.HeroObject.SetName(textObject3, textObject3);
-            TextObject textObject4 = GameTexts.FindText("str_player_mother_name", Hero.MainHero.Culture.StringId);
-            @object.HeroObject.SetName(textObject4, textObject4);
-            TextObject textObject5 = GameTexts.FindText("str_player_brother_name", Hero.MainHero.Culture.StringId);
-            characterObject.HeroObject.SetName(textObject5, textObject5);
-            @object.HeroObject.Spouse = object2.HeroObject;
-            object2.HeroObject.Spouse = @object.HeroObject;
-            @object.HeroObject.UpdateHomeSettlement();
-            object2.HeroObject.UpdateHomeSettlement();
-            characterObject.HeroObject.UpdateHomeSettlement();
-            @object.HeroObject.SetHasMet();
-            object2.HeroObject.SetHasMet();
-            characterObject.HeroObject.SetHasMet();
         }
         public void FinalizeMainHeroAndElderBrother(CharacterCreationManager characterCreationManager)
         {
