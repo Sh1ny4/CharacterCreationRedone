@@ -113,6 +113,7 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            args.SetRenownToAdd(50);
         }
         public void FamilyChoiceARaisOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
@@ -232,6 +233,7 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+            args.SetRenownToAdd(50);
         }
         public void FamilyChoiceBchieftainsOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
@@ -351,6 +353,7 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+            args.SetRenownToAdd(50);
         }
         public void FamilyChoiceEAristocratesOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
@@ -470,6 +473,7 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+            args.SetRenownToAdd(50);
         }
         public void FamilyChoiceKNoyansOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
@@ -589,6 +593,7 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            args.SetRenownToAdd(50);
         }
         public void FamilyChoiceSBoyarsOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
@@ -708,6 +713,7 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+            args.SetRenownToAdd(50);
         }
         public void FamilyChoiceVBaronsOptionOnSelect(CharacterCreationManager characterCreationManager)
         {

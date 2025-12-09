@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
+using TaleWorlds.CampaignSystem.CharacterDevelopment;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
 
@@ -58,6 +59,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            args.SetLevelToTraits(1);
         }
         public bool IdiomFighterAOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -83,6 +86,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            args.SetLevelToTraits(1);
         }
         public bool IdiomFighterBOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -108,6 +113,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            args.SetLevelToTraits(1);
         }
         public bool IdiomFighterEOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -133,6 +140,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            args.SetLevelToTraits(1);
         }
         public bool IdiomFighterKOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -158,6 +167,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            args.SetLevelToTraits(1);
         }
         public bool IdiomFighterSOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -183,6 +194,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            args.SetLevelToTraits(1);
         }
         public bool IdiomFighterVOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -208,6 +221,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            args.SetLevelToTraits(1);
         }
         public bool IdiomFighterCOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -258,6 +273,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Calculating });
+            args.SetLevelToTraits(1);
         }
         public bool IdiomPreventionOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -283,6 +300,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Calculating });
+            args.SetLevelToTraits(1);
         }
         public bool IdiomWellBegunOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -308,6 +327,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Calculating });
+            args.SetLevelToTraits(-1);
         }
         public bool IdiomBoldOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -333,6 +354,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Calculating });
+            args.SetLevelToTraits(1);
         }
         public bool IdiomForwarnedOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -383,6 +406,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Honor });
+            args.SetLevelToTraits(-1);
         }
         public bool IdiomArmedOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -408,6 +433,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            args.SetLevelToTraits(1);
         }
         public bool IdiomConquerOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -433,6 +460,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Honor });
+            args.SetLevelToTraits(-1);
         }
         public bool IdiomMeanOptionOnCondition(CharacterCreationManager characterCreationManager)
         {

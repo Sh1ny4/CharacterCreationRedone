@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
+using TaleWorlds.CampaignSystem.CharacterDevelopment;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
 
@@ -57,6 +58,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            args.SetLevelToTraits(1);
         }
         public void ReasonTravelOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
@@ -75,6 +78,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Mercy });
+            args.SetLevelToTraits(-1);
         }
         public void ReasonRevengeOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
@@ -93,6 +98,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Honor });
+            args.SetLevelToTraits(-1);
         }
         public void ReasonForcedOutOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
@@ -111,6 +118,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Calculating });
+            args.SetLevelToTraits(1);
         }
         public void ReasonMoneyOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
@@ -129,6 +138,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor, DefaultTraits.Calculating });
+            args.SetLevelToTraits(1);
         }
         public void ReasonPowerOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
@@ -147,6 +158,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            args.SetLevelToTraits(1);
         }
         public void ReasonHistoryOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
@@ -201,6 +214,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Mercy, DefaultTraits.Generosity });
+            args.SetLevelToTraits(1);
         }
         public void ReasonHelpingOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
@@ -219,6 +234,8 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(20);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            args.SetLevelToTraits(1);
         }
         public void ReasonWorthOptionOnSelect(CharacterCreationManager characterCreationManager)
         {

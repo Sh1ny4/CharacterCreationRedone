@@ -1,11 +1,11 @@
-using StoryMode.GameComponents.CampaignBehaviors;
-using StoryMode.StoryModeObjects;
 using System.Collections.Generic;
+using TaleWorlds.Core;
+using TaleWorlds.Localization;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.CampaignSystem.Extensions;
-using TaleWorlds.Core;
-using TaleWorlds.Localization;
+using StoryMode.GameComponents.CampaignBehaviors;
+using StoryMode.StoryModeObjects;
 
 namespace CharacterCreationRedone.CampaignOptions
 {

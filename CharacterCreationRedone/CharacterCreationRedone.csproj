@@ -106,13 +106,6 @@
     <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxParentsMenu.cs" />
     <Compile Include="SubModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VanillaOptions\CharacterCreationRedoneVanilla.cs" />
-    <Compile Include="VanillaOptions\CharacterCreationRedoneVanillaAdulthoodMenu.cs" />
-    <Compile Include="VanillaOptions\CharacterCreationRedoneVanillaAgeMenu.cs" />
-    <Compile Include="VanillaOptions\CharacterCreationRedoneVanillaYouthMenu.cs" />
-    <Compile Include="VanillaOptions\CharacterCreationRedoneVanillaEducationMenu.cs" />
-    <Compile Include="VanillaOptions\CharacterCreationRedoneVanillaChildhoodMenu.cs" />
-    <Compile Include="VanillaOptions\CharacterCreationRedoneVanillaParentsMenu.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

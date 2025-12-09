@@ -135,6 +135,7 @@ namespace CharacterCreationRedone.SandboxOptions
             Hero companion = HeroCreator.CreateSpecialHero(wanderer);
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
             AddHeroToPartyAction.Apply(companion, Hero.MainHero.PartyBelongedTo);
+            Hero.MainHero.Gold = 800;
         }
         public void LifeStartAseraiCaravaneerOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -163,6 +164,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiCaravaneerOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 2000;
         }
         public void LifeStartAseraiMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -191,6 +193,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 1200;
         }
         public void LifeStartAseraiCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -247,6 +250,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiFarmerOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 150;
         }
         public void LifeStartAseraiMamlukeOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -275,6 +279,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiMamlukeOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartAseraiHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -303,6 +308,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiHorseArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartAseraiArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -331,6 +337,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartAseraiDesertBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -359,8 +366,13 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiDesertBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 100;
+            foreach (Kingdom kingdom in Kingdom.All)
+            {
+                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 100, false);
+            }
         }
-        
+
         public void LifeStartBattaniaFiannaOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
@@ -394,6 +406,7 @@ namespace CharacterCreationRedone.SandboxOptions
             Hero companion = HeroCreator.CreateSpecialHero(wanderer);
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
             AddHeroToPartyAction.Apply(companion, Hero.MainHero.PartyBelongedTo);
+            Hero.MainHero.Gold = 600;
         }
         public void LifeStartBattaniaDruidOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -422,6 +435,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaDruidOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 400;
         }
         public void LifeStartBattaniaMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -450,6 +464,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 1000;
         }
         public void LifeStartBattaniaCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -478,6 +493,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaCraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 800;
         }
         public void LifeStartBattaniaForesterOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -506,6 +522,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaForesterOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 200;
         }
         public void LifeStartBattaniaWildlingOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -534,6 +551,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaWildlingOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartBattaniaScoutOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -562,6 +580,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaScoutOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartBattaniaKernOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -590,6 +609,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaKernOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartBattaniaForestBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -618,8 +638,13 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaForestBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 100;
+            foreach (Kingdom kingdom in Kingdom.All)
+            {
+                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 100, false);
+            }
         }
-        
+
         public void LifeStartEmpireCommanderOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Leadership, DefaultSkills.Charm };
@@ -651,6 +676,7 @@ namespace CharacterCreationRedone.SandboxOptions
             Hero companion = HeroCreator.CreateSpecialHero(wanderer);
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
             AddHeroToPartyAction.Apply(companion, Hero.MainHero.PartyBelongedTo);
+            Hero.MainHero.Gold = 1000;
         }
         public void LifeStartEmpireEngineerOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -679,6 +705,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireEngineerOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 1300;
         }
         public void LifeStartEmpireMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -707,6 +734,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 1600;
         }
         public void LifeStartEmpireCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -735,6 +763,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireCraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 1100;
         }
         public void LifeStartEmpirePeasantOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -763,6 +792,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpirePeasantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 200;
         }
         public void LifeStartEmpireLegionaryOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -791,6 +821,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireLegionaryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartEmpireArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -819,6 +850,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartEmpireCavalryOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -847,6 +879,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireCavalryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartEmpireHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -875,6 +908,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireHorseArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartEmpireLooterOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -903,6 +937,11 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireLooterOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 100;
+            foreach (Kingdom kingdom in Kingdom.All)
+            {
+                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 100, false);
+            }
         }
 
         public void LifeStartKhuzaitKhanGuardOptionArgs(NarrativeMenuOptionArgs args)
@@ -938,6 +977,7 @@ namespace CharacterCreationRedone.SandboxOptions
             Hero companion = HeroCreator.CreateSpecialHero(wanderer);
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
             AddHeroToPartyAction.Apply(companion, Hero.MainHero.PartyBelongedTo);
+            Hero.MainHero.Gold = 900;
         }
         public void LifeStartKhuzaitNomadOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -966,6 +1006,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitNomadOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartKhuzaitMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -994,6 +1035,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 1000;
         }
         public void LifeStartKhuzaitCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1022,6 +1064,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitCraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 800;
         }
         public void LifeStartKhuzaitFarmerOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1050,6 +1093,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitFarmerOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 200;
         }
         public void LifeStartKhuzaitCavalryOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1078,6 +1122,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitCavalryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartKhuzaitHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1106,6 +1151,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitHorseArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartKhuzaitInfantryOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1134,6 +1180,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitInfantryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartKhuzaitSteppeBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1162,6 +1209,11 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitSteppeBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 100;
+            foreach (Kingdom kingdom in Kingdom.All)
+            {
+                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 100, false);
+            }
         }
 
         public void LifeStartSturgiaDruzhinaOptionArgs(NarrativeMenuOptionArgs args)
@@ -1171,6 +1223,7 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            Hero.MainHero.Gold = 1100;
         }
         public bool LifeStartSturgiaDruzhinaOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
@@ -1225,6 +1278,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaFurHunterOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 1200;
         }
         public void LifeStartSturgiaMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1253,6 +1307,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 1000;
         }
         public void LifeStartSturgiaCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1281,6 +1336,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaCraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 700;
         }
         public void LifeStartSturgiaPeasantOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1309,6 +1365,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaPeasantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 200;
         }
         public void LifeStartSturgiaInfantryOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1337,6 +1394,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaInfantryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartSturgiaShockTroopOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1365,6 +1423,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaShockTroopOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartSturgiaArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1393,6 +1452,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartSturgiaSeaRaiderBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1421,6 +1481,11 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaSeaRaiderBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 600;
+            foreach (Kingdom kingdom in Kingdom.All)
+            {
+                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 100, false);
+            }
         }
 
         public void LifeStartVlandiaKnightOptionArgs(NarrativeMenuOptionArgs args)
@@ -1456,6 +1521,7 @@ namespace CharacterCreationRedone.SandboxOptions
             Hero companion = HeroCreator.CreateSpecialHero(wanderer);
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
             AddHeroToPartyAction.Apply(companion, Hero.MainHero.PartyBelongedTo);
+            Hero.MainHero.Gold = 900;
         }
         public void LifeStartVlandiaChamberlainOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1484,6 +1550,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaChamberlainOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 1000;
         }
         public void LifeStartVlandiaMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1512,6 +1579,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 1200;
         }
         public void LifeStartVlandiaGuildMemberOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1540,6 +1608,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaGuildMemberOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 1600;
         }
         public void LifeStartVlandiaSerfOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1568,6 +1637,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaSerfOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 200;
         }
         public void LifeStartVlandiaInfantryOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1596,6 +1666,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaInfantryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartVlandiaCavalryOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1624,6 +1695,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaCavalryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartVlandiaRangedOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1652,6 +1724,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaRangedOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 300;
         }
         public void LifeStartVlandiaMountainBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
@@ -1680,6 +1753,11 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaMountainBanditOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
+            Hero.MainHero.Gold = 100;
+            foreach (Kingdom kingdom in Kingdom.All)
+            {
+                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 100, false);
+            }
         }
 
 
