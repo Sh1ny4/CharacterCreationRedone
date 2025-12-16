@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Actions;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
@@ -369,7 +369,7 @@ namespace CharacterCreationRedone.SandboxOptions
             Hero.MainHero.Gold = 100;
             foreach (Kingdom kingdom in Kingdom.All)
             {
-                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 100, false);
+                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 50, false);
             }
         }
 
@@ -641,7 +641,7 @@ namespace CharacterCreationRedone.SandboxOptions
             Hero.MainHero.Gold = 100;
             foreach (Kingdom kingdom in Kingdom.All)
             {
-                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 100, false);
+                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 50, false);
             }
         }
 
@@ -940,7 +940,7 @@ namespace CharacterCreationRedone.SandboxOptions
             Hero.MainHero.Gold = 100;
             foreach (Kingdom kingdom in Kingdom.All)
             {
-                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 100, false);
+                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 50, false);
             }
         }
 
@@ -1212,7 +1212,7 @@ namespace CharacterCreationRedone.SandboxOptions
             Hero.MainHero.Gold = 100;
             foreach (Kingdom kingdom in Kingdom.All)
             {
-                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 100, false);
+                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 50, false);
             }
         }
 
@@ -1484,7 +1484,7 @@ namespace CharacterCreationRedone.SandboxOptions
             Hero.MainHero.Gold = 600;
             foreach (Kingdom kingdom in Kingdom.All)
             {
-                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 100, false);
+                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 50, false);
             }
         }
 
@@ -1756,7 +1756,7 @@ namespace CharacterCreationRedone.SandboxOptions
             Hero.MainHero.Gold = 100;
             foreach (Kingdom kingdom in Kingdom.All)
             {
-                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 100, false);
+                ChangeCrimeRatingAction.Apply(kingdom.MapFaction, 50, false);
             }
         }
 
