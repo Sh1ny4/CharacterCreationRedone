@@ -9,6 +9,20 @@ namespace CharacterCreationRedone.VanillaOptions
 {
     public class CharacterCreationRedoneVanillaParentsMenu : CharacterCreationCampaignBehavior, ICharacterCreationContentHandler
     {
+        /// <summary>
+        /// I've split the different steps of the backstory options to make it easier to work with, if you want it to be ina single file : https://github.com/Sh1ny4/CharacterCreationRedone/blob/bc3fd947cef49e8275fa729928d9743b5ea64abe/CharacterCreationRedone/CharacterCreationOptions/CharacterCreationRedoneVanilla.cs
+        /// a lot has changed in the 1.3 update so here is what I found :
+        /// it is now possible to add options without this patching, as seen in the war sails DLC. this is allowed by having a narrative menu ID. Check the DLC code to see how to implement it since it is not the idea behind this mod
+        /// 
+        /// Each menu option has 4 inputs : Condition, Args, OnSelect and Consequences
+        ///     Condition input : allows you to limit which options are available, can be the cultures, for the parents to be noble, having a specifc trait, being a woman, etc
+        ///     Args  : contains what will be affected by your choice like focus, skill level, attributes, traits, etc
+        ///     OnSelect : mostly used to change what is displayed like the equipement and the animation
+        ///     Consequences : is optional, it can be used to change what isn't available in args. I have used it to have the player be part of a kingdom, increase the clan level, change the gold, have a companion or give the player a criminal rating
+        /// 
+        /// A lot more can be done with this, like having a section that is purely a starting gear choice and each option costing a certain amount or having a menu option that allow you to select in which place to spawn
+        /// 
+        /// </summary>
 
         public string GetMotherEquipmentId(CharacterCreationManager characterCreationManager, string occupationType, string cultureId)
         {

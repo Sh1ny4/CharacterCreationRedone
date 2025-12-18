@@ -8,6 +8,7 @@ namespace CharacterCreationRedone.VanillaOptions
     [HarmonyPatch(typeof(CharacterCreationCampaignBehavior), nameof(CharacterCreationCampaignBehavior.InitializeData))]
     public class CharacterCreationRedoneVanilla : CharacterCreationCampaignBehavior, ICharacterCreationContentHandler
     {
+        // these are excluded from the project and is intended for modders to use in their mod with losing countless hours everytime
         [HarmonyPrefix]
         static bool Prefix(ref CharacterCreationRedoneVanilla __instance, CharacterCreationManager characterCreationManager)
         {
