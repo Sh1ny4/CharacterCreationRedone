@@ -26,17 +26,9 @@
 		<XmlNode>
 			<XmlName id="EquipmentRosters" path="CharacterCreationEquipment"/>
 			<IncludedGameTypes>
-				<GameType value = "Campaign"/>
-				<GameType value = "CampaignStoryMode"/>
-				<GameType value = "CustomGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<XmlNode>
-			<XmlName id="EquipmentRosters" path="CharacterCreationParentEquipment"/>
-			<IncludedGameTypes>
-				<GameType value = "Campaign"/>
-				<GameType value = "CampaignStoryMode"/>
-				<GameType value = "CustomGame"/>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="CustomGame"/>
 			</IncludedGameTypes>
 		</XmlNode>
 	</Xmls>

@@ -5,10 +5,7 @@
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
     </xsl:template>
-    <xsl:template match="*[starts-with(@id, 'player_char_creation_ase')]"/>
-    <xsl:template match="*[starts-with(@id, 'player_char_creation_bat')]"/>
-    <xsl:template match="*[starts-with(@id, 'player_char_creation_emp')]"/>
-    <xsl:template match="*[starts-with(@id, 'player_char_creation_khu')]"/>
-    <xsl:template match="*[starts-with(@id, 'player_char_creation_stu')]"/>
-    <xsl:template match="*[starts-with(@id, 'player_char_creation_vla')]"/>
+    <xsl:template match="*[starts-with(@id, 'player_char_creation_')]"/>
+    <xsl:template match="*[starts-with(@id, 'mother_char_creation_')]"/>
+    <xsl:template match="*[starts-with(@id, 'father_char_creation_')]"/>
 </xsl:stylesheet>

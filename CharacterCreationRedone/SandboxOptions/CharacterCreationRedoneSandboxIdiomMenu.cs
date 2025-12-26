@@ -70,6 +70,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_streets");
@@ -97,6 +98,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_militia");
@@ -124,6 +126,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_grit");
@@ -151,6 +154,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_peddlers");
@@ -178,6 +182,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
@@ -205,6 +210,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_peddlers_2");
@@ -232,6 +238,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_fox");
@@ -257,6 +264,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
@@ -284,6 +292,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_peddlers");
@@ -311,6 +320,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_manners");
@@ -338,6 +348,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_book");
@@ -365,6 +376,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_peddlers_2");
@@ -390,6 +402,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_streets");
@@ -417,6 +430,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_militia");
@@ -444,6 +458,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_grit");
@@ -471,6 +486,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_peddlers");
@@ -495,7 +511,7 @@ namespace CharacterCreationRedone.SandboxOptions
             public const string Skirmisher = "skirmisher";
             public const string HorseArcher = "horsearcher";
             public const string Bandit = "bandit";
-            
+
             public const string Special = "special";
             public const string Healer = "healer";
             public const string Forester = "forester";
