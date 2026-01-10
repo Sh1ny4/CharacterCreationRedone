@@ -97,6 +97,8 @@
   <ItemGroup>
     <Compile Include="CampaignOptions\CharacterCreationRedoneCampaignEscapeMenu.cs" />
     <Compile Include="CampaignOptions\CharacterCreationRedoneCampaign.cs" />
+    <Compile Include="DelayedBanner\DelayedBannerCampaignBehavior.cs" />
+    <Compile Include="DelayedBanner\DelayedBannerPatches.cs" />
     <Compile Include="SandboxOptions\CharacterCreationRedoneSandbox.cs" />
     <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxAgeMenu.cs" />
     <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxYouthMenu.cs" />
