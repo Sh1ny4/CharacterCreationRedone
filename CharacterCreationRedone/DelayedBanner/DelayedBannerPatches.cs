@@ -1,7 +1,8 @@
 ﻿using HarmonyLib;
-using System.Reflection.Emit;
 using System.Collections.Generic;
+using System.Reflection.Emit;
 using TaleWorlds.CampaignSystem.CampaignBehaviors;
+using TaleWorlds.CampaignSystem.GameComponents;
 using TaleWorlds.CampaignSystem.ViewModelCollection.ClanManagement;
 
 namespace CharacterCreationRedone.DelayedBanner
@@ -29,6 +30,15 @@ namespace CharacterCreationRedone.DelayedBanner
         static void Postfix(ref bool __result)
         {
             __result = false;
+        }
+    }
+    [HarmonyPatch(typeof(DefaultClanTierModel), nameof(DefaultClanTierModel.BannerEligibleTier), MethodType.Getter)]
+    internal class BannerEligibleTierPatch
+    {
+        [HarmonyPostfix]
+        static void Postfix(ref int __result)
+        {
+            __result = 2;
         }
     }
 }
