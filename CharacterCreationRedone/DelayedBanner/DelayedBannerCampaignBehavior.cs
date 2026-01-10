@@ -11,7 +11,7 @@ namespace CharacterCreationRedone.DelayedBanner
         public override void RegisterEvents()
         {
             CampaignEvents.OnClanChangedKingdomEvent.AddNonSerializedListener(this, new Action<Clan, Kingdom, Kingdom, ChangeKingdomAction.ChangeKingdomActionDetail, bool>(this.OnClanChangedKingdom));
-            CampaignEvents.OnNewGameCreatedEvent.AddNonSerializedListener(this, new Action<CampaignGameStarter>(this.OnNewGameCreated));
+            CampaignEvents.OnCharacterCreationIsOverEvent.AddNonSerializedListener(this, new Action(this.OnCharacterCreationIsOverEvent));
         }
 
         public override void SyncData(IDataStore dataStore)
@@ -20,22 +20,24 @@ namespace CharacterCreationRedone.DelayedBanner
 
         private void OnClanChangedKingdom(Clan clan, Kingdom oldKingdom, Kingdom newKingdom, ChangeKingdomAction.ChangeKingdomActionDetail detail, bool showNotification = true)
         {
-            if (clan == Clan.PlayerClan)
+            if (clan == Clan.PlayerClan && Campaign.Current.IsBannerEditorEnabled)
             {
-                Game.Current.GameStateManager.PushState(Game.Current.GameStateManager.CreateState<BannerEditorState>(), 1);
+                Game.Current.GameStateManager.PushState(Game.Current.GameStateManager.CreateState<BannerEditorState>(), 0);
+            }
+            if (newKingdom.Leader == Hero.MainHero)
+            {
+                newKingdom.Banner = Clan.PlayerClan.Banner;
             }
         }
-
-        private void OnNewGameCreated(CampaignGameStarter campaignGameStarter)
+        private void OnCharacterCreationIsOverEvent()
         {
-            Clan.PlayerClan.Banner.ClearAllIcons();
             Hero.MainHero.ClanBanner.ChangeBackgroundColor(Hero.MainHero.Culture.Color, Hero.MainHero.Culture.BackgroundColor2);
-            Hero.MainHero.ClanBanner.ChangePrimaryColor(Hero.MainHero.Culture.Color);
-        }
-        private void OnTick()
-        {
-            Clan.PlayerClan.Banner.ClearAllIcons();
-            Hero.MainHero.ClanBanner.ChangeBackgroundColor(Hero.MainHero.Culture.Color, Hero.MainHero.Culture.BackgroundColor2);
+            Hero.MainHero.ClanBanner.ChangeIconColors(Hero.MainHero.Culture.Color);
+            if (Clan.PlayerClan.Tier > 0 && Hero.MainHero.Culture.StringId != "empire")
+            {
+                Hero ruler = Hero.FindAll(hero => hero.Culture == Hero.MainHero.Culture && hero.IsAlive && hero.IsFactionLeader && !hero.MapFaction.IsMinorFaction).GetRandomElementInefficiently();
+                ChangeKingdomAction.ApplyByJoinToKingdom(Hero.MainHero.Clan, ruler.Clan.Kingdom, default, false);
+            }
         }
     }
 }

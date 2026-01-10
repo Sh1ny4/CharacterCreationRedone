@@ -129,8 +129,6 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiFarisOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
-            Hero ruler = Hero.FindAll(hero => hero.Culture == Hero.MainHero.Culture && hero.IsAlive && hero.IsFactionLeader && !hero.MapFaction.IsMinorFaction).GetRandomElementInefficiently();
-            ChangeKingdomAction.ApplyByJoinToKingdom(Hero.MainHero.Clan, ruler.Clan.Kingdom, default, false);
             CharacterObject wanderer = (from character in CharacterObject.All where character.Occupation == Occupation.Wanderer && character.Culture == Hero.MainHero.Culture select character).GetRandomElementInefficiently();
             Hero companion = HeroCreator.CreateSpecialHero(wanderer);
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
@@ -400,8 +398,6 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaFiannaOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
-            Hero ruler = Hero.FindAll(hero => hero.Culture == Hero.MainHero.Culture && hero.IsAlive && hero.IsFactionLeader && !hero.MapFaction.IsMinorFaction).GetRandomElementInefficiently();
-            ChangeKingdomAction.ApplyByJoinToKingdom(Hero.MainHero.Clan, ruler.Clan.Kingdom, default, false);
             CharacterObject wanderer = (from character in CharacterObject.All where character.Occupation == Occupation.Wanderer && character.Culture == Hero.MainHero.Culture select character).GetRandomElementInefficiently();
             Hero companion = HeroCreator.CreateSpecialHero(wanderer);
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
@@ -971,8 +967,6 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitKhanGuardOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
-            Hero ruler = Hero.FindAll(hero => hero.Culture == Hero.MainHero.Culture && hero.IsAlive && hero.IsFactionLeader && !hero.MapFaction.IsMinorFaction).GetRandomElementInefficiently();
-            ChangeKingdomAction.ApplyByJoinToKingdom(Hero.MainHero.Clan, ruler.Clan.Kingdom, default, false);
             CharacterObject wanderer = (from character in CharacterObject.All where character.Occupation == Occupation.Wanderer && character.Culture == Hero.MainHero.Culture select character).GetRandomElementInefficiently();
             Hero companion = HeroCreator.CreateSpecialHero(wanderer);
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
@@ -1244,8 +1238,6 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaDruzhinaOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
-            Hero ruler = Hero.FindAll(hero => hero.Culture == Hero.MainHero.Culture && hero.IsAlive && hero.IsFactionLeader && !hero.MapFaction.IsMinorFaction).GetRandomElementInefficiently();
-            ChangeKingdomAction.ApplyByJoinToKingdom(Hero.MainHero.Clan, ruler.Clan.Kingdom, default, false);
             CharacterObject wanderer = (from character in CharacterObject.All where character.Occupation == Occupation.Wanderer && character.Culture == Hero.MainHero.Culture select character).GetRandomElementInefficiently();
             Hero companion = HeroCreator.CreateSpecialHero(wanderer);
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
@@ -1515,8 +1507,6 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaKnightOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
-            Hero ruler = Hero.FindAll(hero => hero.Culture == Hero.MainHero.Culture && hero.IsAlive && hero.IsFactionLeader && !hero.MapFaction.IsMinorFaction).GetRandomElementInefficiently();
-            ChangeKingdomAction.ApplyByJoinToKingdom(Hero.MainHero.Clan, ruler.Clan.Kingdom, default, false);
             CharacterObject wanderer = (from character in CharacterObject.All where character.Occupation == Occupation.Wanderer && character.Culture == Hero.MainHero.Culture select character).GetRandomElementInefficiently();
             Hero companion = HeroCreator.CreateSpecialHero(wanderer);
             AddCompanionAction.Apply(Clan.PlayerClan, companion);
