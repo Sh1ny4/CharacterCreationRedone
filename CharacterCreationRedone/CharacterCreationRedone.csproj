@@ -36,6 +36,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\bin\Win64_Shipping_Client\0Harmony.dll</HintPath>
     </Reference>
+    <Reference Include="NavalDLC">
+      <HintPath>..\..\NavalDLC\bin\Win64_Shipping_Client\NavalDLC.dll</HintPath>
+    </Reference>
     <Reference Include="SandBox">
       <HintPath>..\..\SandBox\bin\Win64_Shipping_Client\SandBox.dll</HintPath>
     </Reference>
@@ -97,8 +100,6 @@
   <ItemGroup>
     <Compile Include="CampaignOptions\CharacterCreationRedoneCampaignEscapeMenu.cs" />
     <Compile Include="CampaignOptions\CharacterCreationRedoneCampaign.cs" />
-    <Compile Include="DelayedBanner\DelayedBannerCampaignBehavior.cs" />
-    <Compile Include="DelayedBanner\DelayedBannerPatches.cs" />
     <Compile Include="SandboxOptions\CharacterCreationRedoneSandbox.cs" />
     <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxAgeMenu.cs" />
     <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxYouthMenu.cs" />

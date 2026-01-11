@@ -1,5 +1,5 @@
-﻿using CharacterCreationRedone.DelayedBanner;
-using HarmonyLib;
+﻿using HarmonyLib;
+using NavalDLC.CampaignBehaviors;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
@@ -14,14 +14,10 @@ namespace CharacterCreationRedone
             new Harmony("CharacterCreationRedone.CharacterCreationOptions").PatchAll();
         }
 
-        protected override void InitializeGameStarter(Game game, IGameStarter gameStarterObject)
+        public override void OnGameInitializationFinished(Game game)
         {
-            if (game.GameType is Campaign)
-            {
-                CampaignGameStarter campaignGameStarter = gameStarterObject as CampaignGameStarter;
-                campaignGameStarter.AddBehavior(new DelayedBannerCampaignBehavior());
-                return;
-            }
+            if (!(game.GameType is Campaign)) return;
+            Campaign.Current.CampaignBehaviorManager.RemoveBehavior<NavalCharacterCreationCampaignBehavior>();
         }
     }
 }
