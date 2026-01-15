@@ -1,3 +1,4 @@
+using NavalDLC.CharacterDevelopment;
 using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
@@ -85,6 +86,13 @@ namespace CharacterCreationRedone.SandboxOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Kartisans", new TextObject("{=CCR_Family_Choice_Kartisans}artisans", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceKArtisansOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.KhuzaitParentsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceKArtisansOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Kwarriors", new TextObject("{=CCR_Family_Choice_Kwarriors}warriors", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceKWarriorsOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.KhuzaitParentsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceKWarriorsOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Kthugs", new TextObject("{=CCR_Family_Choice_Kthugs}thugs", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceKThugsOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.KhuzaitParentsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceKThugsOptionOnSelect), null));
+
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Njarls", new TextObject("{=CCR_Family_Choice_Njarls}jarls", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceNJarlsOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.NordParentsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceNJarlsOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Nmerchants", new TextObject("{=CCR_Family_Choice_Nmerchants}merchants", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceNMerchantsOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.NordParentsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceNMerchantsOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Nfarmers", new TextObject("{=CCR_Family_Choice_Nfarmers}farmers", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceNFarmersOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.NordParentsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceNFarmersOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Nartisans", new TextObject("{=CCR_Family_Choice_Nartisans}artisans", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceNArtisansOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.NordParentsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceNArtisansOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Nwarriors", new TextObject("{=CCR_Family_Choice_Nwarriors}warriors", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceNWarriorsOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.NordParentsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceNWarriorsOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Nvikings", new TextObject("{=CCR_Family_Choice_Nvikings}vikings", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceNVikingsOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.NordParentsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceNVikingsOptionOnSelect), null));
 
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Sboyars", new TextObject("{=CCR_Family_Choice_Sboyars}boyars", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceSBoyarsOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.SturgianParentsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceSBoyarsOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Family_Choice_Smerchants", new TextObject("{=CCR_Family_Choice_Smerchants}merchants", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.FamilyChoiceSMerchantsOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.SturgianParentsOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.FamilyChoiceSMerchantsOptionOnSelect), null));
@@ -582,6 +590,126 @@ namespace CharacterCreationRedone.SandboxOptions
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
 
+        public bool NordParentsOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+        public void FamilyChoiceNJarlsOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { NavalSkills.Boatswain, DefaultSkills.Leadership };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            args.SetRenownToAdd(50);
+        }
+        public void FamilyChoiceNJarlsOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SetParentOccupation("noble");
+            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
+            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
+            string motherAnimation = "act_character_creation_female_default_side_to_side_1";
+            string fatherAnimation = "act_character_creation_male_default_side_to_side_1";
+            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
+        }
+        public void FamilyChoiceNMerchantsOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+        }
+        public void FamilyChoiceNMerchantsOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SetParentOccupation("merchant");
+            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
+            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
+            string motherAnimation = "act_character_creation_female_default_mother_front";
+            string fatherAnimation = "act_character_creation_male_default_mother_front";
+            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
+        }
+        public void FamilyChoiceNFarmersOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Crafting };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+        }
+        public void FamilyChoiceNFarmersOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SetParentOccupation("farmer");
+            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
+            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
+            string motherAnimation = "act_character_creation_female_default_father_sitting";
+            string fatherAnimation = "act_character_creation_male_default_father_sitting";
+            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
+        }
+        public void FamilyChoiceNArtisansOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+        }
+        public void FamilyChoiceNArtisansOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SetParentOccupation("craftman");
+            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
+            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
+            string motherAnimation = "act_character_creation_female_default_side_to_side_2";
+            string fatherAnimation = "act_character_creation_male_default_side_to_side_2";
+            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
+        }
+        public void FamilyChoiceNWarriorsOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Athletics };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+        }
+        public void FamilyChoiceNWarriorsOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SetParentOccupation("infantry");
+            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
+            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
+            string motherAnimation = "act_character_creation_female_default_side_to_side_3";
+            string fatherAnimation = "act_character_creation_male_default_side_to_side_3";
+            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
+        }
+        public void FamilyChoiceNVikingsOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { NavalSkills.Mariner, DefaultSkills.Roguery };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+        }
+        public void FamilyChoiceNVikingsOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SetParentOccupation("bandit");
+            string motherEquipmentId = this.GetMotherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            string fatherEquipmentId = this.GetFatherEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedParentOccupation, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId);
+            MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(motherEquipmentId);
+            MBEquipmentRoster object2 = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(fatherEquipmentId);
+            string motherAnimation = "act_character_creation_female_default_hugging";
+            string fatherAnimation = "act_character_creation_male_default_hugging";
+            this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
+        }
+
         public bool SturgianParentsOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
@@ -821,6 +949,5 @@ namespace CharacterCreationRedone.SandboxOptions
             string fatherAnimation = "act_character_creation_male_default_hugging";
             this.UpdateParentEquipment(characterCreationManager, @object, object2, motherAnimation, fatherAnimation);
         }
-
     }
 }

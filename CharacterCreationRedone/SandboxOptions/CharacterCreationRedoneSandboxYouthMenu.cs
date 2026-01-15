@@ -80,13 +80,23 @@ namespace CharacterCreationRedone.SandboxOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Kinfantry", new TextObject("{=CCR_Start_Choice_Kinfantry}infantry", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartKhuzaitInfantryOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartKhuzaitInfantryOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartKhuzaitInfantryOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartKhuzaitInfantryOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ksteppebandit", new TextObject("{=CCR_Start_Choice_Ksteppebandit}a steppe bandit", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartKhuzaitSteppeBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartKhuzaitSteppeBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartKhuzaitSteppeBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartKhuzaitSteppeBanditOptionOnConsequence)));
 
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Nhuscarl", new TextObject("{=CCR_Start_Choice_Nhuscarl}a Huscarl", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartNordHuscarlOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartNordHuscarlOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartNordHuscarlOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartNordHuscarlOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Nviking", new TextObject("{=CCR_Start_Choice_Nviking}a viking", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartNordVikingOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartNordVikingOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartNordVikingOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartNordVikingOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Nmerchant", new TextObject("{=CCR_Start_Choice_Nmerchant}a merchant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartNordMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartNordMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartNordMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartNordMerchantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ncraftman", new TextObject("{=CCR_Start_Choice_Ncraftman}a craftman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartNordCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartNordCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartNordCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartNordCraftmanOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Npeasant", new TextObject("{=CCR_Start_Choice_Npeasant}a peasant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartNordPeasantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartNordPeasantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartNordPeasantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartNordPeasantOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ninfantry", new TextObject("{=CCR_Start_Choice_Ninfantry}part of the infantry", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartNordInfantryOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartNordInfantryOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartNordInfantryOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartNordInfantryOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Nsvinfylking", new TextObject("{=CCR_Start_Choice_Nsvinfylking}Svinfylking", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartNordShockTroopOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartNordShockTroopOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartNordShockTroopOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartNordShockTroopOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Narcher", new TextObject("{=CCR_Start_Choice_Narcher}bowman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartNordArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartNordArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartNordArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartNordArcherOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Nsearaider", new TextObject("{=CCR_Start_Choice_Nsearaider}a raider", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaSeaRaiderBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaSeaRaiderBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaSeaRaiderBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaSeaRaiderBanditOptionOnConsequence)));
+
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sdruzhina", new TextObject("{=CCR_Start_Choice_Sdruzhina}a member of a druzhina", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaDruzhinaOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaDruzhinaOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaDruzhinaOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaDruzhinaOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sfur_hunter", new TextObject("{=CCR_Start_Choice_Sfur_hunter}fur hunter", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaFurHunterOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaFurHunterOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaFurHunterOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaFurHunterOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Smerchant", new TextObject("{=CCR_Start_Choice_Smerchant}a merchant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaMerchantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaMerchantOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Scraftman", new TextObject("{=CCR_Start_Choice_Scraftman}a craftman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaCraftmanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaCraftmanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaCraftmanOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaCraftmanOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Speasant", new TextObject("{=CCR_Start_Choice_Speasant}a peasant", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaPeasantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaPeasantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaPeasantOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaPeasantOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sinfantry", new TextObject("{=CCR_Start_Choice_Sinfantry}part of the infantry", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaInfantryOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaInfantryOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaInfantryOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaInfantryOptionOnConsequence)));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sshocktroop", new TextObject("{=CCR_Start_Choice_Sshocktroop}shock troop", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaShockTroopOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaShockTroopOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaShockTroopOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaShockTroopOptionOnConsequence)));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Scavalry", new TextObject("{=CCR_Start_Choice_Scavalry}cavarly", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaCavalryOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaCavalryOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaCavalryOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaCavalryOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Sarcher", new TextObject("{=CCR_Start_Choice_Sarcher}bowman", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaArcherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaArcherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaArcherOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaArcherOptionOnConsequence)));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Start_Choice_Ssearaider", new TextObject("{=CCR_Start_Choice_Ssearaider}a raider", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.LifeStartSturgiaSeaRaiderBanditOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.LifeStartSturgiaSeaRaiderBanditOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.LifeStartSturgiaSeaRaiderBanditOptionOnSelect), new NarrativeMenuOptionOnConsequenceDelegate(this.LifeStartSturgiaSeaRaiderBanditOptionOnConsequence)));
 
@@ -1216,9 +1226,248 @@ namespace CharacterCreationRedone.SandboxOptions
             }
         }
 
-        public void LifeStartSturgiaDruzhinaOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartNordHuscarlOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding, DefaultSkills.Bow };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+            Hero.MainHero.Gold = 1100;
+        }
+        public bool LifeStartNordHuscarlOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Noble && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+        public void LifeStartNordHuscarlOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "noble";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_decisive");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+        public void LifeStartNordHuscarlOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        {
+            Hero ruler = Hero.FindAll(hero => hero.Culture == Hero.MainHero.Culture && hero.IsAlive && hero.IsFactionLeader && !hero.MapFaction.IsMinorFaction).GetRandomElementInefficiently();
+            ChangeKingdomAction.ApplyByJoinToKingdom(Hero.MainHero.Clan, ruler.Clan.Kingdom, default, false);
+            CharacterObject wanderer = (from character in CharacterObject.All where character.Occupation == Occupation.Wanderer && character.Culture == Hero.MainHero.Culture select character).GetRandomElementInefficiently();
+            Hero companion = HeroCreator.CreateSpecialHero(wanderer);
+            AddCompanionAction.Apply(Clan.PlayerClan, companion);
+            AddHeroToPartyAction.Apply(companion, Hero.MainHero.PartyBelongedTo);
+        }
+        public void LifeStartNordVikingOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow, DefaultSkills.Athletics };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
+        }
+        public bool LifeStartNordVikingOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+        public void LifeStartNordVikingOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "special";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+        public void LifeStartNordVikingOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        {
+            Hero.MainHero.Gold = 1200;
+        }
+        public void LifeStartNordMerchantOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
+        }
+        public bool LifeStartNordMerchantOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+        public void LifeStartNordMerchantOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "merchant";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_ready");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+        public void LifeStartNordMerchantOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        {
+            Hero.MainHero.Gold = 1000;
+        }
+        public void LifeStartNordCraftmanOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+        }
+        public bool LifeStartNordCraftmanOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+        public void LifeStartNordCraftmanOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "craftman";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_apprentice");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+        public void LifeStartNordCraftmanOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        {
+            Hero.MainHero.Gold = 700;
+        }
+        public void LifeStartNordPeasantOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+        }
+        public bool LifeStartNordPeasantOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+        public void LifeStartNordPeasantOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "farmer";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+        public void LifeStartNordPeasantOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        {
+            Hero.MainHero.Gold = 200;
+        }
+        public void LifeStartNordInfantryOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+        }
+        public bool LifeStartNordInfantryOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+        public void LifeStartNordInfantryOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "infantry";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_vibrant");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+        public void LifeStartNordInfantryOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        {
+            Hero.MainHero.Gold = 300;
+        }
+        public void LifeStartNordShockTroopOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing, DefaultSkills.Athletics };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+        }
+        public bool LifeStartNordShockTroopOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+        public void LifeStartNordShockTroopOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "shock";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+        public void LifeStartNordShockTroopOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        {
+            Hero.MainHero.Gold = 300;
+        }
+        public void LifeStartNordArcherOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
+        }
+        public bool LifeStartNordArcherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+        public void LifeStartNordArcherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "skirmisher";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+        public void LifeStartNordArcherOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        {
+            Hero.MainHero.Gold = 300;
+        }
+
+        public void LifeStartSturgiaDruzhinaOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding, DefaultSkills.Bow };
             args.SetAffectedSkills(affectedSkills);
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
@@ -1396,7 +1645,7 @@ namespace CharacterCreationRedone.SandboxOptions
         {
             Hero.MainHero.Gold = 300;
         }
-        public void LifeStartSturgiaShockTroopOptionArgs(NarrativeMenuOptionArgs args)
+        public void LifeStartSturgiaCavalryOptionArgs(NarrativeMenuOptionArgs args)
         {
             SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing, DefaultSkills.Athletics };
             args.SetAffectedSkills(affectedSkills);
@@ -1404,13 +1653,13 @@ namespace CharacterCreationRedone.SandboxOptions
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
         }
-        public bool LifeStartSturgiaShockTroopOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool LifeStartSturgiaCavalryOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
         }
-        public void LifeStartSturgiaShockTroopOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaCavalryOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
-            characterCreationManager.CharacterCreationContent.SelectedTitleType = "shock";
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "cavalry";
             string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -1421,7 +1670,7 @@ namespace CharacterCreationRedone.SandboxOptions
                 }
             }
         }
-        public void LifeStartSturgiaShockTroopOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        public void LifeStartSturgiaCavalryOptionOnConsequence(CharacterCreationManager characterCreationManager)
         {
             Hero.MainHero.Gold = 300;
         }

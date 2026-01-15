@@ -1943,7 +1943,7 @@
 			<Equipment slot="Leg" id="Item.leather_shoes" />
 		</EquipmentSet>
 	</EquipmentRoster>
-<!--Khuzai-->
+<!--Khuzait-->
 	<EquipmentRoster id="player_char_creation_show_khuzait"
 		culture="Culture.khuzait">
 		<EquipmentSet>
@@ -2596,6 +2596,657 @@
 			<Equipment slot="Leg" id="Item.khuzait_curved_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
+<!-- Nord -->
+    <EquipmentRoster id="player_char_creation_show_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northman_raider_armor" />
+            <Equipment slot="Gloves" id="Item.splinted_bracers" />
+            <Equipment slot="Leg" id="Item.strapped_jackboots" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_battle_axe_4_t3" />
+            <Equipment slot="Body" id="Item.northman_raider_armor" />
+            <Equipment slot="Leg" id="Item.strapped_jackboots" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!-- parents -->
+	<EquipmentRoster id="mother_char_creation_none_nord"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_civilian_dress" />
+            <Equipment slot="Leg" id="Item.strapped_leather_boots" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_none_nord"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Head" id="Item.nordic_civilian_hat_fur_brim" />
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.nord_casual_boots" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="mother_char_creation_noble_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_civilian_dress" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_noble_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northman_raider_armor" />
+            <Equipment slot="Leg" id="Item.strapped_jackboots" />
+            <Equipment slot="Head" id="Item.sturgian_helmet_base" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="mother_char_creation_merchant_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.khuzait_dress_b" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_merchant_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.merchants_fur_coat" />
+            <Equipment slot="Leg" id="Item.nord_casual_boots" />
+            <Equipment slot="Head" id="Item.fur_hat" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="mother_char_creation_farmer_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.battania_female_civil_a" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_farmer_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.battania_civil_a" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="mother_char_creation_craftman_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.dress_with_overall" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_craftman_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.leather_apron" />
+            <Equipment slot="Leg" id="Item.leather_cavalier_boots" />
+            <Equipment slot="Head" id="Item.imperial_cloth_coif" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="mother_char_creation_infantry_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_civilian_dress_plaid" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+            <Equipment slot="Head" id="Item.head_wrapped" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_infantry_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Head" id="Item.nordic_civilian_hat_fur_brim" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="mother_char_creation_bandit_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.plain_dress" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_bandit_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.pirate_a" />
+            <Equipment slot="Leg" id="Item.fine_town_boots" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="mother_char_creation_seafarer_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_dress" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_seafarer_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="mother_char_creation_shipmaster_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.khuzait_dress" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+            <Equipment slot="Cape" id="Item.female_scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_shipmaster_nord"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.cloth_apron" />
+            <Equipment slot="Leg" id="Item.nord_casual_boots" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!-- childhood -->
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_noble_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Head" id="Item.nordic_civilian_hat_fur_brim" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_noble_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_civilian_dress" />
+            <Equipment slot="Head" id="Item.fur_hat" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_merchant_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.heavy_nordic_coat" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_merchant_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.dress_with_overall" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_bard_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_bard_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_civilian_dress" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_craftman_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_sloven" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_craftman_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_sloven" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_hunter_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_leather_vest" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_hunter_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_leather_vest" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_vagabond_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.torn_bandit_clothes" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_vagabond_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.torn_bandit_clothes" />
+        </EquipmentSet>
+    </EquipmentRoster>
+
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_seafarer_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_seafarer_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_shipmaster_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.half_apron" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_nord_shipmaster_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.half_apron" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!-- education -->
+    <EquipmentRoster id="player_char_creation_education_age_nord_noble_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Head" id="Item.nordic_civilian_hat_fur_brim" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_noble_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_civilian_dress" />
+            <Equipment slot="Head" id="Item.fur_hat" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_merchant_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.heavy_nordic_coat" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_merchant_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.dress_with_overall" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_bard_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_bard_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_civilian_dress" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_craftman_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_sloven" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_craftman_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_sloven" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_hunter_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_leather_vest" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_hunter_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_leather_vest" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_vagabond_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.torn_bandit_clothes" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_vagabond_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.torn_bandit_clothes" />
+        </EquipmentSet>
+    </EquipmentRoster>
+
+    <EquipmentRoster id="player_char_creation_education_age_nord_seafarer_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_seafarer_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_shipmaster_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.half_apron" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_nord_shipmaster_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.half_apron" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!-- starting sets -->
+    <EquipmentRoster id="player_char_creation_nord_guard_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Item1" id="Item.northern_round_shield" />
+            <Equipment slot="Item2" id="Item.nord_spear_1_t2" />
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Cape" id="Item.nord_casual_cloak" />
+            <Equipment slot="Leg" id="Item.nord_casual_boots" />
+            <Equipment slot="Head" id="Item.nordic_civilian_hat_fur_brim" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Head" id="Item.nordic_civilian_hat_fur_brim" />
+            <Equipment slot="Leg" id="Item.nord_casual_boots" />
+            <Equipment slot="Cape" id="Item.nord_casual_cloak" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_nord_guard_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Item1" id="Item.northern_round_shield" />
+            <Equipment slot="Item2" id="Item.nord_spear_1_t2" />
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Cape" id="Item.nord_casual_cloak" />
+            <Equipment slot="Leg" id="Item.nord_casual_boots" />
+            <Equipment slot="Head" id="Item.nordic_civilian_hat_fur_brim" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Head" id="Item.nordic_civilian_hat_fur_brim" />
+            <Equipment slot="Leg" id="Item.nord_casual_boots" />
+            <Equipment slot="Cape" id="Item.nord_casual_cloak" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_nord_skirmisher_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.northern_round_shield" />
+            <Equipment slot="Item1" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.nord_throwing_axe_1_t2" />
+            <Equipment slot="Item3" id="Item.nord_throwing_axe_1_t2" />
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_nord_skirmisher_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.northern_round_shield" />
+            <Equipment slot="Item1" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.nord_throwing_axe_1_t2" />
+            <Equipment slot="Item3" id="Item.nord_throwing_axe_1_t2" />
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Cape" id="Item.nord_casual_cloak" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Cape" id="Item.nord_casual_cloak" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_nord_vagabond_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.nord_battle_axe_6_t2" />
+            <Equipment slot="Item1" id="Item.northern_round_shield" />
+            <Equipment slot="Item2" id="Item.nord_spear_1_t2" />
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.nord_casual_boots" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.nord_casual_boots" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_nord_vagabond_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.nord_battle_axe_6_t2" />
+            <Equipment slot="Item1" id="Item.northern_round_shield" />
+            <Equipment slot="Item2" id="Item.nord_spear_1_t2" />
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.nord_casual_boots" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.nord_casual_boots" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_nord_craftman_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item3" id="Item.mountain_hunting_bow" />
+            <Equipment slot="Item2" id="Item.barbed_arrows" />
+            <Equipment slot="Item0" id="Item.nord_hatchett_3_t1" />
+            <Equipment slot="Body" id="Item.nordic_sloven" />
+            <Equipment slot="Leg" id="Item.strapped_jackboots" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.nordic_sloven" />
+            <Equipment slot="Leg" id="Item.strapped_jackboots" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_nord_craftman_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item3" id="Item.mountain_hunting_bow" />
+            <Equipment slot="Item2" id="Item.barbed_arrows" />
+            <Equipment slot="Item0" id="Item.nord_hatchett_3_t1" />
+            <Equipment slot="Body" id="Item.nordic_sloven" />
+            <Equipment slot="Leg" id="Item.strapped_jackboots" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.nordic_sloven" />
+            <Equipment slot="Leg" id="Item.strapped_jackboots" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_nord_infantry_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.northern_round_shield" />
+            <Equipment slot="Body" id="Item.tundra_tunic" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.tundra_tunic" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_nord_infantry_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.northern_round_shield" />
+            <Equipment slot="Body" id="Item.tundra_tunic" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.tundra_tunic" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_nord_mercenary_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.northern_round_shield" />
+            <Equipment slot="Item1" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.nord_spear_javelin_1_t3" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Body" id="Item.northern_leather_vest" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.northern_leather_vest" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_nord_mercenary_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.northern_round_shield" />
+            <Equipment slot="Item1" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.nord_spear_javelin_1_t3" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Body" id="Item.northern_leather_vest" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.northern_leather_vest" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_nord_seafarer_m"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.northern_round_shield" />
+            <Equipment slot="Item1" id="Item.nord_battle_axe_7_t2" />
+            <Equipment slot="Item2" id="Item.nord_spear_2_t2" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_nord_seafarer_f"
+        culture="Culture.nord">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.northern_round_shield" />
+            <Equipment slot="Item1" id="Item.nord_battle_axe_7_t2" />
+            <Equipment slot="Item2" id="Item.nord_spear_2_t2" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.nord_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
 <!--Sturgia-->
 	<EquipmentRoster id="player_char_creation_show_sturgia"
 		culture="Culture.sturgia">
@@ -3128,7 +3779,7 @@
 			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_sturgia_shock_m"
+	<EquipmentRoster id="player_char_creation_sturgia_cavalry_m"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.battania_2haxe_1_t2"/>
@@ -3145,7 +3796,7 @@
 			<Equipment slot="Leg" id="Item.wrapped_leather_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_sturgia_shock_f"
+	<EquipmentRoster id="player_char_creation_sturgia_cavalry_f"
 		culture="Culture.sturgia">
 		<EquipmentSet>
 			<Equipment slot="Item0" id="Item.battania_2haxe_1_t2"/>
@@ -3397,14 +4048,14 @@
 			<Equipment slot="Leg" id="Item.ladys_shoe" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_childhood_age_vlandia_artisan_m"
+	<EquipmentRoster id="player_char_creation_childhood_age_vlandia_craftman_m"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Body" id="Item.cloth_apron" />
 			<Equipment slot="Leg" id="Item.ladys_shoe" />
 		</EquipmentSet>
 	</EquipmentRoster>
-	<EquipmentRoster id="player_char_creation_childhood_age_vlandia_artisan_f"
+	<EquipmentRoster id="player_char_creation_childhood_age_vlandia_craftman_f"
 		culture="Culture.vlandia">
 		<EquipmentSet>
 			<Equipment slot="Body" id="Item.cloth_apron" />
@@ -3847,4 +4498,1042 @@
 			<Equipment slot="Leg" id="Item.leather_cavalier_boots" />
 		</EquipmentSet>
 	</EquipmentRoster>
+<!--TBD-->
+    <!--__ VLANDIA seafarer__-->
+    <EquipmentRoster id="mother_char_creation_seafarer_vlandia"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_dress" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_seafarer_vlandia"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_vlandia_seafarer_m"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_vlandia_seafarer_f"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_vlandia_seafarer_m"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_vlandia_seafarer_f"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__crewed a galley in the coastal raids__-->
+    <EquipmentRoster id="player_char_creation_vlandia_seafarer_m"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Item1" id="Item.vlandia_sword_1_t2" />
+            <Equipment slot="Item0" id="Item.old_kite_shield" />
+            <Equipment slot="Item2" id="Item.western_javelin_1_t2" />
+            <Equipment slot="Cape" id="Item.hood" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.vlandia_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.hood" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_vlandia_seafarer_f"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Item1" id="Item.vlandia_sword_1_t2" />
+            <Equipment slot="Item0" id="Item.old_kite_shield" />
+            <Equipment slot="Item2" id="Item.western_javelin_1_t2" />
+            <Equipment slot="Cape" id="Item.hood" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.vlandia_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.hood" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__VLANDIA shipmaster__-->
+    <EquipmentRoster id="mother_char_creation_shipmaster_vlandia"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_civilian_dress" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_shipmaster_vlandia"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_vlandia_shipmaster_m"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_vlandia_shipmaster_f"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_vlandia_shipmaster_m"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_vlandia_shipmaster_f"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__crewed a galley in the coastal raids__-->
+    <EquipmentRoster id="player_char_creation_vlandia_shipmaster_m"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Item1" id="Item.vlandia_sword_1_t2" />
+            <Equipment slot="Item0" id="Item.old_kite_shield" />
+            <Equipment slot="Item2" id="Item.western_javelin_1_t2" />
+            <Equipment slot="Cape" id="Item.hood" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.vlandia_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.hood" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_vlandia_shipmaster_f"
+        culture="Culture.vlandia">
+        <EquipmentSet>
+            <Equipment slot="Item1" id="Item.vlandia_sword_1_t2" />
+            <Equipment slot="Item0" id="Item.old_kite_shield" />
+            <Equipment slot="Item2" id="Item.western_javelin_1_t2" />
+            <Equipment slot="Cape" id="Item.hood" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.vlandia_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.hood" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__ STURGIA START __-->
+    <!--__ STURGIA START Seafarer__-->
+    <EquipmentRoster id="mother_char_creation_seafarer_sturgia"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_dress" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_seafarer_sturgia"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_sturgia_seafarer_m"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_sturgia_seafarer_f"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_sturgia_seafarer_m"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_sturgia_seafarer_f"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__rowed on a River trader__-->
+    <EquipmentRoster id="player_char_creation_sturgia_seafarer_m"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.worn_kite_shield" />
+            <Equipment slot="Item1" id="Item.sturgia_axe_2_t2" />
+            <Equipment slot="Item2" id="Item.northern_spear_1_t2" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Head" id="Item.northern_fur_cap" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.sturgia_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Head" id="Item.northern_fur_cap" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_sturgia_seafarer_f"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.worn_kite_shield" />
+            <Equipment slot="Item1" id="Item.sturgia_axe_2_t2" />
+            <Equipment slot="Item2" id="Item.northern_spear_1_t2" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Head" id="Item.northern_fur_cap" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.sturgia_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Head" id="Item.northern_fur_cap" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__ STURGIA START shipmaster__-->
+    <EquipmentRoster id="mother_char_creation_shipmaster_sturgia"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_civilian_dress" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_shipmaster_sturgia"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_sturgia_shipmaster_m"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_sturgia_shipmaster_f"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_sturgia_shipmaster_m"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_sturgia_shipmaster_f"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__rowed on a River trader__-->
+    <EquipmentRoster id="player_char_creation_sturgia_shipmaster_m"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.small_flat_heater_shield" />
+            <Equipment slot="Item1" id="Item.sturgia_axe_2_t2" />
+            <Equipment slot="Item2" id="Item.northern_spear_1_t2" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Head" id="Item.northern_fur_cap" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.sturgia_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Head" id="Item.northern_fur_cap" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_sturgia_shipmaster_f"
+        culture="Culture.sturgia">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.small_flat_heater_shield" />
+            <Equipment slot="Item1" id="Item.sturgia_axe_2_t2" />
+            <Equipment slot="Item2" id="Item.northern_spear_1_t2" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Head" id="Item.northern_fur_cap" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.light_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.sturgia_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Head" id="Item.northern_fur_cap" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__EMPIRE START __-->
+    <!--__EMPIRE START Seafarer__-->
+    <EquipmentRoster id="mother_char_creation_seafarer_empire"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_dress" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_seafarer_empire"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_empire_seafarer_m"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_empire_seafarer_f"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_empire_seafarer_m"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_empire_seafarer_f"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__crewed a galley in the coastal raids__-->
+    <EquipmentRoster id="player_char_creation_empire_seafarer_m"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Item3" id="Item.western_javelin_1_t2" />
+            <Equipment slot="Item1" id="Item.empire_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.imperial_spear_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.stripped_leather_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.empire_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_empire_seafarer_f"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Item3" id="Item.western_javelin_1_t2" />
+            <Equipment slot="Item1" id="Item.empire_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.imperial_spear_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.stripped_leather_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.empire_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__EMPIRE START shipmaster__-->
+    <EquipmentRoster id="mother_char_creation_shipmaster_empire"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_civilian_dress" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_shipmaster_empire"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_empire_shipmaster_m"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_empire_shipmaster_f"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_empire_shipmaster_m"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_empire_shipmaster_f"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__crewed a galley in the coastal raids__-->
+    <EquipmentRoster id="player_char_creation_empire_shipmaster_m"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Item3" id="Item.western_javelin_1_t2" />
+            <Equipment slot="Item1" id="Item.empire_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.imperial_spear_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.stripped_leather_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.empire_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_empire_shipmaster_f"
+        culture="Culture.empire">
+        <EquipmentSet>
+            <Equipment slot="Item3" id="Item.western_javelin_1_t2" />
+            <Equipment slot="Item1" id="Item.empire_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.imperial_spear_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.stripped_leather_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.empire_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__ASERAI START __-->
+    <!--__ASERAI START seafarer __-->
+    <EquipmentRoster id="mother_char_creation_seafarer_aserai"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.aserai_villager_female_dress" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+            <Equipment slot="Cape" id="Item.desert_fabric_shoulderpad" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_seafarer_aserai"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_aserai_seafarer_m"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_aserai_seafarer_f"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_aserai_seafarer_m"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_aserai_seafarer_f"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__served as a deckhand on a corsair __-->
+    <EquipmentRoster id="player_char_creation_aserai_seafarer_m"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.aserai_sword_2_t2" />
+            <Equipment slot="Item3" id="Item.eastern_javelin_1_t2" />
+            <Equipment slot="Item2" id="Item.eastern_spear_1_t2" />
+            <Equipment slot="Head" id="Item.pirate_a_head" />
+            <Equipment slot="Body" id="Item.southern_pirate_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.aseran_village_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.aserai_sword_2_t2" />
+            <Equipment slot="Body" id="Item.southern_pirate_armor" />
+            <Equipment slot="Head" id="Item.pirate_a_head" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_aserai_seafarer_f"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.aserai_sword_2_t2" />
+            <Equipment slot="Item3" id="Item.eastern_javelin_1_t2" />
+            <Equipment slot="Item2" id="Item.eastern_spear_1_t2" />
+            <Equipment slot="Head" id="Item.pirate_a_head" />
+            <Equipment slot="Body" id="Item.southern_pirate_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.aseran_village_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.aserai_sword_2_t2" />
+            <Equipment slot="Body" id="Item.southern_pirate_armor" />
+            <Equipment slot="Head" id="Item.pirate_a_head" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__ASERAI START shipmaster __-->
+    <EquipmentRoster id="mother_char_creation_shipmaster_aserai"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.aserai_female_civil_a" />
+            <Equipment slot="Head" id="Item.turban" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_shipmaster_aserai"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.southern_pirate_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Head" id="Item.pirate_a_head" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_aserai_shipmaster_m"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_aserai_shipmaster_f"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_aserai_shipmaster_m"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_aserai_shipmaster_f"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__served as a deckhand on a corsair __-->
+    <EquipmentRoster id="player_char_creation_aserai_shipmaster_m"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.aserai_sword_2_t2" />
+            <Equipment slot="Item3" id="Item.eastern_javelin_1_t2" />
+            <Equipment slot="Item2" id="Item.eastern_spear_1_t2" />
+            <Equipment slot="Head" id="Item.pirate_a_head" />
+            <Equipment slot="Body" id="Item.southern_pirate_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.aseran_village_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.aserai_sword_2_t2" />
+            <Equipment slot="Body" id="Item.southern_pirate_armor" />
+            <Equipment slot="Head" id="Item.pirate_a_head" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_aserai_shipmaster_f"
+        culture="Culture.aserai">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.aserai_sword_2_t2" />
+            <Equipment slot="Item3" id="Item.eastern_javelin_1_t2" />
+            <Equipment slot="Item2" id="Item.eastern_spear_1_t2" />
+            <Equipment slot="Head" id="Item.pirate_a_head" />
+            <Equipment slot="Body" id="Item.southern_pirate_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.aseran_village_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.aserai_sword_2_t2" />
+            <Equipment slot="Body" id="Item.southern_pirate_armor" />
+            <Equipment slot="Head" id="Item.pirate_a_head" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__ KHUZAIT START __-->
+    <!--__ KHUZAIT START seafarer-->
+    <EquipmentRoster id="mother_char_creation_seafarer_khuzait"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.khuzait_dress" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_seafarer_khuzait"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_khuzait_seafarer_m"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_khuzait_seafarer_f"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_khuzait_seafarer_m"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_khuzait_seafarer_f"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__raided river traffic -->
+    <EquipmentRoster id="player_char_creation_khuzait_seafarer_m"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Item3" id="Item.eastern_javelin_1_t2" />
+            <Equipment slot="Item1" id="Item.khuzait_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.eastern_spear_1_t2" />
+            <Equipment slot="Head" id="Item.fur_hat" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.steppe_fur_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
+            <Equipment slot="Head" id="Item.fur_hat" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_khuzait_seafarer_f"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Item3" id="Item.eastern_javelin_1_t2" />
+            <Equipment slot="Item1" id="Item.khuzait_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.eastern_spear_1_t2" />
+            <Equipment slot="Head" id="Item.fur_hat" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.steppe_fur_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
+            <Equipment slot="Head" id="Item.fur_hat" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__ KHUZAIT START shipmaster__-->
+    <EquipmentRoster id="mother_char_creation_shipmaster_khuzait"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.steppe_dress" />
+            <Equipment slot="Cape" id="Item.female_scarf" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_shipmaster_khuzait"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_khuzait_shipmaster_m"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_khuzait_shipmaster_f"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_khuzait_shipmaster_m"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_khuzait_shipmaster_f"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__raided river traffic -->
+    <EquipmentRoster id="player_char_creation_khuzait_shipmaster_m"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Item3" id="Item.eastern_javelin_1_t2" />
+            <Equipment slot="Item1" id="Item.khuzait_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.eastern_spear_1_t2" />
+            <Equipment slot="Head" id="Item.fur_hat" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.steppe_fur_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
+            <Equipment slot="Head" id="Item.fur_hat" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_khuzait_shipmaster_f"
+        culture="Culture.khuzait">
+        <EquipmentSet>
+            <Equipment slot="Item3" id="Item.eastern_javelin_1_t2" />
+            <Equipment slot="Item1" id="Item.khuzait_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.eastern_spear_1_t2" />
+            <Equipment slot="Head" id="Item.fur_hat" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.steppe_fur_harness" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
+            <Equipment slot="Head" id="Item.fur_hat" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__BATTANIA START __-->
+    <!--__BATTANIA START seafarer __-->
+    <EquipmentRoster id="mother_char_creation_seafarer_battania"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_dress" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_seafarer_battania"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_battania_seafarer_m"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_battania_seafarer_f"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_battania_seafarer_m"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_battania_seafarer_f"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.northern_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__served as a coastal defender-->
+    <EquipmentRoster id="player_char_creation_battania_seafarer_m"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.small_flat_heater_shield" />
+            <Equipment slot="Item1" id="Item.battania_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.highland_throwing_axe_1_t2" />
+            <Equipment slot="Cape" id="Item.battania_shoulder_strap_cloak" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.bandit_saddle_steppe" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.battania_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_battania_seafarer_f"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.small_flat_heater_shield" />
+            <Equipment slot="Item1" id="Item.battania_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.highland_throwing_axe_1_t2" />
+            <Equipment slot="Cape" id="Item.battania_shoulder_strap_cloak" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.bandit_saddle_steppe" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.battania_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__BATTANIA START shipmaster __-->
+    <EquipmentRoster id="mother_char_creation_shipmaster_battania"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nordic_civilian_dress_plaid" />
+            <Equipment slot="Leg" id="Item.southern_moccasins" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="father_char_creation_shipmaster_battania"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_battania_shipmaster_m"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_childhood_age_battania_shipmaster_f"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_battania_shipmaster_m"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_education_age_battania_shipmaster_f"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Body" id="Item.nord_casual_tunic" />
+            <Equipment slot="Leg" id="Item.ladys_shoe" />
+            <Equipment slot="Cape" id="Item.scarf" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <!--__served as a coastal defender-->
+    <EquipmentRoster id="player_char_creation_battania_shipmaster_m"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.small_flat_heater_shield" />
+            <Equipment slot="Item1" id="Item.battania_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.highland_throwing_axe_1_t2" />
+            <Equipment slot="Cape" id="Item.battania_shoulder_strap_cloak" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.bandit_saddle_steppe" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.battania_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
+    <EquipmentRoster id="player_char_creation_battania_shipmaster_f"
+        culture="Culture.battania">
+        <EquipmentSet>
+            <Equipment slot="Item0" id="Item.small_flat_heater_shield" />
+            <Equipment slot="Item1" id="Item.battania_sword_1_t2" />
+            <Equipment slot="Item2" id="Item.highland_throwing_axe_1_t2" />
+            <Equipment slot="Cape" id="Item.battania_shoulder_strap_cloak" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+            <Equipment slot="Horse" id="Item.sumpter_horse" />
+            <Equipment slot="HorseHarness" id="Item.bandit_saddle_steppe" />
+        </EquipmentSet>
+        <EquipmentSet
+            civilian="true">
+            <Equipment slot="Item0" id="Item.battania_sword_1_t2" />
+            <Equipment slot="Body" id="Item.heavy_gambeson_armor" />
+            <Equipment slot="Cape" id="Item.scarf" />
+            <Equipment slot="Leg" id="Item.northman_raider_boot" />
+        </EquipmentSet>
+    </EquipmentRoster>
 </EquipmentRosters>
