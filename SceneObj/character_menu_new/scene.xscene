@@ -1,0 +1,1404 @@
+<?xml version="1.0"?>
+<scene name="character_menu_new" version="2" unique_token="{D0423A08-D47E-4D0D-8D07-F47E581724B1}" revision="1762565088456" id_automatic="true">
+	<flora_bounding_rect min="0.000, 0.000" max="0.000, 0.000"/>
+	<levels>
+		<level name="base" mask="1"/>
+	</levels>
+	<environment_properties>
+		<property name="nav_mesh_auto_generated_" value="false"/>
+		<property name="physics_world_min" value="-18.479, -18.250"/>
+		<property name="physics_world_max_" value="35.376, 35.857"/>
+		<property name="north_angle" value="0.000"/>
+		<property name="is_indoors" value="false"/>
+		<property name="disable_flora_billboards" value="false"/>
+		<property name="ground_color" value="0.000, 0.000, 0.000"/>
+		<property name="prt_multiplier" value="1.000"/>
+		<property name="prt_point_light_multiplier" value="1.000"/>
+		<property name="fog_start_distance" value="50.000"/>
+		<property name="prt_color_contrast" value="1.000"/>
+		<property name="scene_scale_multiplier" value="1.000"/>
+		<property name="prt_intensity_contrast" value="1.000"/>
+		<property name="prt_fallback_probe_index" value="-1, -1, -1"/>
+		<property name="enforced_color_grade" value=""/>
+		<property name="gi_data_exists" value="false"/>
+		<atmosphere_properties>
+			<property name="atmosphere_name" value="TOD_06_00_SemiCloudy"/>
+			<property name="wind_meters" value="7.714, 0.000"/>
+			<property name="scene_fog_falloff_offset" value="0.000"/>
+		</atmosphere_properties>
+		<water_properties version="1">
+			<property name="water_level" value="-1.000"/>
+			<property name="water_strength" value="2.000"/>
+			<property name="water_wind_dependency" value="1.000"/>
+			<property name="choppiness" value="1.000"/>
+			<property name="water_material" value="water_default"/>
+			<property name="water_shallow_color" value="1.000, 1.000, 1.000"/>
+			<property name="water_deep_color" value="1.000, 1.000, 1.000"/>
+			<property name="water_exists" value="true"/>
+			<property name="place_water_probe" value="true"/>
+		</water_properties>
+		<out_of_bounds_effects_properties>
+			<property name="vignette_color" value="0.000, 0.500, 1.000"/>
+			<property name="vignette_alpha" value="0.000"/>
+		</out_of_bounds_effects_properties>
+	</environment_properties>
+	<entities>
+		<game_entity prefab="european_castle_l1_floor_a">
+			<transform position="6.410, 7.566, -0.142" rotation_euler="-0.020, 0.000, 0.058" scale="0.600, 0.800, 1.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="european_castle_l1_floor_a.2" material="terrain_ground_soil_b" factor="4290690750"/>
+					<mesh name="european_castle_l1_floor_a.4" factor="4290690750"/>
+					<mesh name="european_castle_l1_floor_a.lod3.2" factor="4290690750"/>
+					<mesh name="european_castle_l1_floor_a.lod3.4" factor="4290690750"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity name="envmap_probe" old_prefab_name="" mobility="1">
+			<visibility_masks>
+				<visibility_mask name="no_shadow" value="true"/>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<transform position="-2.894, 19.876, 3.447" rotation_euler="0.000, 0.000, 0.000"/>
+			<scripts>
+				<script name="ReflectionCapturer">
+					<variables>
+						<variable name="IsGlobal" value="true"/>
+						<variable name="IsParallaxCorrected" value="false"/>
+						<variable name="AmbientMultiplier" value="1.000"/>
+						<variable name="AttenuationCoef" value="20.000"/>
+						<variable name="BoxOffset" value="0.000, 0.000, 0.000, 0.000"/>
+					</variables>
+				</script>
+			</scripts>
+		</game_entity>
+		<game_entity name="sp_brother_brother_stage" old_prefab_name="sp_brother_brother_stage">
+			<visibility_masks>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<tags>
+				<tag name="spawnpoint_brother_brother_stage"/>
+			</tags>
+			<transform position="7.045, 7.243, 0.002" rotation_euler="0.000, 0.000, 3.046" scale="1.000, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity name="sp_player_3" old_prefab_name="sp_player_3">
+			<visibility_masks>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<tags>
+				<tag name="spawnpoint_player_3"/>
+			</tags>
+			<transform position="6.292, 7.412, 0.006" rotation_euler="0.000, 0.000, -3.016" scale="1.000, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity name="sp_player_1" old_prefab_name="sp_player_1">
+			<visibility_masks>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<tags>
+				<tag name="spawnpoint_player_1"/>
+			</tags>
+			<transform position="6.419, 7.380, 0.006" rotation_euler="0.000, 0.000, -3.016" scale="1.000, 1.000, 1.000"/>
+			<children>
+				<game_entity name="animation_point" old_prefab_name="animation_point" mobility="1">
+					<flags>
+						<flag name="record_to_scene_replay" value="true"/>
+					</flags>
+					<visibility_masks>
+						<visibility_mask name="visible_only_when_editing" value="true"/>
+					</visibility_masks>
+					<components>
+						<meta_mesh_component name="arrow_new_icon"/>
+					</components>
+					<scripts>
+						<script name="AnimationPoint">
+							<variables>
+								<variable name="ArriveAction" value=""/>
+								<variable name="LoopStartAction" value="act_childhood_defend"/>
+								<variable name="PairLoopStartAction" value=""/>
+								<variable name="LeaveAction" value=""/>
+								<variable name="GroupId" value="-1"/>
+								<variable name="RightHandItem" value=""/>
+								<variable name="RightHandItemBone" value="ItemR"/>
+								<variable name="LeftHandItem" value=""/>
+								<variable name="LeftHandItemBone" value="ItemL"/>
+								<variable name="MinUserToStartInteraction" value="1"/>
+								<variable name="ActivatePairs" value="false"/>
+								<variable name="MinWaitinSeconds" value="50.000"/>
+								<variable name="MaxWaitInSeconds" value="320.000"/>
+								<variable name="ForwardDistanceToPivotPoint" value="0.000"/>
+								<variable name="SideDistanceToPivotPoint" value="0.000"/>
+								<variable name="KeepOldVisibility" value="false"/>
+								<variable name="AutoSheathWeapons" value="false"/>
+								<variable name="AutoEquipWeaponsOnUseStopped" value="false"/>
+								<variable name="AutoWieldWeapons" value="false"/>
+								<variable name="TranslateUser" value="true"/>
+								<variable name="HasRecentlyBeenRechecked" value="false"/>
+								<variable name="_useOwnPositionInsteadOfWorldPosition" value="false"/>
+								<variable name="_customPlayerInteractionDistance" value="0.000"/>
+								<variable name="NavMeshPrefabName" value=""/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity name="head_male_x" old_prefab_name="head_male_x" visible="false">
+			<tags>
+				<tag name="debug_head"/>
+			</tags>
+			<transform position="6.411, 7.447, 1.391" rotation_euler="0.000, 0.000, 0.038" scale="11.000, 11.000, 11.000"/>
+			<components>
+				<meta_mesh_component name="head_male_x"/>
+			</components>
+		</game_entity>
+		<game_entity name="sp_npc_1" old_prefab_name="sp_npc_1">
+			<visibility_masks>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<tags>
+				<tag name="sp_npc"/>
+			</tags>
+			<transform position="5.829, 7.312, 0.006" rotation_euler="0.000, 0.000, -3.026" scale="1.000, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity name="cradle" old_prefab_name="cradle">
+			<transform position="6.411, 7.311, 0.012" rotation_euler="0.000, 0.000, 2.668" scale="0.800, 0.600, 0.700"/>
+			<components>
+				<meta_mesh_component name="cradle"/>
+			</components>
+		</game_entity>
+		<game_entity name="sp_mount_1" old_prefab_name="sp_mount_1">
+			<visibility_masks>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<tags>
+				<tag name="spawnpoint_mount_1"/>
+			</tags>
+			<transform position="6.713, 8.615, 0.006" rotation_euler="0.000, 0.000, -2.513" scale="1.000, 1.000, 1.000"/>
+			<children>
+				<game_entity name="horse_snor_animated_a" old_prefab_name="horse_snor_animated_a" mobility="1">
+					<visibility_masks>
+						<visibility_mask name="visible_only_when_editing" value="true"/>
+					</visibility_masks>
+					<physics shape="bo_vlandia_city_house_interior_b_tavern_door" override_material="punch_weapon"/>
+					<skeleton skeleton_model="horse_skeleton">
+						<components>
+							<meta_mesh_component name="horse_d"/>
+						</components>
+						<bones>
+							<bone frame="-0.003289, 0.999593, -0.028347, 0.000000, 0.057617, -0.028111, -0.997943, 0.000000, -0.998333, -0.004915, -0.057501, 0.000000, -0.000004, -0.307141, 1.395774, 1.000000"/>
+							<bone frame="0.994885, 0.095542, -0.032793, 0.000000, -0.095593, 0.995420, -0.000003, 0.000000, 0.032642, 0.003138, 0.999462, 0.000000, 0.003092, 0.083512, -0.000000, 1.000000" _index_="1"/>
+							<bone frame="0.985781, -0.167011, 0.018508, 0.000000, 0.165577, 0.984225, 0.062338, 0.000000, -0.028627, -0.058387, 0.997883, 0.000000, 0.307455, -0.000000, 0.000000, 1.000000" _index_="2"/>
+							<bone frame="0.999662, -0.025165, 0.006532, 0.000000, 0.025164, 0.999683, 0.000135, 0.000000, -0.006534, 0.000029, 0.999979, 0.000000, 0.306607, 0.000000, 0.000000, 1.000000" _index_="3"/>
+							<bone frame="0.616643, 0.783451, 0.077171, 0.000000, 0.787239, -0.613383, -0.063372, 0.000000, -0.002313, 0.099830, -0.995002, 0.000000, 0.323919, -0.039250, 0.134606, 1.000000" _index_="4"/>
+							<bone frame="0.051544, -0.998671, -0.000000, 0.000000, 0.998671, 0.051544, 0.000000, 0.000000, 0.000000, -0.000000, 1.000000, 0.000000, 0.350019, 0.000000, 0.000000, 1.000000" _index_="5"/>
+							<bone frame="0.803894, 0.592410, -0.052957, 0.000000, -0.593990, 0.804214, -0.020392, 0.000000, 0.030508, 0.047849, 0.998389, 0.000000, 0.297149, -0.000000, -0.000000, 1.000000" _index_="6"/>
+							<bone frame="0.999999, -0.001399, -0.000034, 0.000000, -0.000048, -0.010535, -0.999944, 0.000000, 0.001398, 0.999943, -0.010535, 0.000000, 0.373929, -0.000000, -0.000000, 1.000000" _index_="7"/>
+							<bone frame="0.770754, -0.148242, 0.619647, 0.000000, -0.619445, 0.053217, 0.783234, 0.000000, -0.149084, -0.987518, -0.050810, 0.000000, 0.321527, 0.000000, 0.000001, 1.000000" _index_="8"/>
+							<bone frame="0.589438, 0.800020, -0.111939, 0.000000, 0.807804, -0.583072, 0.086483, 0.000000, 0.003920, -0.141401, -0.989945, 0.000000, 0.323914, -0.039153, -0.134636, 1.000000" _index_="10"/>
+							<bone frame="0.018562, -0.999728, 0.014127, 0.000000, 0.999807, 0.018651, 0.006198, 0.000000, -0.006460, 0.014009, 0.999881, 0.000000, 0.350020, -0.000000, 0.000000, 1.000000" _index_="11"/>
+							<bone frame="0.647004, 0.759223, -0.070465, 0.000000, -0.760031, 0.634752, -0.139438, 0.000000, -0.061137, 0.143773, 0.987720, 0.000000, 0.297149, -0.000000, -0.000000, 1.000000" _index_="12"/>
+							<bone frame="0.993523, -0.113613, 0.002195, 0.000000, -0.003455, -0.010896, 0.999935, 0.000000, -0.113582, -0.993465, -0.011218, 0.000000, 0.373929, -0.000000, -0.000000, 1.000000" _index_="13"/>
+							<bone frame="0.807588, -0.004598, -0.589729, 0.000000, -0.582150, 0.153779, -0.798407, 0.000000, 0.094359, 0.988095, 0.121513, 0.000000, 0.321553, 0.000000, 0.000001, 1.000000" _index_="14"/>
+							<bone frame="0.538463, 0.841897, -0.035593, 0.000000, 0.840925, -0.539583, -0.041181, 0.000000, -0.053876, -0.007757, -0.998518, 0.000000, -0.196227, 0.045993, 0.182224, 1.000000" _index_="16"/>
+							<bone frame="0.443878, -0.896046, -0.008618, 0.000000, 0.895795, 0.443958, -0.021264, 0.000000, 0.022879, 0.001718, 0.999737, 0.000000, 0.390000, -0.000001, 0.000000, 1.000000" _index_="17"/>
+							<bone frame="0.792278, 0.610159, -0.001139, 0.000000, -0.608877, 0.790732, 0.063341, 0.000000, 0.039549, -0.049490, 0.997991, 0.000000, 0.426308, 0.000001, 0.000001, 1.000000" _index_="18"/>
+							<bone frame="0.905350, 0.416378, -0.083489, 0.000000, -0.421911, 0.904280, -0.065343, 0.000000, 0.048291, 0.094383, 0.994364, 0.000000, 0.462797, -0.000015, 0.000001, 1.000000" _index_="19"/>
+							<bone frame="0.304043, 0.948549, 0.088391, 0.000000, 0.951413, -0.307078, 0.022714, 0.000000, 0.048688, 0.077191, -0.995827, 0.000000, -0.196157, 0.046073, -0.182226, 1.000000" _index_="21"/>
+							<bone frame="0.597752, -0.801349, -0.023057, 0.000000, 0.801664, 0.597679, 0.010703, 0.000000, 0.005204, -0.024881, 0.999677, 0.000000, 0.389999, -0.000001, 0.000000, 1.000000" _index_="22"/>
+							<bone frame="0.863501, 0.504345, 0.001047, 0.000000, -0.503281, 0.861810, -0.063178, 0.000000, -0.032766, 0.054027, 0.998002, 0.000000, 0.426308, 0.000001, 0.000001, 1.000000" _index_="23"/>
+							<bone frame="0.799155, 0.595741, 0.080281, 0.000000, -0.600432, 0.797495, 0.059016, 0.000000, -0.028865, -0.095366, 0.995024, 0.000000, 0.462797, -0.000015, 0.000001, 1.000000" _index_="24"/>
+							<bone frame="-0.593971, 0.801722, 0.066631, 0.000000, 0.015853, -0.071144, 0.997340, 0.000000, 0.804330, 0.593448, 0.029547, 0.000000, -0.343801, -0.029044, -0.000051, 1.000000" _index_="26"/>
+							<bone frame="0.879693, 0.019019, 0.475162, 0.000000, -0.018262, 0.999814, -0.006209, 0.000000, -0.475192, -0.003216, 0.879876, 0.000000, 0.345375, -0.000000, -0.000000, 1.000000" _index_="27"/>
+							<bone frame="0.983107, 0.036023, 0.179451, 0.000000, -0.036000, 0.999346, -0.003389, 0.000000, -0.179456, -0.003129, 0.983761, 0.000000, 0.433521, -0.000000, -0.000000, 1.000000" _index_="28"/>
+							<bone frame="0.733730, 0.678983, 0.024960, 0.000000, -0.679210, 0.733943, 0.000879, 0.000000, -0.017722, -0.017598, 0.999688, 0.000000, 0.391879, 0.032961, -0.000006, 1.000000" _index_="29"/>
+							<bone frame="0.989656, 0.143289, -0.007053, 0.000000, -0.143267, 0.989678, 0.003507, 0.000000, 0.007483, -0.002460, 0.999969, 0.000000, 0.403188, -0.000201, -0.000007, 1.000000" _index_="30"/>
+							<bone frame="0.444903, 0.893540, -0.060404, 0.000000, -0.894858, 0.446237, 0.010031, 0.000000, 0.035918, 0.049590, 0.998124, 0.000000, 0.495842, -0.000001, 0.000001, 1.000000" _index_="31"/>
+						</bones>
+					</skeleton>
+					<scripts>
+						<script name="skinned_mesh_viewer">
+							<variables>
+								<variable name="MeshName" value=""/>
+								<variable name="SkeletonName" value=""/>
+								<variable name="AnimationName" value="horse_idle_4"/>
+							</variables>
+						</script>
+						<script name="sound_emitter">
+							<variables>
+								<variable name="Event Path" value="event:/map/ambient/node/settlements/horseranch"/>
+								<variable name="Play On Startup" value="true"/>
+								<variable name="Is Static" value="false"/>
+								<variable name="Override Sound" value="false"/>
+								<variable name="Overrided Volume Multiplier" value="1.000000"/>
+								<variable name="Overrided Max Distance" value="40.000000"/>
+								<variable name="Overrided Min Distance" value="2.000000"/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity name="sp_player_brother_stage" old_prefab_name="sp_player_brother_stage">
+			<visibility_masks>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<tags>
+				<tag name="spawnpoint_player_brother_stage"/>
+			</tags>
+			<transform position="6.053, 7.318, 0.002" rotation_euler="0.000, 0.000, -2.835" scale="1.000, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity name="arrow_new_icon" old_prefab_name="arrow_new_icon">
+			<visibility_masks>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<transform position="6.319, 7.186, 0.012" rotation_euler="0.000, 0.000, 0.038" scale="1.000, 1.000, 1.000"/>
+			<components>
+				<meta_mesh_component name="arrow_new_icon"/>
+			</components>
+		</game_entity>
+		<game_entity name="sp_mount_2" old_prefab_name="sp_mount_2">
+			<visibility_masks>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<tags>
+				<tag name="spawnpoint_mount_2"/>
+			</tags>
+			<transform position="6.366, 8.959, 0.006" rotation_euler="0.000, 0.000, -3.138" scale="1.000, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity name="sp_npc_2" old_prefab_name="sp_npc_2">
+			<visibility_masks>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<tags>
+				<tag name="sp_npc"/>
+			</tags>
+			<transform position="7.080, 7.457, 0.006" rotation_euler="0.000, 0.000, -3.026" scale="1.000, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity name="sp_player_2" old_prefab_name="sp_player_2">
+			<visibility_masks>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<tags>
+				<tag name="spawnpoint_player_2"/>
+			</tags>
+			<transform position="6.069, 6.948, 0.006" rotation_euler="0.000, 0.000, -3.016" scale="1.000, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity name="sp_mount_3" old_prefab_name="sp_mount_3">
+			<visibility_masks>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<tags>
+				<tag name="spawnpoint_mount_3"/>
+			</tags>
+			<transform position="7.484, 9.661, 0.006" rotation_euler="0.000, 0.000, 3.061" scale="1.000, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity name="sp_brother_brother_stage" old_prefab_name="sp_brother_brother_stage">
+			<visibility_masks>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<tags>
+				<tag name="spawnpoint_brother_brother_stage"/>
+			</tags>
+			<transform position="7.045, 7.243, 0.002" rotation_euler="0.000, 0.000, 3.046" scale="1.000, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="rock_cliff_a">
+			<transform position="7.553, 22.544, 0.000" rotation_euler="0.000, 0.000, -0.654"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="rock_cliff_a" factor="4291085508"/>
+					<mesh name="rock_cliff_a.lod5" factor="4291085508"/>
+					<mesh name="rock_cliff_a.lod6" factor="4291085508"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="european_castle_l1_floor_a">
+			<transform position="6.410, 7.566, -0.350" rotation_euler="0.000, 0.000, 0.058" scale="2.000, 2.000, 2.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="european_castle_l1_floor_a.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.4" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.4" factor="4289638062"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="european_castle_l1_floor_a">
+			<transform position="9.094, 11.934, -0.494" rotation_euler="0.000, 0.000, -0.505" scale="2.000, 2.000, 2.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="european_castle_l1_floor_a.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.4" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.4" factor="4289638062"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="european_castle_l1_floor_a">
+			<transform position="1.734, 12.738, -0.441" rotation_euler="0.000, 0.000, -1.967" scale="2.000, 2.000, 2.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="european_castle_l1_floor_a.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.4" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.4" factor="4289638062"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="european_castle_l1_floor_a">
+			<transform position="-2.001, 20.475, -0.392" rotation_euler="0.000, 0.000, -1.142" scale="2.000, 2.000, 2.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="european_castle_l1_floor_a.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.4" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.4" factor="4289638062"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="fence_old_a5">
+			<transform position="1.183, 7.141, -0.160" rotation_euler="0.000, 0.000, -2.216"/>
+		</game_entity>
+		<game_entity prefab="dry_tree_e">
+			<transform position="7.864, 17.619, 0.184" rotation_euler="0.000, 0.000, -0.892"/>
+		</game_entity>
+		<game_entity prefab="cliff_soil_b">
+			<transform position="9.005, 21.592, -0.120" rotation_euler="0.000, 0.000, -0.067"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="cliff_soil_b" material="terrain_ground_forest_b" factor="4284440415"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="cliff_soil_b">
+			<transform position="-4.651, 16.245, -2.208" rotation_euler="0.000, 0.000, -0.637" scale="2.000, 2.000, 2.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="cliff_soil_b" material="terrain_ground_grass_b" factor="4286151033"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="european_castle_l1_floor_a">
+			<transform position="-5.309, 28.354, 0.021" rotation_euler="-0.015, 0.050, -1.530" scale="2.000, 2.000, 2.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="european_castle_l1_floor_a.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.4" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.4" factor="4289638062"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="cliff_soil_b">
+			<transform position="-13.987, 20.592, -1.961" rotation_euler="0.000, 0.000, 1.580" scale="2.000, 2.000, 2.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="cliff_soil_b" material="terrain_ground_grass_b" factor="4286151033"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity name="empty_object" old_prefab_name="">
+			<transform position="-15.373, 33.125, -3.947" rotation_euler="0.050, 0.000, 0.000"/>
+			<physics shape="bo_siege_soil_a"/>
+			<components>
+				<meta_mesh_component name="siege_soil_a">
+					<mesh name="siege_soil_a" material="terrain_ground_grass_b" factor="4286151033"/>
+					<mesh name="siege_soil_a.lod4" material="terrain_ground_grass_b" factor="4286151033"/>
+					<mesh name="siege_soil_a.lod6" material="terrain_ground_grass_b" factor="4286151033"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="cave_rock_wall_b">
+			<transform position="-5.003, 20.410, -2.126" rotation_euler="-0.240, 0.000, 1.829"/>
+		</game_entity>
+		<game_entity prefab="cave_rock_wall_a">
+			<transform position="-7.564, 24.060, -1.923" rotation_euler="0.000, 0.276, 1.629"/>
+		</game_entity>
+		<game_entity prefab="cave_rock_wall_e">
+			<transform position="4.042, 19.203, -0.331" rotation_euler="-1.551, 0.000, 0.377"/>
+		</game_entity>
+		<game_entity prefab="cave_rock_wall_e">
+			<transform position="10.117, 15.952, -0.158" rotation_euler="-1.551, 0.000, 1.660"/>
+		</game_entity>
+		<game_entity prefab="map_rock_new_e">
+			<transform position="-11.413, 22.399, 0.434" rotation_euler="0.000, 0.000, 2.966"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="map_rock_new_e" material="rock_cliff_b_np"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="-12.502, 29.102, 0.523" rotation_euler="0.067, 0.000, 0.206"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-9.024, 28.005, 0.317" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-9.999, 29.313, 0.353" rotation_euler="0.000, 0.000, 1.197"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-10.147, 30.781, 0.390" rotation_euler="0.000, 0.000, 0.637"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-9.751, 32.656, 0.488" rotation_euler="0.000, 0.000, 0.637"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-12.800, 34.201, 0.724" rotation_euler="0.000, 0.000, 1.238"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-12.793, 37.998, 0.885" rotation_euler="0.000, 0.000, -0.040"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-10.595, 40.368, 0.972" rotation_euler="0.000, 0.000, 0.622"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-17.529, 43.583, 1.265" rotation_euler="0.000, 0.000, -0.248"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-15.812, 38.484, 1.036" rotation_euler="0.000, 0.000, -0.990"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-8.391, 36.900, 0.569" rotation_euler="0.000, 0.000, -0.335"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-10.220, 36.290, 0.673" rotation_euler="0.000, 0.000, -0.333"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-15.092, 34.310, 0.842" rotation_euler="0.000, 0.000, 1.297"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-9.372, 43.577, 1.073" rotation_euler="0.000, 0.000, 0.772"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-13.661, 42.781, 1.211" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-19.157, 39.009, 0.985" rotation_euler="0.000, 0.000, 1.052"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-15.849, 32.389, 0.713" rotation_euler="0.000, 0.000, 1.281"/>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="-15.128, 33.930, 0.507" rotation_euler="0.087, 0.000, 0.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="-11.259, 33.671, 0.306" rotation_euler="0.087, 0.105, 0.000"/>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="-10.654, 36.668, 0.745" rotation_euler="0.087, 0.000, 0.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="-12.050, 41.277, 1.146" rotation_euler="0.087, 0.000, 0.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="-16.743, 40.904, 1.114" rotation_euler="0.087, 0.000, 0.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="-15.718, 35.988, 0.686" rotation_euler="0.087, 0.000, 0.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity name="empty_object" old_prefab_name="">
+			<transform position="11.185, 18.198, -4.704" rotation_euler="0.000, -0.010, 0.873"/>
+			<physics shape="bo_siege_soil_a"/>
+			<components>
+				<meta_mesh_component name="siege_soil_a">
+					<mesh name="siege_soil_a" material="terrain_ground_grass_b" factor="4286151033"/>
+					<mesh name="siege_soil_a.lod4" material="terrain_ground_grass_b" factor="4286151033"/>
+					<mesh name="siege_soil_a.lod6" material="terrain_ground_grass_b" factor="4286151033"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity name="empty_object" old_prefab_name="">
+			<transform position="15.370, 16.493, -4.592" rotation_euler="-0.016, -0.008, 0.166"/>
+			<physics shape="bo_siege_soil_a"/>
+			<components>
+				<meta_mesh_component name="siege_soil_a">
+					<mesh name="siege_soil_a" material="terrain_ground_grass_b" factor="4286151033"/>
+					<mesh name="siege_soil_a.lod4" material="terrain_ground_grass_b" factor="4286151033"/>
+					<mesh name="siege_soil_a.lod6" material="terrain_ground_grass_b" factor="4286151033"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity name="empty_object" old_prefab_name="">
+			<transform position="-3.502, 7.545, -4.764" rotation_euler="0.002, -0.010, 0.718" scale="0.800, 0.800, 1.000"/>
+			<physics shape="bo_siege_soil_a"/>
+			<components>
+				<meta_mesh_component name="siege_soil_a">
+					<mesh name="siege_soil_a" material="terrain_ground_grass_b" factor="4286151033"/>
+					<mesh name="siege_soil_a.lod4" material="terrain_ground_grass_b" factor="4286151033"/>
+					<mesh name="siege_soil_a.lod6" material="terrain_ground_grass_b" factor="4286151033"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-18.867, 44.347, 0.985" rotation_euler="0.000, 0.000, 1.052"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-9.461, 37.995, 0.488" rotation_euler="0.000, 0.000, 0.637"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-12.502, 43.337, 0.885" rotation_euler="0.000, 0.000, -0.040"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-15.522, 43.823, 1.036" rotation_euler="0.000, 0.000, -0.990"/>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="-11.760, 46.615, 1.146" rotation_euler="0.087, 0.000, 0.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-10.304, 45.707, 0.972" rotation_euler="0.000, 0.000, 0.622"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-12.509, 39.540, 0.724" rotation_euler="0.000, 0.000, 1.238"/>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="-10.364, 42.007, 0.745" rotation_euler="0.087, 0.000, 0.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-13.371, 48.120, 1.211" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-9.930, 41.629, 0.673" rotation_euler="0.000, 0.000, -0.333"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-14.802, 39.649, 0.842" rotation_euler="0.000, 0.000, 1.297"/>
+		</game_entity>
+		<game_entity prefab="european_castle_l1_floor_a">
+			<transform position="-5.424, 38.228, 0.510" rotation_euler="-0.029, 0.044, -1.822" scale="2.000, 2.000, 2.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="european_castle_l1_floor_a.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.4" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.4" factor="4289638062"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="9.080, 23.722, 0.160" rotation_euler="-0.040, -0.041, 0.772"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="0.925, 23.728, -0.116" rotation_euler="0.014, -0.056, -0.248"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="7.864, 20.513, -0.011" rotation_euler="-0.033, -0.047, 0.621"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="10.088, 17.045, -0.287" rotation_euler="0.019, -0.054, -0.335"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="8.256, 16.435, -0.288" rotation_euler="0.019, -0.054, -0.333"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="8.154, 25.852, 0.005" rotation_euler="-0.033, -0.047, 0.621"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="5.967, 19.685, -0.369" rotation_euler="-0.054, -0.019, 1.237"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="9.024, 18.140, -0.430" rotation_euler="-0.034, -0.046, 0.637"/>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="6.401, 21.422, 0.079" rotation_euler="0.087, -0.058, 0.005"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="7.818, 16.813, -0.241" rotation_euler="0.087, -0.058, 0.005"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-0.395, 24.493, -0.473" rotation_euler="-0.050, -0.029, 1.051"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="8.546, 21.774, -0.271" rotation_euler="0.019, -0.054, -0.333"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="4.789, 22.926, 0.051" rotation_euler="0.000, -0.057, -0.009"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="5.675, 18.143, -0.224" rotation_euler="0.002, -0.057, -0.040"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="5.965, 23.482, -0.208" rotation_euler="0.002, -0.057, -0.040"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="2.942, 23.968, -0.231" rotation_euler="0.048, -0.032, -0.989"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="3.672, 19.794, -0.383" rotation_euler="-0.055, -0.016, 1.296"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="5.079, 28.265, 0.068" rotation_euler="0.000, -0.057, -0.009"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="2.652, 18.629, -0.247" rotation_euler="0.048, -0.032, -0.989"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="7.597, 15.536, -0.185" rotation_euler="0.000, -0.057, -2.908"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="4.032, 17.138, -0.248" rotation_euler="-0.033, -0.047, -2.277"/>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="4.667, 21.859, -0.174" rotation_euler="0.087, -0.058, -2.894"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="2.671, 21.001, -0.525" rotation_euler="0.019, -0.054, 3.052"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="5.586, 19.965, -0.461" rotation_euler="0.002, -0.057, -2.939"/>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="2.183, 25.992, -0.494" rotation_euler="0.087, -0.058, -2.894"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="8.638, 20.221, -0.484" rotation_euler="0.048, -0.032, 2.396"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="6.925, 24.096, -0.636" rotation_euler="-0.055, -0.016, -1.602"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="2.621, 18.983, -0.093" rotation_euler="-0.040, -0.041, -2.127"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="1.668, 26.253, -0.541" rotation_euler="0.019, -0.054, 3.052"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="4.671, 23.650, -0.622" rotation_euler="-0.054, -0.019, -1.661"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="12.003, 20.514, -0.726" rotation_euler="-0.050, -0.029, -1.848"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="7.635, 25.472, -0.501" rotation_euler="0.048, -0.032, 2.396"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="3.029, 22.390, -0.265" rotation_euler="-0.033, -0.047, -2.277"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="0.036, 25.220, -0.540" rotation_euler="0.019, -0.054, 3.050"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="6.594, 20.787, -0.202" rotation_euler="0.000, -0.057, -2.908"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="4.583, 25.216, -0.478" rotation_euler="0.002, -0.057, -2.939"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="1.332, 24.414, -0.683" rotation_euler="-0.034, -0.046, -2.262"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="10.538, 20.939, -0.370" rotation_euler="0.014, -0.056, 3.137"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-2.919, 30.047, -0.683" rotation_euler="-0.034, -0.046, -2.262"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="7.752, 26.147, -0.726" rotation_euler="-0.050, -0.029, -1.848"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="1.335, 25.598, -0.461" rotation_euler="0.002, -0.057, -2.939"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-2.583, 31.886, -0.541" rotation_euler="0.019, -0.054, 3.052"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="3.346, 21.169, -0.185" rotation_euler="0.000, -0.057, -2.908"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="0.332, 30.849, -0.478" rotation_euler="0.002, -0.057, -2.939"/>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="-2.068, 31.625, -0.494" rotation_euler="0.087, -0.058, -2.894"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="2.343, 26.420, -0.202" rotation_euler="0.000, -0.057, -2.908"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-4.215, 30.853, -0.540" rotation_euler="0.019, -0.054, 3.050"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-0.219, 22.771, -0.248" rotation_euler="-0.033, -0.047, -2.277"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="6.287, 26.572, -0.370" rotation_euler="0.014, -0.056, 3.137"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="4.387, 25.854, -0.484" rotation_euler="0.048, -0.032, 2.396"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-1.222, 28.023, -0.265" rotation_euler="-0.033, -0.047, -2.277"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="2.674, 29.729, -0.636" rotation_euler="-0.055, -0.016, -1.602"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-1.580, 26.634, -0.525" rotation_euler="0.019, -0.054, 3.052"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="-1.630, 24.616, -0.093" rotation_euler="-0.040, -0.041, -2.127"/>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="0.416, 27.493, -0.174" rotation_euler="0.087, -0.058, -2.894"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="3.384, 31.105, -0.501" rotation_euler="0.048, -0.032, 2.396"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="0.420, 29.283, -0.622" rotation_euler="-0.054, -0.019, -1.661"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="6.287, 26.572, -0.370" rotation_euler="0.014, -0.056, 3.137"/>
+		</game_entity>
+		<game_entity prefab="cave_rock_wall_e">
+			<transform position="4.042, 19.203, -0.331" rotation_euler="-1.551, 0.000, 0.377"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="3.672, 19.794, -0.383" rotation_euler="-0.055, -0.016, 1.296"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="8.154, 25.852, 0.005" rotation_euler="-0.033, -0.047, 0.621"/>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="6.401, 21.422, 0.079" rotation_euler="0.087, -0.058, 0.005"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="6.594, 20.787, -0.202" rotation_euler="0.000, -0.057, -2.908"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="5.967, 19.685, -0.369" rotation_euler="-0.054, -0.019, 1.237"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="5.675, 18.143, -0.224" rotation_euler="0.002, -0.057, -0.040"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="4.032, 17.138, -0.248" rotation_euler="-0.033, -0.047, -2.277"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="7.864, 20.513, -0.011" rotation_euler="-0.033, -0.047, 0.621"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="6.925, 24.096, -0.636" rotation_euler="-0.055, -0.016, -1.602"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="5.586, 19.965, -0.461" rotation_euler="0.002, -0.057, -2.939"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="4.789, 22.926, 0.051" rotation_euler="0.000, -0.057, -0.009"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="9.024, 18.140, -0.430" rotation_euler="-0.034, -0.046, 0.637"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="5.965, 23.482, -0.208" rotation_euler="0.002, -0.057, -0.040"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="4.671, 23.650, -0.622" rotation_euler="-0.054, -0.019, -1.661"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="10.538, 20.939, -0.370" rotation_euler="0.014, -0.056, 3.137"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="12.003, 20.514, -0.726" rotation_euler="-0.050, -0.029, -1.848"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="8.638, 20.221, -0.484" rotation_euler="0.048, -0.032, 2.396"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="7.635, 25.472, -0.501" rotation_euler="0.048, -0.032, 2.396"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="9.080, 23.722, 0.160" rotation_euler="-0.040, -0.041, 0.772"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="7.752, 26.147, -0.726" rotation_euler="-0.050, -0.029, -1.848"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="8.546, 21.774, -0.271" rotation_euler="0.019, -0.054, -0.333"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="10.622, 18.163, -0.177" rotation_euler="-0.103, -0.075, 1.184"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="15.281, 15.290, -0.200" rotation_euler="0.054, 0.008, -2.583"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="12.527, 16.859, 0.123" rotation_euler="-0.113, -0.059, 1.335"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="16.768, 15.715, -0.446" rotation_euler="0.023, -0.050, -1.283"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="8.693, 17.770, -0.698" rotation_euler="0.054, 0.008, -2.583"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="13.149, 14.928, -0.263" rotation_euler="0.001, -0.128, 0.233"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="12.101, 11.783, -0.440" rotation_euler="-0.128, -0.001, 1.804"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="12.667, 10.325, -0.252" rotation_euler="-0.035, -0.123, 0.524"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="10.425, 17.564, -0.699" rotation_euler="0.034, 0.043, 2.958"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="14.073, 13.666, -0.406" rotation_euler="0.034, 0.043, 2.958"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="10.060, 14.989, -0.433" rotation_euler="-0.035, -0.123, 0.524"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="10.111, 10.646, -0.604" rotation_euler="-0.128, 0.006, 1.863"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="15.505, 12.115, -0.244" rotation_euler="-0.105, -0.074, 1.200"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="12.028, 13.050, -0.278" rotation_euler="0.055, -0.005, -2.344"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="8.911, 14.437, -0.935" rotation_euler="0.013, -0.053, -1.097"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="9.347, 13.889, -0.227" rotation_euler="-0.039, -0.122, 0.555"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="10.180, 18.196, -0.944" rotation_euler="0.023, -0.050, -1.283"/>
+		</game_entity>
+		<game_entity prefab="grass_terrain_groupe_a">
+			<transform position="11.505, 13.483, -0.036" rotation_euler="0.046, -0.121, 0.574"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="grass_terrain_groupe_a" material="flora_grass_b" argument2="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="cave_rock_wall_e">
+			<transform position="10.734, 10.345, -0.506" rotation_euler="-1.510, -2.320, -1.377"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="11.822, 8.596, -0.340" rotation_euler="0.041, -0.036, -1.712"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="13.230, 13.498, 0.004" rotation_euler="-0.103, -0.075, 1.184"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="10.572, 16.022, -0.823" rotation_euler="0.010, -0.054, -1.038"/>
+		</game_entity>
+		<game_entity prefab="flora_grass_terrain_b">
+			<transform position="11.638, 11.816, -0.567" rotation_euler="0.055, -0.003, -2.375"/>
+		</game_entity>
+		<game_entity prefab="rock_cliff_a">
+			<transform position="36.180, 28.048, 0.000" rotation_euler="0.000, 0.000, 0.961"/>
+		</game_entity>
+		<game_entity prefab="rock_cliff_a">
+			<transform position="29.732, 59.709, 0.000" rotation_euler="0.000, 0.000, 2.626" scale="1.000, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="rock_cliff_a">
+			<transform position="9.856, 58.319, 0.000" rotation_euler="0.000, 0.000, -2.328" scale="1.000, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="bd_straw_h">
+			<transform position="8.355, 7.891, -0.042" rotation_euler="0.011, 0.006, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_log_and_axe">
+			<transform position="7.702, 13.737, -0.278" rotation_euler="0.000, 0.000, -2.771"/>
+		</game_entity>
+		<game_entity prefab="log_bench_beech_d_unsittable">
+			<transform position="6.779, 11.654, -0.141" rotation_euler="0.000, 0.000, 2.553"/>
+		</game_entity>
+		<game_entity prefab="bd_straw_d">
+			<transform position="1.988, 11.634, 0.057" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_straw_h">
+			<transform position="4.831, 11.704, -0.159" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_straw_h">
+			<transform position="3.870, 9.305, -0.050" rotation_euler="-0.012, 0.016, 0.000"/>
+		</game_entity>
+		<game_entity prefab="flora_tree_high_a">
+			<transform position="-30.407, 85.333, -2.913" rotation_euler="0.000, 0.000, 0.212"/>
+		</game_entity>
+		<game_entity prefab="flora_tree_high_c">
+			<transform position="-11.994, 71.958, -2.913" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="shrub_b">
+			<transform position="8.975, 17.165, -0.057" rotation_euler="0.000, 0.000, 0.132"/>
+		</game_entity>
+		<game_entity name="straw_ground_chair_snor_a" old_prefab_name="straw_ground_chair_snor_a">
+			<transform position="9.392, 11.199, -0.187" rotation_euler="0.000, 0.000, 1.294"/>
+			<children>
+				<game_entity name="target_board_colored" old_prefab_name="target_board_colored">
+					<transform position="-0.017, -1.389, -0.177" rotation_euler="-1.571, 0.000, -0.025" scale="0.600, 1.400, 0.600"/>
+					<physics shape="bo_target_board_colored"/>
+					<components>
+						<meta_mesh_component name="target_board_colored">
+							<mesh name="target_board_colored.2" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							<mesh name="target_board_colored.3" material="kitchen"/>
+							<mesh name="target_board_colored.lod1.2" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							<mesh name="target_board_colored.lod1.3" material="kitchen"/>
+							<mesh name="target_board_colored.lod2.2" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							<mesh name="target_board_colored.lod2.3" material="kitchen"/>
+							<mesh name="target_board_colored.lod3.2" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							<mesh name="target_board_colored.lod3.3" material="kitchen"/>
+							<mesh name="target_board_colored.lod4.2" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							<mesh name="target_board_colored.lod4.3" material="kitchen"/>
+							<mesh name="target_board_colored.lod5.1" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							<mesh name="target_board_colored.lod5.2" material="kitchen"/>
+						</meta_mesh_component>
+					</components>
+				</game_entity>
+				<game_entity name="sp_sit_on_the_ground" old_prefab_name="sp_sit_on_the_ground" mobility="1">
+					<flags>
+						<flag name="record_to_scene_replay" value="true"/>
+					</flags>
+					<visibility_masks>
+						<visibility_mask name="visible_only_when_editing" value="true"/>
+					</visibility_masks>
+					<tags>
+						<tag name="npc_common"/>
+						<tag name="npc_wait"/>
+					</tags>
+					<transform position="0.066, -0.068, 0.164" rotation_euler="0.000, 0.000, -1.663"/>
+					<physics shape="bo_bd_pillow_a">
+						<body_flags>
+							<body_flag name="only_collide_with_raycast"/>
+						</body_flags>
+					</physics>
+					<components>
+						<meta_mesh_component name="occ_box"/>
+					</components>
+					<scripts>
+						<script name="Chair">
+							<variables>
+								<variable name="ChairType" value="Sofa"/>
+								<variable name="PilotStandingPointTag" value="Pilot"/>
+								<variable name="AmmoPickUpTag" value="ammopickup"/>
+								<variable name="WaitStandingPointTag" value="Wait"/>
+								<variable name="NavMeshPrefabName" value=""/>
+							</variables>
+						</script>
+					</scripts>
+					<children>
+						<game_entity name="chair_sit_position" old_prefab_name="chair_sit_position" mobility="1">
+							<flags>
+								<flag name="record_to_scene_replay" value="true"/>
+							</flags>
+							<visibility_masks>
+								<visibility_mask name="visible_only_when_editing" value="true"/>
+							</visibility_masks>
+							<transform position="-0.036, -0.120, 0.000" rotation_euler="0.000, 0.000, 3.141" scale="0.750, 0.750, 1.000"/>
+							<components>
+								<meta_mesh_component name="sp_cube"/>
+							</components>
+							<scripts>
+								<script name="ChairUsePoint">
+									<variables>
+										<variable name="NearTable" value="false"/>
+										<variable name="NearTableLoopAction" value=""/>
+										<variable name="NearTablePairLoopAction" value=""/>
+										<variable name="Drink" value="false"/>
+										<variable name="DrinkLoopAction" value=""/>
+										<variable name="DrinkPairLoopAction" value=""/>
+										<variable name="DrinkRightHandItem" value=""/>
+										<variable name="DrinkLeftHandItem" value=""/>
+										<variable name="Eat" value="false"/>
+										<variable name="EatLoopAction" value=""/>
+										<variable name="EatPairLoopAction" value=""/>
+										<variable name="EatRightHandItem" value=""/>
+										<variable name="EatLeftHandItem" value=""/>
+										<variable name="ArriveAction" value="act_sit_down_on_floor_2"/>
+										<variable name="LoopStartAction" value="act_sit_idle_on_floor_2"/>
+										<variable name="PairLoopStartAction" value=""/>
+										<variable name="LeaveAction" value="act_stand_up_floor_2"/>
+										<variable name="GroupId" value="-1"/>
+										<variable name="RightHandItem" value=""/>
+										<variable name="RightHandItemBone" value="ItemR"/>
+										<variable name="LeftHandItem" value=""/>
+										<variable name="LeftHandItemBone" value="ItemL"/>
+										<variable name="MinUserToStartInteraction" value="1"/>
+										<variable name="ActivatePairs" value="false"/>
+										<variable name="MinWaitinSeconds" value="50.000"/>
+										<variable name="MaxWaitInSeconds" value="320.000"/>
+										<variable name="ForwardDistanceToPivotPoint" value="0.000"/>
+										<variable name="SideDistanceToPivotPoint" value="0.000"/>
+										<variable name="KeepOldVisibility" value="false"/>
+										<variable name="AutoSheathWeapons" value="false"/>
+										<variable name="AutoEquipWeaponsOnUseStopped" value="false"/>
+										<variable name="AutoWieldWeapons" value="false"/>
+										<variable name="TranslateUser" value="true"/>
+										<variable name="HasRecentlyBeenRechecked" value="false"/>
+										<variable name="_useOwnPositionInsteadOfWorldPosition" value="false"/>
+										<variable name="_customPlayerInteractionDistance" value="0.000"/>
+										<variable name="NavMeshPrefabName" value=""/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity name="camp_tent_snor_b" old_prefab_name="camp_tent_snor_b">
+			<transform position="1.431, 11.250, -0.027" rotation_euler="0.033, 0.000, 2.945" scale="1.000, 1.000, 1.050"/>
+			<physics shape="bo_bd_basket_aserai_b"/>
+			<components>
+				<meta_mesh_component name="bd_basket_aserai_b"/>
+			</components>
+			<children>
+				<game_entity name="empire_street_tent_01" old_prefab_name="empire_street_tent_01">
+					<transform position="-0.052, 0.266, -2.250" rotation_euler="0.262, 0.000, 0.202" scale="1.900, 1.600, 1.100"/>
+					<components>
+						<cloth_simulator>
+							<meta_mesh_component name="empire_street_tent_01">
+								<mesh name="empire_street_tent_01.1" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+								<mesh name="empire_street_tent_01.lod6.1" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							</meta_mesh_component>
+						</cloth_simulator>
+					</components>
+				</game_entity>
+				<game_entity name="empire_street_tent_01" old_prefab_name="empire_street_tent_01">
+					<transform position="0.074, -0.336, -2.280" rotation_euler="0.262, 0.000, -2.940" scale="1.900, 1.600, 1.100"/>
+					<components>
+						<cloth_simulator>
+							<meta_mesh_component name="empire_street_tent_01">
+								<mesh name="empire_street_tent_01.1" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+								<mesh name="empire_street_tent_01.lod6.1" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							</meta_mesh_component>
+						</cloth_simulator>
+					</components>
+				</game_entity>
+				<game_entity name="bed_straw_f" old_prefab_name="bed_straw_f">
+					<transform position="1.461, 1.143, 0.000" rotation_euler="0.000, 0.000, 1.651" scale="0.800, 0.700, 1.000"/>
+					<physics shape="bo_bed_straw_a" override_material="wood"/>
+					<components>
+						<meta_mesh_component name="bed_straw_f"/>
+					</components>
+				</game_entity>
+				<game_entity name="bed_straw_g" old_prefab_name="bed_straw_g">
+					<transform position="0.119, 0.981, 0.000" rotation_euler="0.000, 0.000, 1.731" scale="0.800, 0.700, 1.000"/>
+					<physics shape="bo_bed_straw_a" override_material="wood"/>
+					<components>
+						<meta_mesh_component name="bed_straw_g"/>
+					</components>
+				</game_entity>
+				<game_entity name="bed_straw_e" old_prefab_name="bed_straw_e">
+					<transform position="-1.371, 0.699, 0.000" rotation_euler="0.000, 0.000, 1.746" scale="0.800, 0.700, 1.000"/>
+					<physics shape="bo_bed_straw_a" override_material="wood"/>
+					<components>
+						<meta_mesh_component name="bed_straw_e"/>
+					</components>
+				</game_entity>
+				<game_entity name="bed_straw_d" old_prefab_name="bed_straw_d">
+					<transform position="-1.021, -1.187, 0.000" rotation_euler="0.000, 0.000, -1.439" scale="0.800, 0.700, 1.000"/>
+					<physics shape="bo_bed_straw_a" override_material="wood"/>
+					<components>
+						<meta_mesh_component name="bed_straw_d"/>
+					</components>
+				</game_entity>
+				<game_entity name="bed_straw_c" old_prefab_name="bed_straw_c">
+					<transform position="0.486, -0.788, 0.000" rotation_euler="0.000, 0.000, -1.414" scale="0.800, 0.700, 1.000"/>
+					<physics shape="bo_bed_straw_a" override_material="wood"/>
+					<components>
+						<meta_mesh_component name="bed_straw_c"/>
+					</components>
+				</game_entity>
+				<game_entity name="bed_straw_f" old_prefab_name="bed_straw_f">
+					<transform position="1.697, -0.571, 0.000" rotation_euler="0.000, 0.000, -1.471" scale="0.800, 0.700, 1.000"/>
+					<physics shape="bo_bed_straw_a" override_material="wood"/>
+					<components>
+						<meta_mesh_component name="bed_straw_f"/>
+					</components>
+				</game_entity>
+				<game_entity name="tent_physics" old_prefab_name="tent_physics">
+					<transform position="0.287, -1.160, 1.313" rotation_euler="0.855, 0.000, 0.216" scale="0.550, 0.450, 1.000"/>
+					<physics shape="bo_aserai_grandbazaar_floor_a" override_material="fabric"/>
+				</game_entity>
+				<game_entity name="tent_physics" old_prefab_name="tent_physics">
+					<transform position="-0.217, 1.136, 1.251" rotation_euler="-0.855, 0.000, 0.216" scale="0.550, 0.450, 1.000"/>
+					<physics shape="bo_aserai_grandbazaar_floor_a" override_material="fabric"/>
+				</game_entity>
+				<game_entity name="arabian_building_detail_f" old_prefab_name="arabian_building_detail_f">
+					<transform position="0.011, 0.144, -0.244" rotation_euler="0.000, 0.000, 0.216" scale="1.600, 1.000, 1.080"/>
+					<physics shape="bo_arabian_building_detail_def" override_material="wood"/>
+					<components>
+						<meta_mesh_component name="arabian_building_detail_f"/>
+					</components>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity name="camp_bags_snor_a" old_prefab_name="camp_bags_snor_a">
+			<transform position="9.201, 13.158, -0.257" rotation_euler="0.023, 0.000, 0.774" scale="1.200, 1.700, 1.200"/>
+			<physics shape="bo_log_bench_default_d"/>
+			<components>
+				<meta_mesh_component name="log_bench_pine_d"/>
+			</components>
+			<children>
+				<game_entity name="empty_object" old_prefab_name="empty_object">
+					<transform position="-1.054, 1.405, -1.190" non_orthogonal_rotation_mat="-0.727656, -0.685942, 0.000000, 0.884095, -0.467307, 0.000000, 0.000000, 0.000000, 1.000000" scale="0.686, 0.754, 0.833"/>
+					<components>
+						<meta_mesh_component name="camel_saddle_b"/>
+					</components>
+				</game_entity>
+				<game_entity name="bd_sack_c" old_prefab_name="bd_sack_c">
+					<transform position="-0.906, 1.320, 0.001" non_orthogonal_rotation_mat="0.900504, -0.434835, 0.003384, 0.695929, 0.718110, 0.000000, -0.002560, 0.001236, 0.999996" scale="0.764, 0.473, 0.833"/>
+					<physics shape="bo_bd_sack_c" override_material="straw"/>
+					<components>
+						<meta_mesh_component name="bd_sack_c"/>
+					</components>
+				</game_entity>
+				<game_entity name="empty_object" old_prefab_name="empty_object">
+					<transform position="-0.005, -0.285, -1.105" non_orthogonal_rotation_mat="0.999368, -0.035549, 0.000000, 0.071208, 0.997461, 0.000000, 0.000000, 0.000000, 1.000000" scale="0.833, 0.589, 0.833"/>
+					<physics shape="bo_camel_saddle_a"/>
+					<components>
+						<meta_mesh_component name="camel_saddle_a"/>
+					</components>
+				</game_entity>
+				<game_entity name="sack" old_prefab_name="sack">
+					<transform position="0.131, 0.863, 0.013" non_orthogonal_rotation_mat="-0.997816, 0.066061, -0.000000, -0.116970, -0.880331, -0.459713, -0.033167, -0.249619, 0.967776" scale="0.748, 0.562, 0.728"/>
+					<physics shape="bo_bd_sack_b" override_material="straw"/>
+					<components>
+						<meta_mesh_component name="bd_sack_b"/>
+					</components>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity name="camp_tent_snor_a" old_prefab_name="camp_tent_snor_a">
+			<transform position="12.081, 11.417, 0.132" rotation_euler="0.000, 0.000, -3.058" scale="0.800, 0.700, 1.000"/>
+			<physics shape="bo_bed_straw_a" override_material="wood"/>
+			<components>
+				<meta_mesh_component name="bed_straw_d">
+					<mesh name="bed_straw_d" factor="4281407505"/>
+					<mesh name="bed_straw_d.6" material="sturgia_windmill_cloth_a" factor="4282527004"/>
+					<mesh name="bed_straw_d.lod3" factor="4281407505"/>
+					<mesh name="bed_straw_d.lod3.6" material="sturgia_windmill_cloth_a" factor="4282527004"/>
+				</meta_mesh_component>
+			</components>
+			<children>
+				<game_entity name="bed_straw_c" old_prefab_name="bed_straw_c">
+					<transform position="0.023, -1.451, 0.000" non_orthogonal_rotation_mat="0.994924, 0.100624, 0.000000, -0.077202, 0.997015, 0.000000, 0.000000, 0.000000, 1.000000"/>
+					<physics shape="bo_bed_straw_a" override_material="wood"/>
+					<components>
+						<meta_mesh_component name="bed_straw_c">
+							<mesh name="bed_straw_c" material="bed_sheet_a"/>
+							<mesh name="bed_straw_c.6" factor="4285682187"/>
+							<mesh name="bed_straw_c.lod3" material="bed_sheet_a"/>
+							<mesh name="bed_straw_c.lod3.6" factor="4285682187"/>
+						</meta_mesh_component>
+					</components>
+				</game_entity>
+				<game_entity name="bed_straw_e" old_prefab_name="bed_straw_e">
+					<transform position="-0.041, 1.658, 0.000" non_orthogonal_rotation_mat="0.986888, -0.161405, 0.000000, 0.124247, 0.992251, 0.000000, 0.000000, 0.000000, 1.000000"/>
+					<physics shape="bo_bed_straw_a" override_material="wood"/>
+					<components>
+						<meta_mesh_component name="bed_straw_e">
+							<mesh name="bed_straw_e" factor="4289943589"/>
+							<mesh name="bed_straw_e.6" factor="4281109546"/>
+							<mesh name="bed_straw_e.lod3" factor="4289943589"/>
+							<mesh name="bed_straw_e.lod3.6" factor="4281109546"/>
+						</meta_mesh_component>
+					</components>
+				</game_entity>
+				<game_entity name="shop_prop_merchantbakery_e" old_prefab_name="shop_prop_merchantbakery_e">
+					<tags>
+						<tag name="shop_prop"/>
+						<tag name="e"/>
+					</tags>
+					<transform position="1.383, -2.017, 1.926" non_orthogonal_rotation_mat="-0.675264, 0.737576, 0.000000, -0.640823, -0.766283, -0.046435, -0.053859, -0.064404, 0.996469" scale="1.338, 1.345, 1.002"/>
+					<components>
+						<meta_mesh_component name="shop_prop_merchantbakery_e">
+							<mesh name="shop_prop_merchantbakery_e.0" material="walls_a" factor="4279769112"/>
+							<mesh name="shop_prop_merchantbakery_e.1" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							<mesh name="shop_prop_merchantbakery_e.3" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							<mesh name="shop_prop_merchantbakery_e.lod1.0" material="walls_a" factor="4279769112"/>
+							<mesh name="shop_prop_merchantbakery_e.lod1.1" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							<mesh name="shop_prop_merchantbakery_e.lod1.3" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							<mesh name="shop_prop_merchantbakery_e.lod3.0" material="walls_a" factor="4279769112"/>
+							<mesh name="shop_prop_merchantbakery_e.lod3.1" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							<mesh name="shop_prop_merchantbakery_e.lod3.3" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							<mesh name="shop_prop_merchantbakery_e.lod6.0" material="walls_a" factor="4279769112"/>
+							<mesh name="shop_prop_merchantbakery_e.lod6.1" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+							<mesh name="shop_prop_merchantbakery_e.lod6.3" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+						</meta_mesh_component>
+					</components>
+				</game_entity>
+				<game_entity name="village_tent_c" old_prefab_name="village_tent_c" occlusion_body_name="bo_occ_village_tent_c">
+					<transform position="-0.056, 0.065, -0.232" non_orthogonal_rotation_mat="-0.041010, 0.999159, 0.000000, -0.983393, -0.052719, 0.173666, 0.265425, 0.014229, 0.964027" scale="1.143, 0.992, 1.114"/>
+					<physics shape="bo_village_tent_c"/>
+					<components>
+						<meta_mesh_component name="village_tent_c">
+							<mesh name="village_tent_c.1" material="plank_d"/>
+							<mesh name="village_tent_c.3" material="thatched_roof_d"/>
+							<mesh name="village_tent_c.4" material="thatched_roof_d"/>
+							<mesh name="village_tent_c.lod3.1" material="plank_d"/>
+							<mesh name="village_tent_c.lod3.3" material="thatched_roof_d"/>
+							<mesh name="village_tent_c.lod3.4" material="thatched_roof_d"/>
+							<mesh name="village_tent_c.lod4.0" material="plank_d"/>
+							<mesh name="village_tent_c.lod4.2" material="thatched_roof_d"/>
+							<mesh name="village_tent_c.lod4.3" material="thatched_roof_d"/>
+							<mesh name="village_tent_c.lod5.0" material="plank_d"/>
+							<mesh name="village_tent_c.lod5.2" material="thatched_roof_d"/>
+							<mesh name="village_tent_c.lod5.3" material="thatched_roof_d"/>
+						</meta_mesh_component>
+					</components>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity name="camp_pot_snor_a" old_prefab_name="camp_pot_snor_a">
+			<transform position="8.465, 9.858, -0.066" rotation_euler="-0.037, 0.000, 1.231" scale="1.200, 1.200, 0.900"/>
+			<physics shape="bo_occ_occ_pyramid" override_material="wood"/>
+			<components>
+				<meta_mesh_component name="bd_target_board">
+					<mesh name="bd_target_board.2" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+					<mesh name="bd_target_board.8" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+					<mesh name="bd_target_board.lod1.2" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+					<mesh name="bd_target_board.lod1.8" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+					<mesh name="bd_target_board.lod2.2" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+					<mesh name="bd_target_board.lod2.8" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+					<mesh name="bd_target_board.lod3.2" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+					<mesh name="bd_target_board.lod3.8" material="editor_gizmo" argument="1.000, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+			<children>
+				<game_entity name="bullseye" old_prefab_name="bullseye">
+					<transform position="0.061, -0.258, 1.417" rotation_euler="0.209, 0.000, 3.141"/>
+				</game_entity>
+				<game_entity name="fire_stones_bonfire" old_prefab_name="fire_stones_bonfire">
+					<transform position="0.007, 0.028, 0.000" rotation_euler="0.000, 0.000, 0.176" scale="0.833, 0.833, 1.111"/>
+					<physics shape="bo_fire_stones_battania" override_material="stone"/>
+					<components>
+						<meta_mesh_component name="fire_stones_battania"/>
+					</components>
+					<children>
+						<game_entity name="burning_campfire" old_prefab_name="burning_campfire">
+							<transform position="-0.083, 0.047, 0.000" rotation_euler="0.025, -0.017, 0.579" scale="0.674, 0.674, 0.674"/>
+							<physics shape="bo_burned_wood_a"/>
+							<components>
+								<meta_mesh_component name="burned_wood_a"/>
+							</components>
+							<children>
+								<game_entity name="smoked_fire_with_light" old_prefab_name="smoked_fire_with_light">
+									<transform position="0.049, -0.047, 0.586" rotation_euler="0.000, 0.000, 2.755"/>
+									<components>
+										<light_component color="1.000, 0.596, 0.243" intensity="150.000" radius="10.000" flicker_interval="0.800" flicker_magnitude="2.000" local_frame_rot="10.000000, 0.000000, 0.000000, 0.000000, 10.000000, 0.000000, 0.000000, 0.000000, 10.000000" hotspot_angle="30.000" falloff_angle="45.000" shadow="2" shadow_size_multiplier="1" shadow_radius="9.000"/>
+									</components>
+									<children>
+										<game_entity name="campfire" old_prefab_name="campfire">
+											<transform position="0.288, 0.145, -0.337" rotation_euler="0.000, 0.000, -1.106"/>
+											<components>
+												<particle_system_instanced_component>
+													<effect_ref base_effect="{2A4578D6-9908-431B-8A24-BE7EB622271A}"/>
+												</particle_system_instanced_component>
+											</components>
+										</game_entity>
+									</children>
+								</game_entity>
+							</children>
+						</game_entity>
+					</children>
+				</game_entity>
+				<game_entity name="bd_cauldron_sturgia" old_prefab_name="bd_cauldron_sturgia">
+					<transform position="-0.002, 0.002, 1.851" rotation_euler="0.000, 0.000, 0.176" scale="0.583, 0.583, 0.667"/>
+					<physics shape="bo_bd_cauldron_sturgia"/>
+					<components>
+						<meta_mesh_component name="bd_cauldron_sturgia">
+							<mesh name="bd_cauldron_sturgia.4" material="siege_metal"/>
+							<mesh name="bd_cauldron_sturgia.9" material="plank_c_trunk"/>
+							<mesh name="bd_cauldron_sturgia.11" material="siege_metal"/>
+						</meta_mesh_component>
+					</components>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="bd_stacked_wood">
+			<transform position="8.060, 13.147, -0.012" rotation_euler="0.000, 0.000, -0.267"/>
+		</game_entity>
+		<game_entity prefab="mat_wicker_c">
+			<transform position="6.373, 7.275, 0.035" rotation_euler="0.000, 0.000, -0.060" scale="0.400, 0.400, 0.900"/>
+		</game_entity>
+		<game_entity prefab="european_castle_l1_floor_a">
+			<transform position="12.172, 11.726, -0.109" rotation_euler="-0.018, -0.020, -1.482" scale="1.000, 1.000, 2.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="european_castle_l1_floor_a.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.4" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.2" factor="4289638062"/>
+					<mesh name="european_castle_l1_floor_a.lod3.4" factor="4289638062"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+	</entities>
+	<terrain enabled="false"/>
+	<editor_data editor_camera_position="6.865, 2.845, 2.102" editor_camera_elevation="-0.880" editor_camera_bearing="1.909" editor_camera_forward="0.067, 0.968, -0.241" author="" comment=""/>
+	<camera_data near_plane="0.100" far_plane="100000.000"/>
+	<Paths/>
+</scene>
+
