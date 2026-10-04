@@ -114,8 +114,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiFarisOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Throwing, DefaultSkills.OneHanded, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Throwing, DefaultSkills.OneHanded, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -132,7 +131,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_decisive");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -149,8 +148,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiCaravaneerOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Trade, DefaultSkills.Leadership };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Trade, DefaultSkills.Leadership });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -178,8 +176,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -196,7 +193,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_ready");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -207,8 +204,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -225,7 +221,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_apprentice");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -235,8 +231,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiFarmerOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -253,7 +248,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -264,8 +259,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiMamlukeOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Throwing, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Throwing, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -282,7 +276,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_vibrant");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -293,8 +287,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -322,8 +315,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -351,8 +343,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartAseraiDesertBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.OneHanded };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.OneHanded });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -385,8 +376,7 @@ namespace CharacterCreationRedone.SandboxOptions
 
         public void LifeStartBattaniaFiannaOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Bow, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -403,7 +393,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_decisive");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -420,8 +410,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaDruidOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Steward, DefaultSkills.Scouting };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Steward, DefaultSkills.Scouting });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
@@ -449,8 +438,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -467,7 +455,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_ready");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -478,8 +466,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -496,7 +483,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_apprentice");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -507,8 +494,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaForesterOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Scouting, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Scouting, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -525,7 +511,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -536,8 +522,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaWildlingOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -554,7 +539,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_vibrant");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -565,8 +550,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaScoutOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Throwing, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Throwing, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -594,8 +578,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaKernOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Throwing, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Throwing, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -623,8 +606,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartBattaniaForestBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Bow, DefaultSkills.OneHanded };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Bow, DefaultSkills.OneHanded });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -657,8 +639,7 @@ namespace CharacterCreationRedone.SandboxOptions
 
         public void LifeStartEmpireCommanderOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Leadership, DefaultSkills.Charm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Leadership, DefaultSkills.Charm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -675,7 +656,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_decisive");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -690,8 +671,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireEngineerOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Engineering, DefaultSkills.Crafting, DefaultSkills.Steward };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Engineering, DefaultSkills.Crafting, DefaultSkills.Steward });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
@@ -719,8 +699,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -737,7 +716,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_ready");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -748,8 +727,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -766,7 +744,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_apprentice");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -777,8 +755,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpirePeasantOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Polearm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Polearm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -795,7 +772,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -806,8 +783,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireLegionaryOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -824,7 +800,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_vibrant");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -835,8 +811,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -864,8 +839,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireCavalryOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -893,8 +867,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -922,8 +895,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartEmpireLooterOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.OneHanded };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.OneHanded });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -956,8 +928,7 @@ namespace CharacterCreationRedone.SandboxOptions
 
         public void LifeStartKhuzaitKhanGuardOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Bow, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Bow, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -974,7 +945,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_decisive");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -991,8 +962,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitNomadOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -1020,8 +990,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -1038,7 +1007,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_ready");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1049,8 +1018,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -1067,7 +1035,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_apprentice");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1078,8 +1046,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitFarmerOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -1096,7 +1063,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1107,8 +1074,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitCavalryOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -1125,7 +1091,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_vibrant");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1136,8 +1102,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitHorseArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -1165,8 +1130,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitInfantryOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -1194,8 +1158,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartKhuzaitSteppeBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Bow, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Bow, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -1228,8 +1191,7 @@ namespace CharacterCreationRedone.SandboxOptions
 
         public void LifeStartNordHuscarlOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding, DefaultSkills.Bow };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding, DefaultSkills.Bow });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -1247,7 +1209,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_decisive");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1263,8 +1225,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartNordVikingOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -1292,8 +1253,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartNordMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -1310,7 +1270,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_ready");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1321,8 +1281,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartNordCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -1339,7 +1298,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_apprentice");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1350,8 +1309,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartNordPeasantOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -1368,7 +1326,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1379,8 +1337,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartNordInfantryOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -1397,7 +1354,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_vibrant");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1408,8 +1365,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartNordShockTroopOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -1437,8 +1393,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartNordArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -1467,8 +1422,7 @@ namespace CharacterCreationRedone.SandboxOptions
 
         public void LifeStartSturgiaDruzhinaOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding, DefaultSkills.Bow };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding, DefaultSkills.Bow });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -1486,7 +1440,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_decisive");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1502,8 +1456,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaFurHunterOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Scouting, DefaultSkills.Bow, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -1531,8 +1484,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -1549,7 +1501,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_ready");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1560,8 +1512,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaCraftmanOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -1578,7 +1529,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_apprentice");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1589,8 +1540,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaPeasantOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Steward, DefaultSkills.Medicine });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -1607,7 +1557,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1618,8 +1568,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaInfantryOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -1636,7 +1585,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_vibrant");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1647,8 +1596,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaCavalryOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -1676,8 +1624,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaArcherOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Bow, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -1705,8 +1652,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartSturgiaSeaRaiderBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.OneHanded };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.OneHanded });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -1739,8 +1685,7 @@ namespace CharacterCreationRedone.SandboxOptions
 
         public void LifeStartVlandiaKnightOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Charm, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Charm, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -1757,7 +1702,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_decisive");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1774,8 +1719,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaChamberlainOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Steward, DefaultSkills.Trade, DefaultSkills.Leadership };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Steward, DefaultSkills.Trade, DefaultSkills.Leadership });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -1803,8 +1747,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Steward, DefaultSkills.Charm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -1821,7 +1764,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_ready");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1832,8 +1775,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaGuildMemberOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Charm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Trade, DefaultSkills.Charm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -1850,7 +1792,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_apprentice");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1861,8 +1803,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaSerfOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Polearm, DefaultSkills.Medicine };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Polearm, DefaultSkills.Medicine });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -1879,7 +1820,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1890,8 +1831,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaInfantryOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -1908,7 +1848,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_vibrant");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }
@@ -1919,8 +1859,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaCavalryOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -1948,8 +1887,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaRangedOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crossbow, DefaultSkills.OneHanded, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crossbow, DefaultSkills.OneHanded, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -1977,8 +1915,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void LifeStartVlandiaMountainBanditOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Throwing, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);

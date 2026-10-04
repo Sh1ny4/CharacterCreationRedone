@@ -1,3 +1,4 @@
+using NavalDLC.CharacterDevelopment;
 using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
@@ -32,16 +33,8 @@ namespace CharacterCreationRedone.SandboxOptions
             List<NarrativeMenuCharacter> list = new List<NarrativeMenuCharacter>();
             list.Add(new NarrativeMenuCharacter("player_education_character", bodyProperties, CharacterObject.PlayerCharacter.Race, CharacterObject.PlayerCharacter.IsFemale));
             NarrativeMenu narrativeMenu = new NarrativeMenu("narrative_education_menu", "narrative_childhood_menu", "narrative_youth_menu", new TextObject("{=!}Idioms", null), new TextObject("{=!}Growing up, you were inculcated the saying...", null), list, new NarrativeMenu.GetNarrativeMenuCharacterArgsDelegate(this.FavoriteIdiomMenuCharacterArgs));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Afighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterAOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterAOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterAOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Bfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterBOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterBOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterBOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Efighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterEOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterEOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterEOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Kfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterKOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterKOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterKOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Sfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterSOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterSOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterSOptionOnSelect), null));
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Vfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterVOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterVOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterVOptionOnSelect), null));
-
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Cfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterCOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterCOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterCOptionOnSelect), null));
-            
-            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Cfighter", new TextObject("{=CCR_Idiom_choice_fighter}The sea is as deep during the calm as during the storm", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterCOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterCOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterCOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Noblefighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterNobleOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterNobleOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterNobleOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_Commonerfighter", new TextObject("{=CCR_Idiom_choice_fighter}Better to be a warrior in a garden than a gardener in a war.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomFighterCommonerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomFighterCommonerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomFighterCommonerOptionOnSelect), null));
 
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_healthy", new TextObject("{=CCR_Idiom_choice_healthy}A healthy mind in a healthy body.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomHealthyOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomHealthyOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomHealthyOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_prevention", new TextObject("{=CCR_Idiom_choice_prevention}Prevention is better than cure.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomPreventionOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomPreventionOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomPreventionOptionOnSelect), null));
@@ -52,135 +45,63 @@ namespace CharacterCreationRedone.SandboxOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_armed", new TextObject("{=CCR_Idiom_choice_armed}Men with weapons never starve.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomArmedOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomArmedOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomArmedOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_conquer", new TextObject("{=CCR_Idiom_choice_conquer}To conquer without risk is to triumph without glory.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomConquerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomConquerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomConquerOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_means", new TextObject("{=CCR_Idiom_choice_means}The end justifies the means.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomMeanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomMeanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomMeanOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Idiom_choice_means", new TextObject("{=CCR_Idiom_choice_turbulent}A smooth sea never made a skillful sailor.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(this.IdiomTurbulantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.IdiomTurbulantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.IdiomTurbulantOptionOnSelect), null));
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
-        public void IdiomFighterAOptionArgs(NarrativeMenuOptionArgs args)
+
+        public void IdiomFighterNobleOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(1);
-            args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
-            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
-            args.SetLevelToTraits(1);
-        }
-        public bool IdiomFighterAOptionOnCondition(CharacterCreationManager characterCreationManager)
-        {
-            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Noble && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
-        }
-        public void IdiomFighterAOptionOnSelect(CharacterCreationManager characterCreationManager)
-        {
-            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            if (Hero.MainHero.Culture.StringId == "aserai")
             {
-                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
-                if (narrativeMenuCharacter.StringId == "player_education_character")
-                {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_streets");
-                    narrativeMenuCharacter.SetLeftHandItem("");
-                    narrativeMenuCharacter.SetRightHandItem("carry_bostaff_rogue1");
-                    break;
-                }
+                args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding });
+                args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
+                args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
             }
-        }
-        public void IdiomFighterBOptionArgs(NarrativeMenuOptionArgs args)
-        {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(1);
-            args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
-            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
-            args.SetLevelToTraits(1);
-        }
-        public bool IdiomFighterBOptionOnCondition(CharacterCreationManager characterCreationManager)
-        {
-            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Noble && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "battania";
-        }
-        public void IdiomFighterBOptionOnSelect(CharacterCreationManager characterCreationManager)
-        {
-            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            else if (Hero.MainHero.Culture.StringId == "battania")
             {
-                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
-                if (narrativeMenuCharacter.StringId == "player_education_character")
-                {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_militia");
-                    narrativeMenuCharacter.SetLeftHandItem("");
-                    narrativeMenuCharacter.SetRightHandItem("peasant_hammer_1_t1");
-                    break;
-                }
+                args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Athletics });
+                args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+                args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
             }
-        }
-        public void IdiomFighterEOptionArgs(NarrativeMenuOptionArgs args)
-        {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(1);
-            args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
-            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
-            args.SetLevelToTraits(1);
-        }
-        public bool IdiomFighterEOptionOnCondition(CharacterCreationManager characterCreationManager)
-        {
-            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Noble && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
-        }
-        public void IdiomFighterEOptionOnSelect(CharacterCreationManager characterCreationManager)
-        {
-            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            else if (Hero.MainHero.Culture.StringId == "empire")
             {
-                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
-                if (narrativeMenuCharacter.StringId == "player_education_character")
-                {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_grit");
-                    narrativeMenuCharacter.SetLeftHandItem("");
-                    narrativeMenuCharacter.SetRightHandItem("carry_hammer");
-                    break;
-                }
+                args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding });
+                args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+                args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
             }
-        }
-        public void IdiomFighterKOptionArgs(NarrativeMenuOptionArgs args)
-        {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(1);
-            args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
-            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
-            args.SetLevelToTraits(1);
-        }
-        public bool IdiomFighterKOptionOnCondition(CharacterCreationManager characterCreationManager)
-        {
-            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Noble && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
-        }
-        public void IdiomFighterKOptionOnSelect(CharacterCreationManager characterCreationManager)
-        {
-            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            else if (Hero.MainHero.Culture.StringId == "khuzait")
             {
-                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
-                if (narrativeMenuCharacter.StringId == "player_education_character")
-                {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_peddlers");
-                    narrativeMenuCharacter.SetLeftHandItem("");
-                    narrativeMenuCharacter.SetRightHandItem("_to_carry_bd_basket_a");
-                    break;
-                }
+                args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Riding });
+                args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
+                args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
             }
-        }
-        public void IdiomFighterSOptionArgs(NarrativeMenuOptionArgs args)
-        {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            else if (Hero.MainHero.Culture.StringId == "nord")
+            {
+                args.SetAffectedSkills(new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Athletics });
+                args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+                args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            }
+            else if (Hero.MainHero.Culture.StringId == "sturgia")
+            {
+                args.SetAffectedSkills(new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Riding });
+                args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+                args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            }
+            else if (Hero.MainHero.Culture.StringId == "vlandia")
+            {
+                args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding });
+                args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
+                args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            }
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
-            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
             args.SetLevelToTraits(1);
         }
-        public bool IdiomFighterSOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomFighterNobleOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
-            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Noble && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
+            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Noble;
         }
-        public void IdiomFighterSOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomFighterNobleOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
@@ -189,61 +110,32 @@ namespace CharacterCreationRedone.SandboxOptions
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetLeftHandItem("");
-                    narrativeMenuCharacter.SetRightHandItem("composite_bow");
+                    narrativeMenuCharacter.SetRightHandItem("");
                     break;
                 }
             }
         }
-        public void IdiomFighterVOptionArgs(NarrativeMenuOptionArgs args)
+        public void IdiomFighterCommonerOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(1);
-            args.SetLevelToSkills(30);
-            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
-            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
-            args.SetLevelToTraits(1);
-        }
-        public bool IdiomFighterVOptionOnCondition(CharacterCreationManager characterCreationManager)
-        {
-            return characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Noble && characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia";
-        }
-        public void IdiomFighterVOptionOnSelect(CharacterCreationManager characterCreationManager)
-        {
-            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
-            {
-                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
-                if (narrativeMenuCharacter.StringId == "player_education_character")
-                {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_peddlers_2");
-                    narrativeMenuCharacter.SetLeftHandItem("");
-                    narrativeMenuCharacter.SetRightHandItem("_to_carry_bd_fabric_c");
-                    break;
-                }
-            }
-        }
-        public void IdiomFighterCOptionArgs(NarrativeMenuOptionArgs args)
-        {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
-            args.SetFocusToSkills(1);
-            args.SetLevelToSkills(30);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Athletics });
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
             args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
             args.SetLevelToTraits(1);
         }
-        public bool IdiomFighterCOptionOnCondition(CharacterCreationManager characterCreationManager)
+        public bool IdiomFighterCommonerOptionOnCondition(CharacterCreationManager characterCreationManager)
         {
             return !(characterCreationManager.CharacterCreationContent.SelectedParentOccupation == CharacterOccupationTypes.Noble);
         }
-        public void IdiomFighterCOptionOnSelect(CharacterCreationManager characterCreationManager)
+        public void IdiomFighterCommonerOptionOnSelect(CharacterCreationManager characterCreationManager)
         {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_fox");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetLeftHandItem("");
                     narrativeMenuCharacter.SetRightHandItem("");
                     break;
@@ -252,8 +144,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void IdiomHealthyOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Medicine };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Athletics, DefaultSkills.Medicine });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -269,7 +160,7 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetLeftHandItem("");
                     narrativeMenuCharacter.SetRightHandItem("");
                     break;
@@ -278,8 +169,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void IdiomPreventionOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Steward };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Steward });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
@@ -297,17 +187,16 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_peddlers");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetLeftHandItem("");
-                    narrativeMenuCharacter.SetRightHandItem("_to_carry_bd_basket_a");
+                    narrativeMenuCharacter.SetRightHandItem("");
                     break;
                 }
             }
         }
         public void IdiomWellBegunOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Steward, DefaultSkills.Engineering };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Steward, DefaultSkills.Engineering });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
@@ -325,7 +214,7 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_manners");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetLeftHandItem("");
                     narrativeMenuCharacter.SetRightHandItem("");
                     break;
@@ -334,8 +223,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void IdiomBoldOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Tactics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Tactics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
@@ -353,8 +241,8 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_book");
-                    narrativeMenuCharacter.SetLeftHandItem("character_creation_notebook");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
+                    narrativeMenuCharacter.SetLeftHandItem("");
                     narrativeMenuCharacter.SetRightHandItem("");
                     break;
                 }
@@ -362,8 +250,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void IdiomForwarnedOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Scouting };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Scouting });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
@@ -381,17 +268,16 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_peddlers_2");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetLeftHandItem("");
-                    narrativeMenuCharacter.SetRightHandItem("_to_carry_bd_fabric_c");
+                    narrativeMenuCharacter.SetRightHandItem("");
                     break;
                 }
             }
         }
         public void IdiomInventionOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Engineering };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Engineering });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
@@ -407,17 +293,16 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_streets");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetLeftHandItem("");
-                    narrativeMenuCharacter.SetRightHandItem("carry_bostaff_rogue1");
+                    narrativeMenuCharacter.SetRightHandItem("");
                     break;
                 }
             }
         }
         public void IdiomArmedOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Roguery };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Roguery });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -435,17 +320,16 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_militia");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetLeftHandItem("");
-                    narrativeMenuCharacter.SetRightHandItem("peasant_hammer_1_t1");
+                    narrativeMenuCharacter.SetRightHandItem("");
                     break;
                 }
             }
         }
         public void IdiomConquerOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Leadership, DefaultSkills.Charm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Leadership, DefaultSkills.Charm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -463,17 +347,16 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_grit");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetLeftHandItem("");
-                    narrativeMenuCharacter.SetRightHandItem("carry_hammer");
+                    narrativeMenuCharacter.SetRightHandItem("");
                     break;
                 }
             }
         }
         public void IdiomMeanOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Roguery };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Tactics, DefaultSkills.Roguery });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -491,9 +374,36 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_peddlers");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                     narrativeMenuCharacter.SetLeftHandItem("");
-                    narrativeMenuCharacter.SetRightHandItem("_to_carry_bd_basket_a");
+                    narrativeMenuCharacter.SetRightHandItem("");
+                    break;
+                }
+            }
+        }
+        public void IdiomTurbulantOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            args.SetAffectedSkills(new SkillObject[] { NavalSkills.Mariner, NavalSkills.Shipmaster });
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(30);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
+            args.SetAffectedTraits(new TraitObject[] { DefaultTraits.Valor });
+            args.SetLevelToTraits(1);
+        }
+        public bool IdiomTurbulantOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+        public void IdiomTurbulantOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_education_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
+                if (narrativeMenuCharacter.StringId == "player_education_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
+                    narrativeMenuCharacter.SetLeftHandItem("");
+                    narrativeMenuCharacter.SetRightHandItem("");
                     break;
                 }
             }

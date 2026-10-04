@@ -42,7 +42,7 @@ namespace CharacterCreationRedone.SandboxOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_Commander", new TextObject("{=CCR_Education_Choice_Commander}lead armies.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(EducationCommanderOptionArgs), new NarrativeMenuOptionOnConditionDelegate(EducationCommanderOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(EducationCommanderOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_lady", new TextObject("{=CCR_Education_Choice_lady}become a lady in waiting.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(EducationLadyOptionArgs), new NarrativeMenuOptionOnConditionDelegate(EducationLadyOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(EducationLadyOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_Court", new TextObject("{=CCR_Education_Choice_Court}be part of the court.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(EducationCourtOptionArgs), new NarrativeMenuOptionOnConditionDelegate(EducationCourtOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(EducationCourtOptionOnSelect), null));
-            
+
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_trade", new TextObject("{=CCR_Education_Choice_trade}become a merchant.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(EducationMerchantOptionArgs), new NarrativeMenuOptionOnConditionDelegate(EducationMerchantOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(EducationMerchantOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_crafting", new TextObject("{=CCR_Education_Choice_crafting}learn a trade.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(EducationCraftOptionArgs), new NarrativeMenuOptionOnConditionDelegate(EducationCraftOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(EducationCraftOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("CCR_Education_Choice_scholar", new TextObject("{=CCR_Education_Choice_scholar}become a scholar.", null), new TextObject("{=!}", null), new GetNarrativeMenuOptionArgsDelegate(EducationScholarOptionArgs), new NarrativeMenuOptionOnConditionDelegate(EducationScholarOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(EducationScholarOptionOnSelect), null));
@@ -54,8 +54,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void EducationFarisOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Athletics, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Polearm, DefaultSkills.Athletics, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -71,14 +70,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_leader");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationHearthguardOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Bow, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Bow, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -94,14 +92,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationCataphractOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -117,14 +114,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_memory");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationKhanGuardOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Polearm, DefaultSkills.Riding };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Polearm, DefaultSkills.Riding });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -140,14 +136,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_numbers");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationDruzhinaOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.TwoHanded, DefaultSkills.Throwing, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -163,14 +158,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_manners");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationKnightOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Athletics, DefaultSkills.Polearm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Athletics, DefaultSkills.Polearm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -186,14 +180,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_animals");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationCommanderOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Leadership, DefaultSkills.Tactics, DefaultSkills.Charm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Leadership, DefaultSkills.Tactics, DefaultSkills.Charm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -209,14 +202,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_leader");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationCourtOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Charm, DefaultSkills.Roguery, DefaultSkills.Tactics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Charm, DefaultSkills.Roguery, DefaultSkills.Tactics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -232,14 +224,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationMerchantOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm, DefaultSkills.Steward };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm, DefaultSkills.Steward });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -255,14 +246,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_memory");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationCraftOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Engineering, DefaultSkills.Trade, DefaultSkills.Crafting };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Engineering, DefaultSkills.Trade, DefaultSkills.Crafting });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -278,14 +268,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_numbers");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationScholarOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Engineering, DefaultSkills.Tactics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Medicine, DefaultSkills.Engineering, DefaultSkills.Tactics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
@@ -301,14 +290,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_manners");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationReligiousOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Steward, DefaultSkills.Medicine, DefaultSkills.Trade };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Steward, DefaultSkills.Medicine, DefaultSkills.Trade });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
@@ -324,14 +312,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_animals");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationFarmerOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Medicine, DefaultSkills.Athletics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting, DefaultSkills.Medicine, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -347,14 +334,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_leader");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationLadyOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm, DefaultSkills.Steward };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Trade, DefaultSkills.Charm, DefaultSkills.Steward });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -370,14 +356,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationDefenseOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Athletics, DefaultSkills.Roguery };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Athletics, DefaultSkills.Roguery });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -393,14 +378,13 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_memory");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void EducationTrickOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Charm, DefaultSkills.OneHanded };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Charm, DefaultSkills.OneHanded });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(30);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -416,7 +400,7 @@ namespace CharacterCreationRedone.SandboxOptions
                 narrativeMenuCharacter.SetEquipment(Campaign.Current.ObjectManager.GetObject<MBEquipmentRoster>(string.Concat(new string[] { "player_char_creation_childhood_age_", characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, "_", characterCreationManager.CharacterCreationContent.SelectedParentOccupation, "_", Hero.MainHero.IsFemale ? "f" : "m" })));
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_numbers");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }

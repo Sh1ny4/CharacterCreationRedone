@@ -53,8 +53,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
         public void ReasonTravelOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Scouting };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Scouting });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -67,14 +66,13 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_adulthood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_vibrant");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void ReasonRevengeOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Tactics };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Tactics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -87,14 +85,13 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_adulthood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_decisive");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void ReasonForcedOutOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Roguery });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -107,14 +104,13 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_adulthood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_ready_handshield");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void ReasonMoneyOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Trade };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Trade });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -127,14 +123,13 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_adulthood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_clever");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void ReasonPowerOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Leadership };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Leadership });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -147,14 +142,13 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_adulthood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_decisive");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void ReasonHistoryOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Charm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Charm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -167,14 +161,13 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_adulthood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_decisive");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void ReasonLossOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Steward };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Steward });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -185,14 +178,13 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_adulthood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_vibrant");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void ReasonCraftingOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Crafting };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Crafting });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -203,14 +195,13 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_adulthood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_tough");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void ReasonHelpingOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Medicine };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Medicine });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(50);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
@@ -223,14 +214,13 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_adulthood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_vibrant");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }
         public void ReasonWorthOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.TwoHanded, DefaultSkills.Polearm };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.TwoHanded, DefaultSkills.Polearm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(20);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -243,7 +233,7 @@ namespace CharacterCreationRedone.SandboxOptions
             {
                 if (narrativeMenuCharacter.StringId == "player_adulthood_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_tough");
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
                 }
             }
         }

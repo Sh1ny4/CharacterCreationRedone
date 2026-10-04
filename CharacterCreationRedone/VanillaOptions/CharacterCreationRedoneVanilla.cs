@@ -8,9 +8,11 @@ using TaleWorlds.Localization;
 namespace CharacterCreationRedone.VanillaOptions
 {
     [HarmonyPatch(typeof(CharacterCreationCampaignBehavior), nameof(CharacterCreationCampaignBehavior.InitializeData))]
-    public class InitializeDataPatch : CharacterCreationCampaignBehavior
+    public class InitializeDataPatch
     {
-        // these are excluded from the project and is intended for modders to use in their mod with losing countless hours everytime
+        // The vanilla options are excluded from the project and are intended for modders to use in their mod with losing countless hours everytime.
+        // these files are drag an drop and should work as is, but require the war sails DLC starting from now on. look for older commits to get the non DLC version
+        // The XMLs in this mod however are the one, well, for this mod. You need to use the vanilla unsorted mess ones
         [HarmonyPrefix]
         static bool Prefix(CharacterCreationManager characterCreationManager)
         {
@@ -25,7 +27,7 @@ namespace CharacterCreationRedone.VanillaOptions
         }
     }
     [HarmonyPatch(typeof(CharacterCreationCampaignBehavior), nameof(CharacterCreationCampaignBehavior.InitializeCharacterCreationCultures))]
-    public class InitializeCharacterCreationCulturesPatch : CharacterCreationCampaignBehavior
+    public class InitializeCharacterCreationCulturesPatch
     {
         [HarmonyPrefix]
         static bool Prefix(CharacterCreationManager characterCreationManager)

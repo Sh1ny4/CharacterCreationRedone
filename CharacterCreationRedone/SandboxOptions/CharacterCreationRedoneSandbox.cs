@@ -8,7 +8,7 @@ using TaleWorlds.Localization;
 namespace CharacterCreationRedone.SandboxOptions
 {
     [HarmonyPatch(typeof(CharacterCreationCampaignBehavior), nameof(CharacterCreationCampaignBehavior.InitializeData))]
-    public class CharacterCreationRedoneSandboxMenus : CharacterCreationCampaignBehavior
+    public class InitializeDataPatchs
     {
         [HarmonyPrefix]
         static bool Prefix(CharacterCreationManager characterCreationManager)
@@ -24,7 +24,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
     }
     [HarmonyPatch(typeof(CharacterCreationCampaignBehavior), nameof(CharacterCreationCampaignBehavior.InitializeCharacterCreationCultures))]
-    public class InitializeCharacterCreationCulturesPatch : CharacterCreationCampaignBehavior
+    public class InitializeCharacterCreationCulturesPatch
     {
         [HarmonyPrefix]
         static bool Prefix(CharacterCreationManager characterCreationManager)

@@ -8,7 +8,7 @@ using TaleWorlds.Localization;
 namespace CharacterCreationRedone.CampaignOptions
 {
     [HarmonyPatch(typeof(StoryModeCharacterCreationCampaignBehavior), nameof(StoryModeCharacterCreationCampaignBehavior.InitializeData))]
-    public class CharacterCreationRedoneCampaign : StoryModeCharacterCreationCampaignBehavior
+    public class CharacterCreationRedoneCampaign
     {
         [HarmonyPrefix]
         static bool Prefix(CharacterCreationManager characterCreationManager)

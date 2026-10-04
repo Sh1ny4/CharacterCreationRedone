@@ -67,9 +67,7 @@ namespace CharacterCreationRedone.CampaignOptions
         }
         public void GetEscapeSubduedRaiderNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Athletics
-            };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Athletics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(20);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 2);
@@ -92,9 +90,7 @@ namespace CharacterCreationRedone.CampaignOptions
         }
         public void GetEscapeArrowNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Tactics
-            };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Bow, DefaultSkills.Tactics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(20);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 2);
@@ -117,9 +113,7 @@ namespace CharacterCreationRedone.CampaignOptions
         }
         public void GetEscapeHorseNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Scouting
-            };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Riding, DefaultSkills.Scouting });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(20);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 2);
@@ -142,9 +136,7 @@ namespace CharacterCreationRedone.CampaignOptions
         }
         public void GetEscapeTrickedNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Tactics
-            };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Tactics });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(20);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 2);
@@ -167,9 +159,7 @@ namespace CharacterCreationRedone.CampaignOptions
         }
         public void GetEscapeBreakOutNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Leadership, DefaultSkills.Charm
-            };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Leadership, DefaultSkills.Charm });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(20);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 2);
@@ -192,9 +182,7 @@ namespace CharacterCreationRedone.CampaignOptions
         }
         public void GetMakeshiftFortificationNarrativeOptionArgs(NarrativeMenuOptionArgs args)
         {
-            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Engineering, DefaultSkills.TwoHanded
-            };
-            args.SetAffectedSkills(affectedSkills);
+            args.SetAffectedSkills(new SkillObject[] { DefaultSkills.Engineering, DefaultSkills.TwoHanded });
             args.SetFocusToSkills(1);
             args.SetLevelToSkills(20);
             args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 2);
@@ -237,7 +225,7 @@ namespace CharacterCreationRedone.CampaignOptions
             elderBrother.CharacterObject.Equipment.FillFrom(narrativeMenuCharacter2.Equipment.DefaultEquipment, true);
             elderBrother.CharacterObject.FirstCivilianEquipment.FillFrom(narrativeMenuCharacter2.Equipment.GetRandomCivilianEquipment(), true);
         }
-        new public void CreateSibling(Hero hero, BodyProperties motherBodyProperties, BodyProperties fatherBodyProperties)
+        public void CreateSibling(Hero hero, BodyProperties motherBodyProperties, BodyProperties fatherBodyProperties)
         {
             BodyProperties randomBodyProperties = BodyProperties.GetRandomBodyProperties(hero.CharacterObject.Race, hero.IsFemale, motherBodyProperties, fatherBodyProperties, 1, Hero.MainHero.Mother.CharacterObject.GetDefaultFaceSeed(1), hero.IsFemale ? Hero.MainHero.Mother.CharacterObject.BodyPropertyRange.HairTags : Hero.MainHero.Father.CharacterObject.BodyPropertyRange.HairTags, hero.IsFemale ? Hero.MainHero.Mother.CharacterObject.BodyPropertyRange.BeardTags : Hero.MainHero.Father.CharacterObject.BodyPropertyRange.BeardTags, hero.IsFemale ? Hero.MainHero.Mother.CharacterObject.BodyPropertyRange.TattooTags : Hero.MainHero.Father.CharacterObject.BodyPropertyRange.TattooTags, 0f);
             randomBodyProperties = new BodyProperties(new DynamicBodyProperties(hero.Age, 0.5f, 0.5f), randomBodyProperties.StaticProperties);
