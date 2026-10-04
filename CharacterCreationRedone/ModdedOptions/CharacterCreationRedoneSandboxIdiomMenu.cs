@@ -1,10 +1,10 @@
-using NavalDLC.CharacterDevelopment;
 using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.CampaignSystem.CharacterDevelopment;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
+using NavalDLC.CharacterDevelopment;
 
 namespace CharacterCreationRedone.SandboxOptions
 {
@@ -17,7 +17,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
 
         /// <summary>
-        /// Education menu
+        /// Idioms menu
         /// </summary>
         public List<NarrativeMenuCharacterArgs> FavoriteIdiomMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
         {

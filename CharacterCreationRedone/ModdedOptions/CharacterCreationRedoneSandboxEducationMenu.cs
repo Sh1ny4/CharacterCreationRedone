@@ -1,10 +1,8 @@
-using SandBox.View.Map.Navigation.NavigationElements;
 using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace CharacterCreationRedone.SandboxOptions
 {

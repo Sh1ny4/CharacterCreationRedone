@@ -1,9 +1,9 @@
-using NavalDLC.CharacterDevelopment;
 using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
+using NavalDLC.CharacterDevelopment;
 
 namespace CharacterCreationRedone.SandboxOptions
 {

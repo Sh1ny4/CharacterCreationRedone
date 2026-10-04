@@ -16,7 +16,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
 
         /// <summary>
-        /// Reason For Adventuring menu
+        /// Reason Menu
         /// </summary>
         public List<NarrativeMenuCharacterArgs> GetReasonMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
         {

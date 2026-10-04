@@ -100,13 +100,13 @@
   <ItemGroup>
     <Compile Include="CampaignOptions\CharacterCreationRedoneCampaignEscapeMenu.cs" />
     <Compile Include="CampaignOptions\CharacterCreationRedoneCampaign.cs" />
-    <Compile Include="SandboxOptions\CharacterCreationRedoneSandbox.cs" />
-    <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxAgeMenu.cs" />
-    <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxEducationMenu.cs" />
-    <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxIdiomMenu.cs" />
-    <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxParentsMenu.cs" />
-    <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxReasonMenu.cs" />
-    <Compile Include="SandboxOptions\CharacterCreationRedoneSandboxYouthMenu.cs" />
+    <Compile Include="ModdedOptions\CharacterCreationRedoneSandbox.cs" />
+    <Compile Include="ModdedOptions\CharacterCreationRedoneSandboxAgeMenu.cs" />
+    <Compile Include="ModdedOptions\CharacterCreationRedoneSandboxEducationMenu.cs" />
+    <Compile Include="ModdedOptions\CharacterCreationRedoneSandboxIdiomMenu.cs" />
+    <Compile Include="ModdedOptions\CharacterCreationRedoneSandboxParentsMenu.cs" />
+    <Compile Include="ModdedOptions\CharacterCreationRedoneSandboxReasonMenu.cs" />
+    <Compile Include="ModdedOptions\CharacterCreationRedoneSandboxYouthMenu.cs" />
     <Compile Include="SubModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

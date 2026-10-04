@@ -17,7 +17,7 @@ namespace CharacterCreationRedone.SandboxOptions
         }
 
         /// <summary>
-        /// AgeSelection
+        /// Age Menu
         /// </summary>
         public List<NarrativeMenuCharacterArgs> GetAgeSelectionMenuNarrativeMenuCharacterArgs(CultureObject culture, string occupationType, CharacterCreationManager characterCreationManager)
         {
