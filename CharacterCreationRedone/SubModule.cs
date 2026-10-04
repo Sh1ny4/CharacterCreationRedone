@@ -1,8 +1,8 @@
 ﻿using HarmonyLib;
-using NavalDLC.CampaignBehaviors;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
+using NavalDLC.CampaignBehaviors;
 
 namespace CharacterCreationRedone
 {

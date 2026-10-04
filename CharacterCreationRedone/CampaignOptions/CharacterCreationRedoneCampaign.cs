@@ -1,9 +1,9 @@
 using HarmonyLib;
-using StoryMode.GameComponents.CampaignBehaviors;
-using StoryMode.StoryModeObjects;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Localization;
+using StoryMode.GameComponents.CampaignBehaviors;
+using StoryMode.StoryModeObjects;
 
 namespace CharacterCreationRedone.CampaignOptions
 {

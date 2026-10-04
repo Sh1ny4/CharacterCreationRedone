@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
 using TaleWorlds.CampaignSystem;
-using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.CampaignSystem.Extensions;
+using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using StoryMode.GameComponents.CampaignBehaviors;
 using StoryMode.StoryModeObjects;
 
