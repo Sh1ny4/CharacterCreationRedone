@@ -2,12 +2,11 @@
 <Module>
 	<Name value="CharacterCreationRedone"/>
 	<Id value="CharacterCreationRedone"/>
-	<Version value="v1.3.15"/>
+	<Version value="v1.5.3"/>
 	<SingleplayerModule value="true"/>
 	<MultiplayerModule value="false"/>
 	<ModuleType value="Community" />
 	<DependedModules>
-		<DependedModule Id="Bannerlord.Harmony"/>
 		<DependedModule Id="Native"/>
 		<DependedModule Id="Sandbox"/>
 		<DependedModule Id="SandBoxCore"/>
@@ -25,14 +24,6 @@
 	<Xmls>
 		<XmlNode>
 			<XmlName id="EquipmentRosters" path="CharacterCreationEquipment"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="CustomGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<XmlNode>
-			<XmlName id="Factions" path="Factions"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
 				<GameType value="CampaignStoryMode"/>

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using NavalDLC.CharacterDevelopment;
+using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CampaignBehaviors;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
@@ -36,6 +37,7 @@ namespace CharacterCreationRedone.VanillaOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("childhood_smart_option", new TextObject("{=Y3UcaX74}your aptitude for numbers.", null), new TextObject("{=DFidSjIf}Most children around you had only the most rudimentary education, but you lingered after class to study letters and mathematics. You were fascinated by the marketplace - weights and measures, tallies and accounts, the chatter about profits and losses.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetChildhoodSmartOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.ChildhoodSmartOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.ChildhoodSmartOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("childhood_leader_option", new TextObject("{=GEYzLuwb}your way with people.", null), new TextObject("{=w2TEQq26}You were always attentive to other people, good at guessing their motivations. You studied how individuals were swayed, and tried out what you learned from adults on your friends.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetChildhoodLeaderOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.ChildhoodLeaderOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.ChildhoodLeaderOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("childhood_horse_option", new TextObject("{=MEgLE2kj}your skill with horses.", null), new TextObject("{=ngazFofr}You were always drawn to animals, and spent as much time as possible hanging out in the village stables. You could calm horses, and were sometimes called upon to break in new colts. You learned the basics of veterinary arts, much of which is applicable to humans as well.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetChildhoodHorseOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.ChildhoodHorseOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.ChildhoodHorseOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("childhood_predict_weather_option", new TextObject("{=cYIB0838}your uncanny ability to predict the weather.", null), new TextObject("{=w77I1ijB}You were fascinated with clouds and patterns and always observed weather, often warning your family of impending storms with uncanny accuracy.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetChildhoodPredictWeatherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.ChildhoodPredictWeatherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.ChildhoodPredictWeatherOptionOnSelect), null));
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
 
@@ -185,6 +187,30 @@ namespace CharacterCreationRedone.VanillaOptions
                 if (narrativeMenuCharacter.StringId == "player_childhood_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_animals");
+                }
+            }
+        }
+        private void GetChildhoodPredictWeatherOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { NavalSkills.Boatswain, DefaultSkills.Scouting };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
+        }
+
+        private bool ChildhoodPredictWeatherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return true;
+        }
+
+        private void ChildhoodPredictWeatherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_childhood_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_memory");
                 }
             }
         }

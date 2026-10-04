@@ -1,4 +1,6 @@
 ﻿using HarmonyLib;
+using NavalDLC.CampaignBehaviors;
+using NavalDLC.CharacterDevelopment;
 using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CampaignBehaviors;
@@ -53,6 +55,8 @@ namespace CharacterCreationRedone.VanillaOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_marketer_option", new TextObject("{=JTsv6PFe}worked in the markets and caravanserais.", null), new TextObject("{=rmMcwSn8}You helped your family handle their business affairs, going down to the marketplace to make purchases and oversee the arrival of caravans.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationMarketerOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationMarketerOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationMarketerOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_tutor_option", new TextObject("{=EMVojYzW}studied with your public tutor.", null), new TextObject("{=hXl25avg}Your family arranged for a public tutor and you took full advantage, reading voraciously on history, mathematics, and philosophy and discussing what you read with your tutor and classmates.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationTutorOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationTutorOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationTutorOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_horser_option", new TextObject("{=hin3iA2D}cared for the horses.", null), new TextObject("{=Ghz90npw}Your family owned a few horses at the town stables and you took charge of their care. Many evenings you would take them out beyond the walls and gallup through the fields, racing other youth.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationPoorHorserOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationPoorHorserOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationPoorHorserOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_fishing_boat", new TextObject("{=MHXeREoc}worked as a deckhand on a fishing boat.", null), new TextObject("{=3H4sk6zN}You spent your adolescence helping your uncle with his fishing business, learning the ropes (literally!) of seamanship, from mending nets to hauling in the catch.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationFishingBoatOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationFishingBoatOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationFishingBoatOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("education_docks", new TextObject("{=eTXb0QYP}worked at the docks.", null), new TextObject("{=EDwrct2r}You spent your adolescence helping out at the bustling docks, assisting with the loading and unloading of ships, and learning the ins and outs of maritime trade. You witnessed the arrival and departure of exotic goods and people from far-off lands, fueling your dreams of adventure on the high seas.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEducationDocksOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EducationDocksOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EducationDocksOptionOnSelect), null));
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
 
@@ -392,33 +396,56 @@ namespace CharacterCreationRedone.VanillaOptions
             }
         }
 
-        public void AgeSelectionElderOptionOnSelect(CharacterCreationManager characterCreationManager)
+        private void GetEducationFishingBoatOptionArgs(NarrativeMenuOptionArgs args)
         {
-            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            SkillObject[] affectedSkills = new SkillObject[] { NavalSkills.Boatswain, DefaultSkills.Athletics };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(this._focusToAdd);
+            args.SetLevelToSkills(this._skillLevelToAdd);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, this._attributeLevelToAdd);
+        }
+
+        private bool EducationFishingBoatOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return !CharacterCreationRedoneVanillaEducationMenu.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+        }
+
+        private void EducationFishingBoatOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
             foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
             {
-                if (narrativeMenuCharacter.StringId == "player_age_selection_character")
+                if (narrativeMenuCharacter.StringId == "player_education_character")
                 {
-                    narrativeMenuCharacter.SetAnimationId("act_childhood_tough");
-                    narrativeMenuCharacter.ChangeAge(50f);
-                    MBEquipmentRoster @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId);
-                    if (@object == null)
-                    {
-                        Debug.FailedAssert("character creation menu character equipment should not be null!", "C:\\BuildAgent\\work\\mb3\\Source\\Bannerlord\\TaleWorlds.CampaignSystem\\CampaignBehaviors\\CharacterCreationCampaignBehavior.cs", "AgeSelectionElderOptionOnSelect", 5034);
-                        @object = Game.Current.ObjectManager.GetObject<MBEquipmentRoster>("player_char_creation_default");
-                    }
-                    narrativeMenuCharacter.SetEquipment(@object);
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
                     break;
                 }
             }
-            characterCreationManager.CharacterCreationContent.StartingAge = 50;
-            Hero.MainHero.SetBirthDay(CampaignTime.YearsFromNow(-50f));
         }
 
-        public void AgeSelectionElderOptionOnConsequence(CharacterCreationManager characterCreationManager)
+        private void GetEducationDocksOptionArgs(NarrativeMenuOptionArgs args)
         {
-            characterCreationManager.CharacterCreationContent.StartingAge = 50;
-            this.ApplyMainHeroEquipment(characterCreationManager);
+            SkillObject[] affectedSkills = new SkillObject[] { NavalSkills.Shipmaster, DefaultSkills.Trade };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(this._focusToAdd);
+            args.SetLevelToSkills(this._skillLevelToAdd);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, this._attributeLevelToAdd);
+        }
+
+        private bool EducationDocksOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return CharacterCreationRedoneVanillaEducationMenu.CharacterOccupationTypes.IsUrbanOccupation(characterCreationManager.CharacterCreationContent.SelectedParentOccupation);
+        }
+
+        private void EducationDocksOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_education_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_tough");
+                    break;
+                }
+            }
         }
 
         public void ApplyMainHeroEquipment(CharacterCreationManager characterCreationManager)
@@ -438,84 +465,29 @@ namespace CharacterCreationRedone.VanillaOptions
         }
 
         public readonly IReadOnlyDictionary<string, string> _occupationToEquipmentMapping = new Dictionary<string, string>
-    {
         {
-            "retainer",
-            "retainer"
-        },
-        {
-            "bard",
-            "bard"
-        },
-        {
-            "hunter",
-            "hunter"
-        },
-        {
-            "farmer",
-            "farmer"
-        },
-        {
-            "herder",
-            "herder"
-        },
-        {
-            "healer",
-            "healer"
-        },
-        {
-            "mercenary",
-            "mercenary"
-        },
-        {
-            "infantry",
-            "infantry"
-        },
-        {
-            "skirmisher",
-            "skirmisher"
-        },
-        {
-            "kern",
-            "kern"
-        },
-        {
-            "guard",
-            "guard"
-        },
-        {
-            "retainer_urban",
-            "retainer"
-        },
-        {
-            "mercenary_urban",
-            "mercenary"
-        },
-        {
-            "merchant_urban",
-            "merchant"
-        },
-        {
-            "vagabond_urban",
-            "vagabond"
-        },
-        {
-            "artisan_urban",
-            "artisan"
-        },
-        {
-            "physician_urban",
-            "physician"
-        },
-        {
-            "healer_urban",
-            "healer"
-        },
-        {
-            "bard_urban",
-            "bard"
-        }
-};
+            { "retainer",  "retainer" },
+            { "bard",  "bard" },
+            { "hunter",  "hunter" },
+            { "farmer",  "farmer" },
+            { "herder",  "herder" },
+            { "healer",  "healer" },
+            { "mercenary",  "mercenary" },
+            { "infantry",  "infantry" },
+            { "skirmisher",  "skirmisher" },
+            { "kern",  "kern" },
+            { "guard",  "guard" },
+            { "retainer_urban",  "retainer" },
+            { "mercenary_urban",  "mercenary" },
+            { "merchant_urban",  "merchant" },
+            { "vagabond_urban",  "vagabond" },
+            { "artisan_urban",  "artisan" },
+            { "physician_urban",  "physician" },
+            { "healer_urban",  "healer" },
+            { "bard_urban",  "bard" },
+            { "seafarer",  "seafarer" },
+            { "shipmaster_urban",  "shipmaster" }
+        };
 
         public const int ChildhoodAge = 7;
 
@@ -577,46 +549,30 @@ namespace CharacterCreationRedone.VanillaOptions
         {
             public static bool IsUrbanOccupation(string occupation)
             {
-                return occupation == "retainer_urban" || occupation == "mercenary_urban" || occupation == "merchant_urban" || occupation == "vagabond_urban" || occupation == "artisan_urban" || occupation == "physician_urban" || occupation == "healer_urban" || occupation == "bard_urban";
+                return occupation == "retainer_urban" || occupation == "mercenary_urban" || occupation == "merchant_urban" || occupation == "vagabond_urban" || occupation == "artisan_urban" || occupation == "physician_urban" || occupation == "healer_urban" || occupation == "bard_urban" || occupation == "shipmaster_urban" ;
             }
 
             public const string Retainer = "retainer";
-
             public const string Bard = "bard";
-
             public const string Hunter = "hunter";
-
             public const string Farmer = "farmer";
-
             public const string Herder = "herder";
-
             public const string Healer = "healer";
-
             public const string Mercenary = "mercenary";
-
             public const string Infantry = "infantry";
-
             public const string Skirmisher = "skirmisher";
-
             public const string Kern = "kern";
-
             public const string Guard = "guard";
-
             public const string RetainerUrban = "retainer_urban";
-
             public const string MercenaryUrban = "mercenary_urban";
-
             public const string MerchantUrban = "merchant_urban";
-
             public const string VagabondUrban = "vagabond_urban";
-
             public const string ArtisanUrban = "artisan_urban";
-
             public const string PhysicianUrban = "physician_urban";
-
             public const string HealerUrban = "healer_urban";
-
             public const string BardUrban = "bard_urban";
+            public const string Seafarer = "seafarer";
+            public const string ShipmasterUrban = "shipmaster_urban";
         }
     }
 }

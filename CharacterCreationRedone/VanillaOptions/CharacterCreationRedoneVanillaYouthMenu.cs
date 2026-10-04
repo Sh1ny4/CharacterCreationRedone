@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using NavalDLC.CharacterDevelopment;
+using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CampaignBehaviors;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
@@ -60,6 +61,18 @@ namespace CharacterCreationRedone.VanillaOptions
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_camp_option", new TextObject("{=GFUggps8}marched with the camp followers.", null), new TextObject("{=64rWqBLN}You avoided service with one of the main forces of your realm's armies, but followed instead in the train - the troops' wives, lovers and servants, and those who make their living by caring for, entertaining, or cheating the soldiery.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthCampOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthCampOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthCampOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_envoys_guard_first_option", new TextObject("{=YmPlLGXb}served as an envoy's guard", null), new TextObject("{=qPamcCkA}Your family arranged for you to accompany an envoy. You were not given major responsibilities - mostly carrying arms and trying to look imposing. - but it did give you a chance to travel a lot and socialise and see the world.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEnvoysGuardFirstOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EnvoysGuardFirstOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EnvoysGuardFirstOptionOnSelect), null));
             narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_envoys_guard_second_option", new TextObject("{=YmPlLGXb}served as an envoy's guard", null), new TextObject("{=VYU1nEHP}Your family arranged for you to accompany an envoy. You were not given major responsibilities but it did give you a chance to travel and socialise and see a bit of the world.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetEnvoysGuardSecondOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.EnvoysGuardSecondOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.EnvoysGuardSecondOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_nord_guard_option", new TextObject("{=I23UbK4E}served as a shieldbearer to a huscarl.", null), new TextObject("{=Rffyscuk}War was a constant presence in your village. You served as a shieldbearer to a renowned Huscarl, a veteran Nord warrior. Witnessing countless battles and learning the art of defense from a master, you yearn to prove yourself worthy of wielding a weapon in the front lines.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthNordGuardOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthNordGuardOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthNordGuardOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_nord_skirmisher_option", new TextObject("{=8c7mwLQQ}joined the raiders as a lookout.", null), new TextObject("{=6X2hZY6z}Growing up on the harsh Nordic coast, you were trained from a young age to spot enemy sails and signal incoming raids. Agile and quick-witted, you honed your skills with a throwing axe and learned to fight in skirmishes. You dream of joining a raiding party and tasting the glory of conquest.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthNordSkirmisherOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthNordSkirmisherOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthNordSkirmisherOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_nord_vagabond_option", new TextObject("{=T7B4KmHz}drafted to war as a thrall.", null), new TextObject("{=lilGmaCg}Thrown into servitude to a Jarl, war ripped through your village. Drafted alongside other thralls, you were thrown into battle with minimal training and a simple spear. Though fear grips you, a deep loyalty to your Jarl and a desperate will to survive drive you forward.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthNordVagabondOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthNordVagabondOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthNordVagabondOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_nord_artisan_option", new TextObject("{=qJweXkmJ}stood sentry at the Walls of the Hold.", null), new TextObject("{=XpiyI865}With enemy forces constantly threatening your village, you spent your youth helping fortify the local hold. You became skilled in basic construction, learned to use a pickaxe and shovel, and assisted in defending the walls during sieges. Now, you yearn to be part of the offensive and take the fight to the enemy.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthNordArtisanOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthNordArtisanOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthNordArtisanOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_nord_infantry_option", new TextObject("{=ZfaBIuFL}scavenged the battlefields for scraps.", null), new TextObject("{=unIV7bqB}Born into a Calradia perpetually at war, you didn't know playgrounds, you knew battlefields. Survival as a youngster meant picking through the battlefields. You learned to be self-sufficient, sometimes tending to wounds amidst the carnage. The law of the battlefield was simple: take what you can, and don't get caught.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthNordInfantryOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthNordInfantryOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthNordInfantryOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_nord_mercenary_option", new TextObject("{=On8SIR0J}became a warchild of the North.", null), new TextObject("{=La4V8zQn}War ravaged your village, leaving you orphaned and hardened by hardship. You scavenged for scraps, learning to fight for survival in the harsh wilderness. Now, driven by a thirst for vengeance and a desire to carve your own path, you seek to join a warband and prove your worth.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthNordMercenaryOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthNordMercenaryOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthNordMercenaryOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_crewed_a_galley_option", new TextObject("{=Hhkt6gtQ}crewed a galley in the coastal raids.", null), new TextObject("{=KWI2QOAO}You spent your youth participating in coastal raids, learning the skills of a rower, a lookout, and a boarding party. You witnessed the thrill of naval combat firsthand, experiencing the fear and the glory of maritime warfare.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthCrewedAGalleyNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthCrewedAGalleyNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthCrewedAGalleyNarrativeOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_rowed_river_trader_option", new TextObject("{=BRcMIDYK}rowed on a river trader.", null), new TextObject("{=urpdbYXl}You spent your youth helping your family transport goods along the river, learning to navigate the treacherous currents and to defend yourselves from raiders. You witnessed the bustling trade centers and encountered a diverse array of cultures.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthRowedRiverTraderNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthRowedRiverTraderNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthRowedRiverTraderNarrativeOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_deckhand_corsair_option", new TextObject("{=h0h4abww}served as a deckhand on a corsair.", null), new TextObject("{=LVxRFT5b}Growing up in a coastal town, you were drawn to the allure of the sea and the thrill of adventure. You joined a corsair crew as a deckhand, learning the ropes seamanship and witnessing the brutality of pirate raids firsthand.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthDeckhandCorsairNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthDeckhandCorsairNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthDeckhandCorsairNarrativeOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_raided_river_traffic_option", new TextObject("{=C04DgO2S}raided river traffic.", null), new TextObject("{=lHd0H3jg}You grew up along the great rivers, learning to navigate the treacherous currents and to fight from swift riverboats. You learned to raid rival clans and extort tribute from wealthy merchants, honing your skills as a river pirate.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthRaidedRiverTrafficNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthRaidedRiverTrafficNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthRaidedRiverTrafficNarrativeOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_coastal_defender_option", new TextObject("{=OMnJGBCR}served as a coastal defender.", null), new TextObject("{=gvp4AsMQ}You grew up amidst tales of legendary sea battles and legendary heroes, destined to carry on the proud traditions of your seafaring ancestors and defend your coastal towns just like them. You learned the skills of a mariner, a rower, and a warrior.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthCoastalDefenderNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthCoastalDefenderNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthCoastalDefenderNarrativeOptionOnSelect), null));
+            narrativeMenu.AddNarrativeMenuOption(new NarrativeMenuOption("youth_serve_raider_ship_option", new TextObject("{=8GnOKv5r}went serving on a raider ship.", null), new TextObject("{=Xclr9fU3}You grew up in a coastal village, surrounded by tales of legendary Viking warriors and their daring voyages. As a youth, you learned the skills of a sailor, a warrior, and a raider, preparing for the day when you would join your kin on a voyage of exploration and conquest.", null), new GetNarrativeMenuOptionArgsDelegate(this.GetYouthServeRaiderShipNarrativeOptionArgs), new NarrativeMenuOptionOnConditionDelegate(this.YouthServeRaiderShipNarrativeOptionOnCondition), new NarrativeMenuOptionOnSelectDelegate(this.YouthServeRaiderShipNarrativeOptionOnSelect), null));
             characterCreationManager.AddNewMenu(narrativeMenu);
         }
 
@@ -544,6 +557,342 @@ namespace CharacterCreationRedone.VanillaOptions
                 if (narrativeMenuCharacter.StringId == "player_youth_character")
                 {
                     narrativeMenuCharacter.SetAnimationId("act_childhood_sharp");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+
+        private void GetYouthNordGuardOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Charm, DefaultSkills.Scouting };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
+        }
+
+        private bool YouthNordGuardOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+
+        private void YouthNordGuardOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "guard";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_character_creation_nord_served_as_a_shieldbearer");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+
+        private void GetYouthNordSkirmisherOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Throwing, DefaultSkills.Tactics };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
+        }
+
+        private bool YouthNordSkirmisherOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+
+        private void YouthNordSkirmisherOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "skirmisher";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_fox");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+
+        private void GetYouthNordVagabondOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.OneHanded, DefaultSkills.Polearm };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
+        }
+
+        private bool YouthNordVagabondOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+
+        private void YouthNordVagabondOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "vagabond";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_drafted_to_war_pose");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+
+        private void GetYouthNordArtisanOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Engineering, DefaultSkills.Bow };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Intelligence, 1);
+        }
+
+        private bool YouthNordArtisanOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+
+        private void YouthNordArtisanOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "artisan";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_decisive");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+
+        private void GetYouthNordInfantryOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Roguery, DefaultSkills.Medicine };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
+        }
+
+        private bool YouthNordInfantryOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+
+        private void YouthNordInfantryOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "infantry";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_character_creation_nord_served_as_a_shieldbearer");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+
+        private void GetYouthNordMercenaryOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Throwing, DefaultSkills.OneHanded };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Control, 1);
+        }
+
+        private bool YouthNordMercenaryOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+
+        private void YouthNordMercenaryOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "mercenary";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_decisive");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+
+        private void GetYouthCrewedAGalleyNarrativeOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { NavalSkills.Mariner, DefaultSkills.OneHanded };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
+        }
+
+        private bool YouthCrewedAGalleyNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "vlandia" || characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "empire";
+        }
+
+        private void YouthCrewedAGalleyNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "seafarer";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+
+        private void GetYouthRowedRiverTraderNarrativeOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { NavalSkills.Boatswain, DefaultSkills.TwoHanded };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Endurance, 1);
+        }
+
+        private bool YouthRowedRiverTraderNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "sturgia";
+        }
+
+        private void YouthRowedRiverTraderNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "seafarer";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+
+        private void GetYouthDeckhandCorsairNarrativeOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { NavalSkills.Mariner, DefaultSkills.OneHanded };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Cunning, 1);
+        }
+
+        private bool YouthDeckhandCorsairNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "aserai";
+        }
+
+        private void YouthDeckhandCorsairNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "seafarer";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+
+        private void GetYouthRaidedRiverTrafficNarrativeOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { NavalSkills.Mariner, DefaultSkills.Charm };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Social, 1);
+        }
+
+        private bool YouthRaidedRiverTrafficNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "khuzait";
+        }
+
+        private void YouthRaidedRiverTrafficNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "seafarer";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+
+        private void GetYouthCoastalDefenderNarrativeOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { DefaultSkills.Bow, NavalSkills.Boatswain };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
+        }
+
+        private bool YouthCoastalDefenderNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "battania";
+        }
+
+        private void YouthCoastalDefenderNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "seafarer";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
+                    narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
+                }
+            }
+        }
+
+        private void GetYouthServeRaiderShipNarrativeOptionArgs(NarrativeMenuOptionArgs args)
+        {
+            SkillObject[] affectedSkills = new SkillObject[] { NavalSkills.Mariner, DefaultSkills.OneHanded };
+            args.SetAffectedSkills(affectedSkills);
+            args.SetFocusToSkills(1);
+            args.SetLevelToSkills(10);
+            args.SetLevelToAttribute(DefaultCharacterAttributes.Vigor, 1);
+        }
+
+        private bool YouthServeRaiderShipNarrativeOptionOnCondition(CharacterCreationManager characterCreationManager)
+        {
+            return characterCreationManager.CharacterCreationContent.SelectedCulture.StringId == "nord";
+        }
+
+        private void YouthServeRaiderShipNarrativeOptionOnSelect(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.SelectedTitleType = "seafarer";
+            string playerEquipmentId = this.GetPlayerEquipmentId(characterCreationManager, characterCreationManager.CharacterCreationContent.SelectedTitleType, characterCreationManager.CharacterCreationContent.SelectedCulture.StringId, Hero.MainHero.IsFemale);
+            foreach (NarrativeMenuCharacter narrativeMenuCharacter in characterCreationManager.CurrentMenu.Characters)
+            {
+                if (narrativeMenuCharacter.StringId == "player_youth_character")
+                {
+                    narrativeMenuCharacter.SetAnimationId("act_childhood_athlete");
                     narrativeMenuCharacter.SetEquipment(Game.Current.ObjectManager.GetObject<MBEquipmentRoster>(playerEquipmentId));
                 }
             }

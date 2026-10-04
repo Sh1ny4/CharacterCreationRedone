@@ -1,30 +1,42 @@
 ﻿using HarmonyLib;
+using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CampaignBehaviors;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
+using TaleWorlds.Core;
 using TaleWorlds.Localization;
 
 namespace CharacterCreationRedone.VanillaOptions
 {
     [HarmonyPatch(typeof(CharacterCreationCampaignBehavior), nameof(CharacterCreationCampaignBehavior.InitializeData))]
-    public class CharacterCreationRedoneVanilla : CharacterCreationCampaignBehavior, ICharacterCreationContentHandler
+    public class InitializeDataPatch : CharacterCreationCampaignBehavior
     {
         // these are excluded from the project and is intended for modders to use in their mod with losing countless hours everytime
         [HarmonyPrefix]
-        static bool Prefix(ref CharacterCreationRedoneVanilla __instance, CharacterCreationManager characterCreationManager)
+        static bool Prefix(CharacterCreationManager characterCreationManager)
         {
             characterCreationManager.CharacterCreationContent.ChangeReviewPageDescription(new TextObject("{=W6pKpEoT}You prepare to set off for a grand adventure in Calradia! Here is your character. Continue if you are ready, or go back to make changes.", null));
-            var ParentsMenu = new CharacterCreationRedoneVanillaParentsMenu();
-            var ChildhoodMenu = new CharacterCreationRedoneVanillaChildhoodMenu();
-            var EducationMenu = new CharacterCreationRedoneVanillaEducationMenu();
-            var youthmenu = new CharacterCreationRedoneVanillaYouthMenu();
-            var AdulthoodMenu = new CharacterCreationRedoneVanillaAdulthoodMenu();
-            var AgeMenu = new CharacterCreationRedoneVanillaAgeMenu();
-            ParentsMenu.AddParentsMenu(characterCreationManager);
-            ChildhoodMenu.AddChildhoodMenu(characterCreationManager);
-            EducationMenu.AddEducationMenu(characterCreationManager);
-            youthmenu.AddYouthMenu(characterCreationManager);
-            AdulthoodMenu.AddAdulthoodMenu(characterCreationManager);
-            AgeMenu.AddAgeSelectionMenu(characterCreationManager);
+            new CharacterCreationRedoneVanillaParentsMenu().AddParentsMenu(characterCreationManager);
+            new CharacterCreationRedoneVanillaChildhoodMenu().AddChildhoodMenu(characterCreationManager);
+            new CharacterCreationRedoneVanillaEducationMenu().AddEducationMenu(characterCreationManager);
+            new CharacterCreationRedoneVanillaYouthMenu().AddYouthMenu(characterCreationManager);
+            new CharacterCreationRedoneVanillaAdulthoodMenu().AddAdulthoodMenu(characterCreationManager);
+            new CharacterCreationRedoneVanillaAgeMenu().AddAgeSelectionMenu(characterCreationManager);
+            return false;
+        }
+    }
+    [HarmonyPatch(typeof(CharacterCreationCampaignBehavior), nameof(CharacterCreationCampaignBehavior.InitializeCharacterCreationCultures))]
+    public class InitializeCharacterCreationCulturesPatch : CharacterCreationCampaignBehavior
+    {
+        [HarmonyPrefix]
+        static bool Prefix(CharacterCreationManager characterCreationManager)
+        {
+            characterCreationManager.CharacterCreationContent.AddCharacterCreationCulture(Game.Current.ObjectManager.GetObject<CultureObject>("aserai"), 1, 10);
+            characterCreationManager.CharacterCreationContent.AddCharacterCreationCulture(Game.Current.ObjectManager.GetObject<CultureObject>("battania"), 1, 10);
+            characterCreationManager.CharacterCreationContent.AddCharacterCreationCulture(Game.Current.ObjectManager.GetObject<CultureObject>("empire"), 1, 10);
+            characterCreationManager.CharacterCreationContent.AddCharacterCreationCulture(Game.Current.ObjectManager.GetObject<CultureObject>("khuzait"), 1, 10);
+            characterCreationManager.CharacterCreationContent.AddCharacterCreationCulture(Game.Current.ObjectManager.GetObject<CultureObject>("nord"), 1, 10);
+            characterCreationManager.CharacterCreationContent.AddCharacterCreationCulture(Game.Current.ObjectManager.GetObject<CultureObject>("sturgia"), 1, 10);
+            characterCreationManager.CharacterCreationContent.AddCharacterCreationCulture(Game.Current.ObjectManager.GetObject<CultureObject>("vlandia"), 1, 10);
             return false;
         }
     }
